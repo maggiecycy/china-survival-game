@@ -1,0 +1,118 @@
+{
+    "tutorialCityId": "beijing",
+    "stages": [
+      {
+        "id": "network_setup",
+        "title": { "cn": "第一關：解決網路與通訊（SIM Card）", "en": "Stage 1: Connection & SIM Card" },
+        "desc": {
+          "cn": "你剛在北京首都機場落地，發現機場免費 Wi-Fi 需要國內手機號接收驗證碼才能登入。你現在沒有網絡，與外界完全失聯。",
+          "en": "You just landed at Beijing Capital Airport. The free airport Wi-Fi requires a Chinese phone number to receive a verification SMS. You have no internet."
+        },
+        "options": [
+          {
+            "id": "buy_local_sim",
+            "text": {
+              "cn": "在機場航站樓排隊辦理國內電信商預付卡（需實名制登記護照）。",
+              "en": "Queue at the terminal to buy a prepaid Chinese SIM card (requires passport registration)."
+            },
+            "cost": { "money": 150, "sanity": -10, "time": 1.5 },
+            "effectFlag": "has_local_number",
+            "feedback": {
+              "cn": "花費了 150 元和 1.5 小時。你拿到了中國手機號！雖然肉痛，但之後綁定各種 App 將會非常絲滑。",
+              "en": "Spent 150 RMB and 1.5 hours. You got a local Chinese number! It's pricey, but binding future apps will be much smoother."
+            }
+          },
+          {
+            "id": "roaming_only",
+            "text": {
+              "cn": "拒絕高昂卡費，堅持使用原本國家的國際漫遊數據（無國內手機號）。",
+              "en": "Refuse the expensive local SIM card. Rely solely on your home country's international roaming."
+            },
+            "cost": { "money": 0, "sanity": -5, "time": 0.5 },
+            "effectFlag": "roaming_only",
+            "feedback": {
+              "cn": "你省下了錢，用漫遊勉強連上了網。但注意：因為沒有國內手機號，後續所有需要驗證碼的場景你都將面臨極大麻煩！",
+              "en": "You saved money and got connected via roaming. But beware: without a local number, any task requiring SMS verification will be a nightmare!"
+            }
+          }
+        ]
+      },
+      {
+        "id": "payment_setup",
+        "title": { "cn": "第二關：綁定移動支付（Mobile Payment）", "en": "Stage 2: Setting up Mobile Payment" },
+        "desc": {
+          "cn": "肚子好餓，你走到機場便利店想買瓶水和麵包，卻發現收銀台貼著『不收大額外幣現金，建議掃碼支付』。你必須立刻設置支付寶或微信支付。",
+          "en": "Hungry and thirsty, you walk to an airport convenience store, only to find a sign: 'No large foreign cash, mobile payment preferred'. You must set up WeChat Pay or Alipay."
+        },
+        "options": [
+          {
+            "id": "bind_foreign_card",
+            "text": {
+              "cn": "下載 App 並嘗試上傳護照、綁定你的境外 Visa/Mastercard 信用卡。",
+              "en": "Download the app, upload your passport, and bind your international Visa/Mastercard."
+            },
+            "cost": { "money": 0, "sanity": -20, "time": 1.0 },
+            "effectFlag": "foreign_card_linked",
+            "feedback": {
+              "cn": "折騰了 1 小時，上傳了兩次護照截圖，終於綁定成功！但之後每筆消費超過 200 元將被加收 3% 外卡手續費。",
+              "en": "After an hour of struggle and uploading your passport twice, it finally worked! However, transactions over 200 RMB will incur a 3% fee."
+            }
+          },
+          {
+            "id": "cash_only",
+            "text": {
+              "cn": "拒絕綁定境外卡和上傳隱私，堅持只用人民幣現金硬闖。",
+              "en": "Refuse to upload your passport/ID. Decide to survive purely on cash RMB."
+            },
+            "cost": { "money": 0, "sanity": -10, "time": 0.5 },
+            "effectFlag": "cash_only",
+            "feedback": {
+              "cn": "你費盡口舌讓店員找零，勉強買到了食物。但你隱約覺得，在接下來那些高度數碼化的城市（如上海、深圳）裡，你會寸步難行。",
+              "en": "You barely bought food after begging the cashier for change. You have a bad feeling that in cashless cities like Shanghai, you'll struggle."
+            }
+          }
+        ]
+      },
+      {
+        "id": "attraction_booking",
+        "title": { "cn": "第三關：預約故宮門票（The Reservation Hell）", "en": "Stage 3: Forbidden City Ticket Hell" },
+        "desc": {
+          "cn": "既然來了北京，你打算明天去參觀故宮。但故宮不售現場票，必須提前在微信小程序實名制預約。當你打開預約頁面時，發現護照輸入框一直報錯……",
+          "en": "Since you're in Beijing, you want to visit the Forbidden City tomorrow. But tickets are online-only via a WeChat mini-program. When you open it, the passport input field keeps crashing..."
+        },
+        "options": [
+          {
+            "id": "keep_trying_system",
+            "text": {
+              "cn": "不信邪，瘋狂刷新頁面並手動嘗試各種護照格式輸入。",
+              "en": "Keep trying. Bruteforce and refresh the booking page with different passport formats."
+            },
+            "cost": { "money": 60, "sanity": -30, "time": 2.0 },
+            "effectFlag": "booked_ticket_official",
+            "feedback": {
+              "cn": "在折騰了整整 2 個小時、系統崩潰 4 次後，你奇蹟般地搶到了一張官方門票！精神受到了重創，但省下了錢。",
+              "en": "After 2 agonizing hours and 4 system crashes, you miraculously booked an official ticket! Your sanity is wrecked, but you saved money."
+            }
+          },
+          {
+            "id": "scalper_ticket",
+            "text": {
+              "cn": "放棄掙扎，直接去旅行平台（OTA）或找旅行社購買『高價旅行套餐/黃牛渠道票』。",
+              "en": "Give up. Go to an OTA platform or contact an agency for an expensive 'all-inclusive package' (scalper ticket)."
+            },
+            "cost": { "money": 280, "sanity": -5, "time": 0.5 },
+            "effectFlag": "booked_ticket_scalper",
+            "feedback": {
+              "cn": "多花了 220 元冤枉錢，但 30 分鐘內搞定。有時候，能用錢解決的麻煩在旅行中都不算麻煩。",
+              "en": "Spent an extra 220 RMB, but settled it within 30 minutes. Sometimes, throwing money at the problem is the only way."
+            }
+          }
+        ]
+      }
+    ],
+    "completionReward": {
+      "unlockWorldMap": true,
+      "sanityBonus": 10,
+      "logMessage": "恭喜你！解決了網絡、支付與預約三大難題，你已經初步具備了在中國生存的能力。世界地圖已解鎖，請開始規劃你的下一站！"
+    }
+  }
