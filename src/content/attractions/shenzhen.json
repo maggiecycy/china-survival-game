@@ -1,0 +1,26 @@
+{
+  "cityId": "shenzhen",
+  "attractions": [
+    {
+      "id": "face_gate",
+      "name": { "cn": "地鐵刷臉閘機", "en": "Facial Gate" },
+      "coords": { "x": 50, "y": 50 },
+      "desc": { "cn": "外國面孔識別失敗現場。", "en": "Foreign-face recognition failure live." },
+      "graphId": "shenzhen_face_gate"
+    },
+    {
+      "id": "tech_mall",
+      "name": { "cn": "華強北", "en": "Huaqiangbei" },
+      "coords": { "x": 40, "y": 62 },
+      "desc": { "cn": "電子零件迷宮與砍價。", "en": "Electronics maze and haggling." },
+      "graphId": "shenzhen_tech_mall"
+    },
+    {
+      "id": "window_of_world",
+      "name": { "cn": "世界之窗／海邊", "en": "Window / Bay" },
+      "coords": { "x": 65, "y": 70 },
+      "desc": { "cn": "打卡或吹風半天。", "en": "Check-in or sea breeze half-day." },
+      "graphId": "shenzhen_bay"
+    }
+  ]
+}

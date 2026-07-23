@@ -1,0 +1,51 @@
+{
+  "id": "zhangjiajie",
+  "entry": "avatar_mountains",
+  "nodes": {
+    "avatar_mountains": {
+      "id": "avatar_mountains",
+      "title": { "cn": "張家界：阿凡達山", "en": "Zhangjiajie: Avatar Peaks" },
+      "text": {
+        "cn": "索道、玻璃棧道、『再走 20 分鐘就到』——張家界用腿與恐懼收費。",
+        "en": "Cable cars, glass bridges, 'just 20 more minutes' — Zhangjiajie bills your legs and fear."
+      },
+      "choices": [
+        {
+          "id": "glass_bridge",
+          "text": {
+            "cn": "上玻璃棧道（San 值試煉，耗時中等）。",
+            "en": "Glass bridge (sanity trial, medium time)."
+          },
+          "effect": { "money": -120, "sanity": -25, "time": -2.5, "battery": -15, "locality": 3 },
+          "next": "zj_end"
+        },
+        {
+          "id": "cable_marathon",
+          "text": {
+            "cn": "多坐幾趟索道把景點串起來（貴、省腿、排隊長）。",
+            "en": "Chain cable cars (pricey, saves legs, long queues)."
+          },
+          "effect": { "money": -260, "sanity": -10, "time": -5, "battery": -10, "locality": 2 },
+          "next": "zj_end"
+        },
+        {
+          "id": "hike_hard",
+          "text": {
+            "cn": "徒步上台階（最省錢，最耗命）。",
+            "en": "Hike the stairs (cheapest, costliest on HP)."
+          },
+          "effect": { "money": -40, "sanity": -15, "time": -6, "battery": -30, "locality": 4 },
+          "next": "zj_end"
+        }
+      ]
+    },
+    "zj_end": {
+      "id": "zj_end",
+      "end": true,
+      "text": {
+        "cn": "雲霧散開時很美。你的小腿肌也散開了。",
+        "en": "When mist clears, it's beautiful. So are your destroyed calves."
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "xian",
+  "entry": "attraction_hub",
+  "nodes": {
+    "attraction_hub": {
+      "id": "attraction_hub",
+      "title": { "cn": "西安：今天衝哪個經典？", "en": "Xi'an: Which Classic Today?" },
+      "text": {
+        "cn": "兵馬俑、回民街、城牆——每條路線的時間與『被導遊攔截概率』都不同。",
+        "en": "Terracotta Army, Muslim Quarter, City Wall — each route costs different time and tourist-trap odds."
+      },
+      "choices": [
+        {
+          "id": "terracotta",
+          "text": {
+            "cn": "兵馬俑：提防『一日遊』與強制購物（半日到一日）。",
+            "en": "Terracotta Army: dodge day-tours and forced shopping (half to full day)."
+          },
+          "effect": { "money": -150, "sanity": -12, "time": -6, "battery": -20, "locality": 4 },
+          "next": "xa_trap_check"
+        },
+        {
+          "id": "muslim_quarter",
+          "text": {
+            "cn": "回民街：排隊吃肉夾饃/涼皮（晚上更熱鬧）。",
+            "en": "Muslim Quarter: queue for rou jia mo / liangpi (livelier at night)."
+          },
+          "effect": { "money": -80, "sanity": 8, "time": -2.5, "battery": -12, "locality": 5 },
+          "next": "xa_end"
+        },
+        {
+          "id": "city_wall",
+          "text": {
+            "cn": "騎行/步行城牆：風大、日落美、腿會抗議。",
+            "en": "Bike/walk the wall: windy, sunset pretty, legs complain."
+          },
+          "effect": { "money": -50, "sanity": 5, "time": -3, "battery": -18, "locality": 3 },
+          "next": "xa_end"
+        }
+      ]
+    },
+    "xa_trap_check": {
+      "id": "xa_trap_check",
+      "title": { "cn": "出口遭遇『熱心導遊』", "en": "Exit: 'Helpful' Guide Appears" },
+      "text": {
+        "cn": "有人塞給你『免費接駁』傳單。語氣太熟練，熟練得像劇本。",
+        "en": "Someone hands you a 'free shuttle' flyer. The pitch is too polished — scripted."
+      },
+      "choices": [
+        {
+          "id": "spot_scam",
+          "text": { "cn": "識破並拒絕（你有攻略/本地判斷）。", "en": "Spot it and refuse (guides/local sense help)." },
+          "effect": { "sanity": 10, "time": -0.3, "locality": 4 },
+          "requires": ["has_local_number"],
+          "showIfLocked": true,
+          "lockedHint": { "cn": "能查評價通常更安心", "en": "Being able to check reviews helps" },
+          "next": "xa_end"
+        },
+        {
+          "id": "polite_no",
+          "text": { "cn": "連連搖頭離開。", "en": "Shake your head and walk." },
+          "effect": { "sanity": 5, "time": -0.2 },
+          "next": "xa_end"
+        },
+        {
+          "id": "follow_trap",
+          "text": { "cn": "跟著去『順便看看』……", "en": "Follow them to 'just look'..." },
+          "effect": { "money": -200, "sanity": -20, "time": -2, "locality": -5 },
+          "next": "xa_end"
+        }
+      ]
+    },
+    "xa_end": {
+      "id": "xa_end",
+      "end": true,
+      "text": {
+        "cn": "西安的歷史很長，詐騙話術也很長。你活著離開景點，就算贏。",
+        "en": "Xi'an's history is long — so are scam scripts. Leaving the site alive counts as a win."
+      }
+    }
+  }
+}

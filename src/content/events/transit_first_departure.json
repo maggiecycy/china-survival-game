@@ -1,0 +1,108 @@
+{
+  "id": "transit_first_departure",
+  "entry": "ticket_gate",
+  "nodes": {
+    "ticket_gate": {
+      "id": "ticket_gate",
+      "title": { "cn": "首次離京：購票與進站", "en": "First Leave Beijing: Tickets & Entry" },
+      "text": {
+        "cn": "你第一次在中國做城際移動。12306 / 航司 App、實名制、證件核驗……這趟『交通事件』只會發生一次——之後你就『熟了』。",
+        "en": "Your first intercity move in China. 12306 / airline apps, real-name tickets, ID checks… This transit event happens once — then you're 'experienced'."
+      },
+      "choices": [
+        {
+          "id": "app_smooth",
+          "text": {
+            "cn": "用國內號順利收到驗證碼，線上取票進站。",
+            "en": "Local number gets the SMS; e-ticket and enter smoothly."
+          },
+          "requires": ["has_local_number"],
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "需要國內手機號",
+            "en": "Needs a local Chinese number"
+          },
+          "effect": { "money": -0, "sanity": -5, "time": -0.5, "battery": -10, "locality": 5 },
+          "feedback": {
+            "cn": "進站像本地人。你第一次覺得 Tutorial 辦的卡沒有白辦。",
+            "en": "You enter like a local. That Tutorial SIM finally pays rent."
+          },
+          "next": "on_the_way"
+        },
+        {
+          "id": "counter_struggle",
+          "text": {
+            "cn": "窗口人工購票 / 用護照反覆嘗試取票機。",
+            "en": "Buy at the counter / wrestle the passport ticket machine."
+          },
+          "effect": { "money": -20, "sanity": -15, "time": -1.2, "battery": -15, "locality": 2 },
+          "feedback": {
+            "cn": "護照號碼少輸入一位，排隊重來。你學會了『仔細核對每一個字母』。",
+            "en": "One missing passport digit — queue again. You learn to check every letter."
+          },
+          "next": "on_the_way"
+        },
+        {
+          "id": "pay_helper",
+          "text": {
+            "cn": "花小錢找『黃牛式』協助（不推薦，但慌的時候很香）。",
+            "en": "Pay a little for 'helpful' middlemen (not advised; panic makes it tempting)."
+          },
+          "effect": { "money": -80, "sanity": -8, "time": -0.4, "battery": -8, "locality": -3 },
+          "addFlags": ["used_ticket_scalper"],
+          "feedback": {
+            "cn": "票是買到了，心裡留下一點『我不該這樣』的餘韻。",
+            "en": "You got the ticket — and a lingering 'I shouldn't have' aftertaste."
+          },
+          "next": "on_the_way"
+        }
+      ]
+    },
+    "on_the_way": {
+      "id": "on_the_way",
+      "title": { "cn": "路上插曲", "en": "En-route Interlude" },
+      "text": {
+        "cn": "車廂/機艙裡，你的手機電量正在危險區。隔壁旅客熱心地遞來一份連不了的公共 Wi-Fi 密碼。",
+        "en": "Aboard, your battery hits the danger zone. A neighbor kindly shares a public Wi-Fi password that doesn't work."
+      },
+      "choices": [
+        {
+          "id": "powerbank_save",
+          "text": {
+            "cn": "掏出行動電源續命（或車站買一個天價的）。",
+            "en": "Deploy a power bank (or buy an overpriced one at the station)."
+          },
+          "effect": { "money": -50, "sanity": 3, "battery": 40 },
+          "feedback": {
+            "cn": "電量回升。你決定以後把『電』當成第四種生存資源。",
+            "en": "Battery rises. You decide power is your fourth survival resource."
+          },
+          "next": "transit_done"
+        },
+        {
+          "id": "offline_mode",
+          "text": {
+            "cn": "關掉螢幕睡覺/發呆，抵達再說。",
+            "en": "Screen off. Sleep/zone out. Deal with it on arrival."
+          },
+          "effect": { "sanity": 5, "battery": -5, "time": -0.2 },
+          "feedback": {
+            "cn": "你抵達時像一顆沒電的土豆，但至少沒在路上崩潰。",
+            "en": "You arrive like an unplugged potato — but you didn't melt down en route."
+          },
+          "next": "transit_done"
+        }
+      ]
+    },
+    "transit_done": {
+      "id": "transit_done",
+      "end": true,
+      "text": {
+        "cn": "首次城際移動的『學費』繳完了。以後再出發，不會再觸發這段教學事件——但時間與金錢照樣會扣。",
+        "en": "Tuition for your first intercity move is paid. This tutorial transit won't repeat — money and time still will."
+      },
+      "addFlags": ["first_intercity_survived"],
+      "effect": { "locality": 3 }
+    }
+  }
+}

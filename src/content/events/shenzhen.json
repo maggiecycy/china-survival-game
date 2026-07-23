@@ -1,0 +1,86 @@
+{
+  "id": "shenzhen",
+  "entry": "face_gate",
+  "nodes": {
+    "face_gate": {
+      "id": "face_gate",
+      "title": { "cn": "刷臉閘機", "en": "Facial Recognition Gate" },
+      "text": {
+        "cn": "地鐵出站全是刷臉閘機。外國面孔連續識別失敗，身後隊伍越來越長……",
+        "en": "Exit gates are all facial recognition. Your foreign face fails repeatedly. The queue behind you grows..."
+      },
+      "choices": [
+        {
+          "id": "link_wechat_transit",
+          "text": {
+            "cn": "打開乘車碼小程序，用已綁定的支付方式過閘。",
+            "en": "Open the transit QR mini-program and pass with your linked payment."
+          },
+          "requires": ["foreign_card_linked"],
+          "blocks_if": ["cash_only"],
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "需要已綁定移動支付",
+            "en": "Requires linked mobile payment"
+          },
+          "effect": { "money": -5, "sanity": -3, "time": -0.2, "locality": 5 },
+          "feedback": {
+            "cn": "綠碼一閃而過。科技讓你感到被善待了一秒。",
+            "en": "Green code flashes. For one second, tech feels kind."
+          },
+          "next": "shenzhen_ok"
+        },
+        {
+          "id": "sms_staff_help",
+          "text": {
+            "cn": "用國內號給工作人員發短信驗證，走人工通道。",
+            "en": "Verify via SMS with your local number and use the manual lane."
+          },
+          "requires": ["has_local_number"],
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "需要國內手機號",
+            "en": "Requires a local Chinese number"
+          },
+          "effect": { "sanity": -8, "time": -0.8, "locality": 3 },
+          "feedback": {
+            "cn": "工作人員核驗護照後放行。你保住了面子，也失去了 48 分鐘。",
+            "en": "Staff checks your passport and lets you through. Dignity preserved, 48 minutes gone."
+          },
+          "next": "shenzhen_ok"
+        },
+        {
+          "id": "manual_queue",
+          "text": {
+            "cn": "乖乖排人工核驗長隊（無碼無號的命運）。",
+            "en": "Join the long manual verification queue (the fate of the codeless)."
+          },
+          "effect": { "sanity": -15, "time": -1.5 },
+          "feedback": {
+            "cn": "空調很足，但時間與自尊一起被消磨。",
+            "en": "The AC is strong. Your time and pride are not."
+          },
+          "next": "shenzhen_tired"
+        }
+      ]
+    },
+    "shenzhen_ok": {
+      "id": "shenzhen_ok",
+      "end": true,
+      "text": {
+        "cn": "你離開閘機，深圳的無人便利店燈火通明——下一個挑戰已在等你。",
+        "en": "Past the gate, unmanned stores glow — the next challenge is already waiting."
+      },
+      "effect": { "locality": 2 }
+    },
+    "shenzhen_tired": {
+      "id": "shenzhen_tired",
+      "end": true,
+      "text": {
+        "cn": "你終於出站。手機電量與精神值一起報警。",
+        "en": "You finally exit. Battery and sanity both flash warnings."
+      },
+      "effect": { "sanity": -5, "battery": -20 }
+    }
+  }
+}

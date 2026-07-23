@@ -1,0 +1,73 @@
+{
+  "id": "guilin",
+  "entry": "li_river",
+  "nodes": {
+    "li_river": {
+      "id": "li_river",
+      "title": { "cn": "桂林：漓江選擇題", "en": "Guilin: Li River Choices" },
+      "text": {
+        "cn": "山水很甲天下，竹筏與遊船報價也很甲天下。陽朔西街的酒吧燈開始閃。",
+        "en": "Karst peaks are world-class — so are raft/boat markups. West Street bars start blinking."
+      },
+      "choices": [
+        {
+          "id": "bamboo_raft",
+          "text": {
+            "cn": "坐竹筏：小心強推拍照與『龜速報復』。",
+            "en": "Bamboo raft: watch forced photos and slow-boat revenge."
+          },
+          "effect": { "money": -150, "sanity": -12, "time": -2, "battery": -8, "locality": 3 },
+          "next": "gl_vendor"
+        },
+        {
+          "id": "big_boat",
+          "text": {
+            "cn": "坐遊船看二十元人民幣背景（耗時更長、較少扯皮）。",
+            "en": "Cruise past the 20-RMB bill backdrop (longer, less haggling)."
+          },
+          "effect": { "money": -210, "sanity": -5, "time": -4, "battery": -10, "locality": 4 },
+          "next": "gl_end"
+        },
+        {
+          "id": "yangshuo_night",
+          "text": {
+            "cn": "直接殺去陽朔西街：酒吧、租金傳説與宵夜。",
+            "en": "Skip to Yangshuo West Street: bars, rent myths, late snacks."
+          },
+          "effect": { "money": -100, "sanity": 5, "time": -3, "battery": -20, "locality": 3 },
+          "next": "gl_end"
+        }
+      ]
+    },
+    "gl_vendor": {
+      "id": "gl_vendor",
+      "title": { "cn": "竹筏上的推銷", "en": "Hard Sell on the Raft" },
+      "text": {
+        "cn": "師傅舉起相機：『合影只要——』價格隨著江風上漲。",
+        "en": "The rower lifts a camera: 'Just a photo—' prices rise with the river wind."
+      },
+      "choices": [
+        {
+          "id": "pay_photo",
+          "text": { "cn": "付錢了事。", "en": "Pay to end it." },
+          "effect": { "money": -80, "sanity": -5, "time": -0.2 },
+          "next": "gl_end"
+        },
+        {
+          "id": "refuse_photo",
+          "text": { "cn": "拒絕。接受可能的龜速漂流。", "en": "Refuse. Accept possible turtle-speed drifting." },
+          "effect": { "sanity": -15, "time": -1 },
+          "next": "gl_end"
+        }
+      ]
+    },
+    "gl_end": {
+      "id": "gl_end",
+      "end": true,
+      "text": {
+        "cn": "江山依舊，錢包與耐心都瘦了一圈。",
+        "en": "The landscape endures. Your wallet and patience do not."
+      }
+    }
+  }
+}

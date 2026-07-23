@@ -1,0 +1,29 @@
+{
+  "id": "hangzhou_fish",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "醋魚抉擇", "en": "Vinegar Fish" },
+      "text": { "cn": "導遊餐廳微笑推銷必點。", "en": "Touristy smile pushes the must-order." },
+      "choices": [
+        {
+          "id": "order",
+          "text": { "cn": "點了，接受命運。", "en": "Order it; accept fate." },
+          "requires": ["foreign_card_linked"],
+          "showIfLocked": true,
+          "lockedHint": { "cn": "小程序常要支付", "en": "Often needs mobile pay" },
+          "effect": { "money": -120, "sanity": -20, "locality": 1 },
+          "next": "done"
+        },
+        {
+          "id": "escape",
+          "text": { "cn": "改吃片兒川。", "en": "Switch to pian'er chuan." },
+          "effect": { "money": -35, "sanity": 5, "locality": 4 },
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "醋魚日結束。", "en": "Fish day ends." } }
+  }
+}

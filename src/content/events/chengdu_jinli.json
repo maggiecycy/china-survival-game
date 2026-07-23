@@ -1,0 +1,20 @@
+{
+  "id": "chengdu_jinli",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "錦里／寬窄", "en": "Jinli / Kuanzhai" },
+      "text": { "cn": "小吃與燈籠。人潮是標配。", "en": "Snacks and lanterns. Crowds are default." },
+      "choices": [
+        {
+          "id": "snack",
+          "text": { "cn": "邊走邊吃邊拍。", "en": "Walk, eat, shoot." },
+          "effect": { "money": -100, "sanity": 6, "battery": -15, "locality": 3 },
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "巷子日結束。", "en": "Lane day ends." } }
+  }
+}

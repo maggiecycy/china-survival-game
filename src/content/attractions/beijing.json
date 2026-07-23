@@ -1,0 +1,55 @@
+{
+  "cityId": "beijing",
+  "attractions": [
+    {
+      "id": "forbidden_city",
+      "name": { "cn": "故宮", "en": "Forbidden City" },
+      "coords": { "x": 52, "y": 42 },
+      "desc": {
+        "cn": "預約地獄 + 安檢長隊。經典，但半日直接蒸發。",
+        "en": "Reservation hell + security lines. Classic — half a day vanishes."
+      },
+      "graphId": "beijing_forbidden_city"
+    },
+    {
+      "id": "great_wall",
+      "name": { "cn": "長城", "en": "Great Wall" },
+      "coords": { "x": 72, "y": 28 },
+      "desc": {
+        "cn": "車程長、人擠、腿軟。不到長城非好漢，到了長城腿先好漢。",
+        "en": "Long ride, crowds, jelly legs. Hero status costs your calves."
+      },
+      "graphId": "beijing_great_wall"
+    },
+    {
+      "id": "hutong",
+      "name": { "cn": "南鑼鼓巷／什剎海", "en": "Hutong / Shichahai" },
+      "coords": { "x": 40, "y": 48 },
+      "desc": {
+        "cn": "網紅街、租金傳說與咖啡。適合半日亂逛。",
+        "en": "Influencer streets, rent myths, coffee. Half-day wander."
+      },
+      "graphId": "beijing_hutong"
+    },
+    {
+      "id": "temple_heaven",
+      "name": { "cn": "天壇", "en": "Temple of Heaven" },
+      "coords": { "x": 58, "y": 62 },
+      "desc": {
+        "cn": "廣場空曠、太極大爺、相對可呼吸。",
+        "en": "Open plazas, tai-chi uncles, relatively breathable."
+      },
+      "graphId": "beijing_temple_heaven"
+    },
+    {
+      "id": "roast_duck",
+      "name": { "cn": "烤鴨排隊", "en": "Peking Duck Queue" },
+      "coords": { "x": 35, "y": 68 },
+      "desc": {
+        "cn": "排隊也是北京體驗。胃開心，時間不安。",
+        "en": "Queuing is part of the experience. Stomach happy, clock anxious."
+      },
+      "graphId": "beijing_roast_duck"
+    }
+  ]
+}

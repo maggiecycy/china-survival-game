@@ -1,0 +1,73 @@
+{
+  "id": "nanjing",
+  "entry": "attraction_hub",
+  "nodes": {
+    "attraction_hub": {
+      "id": "attraction_hub",
+      "title": { "cn": "南京：去哪裡擠？", "en": "Nanjing: Where to Crowd?" },
+      "text": {
+        "cn": "夫子廟人潮、博物館靜氣、還是鴨血粉絲湯的香味——南京用『鴨』與歷史同時招待你。",
+        "en": "Confucius Temple crowds, museum calm, or duck-blood soup aroma — Nanjing serves history with duck."
+      },
+      "choices": [
+        {
+          "id": "fuzi_miao",
+          "text": {
+            "cn": "夫子廟：人擠人，夜間燈火，錢包小心。",
+            "en": "Confucius Temple: packed, lit at night, watch your wallet."
+          },
+          "effect": { "money": -90, "sanity": -10, "time": -3, "battery": -15, "locality": 3 },
+          "next": "nj_duck"
+        },
+        {
+          "id": "museum",
+          "text": {
+            "cn": "博物館線：預約、安檢、安靜地看展。",
+            "en": "Museum line: reserve, security, quiet exhibits."
+          },
+          "effect": { "money": -40, "sanity": 8, "time": -3.5, "battery": -12, "locality": 4 },
+          "next": "nj_end"
+        },
+        {
+          "id": "sun_yat_sen",
+          "text": {
+            "cn": "中山陵臺階：膝蓋的愛國教育。",
+            "en": "Sun Yat-sen Mausoleum stairs: patriotism for your knees."
+          },
+          "effect": { "money": -20, "sanity": -5, "time": -2.5, "battery": -20, "locality": 3 },
+          "next": "nj_end"
+        }
+      ]
+    },
+    "nj_duck": {
+      "id": "nj_duck",
+      "title": { "cn": "鴨的命運", "en": "Duck Destiny" },
+      "text": {
+        "cn": "排隊買鴨血粉絲湯時有人插隊。金陵『無鴨不成席』不是玩笑。",
+        "en": "Someone cuts the duck-soup queue. 'No duck, no feast' isn't a joke here."
+      },
+      "choices": [
+        {
+          "id": "endure_queue",
+          "text": { "cn": "忍，吃到再說。", "en": "Endure. Eat later." },
+          "effect": { "money": -25, "sanity": -5, "time": -0.8, "locality": 2 },
+          "next": "nj_end"
+        },
+        {
+          "id": "change_shop",
+          "text": { "cn": "換一家，少點人。", "en": "Switch shops; fewer people." },
+          "effect": { "money": -30, "sanity": 3, "time": -0.5 },
+          "next": "nj_end"
+        }
+      ]
+    },
+    "nj_end": {
+      "id": "nj_end",
+      "end": true,
+      "text": {
+        "cn": "你離開南京時，空氣裡似乎還有滷水味。",
+        "en": "Leaving Nanjing, the air still smells faintly of braising spices."
+      }
+    }
+  }
+}

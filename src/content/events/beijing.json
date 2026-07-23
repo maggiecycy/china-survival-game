@@ -1,0 +1,62 @@
+{
+  "id": "beijing",
+  "entry": "attraction_hub",
+  "nodes": {
+    "attraction_hub": {
+      "id": "attraction_hub",
+      "title": { "cn": "再訪北京：今天去哪？", "en": "Beijing Again: Where Today?" },
+      "text": {
+        "cn": "你已經在北京生存過一輪。剩下的時間夠再衝一個經典項目——選哪個，時間表會完全不同。",
+        "en": "You've already survived Beijing once. Time remains for one more classic — each choice rewrites your schedule."
+      },
+      "choices": [
+        {
+          "id": "palace_again",
+          "text": {
+            "cn": "故宮：預約/安檢/人潮（半日直接蒸發）。",
+            "en": "Forbidden City: booking, security, crowds (half-day vanishes)."
+          },
+          "effect": { "money": -60, "sanity": -18, "time": -4.5, "battery": -25, "locality": 3 },
+          "addFlags": ["bj_palace_revisit"],
+          "next": "bj_wrap"
+        },
+        {
+          "id": "wall_again",
+          "text": {
+            "cn": "長城一日：車上睡覺、牆上喘气。",
+            "en": "Great Wall day: sleep on the bus, gasp on the stones."
+          },
+          "effect": { "money": -220, "sanity": -15, "time": -8, "battery": -35, "locality": 4 },
+          "addFlags": ["climbed_great_wall"],
+          "next": "bj_wrap"
+        },
+        {
+          "id": "798_art",
+          "text": {
+            "cn": "798 藝術區：拍照、咖啡、偶爾看懂展覽。",
+            "en": "798 Art Zone: photos, coffee, occasionally understanding art."
+          },
+          "effect": { "money": -90, "sanity": 8, "time": -3, "battery": -15, "locality": 3 },
+          "next": "bj_wrap"
+        },
+        {
+          "id": "roast_duck",
+          "text": {
+            "cn": "全聚德/本地烤鴨店：排隊也是北京體驗。",
+            "en": "Peking duck queue — also a Beijing experience."
+          },
+          "effect": { "money": -180, "sanity": 10, "time": -2, "battery": -8, "locality": 5 },
+          "next": "bj_wrap"
+        }
+      ]
+    },
+    "bj_wrap": {
+      "id": "bj_wrap",
+      "end": true,
+      "text": {
+        "cn": "北京的一天結束。你更懂這座城的『距離』——地理的，也是行政的。",
+        "en": "A Beijing day ends. You understand the city's distances — geographic and administrative."
+      }
+    }
+  }
+}

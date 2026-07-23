@@ -1,0 +1,20 @@
+{
+  "id": "shanghai_wukang",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "武康路", "en": "Wukang Road" },
+      "text": { "cn": "網紅牆前人比磚多。咖啡因可以續命。", "en": "More people than bricks at the influencer wall. Caffeine helps." },
+      "choices": [
+        {
+          "id": "photo",
+          "text": { "cn": "排隊拍照 + 咖啡。", "en": "Queue for photos + coffee." },
+          "effect": { "money": -120, "sanity": 5, "battery": -18, "locality": 3 },
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "武康路日結束。", "en": "Wukang day ends." } }
+  }
+}

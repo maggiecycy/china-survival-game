@@ -1,0 +1,74 @@
+{
+  "hongkong_departure": {
+    "id": "hongkong_departure",
+    "type": "good",
+    "icon": "🛫",
+    "title": {
+      "cn": "成功自香港離境",
+      "en": "Departed via Hong Kong"
+    },
+    "desc": {
+      "cn": "你走完了這趟中國生存線。不算完美，但你活著出境了。",
+      "en": "You finished the China survival route. Not perfect — but you exited alive."
+    }
+  },
+  "china_pro": {
+    "id": "china_pro",
+    "type": "good",
+    "icon": "🏅",
+    "title": {
+      "cn": "中國通認證",
+      "en": "China Pro Certified"
+    },
+    "desc": {
+      "cn": "高本地化分數說明你真的學會了掃碼、預約與隨機應變。香港只是畢業禮。",
+      "en": "High locality means you learned scanning, booking, and improvising. Hong Kong is just the graduation gate."
+    }
+  },
+  "bad_end_sanity": {
+    "id": "bad_end_sanity",
+    "type": "bad",
+    "icon": "😵",
+    "title": {
+      "cn": "精神值歸零：買機票回國",
+      "en": "Sanity Melted — Flight Home"
+    },
+    "desc": {
+      "cn": "預約、拒收、掃碼與排隊掏空了你。你打開航司 App，選擇了『逃離』。",
+      "en": "Bookings, rejections, QR codes and queues emptied you. You open the airline app and choose escape."
+    }
+  },
+  "bad_end_overstay": {
+    "id": "bad_end_overstay",
+    "type": "bad",
+    "icon": "⏳",
+    "title": {
+      "cn": "時間耗盡：簽證壓力爆表",
+      "en": "Time's Up — Visa Pressure"
+    },
+    "desc": {
+      "cn": "剩餘停留時間歸零。你來不及走完地圖，只能倉促處理離境或延期焦慮。",
+      "en": "Remaining stay hits zero. The map is unfinished — only exit anxiety remains."
+    }
+  },
+  "bad_end_battery": {
+    "id": "bad_end_battery",
+    "type": "bad",
+    "icon": "🔋",
+    "title": {
+      "cn": "手機沒電：深夜迷失",
+      "en": "Phone Dead — Lost at Night"
+    },
+    "desc": {
+      "cn": "地圖、乘車碼、翻譯與叫車同時消失。沒電的夜晚，城市變得陌生而巨大。",
+      "en": "Maps, transit codes, translate and ride-hail vanish together. A dead phone makes the city vast and foreign."
+    }
+  },
+  "rules": [
+    { "id": "bad_end_sanity", "when": { "stat": "sanity", "lte": 0 } },
+    { "id": "bad_end_overstay", "when": { "stat": "timeRemaining", "lte": 0 } },
+    { "id": "bad_end_battery", "when": { "stat": "battery", "lte": 0 } },
+    { "id": "china_pro", "when": { "arrivedCity": "hongkong", "localityGte": 80 } },
+    { "id": "hongkong_departure", "when": { "arrivedCity": "hongkong" } }
+  ]
+}

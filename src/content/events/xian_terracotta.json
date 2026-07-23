@@ -1,0 +1,26 @@
+{
+  "id": "xian_terracotta",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "兵馬俑", "en": "Terracotta" },
+      "text": { "cn": "出口有『熱心』導遊。劇本感很強。", "en": "Helpful guides at the exit. Very scripted." },
+      "choices": [
+        {
+          "id": "refuse",
+          "text": { "cn": "拒絕一日遊陷阱。", "en": "Refuse the day-tour trap." },
+          "effect": { "money": -150, "sanity": 8, "battery": -15, "locality": 4 },
+          "next": "done"
+        },
+        {
+          "id": "follow",
+          "text": { "cn": "跟著去『順便看看』。", "en": "Follow to 'just look'." },
+          "effect": { "money": -320, "sanity": -18, "battery": -15, "locality": -4 },
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "兵馬俑日結束。", "en": "Terracotta day ends." } }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "cityId": "chengdu",
+  "attractions": [
+    {
+      "id": "hotpot",
+      "name": { "cn": "火鍋「微辣」", "en": "Hotpot 'Mild'" },
+      "coords": { "x": 45, "y": 55 },
+      "desc": { "cn": "微辣警告。腸胃命運分水嶺。", "en": "'Mild' warning. Gut destiny." },
+      "graphId": "chengdu_hotpot"
+    },
+    {
+      "id": "pandas",
+      "name": { "cn": "熊貓基地", "en": "Panda Base" },
+      "coords": { "x": 70, "y": 35 },
+      "desc": { "cn": "早起排隊看睡覺的國寶。", "en": "Early queues for sleeping national treasures." },
+      "graphId": "chengdu_pandas"
+    },
+    {
+      "id": "jinli",
+      "name": { "cn": "錦里／寬窄", "en": "Jinli / Kuanzhai" },
+      "coords": { "x": 40, "y": 70 },
+      "desc": { "cn": "小吃街拍照半日。", "en": "Snack-street photo half-day." },
+      "graphId": "chengdu_jinli"
+    }
+  ]
+}

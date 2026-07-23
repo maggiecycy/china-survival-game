@@ -1,0 +1,33 @@
+{
+  "id": "hangzhou_west_lake",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "西湖", "en": "West Lake" },
+      "text": {
+        "cn": "共享單車包圍湖岸。一對情侶跑來：『幫我們按快門！……啊也可以合影收費嗎？』",
+        "en": "Shared bikes siege the shore. A couple runs over: 'Press the shutter! …Can we also pay for a photo with you?'"
+      },
+      "choices": [
+        {
+          "id": "walk",
+          "text": { "cn": "沿湖走半圈，拒絕變成商品。", "en": "Walk half the shore; refuse becoming a product." },
+          "effect": { "money": -15, "sanity": 12, "battery": -12, "locality": 3 },
+          "next": "done"
+        },
+        {
+          "id": "couple_photo_fee",
+          "text": {
+            "cn": "💰 幫按快門 + 合影收費（西湖限定奇妙生意）。",
+            "en": "💰 Shutter help + paid group photo (West Lake weird business)."
+          },
+          "effect": { "money": 100, "sanity": -3, "battery": -14, "locality": 2 },
+          "addFlags": ["did_photo_hustle"],
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "西湖日結束。", "en": "West Lake day ends." } }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "144": {
+    "id": "144",
+    "label": {
+      "cn": "144小时过境免签",
+      "en": "144-Hour Transit Visa-Free"
+    },
+    "badge": {
+      "cn": "Easy Entry",
+      "en": "Easy Entry"
+    },
+    "badgeTone": "blue",
+    "summary": {
+      "cn": "無需提前申請。活動範圍被嚴格限制在申報區域（如京津冀）。",
+      "en": "No advance application. Strictly restricted to regional zones."
+    },
+    "durationLabel": "144H",
+    "regions": {
+      "cn": "京津冀、長三角、粵港澳大灣區、成渝、遼寧、山東、陝西、武漢、昆明、廈門等區域指定口岸（共54個國家適用）",
+      "en": "Beijing-Tianjin-Hebei, Yangtze River Delta, Greater Bay Area, Chengdu-Chongqing, etc. via designated ports (54 countries eligible)"
+    },
+    "list": [
+      "Austria",
+      "Belgium",
+      "Czech Republic",
+      "Denmark",
+      "Estonia",
+      "Finland",
+      "France",
+      "Germany",
+      "Greece",
+      "Hungary",
+      "Iceland",
+      "Italy",
+      "Latvia",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Netherlands",
+      "Poland",
+      "Portugal",
+      "Slovakia",
+      "Slovenia",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "Russia",
+      "United Kingdom",
+      "Ireland",
+      "Cyprus",
+      "Bulgaria",
+      "Romania",
+      "Ukraine",
+      "Serbia",
+      "Croatia",
+      "Bosnia and Herzegovina",
+      "Montenegro",
+      "North Macedonia",
+      "Albania",
+      "Monaco",
+      "Belarus",
+      "United States",
+      "Canada",
+      "Brazil",
+      "Mexico",
+      "Argentina",
+      "Chile",
+      "Australia",
+      "New Zealand",
+      "South Korea",
+      "Japan",
+      "Singapore",
+      "Brunei",
+      "United Arab Emirates",
+      "Qatar"
+    ],
+    "eligibleCountHint": 54,
+    "initial": {
+      "money": 2800,
+      "sanity": 100,
+      "timeRemaining": 144,
+      "battery": 100,
+      "locality": 0
+    }
+  },
+  "Visa-Free": {
+    "id": "Visa-Free",
+    "label": {
+      "cn": "30天免签",
+      "en": "30-Day Ordinary Visa-Free"
+    },
+    "badge": {
+      "cn": "Highly Recommended",
+      "en": "Highly Recommended"
+    },
+    "badgeTone": "green",
+    "summary": {
+      "cn": "免簽入境30天。適合深度遊，地圖可暢玩區域極多。",
+      "en": "Free entry for 30 days. Perfect for long travel, high freedom."
+    },
+    "durationLabel": "30D FREE",
+    "regions": {
+      "cn": "全中國境內（特定管制區域如西藏除外，普通護照持有人免簽停留不超過30天）",
+      "en": "All of Mainland China (except restricted areas like Tibet, ordinary passport holders up to 30 days)"
+    },
+    "list": [
+      "France",
+      "Germany",
+      "Italy",
+      "Netherlands",
+      "Spain",
+      "Switzerland",
+      "Ireland",
+      "Hungary",
+      "Austria",
+      "Belgium",
+      "Luxembourg",
+      "Poland",
+      "Portugal",
+      "Greece",
+      "Cyprus",
+      "Slovenia",
+      "Slovakia",
+      "Norway",
+      "Finland",
+      "Denmark",
+      "Iceland",
+      "Monaco",
+      "Liechtenstein",
+      "Andorra",
+      "Sweden",
+      "Bulgaria",
+      "Romania",
+      "Croatia",
+      "Montenegro",
+      "North Macedonia",
+      "Estonia",
+      "Latvia",
+      "Singapore",
+      "Thailand",
+      "Malaysia",
+      "Brunei",
+      "Japan",
+      "South Korea",
+      "Australia",
+      "New Zealand",
+      "Argentina",
+      "Brazil",
+      "Chile",
+      "Peru",
+      "Uruguay"
+    ],
+    "initial": {
+      "money": 2800,
+      "sanity": 100,
+      "timeRemaining": 720,
+      "battery": 100,
+      "locality": 5
+    }
+  },
+  "L": {
+    "id": "L",
+    "label": {
+      "cn": "旅游签证 L",
+      "en": "Tourist Visa (L-Visa)"
+    },
+    "badge": {
+      "cn": "Hardcore Paperwork",
+      "en": "Hardcore Paperwork"
+    },
+    "badgeTone": "amber",
+    "summary": {
+      "cn": "需要邀請函、機票酒店訂單。辦理手續繁瑣，但入境後限制最少。",
+      "en": "Requires tedious invitation letters, pre-bookings, but grants complete freedom."
+    },
+    "durationLabel": "L VISA",
+    "regions": {
+      "cn": "全中國境內（自由度最高，但西藏仍需額外申請入藏函）",
+      "en": "All of Mainland China (Highest freedom, Tibet still requires Tibet Travel Permit)"
+    },
+    "list": [
+      "All Countries / 所有國家"
+    ],
+    "allCountries": true,
+    "initial": {
+      "money": 2800,
+      "sanity": 100,
+      "timeRemaining": 720,
+      "battery": 100,
+      "locality": 10
+    }
+  }
+}

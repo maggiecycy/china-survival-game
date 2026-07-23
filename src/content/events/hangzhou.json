@@ -1,0 +1,77 @@
+{
+  "id": "hangzhou",
+  "entry": "vinegar_fish",
+  "nodes": {
+    "vinegar_fish": {
+      "id": "vinegar_fish",
+      "title": { "cn": "西湖醋魚抉擇", "en": "West Lake Vinegar Fish Dilemma" },
+      "text": {
+        "cn": "導遊式餐廳把『必吃西湖醋魚』推到你面前。菜單只有小程序，價格模糊……",
+        "en": "A touristy restaurant pushes 'must-try vinegar fish'. Menu is mini-program only; prices are suspiciously vague..."
+      },
+      "choices": [
+        {
+          "id": "pay_and_suffer",
+          "text": {
+            "cn": "掃碼點一份『招牌醋魚』，用移動支付結帳。",
+            "en": "Scan-order the signature fish and pay by mobile."
+          },
+          "requires": ["foreign_card_linked"],
+          "blocks_if": ["cash_only"],
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "需要移動支付",
+            "en": "Requires mobile payment"
+          },
+          "effect": { "money": -120, "sanity": -25, "time": -1, "locality": 2 },
+          "feedback": {
+            "cn": "味道一言難盡。胃與錢包同時受創，但你完成了『打卡』。",
+            "en": "The taste is... memorable. Stomach and wallet both hurt, but you checked the box."
+          },
+          "next": "hz_end"
+        },
+        {
+          "id": "local_tip",
+          "text": {
+            "cn": "用手機查本地攻略（有號才能順利打開評論區驗證碼）。",
+            "en": "Search local tips (SMS verification helps open review apps)."
+          },
+          "requires": ["has_local_number"],
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "需要國內手機號以通過 App 驗證",
+            "en": "Requires local number for app verification"
+          },
+          "effect": { "money": -35, "sanity": 5, "time": -0.5, "locality": 6 },
+          "addFlags": ["dodged_tourist_trap"],
+          "feedback": {
+            "cn": "評論區高喊『別點醋魚』。你改吃片兒川，救回了部分 San 值。",
+            "en": "Reviews scream 'skip the fish'. You switch to pian'er chuan and save some sanity."
+          },
+          "next": "hz_end"
+        },
+        {
+          "id": "cash_refuse",
+          "text": {
+            "cn": "拒絕小程序，改去路邊買龍井茶炒豆。",
+            "en": "Refuse the mini-program; buy Longjing tea snacks from a street stall."
+          },
+          "effect": { "money": -40, "sanity": -5, "time": -0.5 },
+          "feedback": {
+            "cn": "便宜、安全、沒有『美食沙漠』詛咒。你對杭州的印象好轉了一點。",
+            "en": "Cheap, safe, no 'food desert' curse. Hangzhou's reputation recovers slightly."
+          },
+          "next": "hz_end"
+        }
+      ]
+    },
+    "hz_end": {
+      "id": "hz_end",
+      "end": true,
+      "text": {
+        "cn": "西湖很美。胃的記憶則因人而異。",
+        "en": "West Lake is beautiful. Your stomach's memories may vary."
+      }
+    }
+  }
+}

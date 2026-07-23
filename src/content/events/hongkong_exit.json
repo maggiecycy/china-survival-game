@@ -1,0 +1,28 @@
+{
+  "id": "hongkong_exit",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "離境口岸", "en": "Exit" },
+      "text": {
+        "cn": "你走向離境檢查。這一站完成後，系統會根據 Locality 等狀態判定結局。",
+        "en": "You walk to departure control. Finishing this stop triggers ending evaluation."
+      },
+      "choices": [
+        {
+          "id": "depart",
+          "text": { "cn": "提交證件，離境。", "en": "Present documents and leave." },
+          "effect": { "sanity": 5, "locality": 3 },
+          "addFlags": ["departed_hongkong"],
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": { "cn": "關口在你身後合上。", "en": "The gate closes behind you." }
+    }
+  }
+}

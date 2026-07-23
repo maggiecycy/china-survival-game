@@ -1,0 +1,103 @@
+{
+  "id": "chengdu",
+  "entry": "spicy_warning",
+  "nodes": {
+    "spicy_warning": {
+      "id": "spicy_warning",
+      "title": { "cn": "「微辣」警告", "en": "'Mild' Spicy Warning" },
+      "text": {
+        "cn": "火鍋店服務員微笑：『微辣就可以。』桌上的辣椒罐比你的護照還厚。",
+        "en": "Hotpot staff smiles: 'Mild is fine.' The chili jar is thicker than your passport."
+      },
+      "choices": [
+        {
+          "id": "trust_mild",
+          "text": {
+            "cn": "相信『微辣』，點單開吃。",
+            "en": "Trust 'mild' and dive in."
+          },
+          "effect": { "money": -90, "sanity": -20, "time": -4 },
+          "addFlags": ["chili_trauma"],
+          "feedback": {
+            "cn": "你在馬桶上度過了大半天。成都很慢，你的腸胃更快。",
+            "en": "You spend half the day in the restroom. Chengdu is slow; your gut is not."
+          },
+          "next": "cd_attractions"
+        },
+        {
+          "id": "translate_help",
+          "text": {
+            "cn": "用翻譯 App + 國內號登錄會員，點『免辣』並確認配料。",
+            "en": "Use a translate app + local-number login to order truly non-spicy."
+          },
+          "requires": ["has_local_number"],
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "會員登錄常要國內手機號",
+            "en": "Membership login often needs a local number"
+          },
+          "effect": { "money": -80, "sanity": 5, "time": -1.5, "locality": 4 },
+          "feedback": {
+            "cn": "免辣鍋底救了你。你甚至有力氣去熊貓基地排隊。",
+            "en": "Non-spicy broth saves you. You even have energy to queue for pandas."
+          },
+          "next": "cd_attractions"
+        },
+        {
+          "id": "skip_hotpot",
+          "text": {
+            "cn": "改吃甜品與蓋碗茶，保留戰鬥力。",
+            "en": "Switch to dessert and covered-bowl tea. Keep your HP."
+          },
+          "effect": { "money": -40, "sanity": 5, "time": -1, "locality": 2 },
+          "next": "cd_attractions"
+        }
+      ]
+    },
+    "cd_attractions": {
+      "id": "cd_attractions",
+      "title": { "cn": "成都還能去哪", "en": "More Chengdu?" },
+      "text": {
+        "cn": "火鍋戰後：熊貓基地大排隊，還是寬窄巷子/錦里人潮？",
+        "en": "After hotpot: panda base mega-queue, or Kuanzhai / Jinli crowds?"
+      },
+      "choices": [
+        {
+          "id": "pandas",
+          "text": {
+            "cn": "熊貓基地：早起、排隊、看睡覺的國寶（半日+）。",
+            "en": "Panda base: early rise, queues, sleeping national treasures (half-day+)."
+          },
+          "effect": { "money": -80, "sanity": 10, "time": -4.5, "battery": -20, "locality": 4 },
+          "next": "cd_end"
+        },
+        {
+          "id": "jinli",
+          "text": {
+            "cn": "錦里／寬窄：小吃街拍照半日。",
+            "en": "Jinli / Kuanzhai: snack-street photo half-day."
+          },
+          "effect": { "money": -100, "sanity": 5, "time": -2.5, "battery": -15, "locality": 3 },
+          "next": "cd_end"
+        },
+        {
+          "id": "teahouse",
+          "text": {
+            "cn": "茶館躺平：成都正確打開方式。",
+            "en": "Teahouse flatline: the correct Chengdu mode."
+          },
+          "effect": { "money": -40, "sanity": 15, "time": -2, "battery": -5, "locality": 5 },
+          "next": "cd_end"
+        }
+      ]
+    },
+    "cd_end": {
+      "id": "cd_end",
+      "end": true,
+      "text": {
+        "cn": "成都的節奏很慢。你的決策速度決定了腸胃與行程的命運。",
+        "en": "Chengdu moves slowly. Your choices decide gut and itinerary alike."
+      }
+    }
+  }
+}

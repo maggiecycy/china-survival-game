@@ -1,0 +1,45 @@
+{
+  "cityId": "shanghai",
+  "attractions": [
+    {
+      "id": "miniprogram_lunch",
+      "name": { "cn": "小程序點單", "en": "Mini-Program Lunch" },
+      "coords": { "x": 48, "y": 55 },
+      "desc": {
+        "cn": "不收現金、強制授權。支付能力決定你能不能吃上熱麵。",
+        "en": "No cash, forced permissions. Payment setup decides if you eat."
+      },
+      "graphId": "shanghai_miniprogram"
+    },
+    {
+      "id": "the_bund",
+      "name": { "cn": "外灘／陸家嘴", "en": "The Bund" },
+      "coords": { "x": 62, "y": 48 },
+      "desc": {
+        "cn": "天際線打卡。傍晚更耗電。",
+        "en": "Skyline check-in. Evenings drain battery harder."
+      },
+      "graphId": "shanghai_bund"
+    },
+    {
+      "id": "disney",
+      "name": { "cn": "迪士尼", "en": "Disney" },
+      "coords": { "x": 78, "y": 70 },
+      "desc": {
+        "cn": "排隊才是主線。時間怪獸。",
+        "en": "Queuing is the main quest. Time monster."
+      },
+      "graphId": "shanghai_disney"
+    },
+    {
+      "id": "wukang",
+      "name": { "cn": "武康路", "en": "Wukang Road" },
+      "coords": { "x": 40, "y": 62 },
+      "desc": {
+        "cn": "網紅街與咖啡半日。",
+        "en": "Influencer street + cafe half-day."
+      },
+      "graphId": "shanghai_wukang"
+    }
+  ]
+}

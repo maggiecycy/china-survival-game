@@ -1,0 +1,51 @@
+{
+  "id": "tibet",
+  "entry": "altitude",
+  "nodes": {
+    "altitude": {
+      "id": "altitude",
+      "title": { "cn": "西藏：高原先動手", "en": "Tibet: Altitude Strikes First" },
+      "text": {
+        "cn": "頭開始轟鳴。布達拉宮在遠處，氧氣瓶在近處。你的簽證與入藏手續若有問題，遊戲早該遣返你了——現在是身體問題。",
+        "en": "Your head pounds. Potala is far; oxygen is near. Visa/permit issues would have deported you already — this is your body talking."
+      },
+      "choices": [
+        {
+          "id": "buy_oxygen",
+          "text": {
+            "cn": "買氧氣瓶 + 旅館躺平一天。",
+            "en": "Buy oxygen + flat-line in a hotel for a day."
+          },
+          "effect": { "money": -150, "sanity": -15, "time": -24, "battery": -10, "locality": 2 },
+          "next": "tb_end"
+        },
+        {
+          "id": "slow_sightsee",
+          "text": {
+            "cn": "慢遊近處，不逞強爬高。",
+            "en": "Sightsee slowly nearby; no hero climbs."
+          },
+          "effect": { "money": -80, "sanity": -8, "time": -6, "battery": -15, "locality": 4 },
+          "next": "tb_end"
+        },
+        {
+          "id": "push_potala",
+          "text": {
+            "cn": "硬衝布達拉宮參觀（風險：更暈）。",
+            "en": "Push to Potala anyway (risk: worse dizziness)."
+          },
+          "effect": { "money": -120, "sanity": -25, "time": -5, "battery": -20, "locality": 5 },
+          "next": "tb_end"
+        }
+      ]
+    },
+    "tb_end": {
+      "id": "tb_end",
+      "end": true,
+      "text": {
+        "cn": "高原教會你：旅行有時是和重力談判。",
+        "en": "Altitude teaches: travel is sometimes a negotiation with gravity."
+      }
+    }
+  }
+}

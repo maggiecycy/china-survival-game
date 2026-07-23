@@ -1,0 +1,42 @@
+{
+  "id": "shanghai_miniprogram",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "小程序點單", "en": "Mini-Program Order" },
+      "text": {
+        "cn": "麵館只收掃碼。授權彈窗層層疊疊。",
+        "en": "Noodles are scan-only. Permission popups stack."
+      },
+      "choices": [
+        {
+          "id": "scan",
+          "text": { "cn": "用已綁境外卡硬掃。", "en": "Scan with linked foreign card." },
+          "requires": ["foreign_card_linked"],
+          "blocks_if": ["cash_only"],
+          "showIfLocked": true,
+          "lockedHint": { "cn": "需要移動支付", "en": "Needs mobile pay" },
+          "effect": { "money": -45, "sanity": -5, "battery": -10, "locality": 5 },
+          "next": "done"
+        },
+        {
+          "id": "sms",
+          "text": { "cn": "用國內號收驗證碼註冊。", "en": "Register with local SMS." },
+          "requires": ["has_local_number"],
+          "showIfLocked": true,
+          "lockedHint": { "cn": "需要國內號", "en": "Needs local number" },
+          "effect": { "money": -40, "sanity": -8, "battery": -15, "locality": 6 },
+          "next": "done"
+        },
+        {
+          "id": "cash",
+          "text": { "cn": "求店員收現金／換店。", "en": "Beg for cash or change shops." },
+          "effect": { "money": -50, "sanity": -18, "battery": -10, "locality": -2 },
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "午餐戰爭結束。一天已消耗。", "en": "Lunch war ends. A day is spent." } }
+  }
+}

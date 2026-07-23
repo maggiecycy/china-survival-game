@@ -1,0 +1,37 @@
+{
+  "id": "shenzhen_tech_mall",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "華強北", "en": "Huaqiangbei" },
+      "text": {
+        "cn": "零件迷宮。有工作室攔截你：『外模拍智能手錶廣告，兩小時，日結。』",
+        "en": "Parts maze. A studio stops you: 'Foreign model for a smartwatch ad, two hours, same-day pay.'"
+      },
+      "choices": [
+        {
+          "id": "browse",
+          "text": { "cn": "亂逛兩小時（可能買奇怪配件）。", "en": "Wander two hours (maybe buy weird gadgets)." },
+          "effect": { "money": -60, "sanity": -5, "battery": -15, "locality": 3 },
+          "next": "done"
+        },
+        {
+          "id": "watch_model",
+          "text": {
+            "cn": "💰 接手錶廣告：對著鏡頭說 Wow。",
+            "en": "💰 Take the watch ad: say Wow to the camera."
+          },
+          "effect": { "money": 320, "sanity": -8, "battery": -22, "locality": 2 },
+          "addFlags": ["did_model_gig"],
+          "feedback": {
+            "cn": "你說了十二次 Wow。錢是真的，尊嚴需要重啟。",
+            "en": "You said Wow twelve times. Money is real; dignity needs a reboot."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "華強北日結束。", "en": "Huaqiangbei day ends." } }
+  }
+}

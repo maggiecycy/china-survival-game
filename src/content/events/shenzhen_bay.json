@@ -1,0 +1,20 @@
+{
+  "id": "shenzhen_bay",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "灣區吹風", "en": "Bay Breeze" },
+      "text": { "cn": "看海或人造景點，節奏比閘機人類。", "en": "Sea or theme parks — slower than gate anxiety." },
+      "choices": [
+        {
+          "id": "chill",
+          "text": { "cn": "散步吹風。", "en": "Walk and breathe." },
+          "effect": { "money": -40, "sanity": 10, "battery": -12, "locality": 2 },
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "灣區日結束。", "en": "Bay day ends." } }
+  }
+}

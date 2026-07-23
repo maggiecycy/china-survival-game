@@ -1,0 +1,76 @@
+{
+  "id": "hongkong",
+  "entry": "dual_currency",
+  "nodes": {
+    "dual_currency": {
+      "id": "dual_currency",
+      "title": { "cn": "雙幣切換", "en": "Dual Currency Switch" },
+      "text": {
+        "cn": "茶餐廳不收人民幣移動支付。店員盯著你的手機：『八達通？現金港幣？』",
+        "en": "The cha chaan teng won't take RMB mobile pay. Staff stares at your phone: 'Octopus? HKD cash?'"
+      },
+      "choices": [
+        {
+          "id": "octopus_link",
+          "text": {
+            "cn": "用國內號快速開通交通卡/電子支付聯動。",
+            "en": "Quickly set up transit/e-pay linkage with your local number."
+          },
+          "requires": ["has_local_number"],
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "有國內手機號會更絲滑",
+            "en": "A local number makes this smoother"
+          },
+          "effect": { "money": -30, "sanity": -5, "time": -0.5, "locality": 5 },
+          "feedback": {
+            "cn": "切換成功。你點了凍奶茶，感到離境前夕的平靜。",
+            "en": "Setup done. You order iced milk tea and feel calm before departure."
+          },
+          "next": "hk_exit"
+        },
+        {
+          "id": "forex_cash",
+          "text": {
+            "cn": "跑去兌換港幣現金，接受匯率差。",
+            "en": "Exchange for HKD cash and eat the spread."
+          },
+          "effect": { "money": -50, "sanity": -10, "time": -0.8 },
+          "feedback": {
+            "cn": "匯率刺客比茶餐廳更狠。但至少你能買單了。",
+            "en": "The FX spread bites harder than the cafe. At least you can pay."
+          },
+          "next": "hk_exit"
+        },
+        {
+          "id": "card_awkward",
+          "text": {
+            "cn": "甩出境外信用卡硬刷（有卡會好過一點）。",
+            "en": "Swipe your foreign credit card (easier if you already linked one)."
+          },
+          "requires": ["foreign_card_linked"],
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "Tutorial 綁定境外卡後更穩",
+            "en": "More reliable if you linked a foreign card in Tutorial"
+          },
+          "effect": { "money": -55, "sanity": -8, "time": -0.3 },
+          "feedback": {
+            "cn": "機器嗶了一聲。手續費隱藏在明細裡，像最後的惡作劇。",
+            "en": "The terminal beeps. Fees hide in the statement — a final prank."
+          },
+          "next": "hk_exit"
+        }
+      ]
+    },
+    "hk_exit": {
+      "id": "hk_exit",
+      "end": true,
+      "text": {
+        "cn": "你穿過關口。中國生存之旅，到此告一段落。",
+        "en": "You clear the checkpoint. Your China survival run reaches its exit."
+      },
+      "effect": { "sanity": 10, "locality": 5 }
+    }
+  }
+}

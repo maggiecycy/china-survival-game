@@ -1,0 +1,26 @@
+{
+  "cityId": "xian",
+  "attractions": [
+    {
+      "id": "terracotta",
+      "name": { "cn": "兵馬俑", "en": "Terracotta Army" },
+      "coords": { "x": 75, "y": 45 },
+      "desc": { "cn": "提防一日遊與強制購物。", "en": "Dodge day-tours and forced shopping." },
+      "graphId": "xian_terracotta"
+    },
+    {
+      "id": "muslim_quarter",
+      "name": { "cn": "回民街", "en": "Muslim Quarter" },
+      "coords": { "x": 45, "y": 55 },
+      "desc": { "cn": "肉夾饃與排隊。", "en": "Rou jia mo and queues." },
+      "graphId": "xian_muslim_quarter"
+    },
+    {
+      "id": "city_wall",
+      "name": { "cn": "城牆", "en": "City Wall" },
+      "coords": { "x": 50, "y": 40 },
+      "desc": { "cn": "騎行吹風，日落很美。", "en": "Bike in the wind; sunset is lovely." },
+      "graphId": "xian_city_wall"
+    }
+  ]
+}

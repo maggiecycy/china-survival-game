@@ -1,0 +1,26 @@
+{
+  "id": "shanghai_disney",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "迪士尼", "en": "Disney" },
+      "text": { "cn": "排隊才是主線任務。錢包與腳同時報警。", "en": "Queuing is the main quest. Wallet and feet both alarm." },
+      "choices": [
+        {
+          "id": "full",
+          "text": { "cn": "買票衝進去，接受排隊命運。", "en": "Buy tickets; accept queue fate." },
+          "effect": { "money": -450, "sanity": -10, "battery": -35, "locality": 2 },
+          "next": "done"
+        },
+        {
+          "id": "skip",
+          "text": { "cn": "到門口拍照就撤（省錢但遺憾）。", "en": "Photo at the gate and leave (cheap, regretful)." },
+          "effect": { "money": -30, "sanity": -5, "battery": -10, "locality": 1 },
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "迪士尼日結束（或幾乎結束）。", "en": "Disney day ends (or almost)." } }
+  }
+}

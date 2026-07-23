@@ -1,0 +1,36 @@
+{
+  "id": "chengdu_hotpot",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "火鍋", "en": "Hotpot" },
+      "text": { "cn": "『微辣就可以。』辣椒罐比護照厚。", "en": "'Mild is fine.' Chili jar thicker than your passport." },
+      "choices": [
+        {
+          "id": "mild",
+          "text": { "cn": "相信微辣。", "en": "Trust mild." },
+          "effect": { "money": -90, "sanity": -20, "locality": 2 },
+          "addFlags": ["chili_trauma"],
+          "next": "done"
+        },
+        {
+          "id": "no_spice",
+          "text": { "cn": "堅持免辣（有號更好溝通）。", "en": "Insist non-spicy (local number helps)." },
+          "requires": ["has_local_number"],
+          "showIfLocked": true,
+          "lockedHint": { "cn": "國內號更好溝通", "en": "Local number helps" },
+          "effect": { "money": -80, "sanity": 5, "locality": 4 },
+          "next": "done"
+        },
+        {
+          "id": "skip",
+          "text": { "cn": "改吃甜品。", "en": "Switch to dessert." },
+          "effect": { "money": -40, "sanity": 5, "locality": 2 },
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "火鍋日結束。", "en": "Hotpot day ends." } }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "lodging_resolve",
+  "entry": "need_bed",
+  "nodes": {
+    "need_bed": {
+      "id": "need_bed",
+      "title": { "cn": "今晚住哪？", "en": "Where tonight?" },
+      "text": {
+        "cn": "你沒有有效住宿了（沙發只能湊合一晚）。先安排床位，才能繼續點亮景點。房費會在「完成景點／過一天」時自動扣除。",
+        "en": "No valid lodging (couch lasts one night). Arrange a bed before more attractions. Nightly fees auto-deduct when you complete a day."
+      },
+      "choices": [
+        {
+          "id": "book_international",
+          "text": {
+            "cn": "訂國際連鎖（每晚自動扣，護照友好）。",
+            "en": "International hotel (auto nightly fee, passport-friendly)."
+          },
+          "effect": { "sanity": 3, "time": -0.5, "battery": -8, "locality": 2 },
+          "lodgingType": "international",
+          "feedback": {
+            "cn": "登記完成。之後每完成一個景點日，會自動扣今晚房費。",
+            "en": "Checked in. Completing an attraction day will auto-charge tonight's rate."
+          },
+          "next": "lodging_done"
+        },
+        {
+          "id": "book_foreigner_ok",
+          "text": {
+            "cn": "訂可接待外賓的中檔旅店（押金手續麻煩一點）。",
+            "en": "Foreigner-OK mid lodge (deposit friction)."
+          },
+          "effect": { "money": -50, "sanity": -3, "time": -0.8, "battery": -12, "locality": 3 },
+          "lodgingType": "foreigner_ok",
+          "feedback": {
+            "cn": "押金預授權咬了一口。房費仍按天在景點結算時扣除。",
+            "en": "Deposit pre-auth nicks you. Nightly rate still settles after attraction days."
+          },
+          "next": "lodging_done"
+        },
+        {
+          "id": "couch_again",
+          "text": {
+            "cn": "再找一晚沙發（免費一晚，用完又要重來）。",
+            "en": "Couch one more night (free once, then repeat)."
+          },
+          "effect": { "money": -15, "sanity": -5, "time": -0.5, "battery": -15, "locality": 3 },
+          "lodgingType": "couch",
+          "feedback": {
+            "cn": "今晚有沙發。完成下一個景點日後，住宿會再次到期。",
+            "en": "Couch tonight. After the next attraction day, lodging expires again."
+          },
+          "next": "lodging_done"
+        }
+      ]
+    },
+    "lodging_done": {
+      "id": "lodging_done",
+      "end": true,
+      "text": {
+        "cn": "今晚有床了。回到城市地圖，選一個景點點亮吧。",
+        "en": "You have a bed. Back to the city map — light up an attraction."
+      }
+    }
+  }
+}

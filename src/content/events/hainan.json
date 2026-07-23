@@ -1,0 +1,55 @@
+{
+  "id": "hainan",
+  "entry": "attraction_hub",
+  "nodes": {
+    "attraction_hub": {
+      "id": "attraction_hub",
+      "title": { "cn": "海南：海與刺客", "en": "Hainan: Sea & Assassins" },
+      "text": {
+        "cn": "免稅店燈火、海鮮秤、沙灘自拍——熱帶假期的三種主流死法。",
+        "en": "Duty-free lights, seafood scales, beach selfies — three classic tropical deaths."
+      },
+      "choices": [
+        {
+          "id": "duty_free",
+          "text": {
+            "cn": "衝免稅店（預算刺客，耗時看隊伍）。",
+            "en": "Duty-free run (budget assassin; queues vary)."
+          },
+          "effect": { "money": -400, "sanity": -8, "time": -3, "battery": -15, "locality": 2 },
+          "next": "hn_end"
+        },
+        {
+          "id": "seafood_risk",
+          "text": {
+            "cn": "海鮮大排檔：務必問價、看秤。",
+            "en": "Seafood stall: ask prices, watch the scale."
+          },
+          "effect": { "money": -280, "sanity": -18, "time": -2, "battery": -8, "locality": 1 },
+          "feedback": {
+            "cn": "帳單出來時你懷疑自己點了整片南海。",
+            "en": "The bill arrives; you wonder if you ordered the South China Sea."
+          },
+          "next": "hn_end"
+        },
+        {
+          "id": "beach_chill",
+          "text": {
+            "cn": "沙灘發呆 + 椰林大道散步（相對安全）。",
+            "en": "Beach zoning + coconut boulevard walk (relatively safe)."
+          },
+          "effect": { "money": -60, "sanity": 12, "time": -2.5, "battery": -20, "locality": 3 },
+          "next": "hn_end"
+        }
+      ]
+    },
+    "hn_end": {
+      "id": "hn_end",
+      "end": true,
+      "text": {
+        "cn": "陽光很足。你的銀行卡也『很足』地被曬過了。",
+        "en": "The sun is strong. So was the heat on your bank card."
+      }
+    }
+  }
+}

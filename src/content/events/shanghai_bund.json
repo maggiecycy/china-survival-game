@@ -1,0 +1,39 @@
+{
+  "id": "shanghai_bund",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "外灘", "en": "The Bund" },
+      "text": {
+        "cn": "風與天際線。有人舉著相機：『合影！紅包轉你。』",
+        "en": "Wind and skyline. Someone lifts a camera: 'Photo! I'll WeChat-pay you.'"
+      },
+      "choices": [
+        {
+          "id": "night",
+          "text": { "cn": "等到亮燈再拍。", "en": "Wait for the lights." },
+          "effect": { "money": -30, "sanity": 8, "battery": -18, "locality": 3 },
+          "next": "done"
+        },
+        {
+          "id": "day",
+          "text": { "cn": "白天走一圈就走。", "en": "Day walk and leave." },
+          "effect": { "money": -15, "sanity": 5, "battery": -10, "locality": 2 },
+          "next": "done"
+        },
+        {
+          "id": "bund_photo_fee",
+          "text": {
+            "cn": "💰 當『外灘背景板』合照收費（連續三組）。",
+            "en": "💰 Be Bund background — charge three photo groups."
+          },
+          "effect": { "money": 180, "sanity": -10, "battery": -20, "locality": 2 },
+          "addFlags": ["did_photo_hustle"],
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "外灘日結束。", "en": "Bund day ends." } }
+  }
+}

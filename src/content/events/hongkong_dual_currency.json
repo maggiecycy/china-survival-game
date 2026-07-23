@@ -1,0 +1,29 @@
+{
+  "id": "hongkong_dual_currency",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "茶餐廳", "en": "Cha Chaan Teng" },
+      "text": { "cn": "不收人民幣移動支付。八達通？港幣？", "en": "No RMB mobile pay. Octopus? HKD?" },
+      "choices": [
+        {
+          "id": "octopus",
+          "text": { "cn": "用國內號輔助開通交通卡聯動。", "en": "Link transit pay with local number help." },
+          "requires": ["has_local_number"],
+          "showIfLocked": true,
+          "lockedHint": { "cn": "國內號更絲滑", "en": "Local number helps" },
+          "effect": { "money": -30, "sanity": -5, "battery": -10, "locality": 5 },
+          "next": "done"
+        },
+        {
+          "id": "hkd",
+          "text": { "cn": "兌換港幣現金。", "en": "Exchange HKD cash." },
+          "effect": { "money": -50, "sanity": -8, "battery": -5, "locality": 2 },
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "雙幣日結束。", "en": "FX day ends." } }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "id": "shanghai",
+  "entry": "miniprogram",
+  "nodes": {
+    "miniprogram": {
+      "id": "miniprogram",
+      "title": { "cn": "小程序點單地獄", "en": "Mini-Program Order Hell" },
+      "text": {
+        "cn": "你走進一家網紅麵館，店員指著牆上的二維碼：『不收現金，請掃碼點單。』小程序彈出強制授權、定位與通訊錄權限請求……",
+        "en": "At a viral noodle shop, the staff points at a QR code: 'No cash. Scan to order.' The mini-program demands contacts, location, and phone permissions..."
+      },
+      "choices": [
+        {
+          "id": "scan_foreign_card",
+          "text": {
+            "cn": "用已綁定的境外卡直接掃碼支付（有支付能力才能闖關）。",
+            "en": "Pay with your linked foreign card — only works if mobile payment is set up."
+          },
+          "requires": ["foreign_card_linked"],
+          "blocks_if": ["cash_only"],
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "需要 Tutorial 綁定境外卡（且不能是純現金路線）",
+            "en": "Requires foreign card linked in Tutorial (not cash-only)"
+          },
+          "effect": { "money": -45, "sanity": -5, "time": -0.3, "locality": 5 },
+          "addFlags": ["bound_miniprogram"],
+          "feedback": {
+            "cn": "外卡手續費讓你肉痛，但 30 秒內麵就來了。你感到自己稍微融入了一點點。",
+            "en": "The foreign-card fee hurts, but noodles arrive in 30 seconds. You feel slightly more local."
+          },
+          "next": "shanghai_done_smooth"
+        },
+        {
+          "id": "sms_verify_local",
+          "text": {
+            "cn": "用國內手機號接收驗證碼，重新註冊一個能用的賬號。",
+            "en": "Use your Chinese number to receive an SMS code and register properly."
+          },
+          "requires": ["has_local_number"],
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "需要 Tutorial 辦理的國內手機號",
+            "en": "Requires a local Chinese number from Tutorial"
+          },
+          "effect": { "money": -40, "sanity": -8, "time": -0.8, "locality": 8 },
+          "addFlags": ["bound_miniprogram"],
+          "feedback": {
+            "cn": "驗證碼秒到。你罵了兩句隱私條款，但至少吃上了熱麵。",
+            "en": "SMS arrives instantly. You curse the privacy policy, but at least you get hot noodles."
+          },
+          "next": "shanghai_done_smooth"
+        },
+        {
+          "id": "cash_awkward",
+          "text": {
+            "cn": "堅持掏出現金，用蹩腳中文求店員通融（高摩擦路線）。",
+            "en": "Insist on cash and plead with broken Chinese (high-friction route)."
+          },
+          "effect": { "money": -60, "sanity": -20, "time": -1.5, "locality": -5 },
+          "addFlags": ["hungry_embarrassment"],
+          "feedback": {
+            "cn": "店員無奈收下現金後，又花了十分鐘找零。排隊的人開始竊竊私語。你的 San 值在蒸發。",
+            "en": "The cashier reluctantly takes cash and spends 10 minutes making change. People in line start whispering. Your sanity evaporates."
+          },
+          "next": "shanghai_done_rough"
+        },
+        {
+          "id": "walk_away",
+          "text": {
+            "cn": "放棄這家店，去找還收現金的路邊攤。",
+            "en": "Give up and hunt for a cash-friendly street stall."
+          },
+          "effect": { "money": -25, "sanity": -10, "time": -1.0 },
+          "addFlags": ["ate_street_food"],
+          "feedback": {
+            "cn": "你吃到了便宜的煎餅，但肚子對『衛生評分』表示懷疑。",
+            "en": "You get a cheap jianbing — your stomach has questions about the hygiene score."
+          },
+          "next": "shanghai_done_rough"
+        }
+      ]
+    },
+    "shanghai_done_smooth": {
+      "id": "shanghai_done_smooth",
+      "text": {
+        "cn": "吃飽了。上海還很大——你還能擠出半天衝一個刻板印象景點。",
+        "en": "Fed. Shanghai is still huge — you have half a day for one stereotype landmark."
+      },
+      "choices": [
+        {
+          "id": "to_attractions_s",
+          "text": { "cn": "規劃下午行程", "en": "Plan the afternoon" },
+          "effect": { "sanity": 5, "locality": 3 },
+          "next": "sh_attractions"
+        }
+      ]
+    },
+    "shanghai_done_rough": {
+      "id": "shanghai_done_rough",
+      "text": {
+        "cn": "掃碼戰爭暫告一段落。你仍可選一個上海經典去消耗剩餘時間。",
+        "en": "QR wars pause. You can still burn remaining time on a Shanghai classic."
+      },
+      "choices": [
+        {
+          "id": "to_attractions_r",
+          "text": { "cn": "勉強出門走走", "en": "Force yourself outside" },
+          "effect": { "sanity": -5 },
+          "next": "sh_attractions"
+        }
+      ]
+    },
+    "sh_attractions": {
+      "id": "sh_attractions",
+      "title": { "cn": "上海景點選擇", "en": "Shanghai Sight Picks" },
+      "text": {
+        "cn": "外灘夜景、迪士尼排隊帝國，還是武康路拍照——時間完全不一樣。",
+        "en": "Bund night views, Disney queue empire, or Wukang Road photos — totally different clocks."
+      },
+      "choices": [
+        {
+          "id": "the_bund",
+          "text": { "cn": "外灘／陸家嘴看天際線（傍晚更貴電）。", "en": "The Bund / Lujiazui skyline (evenings drain battery)." },
+          "effect": { "money": -40, "sanity": 8, "time": -2, "battery": -25, "locality": 3 },
+          "next": "sh_end"
+        },
+        {
+          "id": "disney",
+          "text": { "cn": "迪士尼：排隊才是主線任務（耗時怪獸）。", "en": "Disney: queuing is the main quest (time monster)." },
+          "effect": { "money": -450, "sanity": -10, "time": -9, "battery": -40, "locality": 2 },
+          "next": "sh_end"
+        },
+        {
+          "id": "wukang",
+          "text": { "cn": "武康路／咖啡：網紅街打卡半日。", "en": "Wukang Road / cafes: influencer half-day." },
+          "effect": { "money": -120, "sanity": 5, "time": -3, "battery": -15, "locality": 3 },
+          "next": "sh_end"
+        }
+      ]
+    },
+    "sh_end": {
+      "id": "sh_end",
+      "end": true,
+      "text": {
+        "cn": "魔都的一天結束。你更懂『掃碼』與『排隊』是同一門課的兩面。",
+        "en": "A Shanghai day ends. Scanning and queuing are two sides of one course."
+      }
+    }
+  }
+}

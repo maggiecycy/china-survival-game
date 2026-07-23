@@ -1,0 +1,33 @@
+{
+  "id": "beijing_roast_duck",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "烤鴨", "en": "Peking Duck" },
+      "text": {
+        "cn": "排隊號碼牌比鴨子還神聖。胃說值得，行程表說危險。",
+        "en": "Queue tickets are sacred. Stomach says worth it; itinerary disagrees."
+      },
+      "choices": [
+        {
+          "id": "queue",
+          "text": { "cn": "排下去，吃到那口皮。", "en": "Queue it out for the skin." },
+          "effect": { "money": -180, "sanity": 12, "battery": -8, "locality": 4 },
+          "next": "done"
+        },
+        {
+          "id": "nearby",
+          "text": { "cn": "換家本地烤鴨店，少排隊。", "en": "Switch to a local duck shop; less queue." },
+          "effect": { "money": -100, "sanity": 8, "battery": -5, "locality": 3 },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": { "cn": "烤鴨日結束。油脂的幸福感很真實。", "en": "Duck day ends. Greasy happiness is real." }
+    }
+  }
+}

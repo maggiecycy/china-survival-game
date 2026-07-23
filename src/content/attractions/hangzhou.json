@@ -1,0 +1,26 @@
+{
+  "cityId": "hangzhou",
+  "attractions": [
+    {
+      "id": "vinegar_fish",
+      "name": { "cn": "西湖醋魚陷阱", "en": "Vinegar Fish Trap" },
+      "coords": { "x": 48, "y": 55 },
+      "desc": { "cn": "導遊餐廳與模糊報價。", "en": "Touristy menus and vague prices." },
+      "graphId": "hangzhou_fish"
+    },
+    {
+      "id": "west_lake",
+      "name": { "cn": "西湖", "en": "West Lake" },
+      "coords": { "x": 42, "y": 48 },
+      "desc": { "cn": "共享單車包圍中的風景。", "en": "Scenery inside a shared-bike siege." },
+      "graphId": "hangzhou_west_lake"
+    },
+    {
+      "id": "longjing",
+      "name": { "cn": "龍井村", "en": "Longjing Village" },
+      "coords": { "x": 35, "y": 65 },
+      "desc": { "cn": "茶葉與爬山半日。", "en": "Tea and a half-day hike." },
+      "graphId": "hangzhou_longjing"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "beijing_great_wall",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "長城", "en": "Great Wall" },
+      "text": {
+        "cn": "大巴搖晃、臺階無窮。有人塞名片：『外模？拍戶外大片，日結。』",
+        "en": "Bus shakes, endless stairs. A card appears: 'Foreign model? Outdoor shoot, paid same day.'"
+      },
+      "choices": [
+        {
+          "id": "climb",
+          "text": { "cn": "往上爬，拍那張必拍角度。", "en": "Climb for the mandatory angle." },
+          "effect": { "money": -180, "sanity": -10, "battery": -22, "locality": 5 },
+          "next": "done"
+        },
+        {
+          "id": "cable",
+          "text": { "cn": "能坐纜車就坐，保住膝蓋。", "en": "Take the cable car; keep your knees." },
+          "effect": { "money": -250, "sanity": -5, "battery": -12, "locality": 3 },
+          "next": "done"
+        },
+        {
+          "id": "model_gig",
+          "text": {
+            "cn": "💰 接模特單：在牆垛上吹風擺姿勢兩小時。",
+            "en": "💰 Take the model gig: pose on battlements for two windy hours."
+          },
+          "effect": { "money": 280, "sanity": -12, "battery": -28, "locality": 3 },
+          "addFlags": ["did_model_gig"],
+          "feedback": {
+            "cn": "日結到賬（或微信轉帳）。你感覺自己像長城周邊的移動道具。",
+            "en": "Same-day pay (or WeChat transfer). You feel like a mobile prop for the Wall."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": { "cn": "長城日結束。", "en": "Wall day ends." }
+    }
+  }
+}

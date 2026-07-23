@@ -1,0 +1,30 @@
+{
+  "id": "shenzhen_face_gate",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "刷臉閘機", "en": "Face Gate" },
+      "text": { "cn": "識別失敗。隊伍變長。", "en": "Recognition fails. Queue grows." },
+      "choices": [
+        {
+          "id": "qr",
+          "text": { "cn": "開乘車碼（需支付）。", "en": "Open transit QR (needs pay)." },
+          "requires": ["foreign_card_linked"],
+          "blocks_if": ["cash_only"],
+          "showIfLocked": true,
+          "lockedHint": { "cn": "需要移動支付", "en": "Needs mobile pay" },
+          "effect": { "money": -5, "sanity": -3, "battery": -10, "locality": 4 },
+          "next": "done"
+        },
+        {
+          "id": "manual",
+          "text": { "cn": "排人工通道。", "en": "Manual lane." },
+          "effect": { "sanity": -12, "battery": -8, "locality": 1 },
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "出站成功。一天結束。", "en": "You exit. Day spent." } }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "modes": [
+    {
+      "id": "hsr",
+      "label": { "cn": "高鐵", "en": "High-Speed Rail" },
+      "desc": { "cn": "快、準、貴一點。站內安檢與實名制是必修。", "en": "Fast and punctual. Station security + real-name tickets are mandatory." },
+      "multiplier": { "money": 1.0, "time": 1.0, "sanity": 1.0, "battery": 1.0 }
+    },
+    {
+      "id": "flight",
+      "label": { "cn": "飛機", "en": "Flight" },
+      "desc": { "cn": "遠程最快，但機場往返吃時間，延誤風險真實存在。", "en": "Fastest for long hops — airport transfers eat time; delays are real." },
+      "multiplier": { "money": 1.6, "time": 0.7, "sanity": 1.2, "battery": 1.3 }
+    },
+    {
+      "id": "bus",
+      "label": { "cn": "長途大巴", "en": "Coach Bus" },
+      "desc": { "cn": "最省錢，腰與 sanity 一起繳稅。", "en": "Cheapest. Your spine and sanity both pay tax." },
+      "multiplier": { "money": 0.45, "time": 1.8, "sanity": 1.6, "battery": 0.8 }
+    },
+    {
+      "id": "sleeper",
+      "label": { "cn": "綠皮/硬臥", "en": "Overnight Sleeper" },
+      "desc": { "cn": "用睡眠換票價。隔天像重生，也像沒睡。", "en": "Trade sleep for fare. Next day feels reborn and unrested." },
+      "multiplier": { "money": 0.55, "time": 2.2, "sanity": 1.4, "battery": 0.5 }
+    }
+  ],
+  "tierBase": {
+    "high": { "money": 280, "time": 3.5, "sanity": -6, "battery": -18 },
+    "medium": { "money": 180, "time": 4.5, "sanity": -8, "battery": -15 },
+    "low": { "money": 120, "time": 5.5, "sanity": -10, "battery": -12 }
+  },
+  "sameRegionFactor": 0.65,
+  "firstDepartureFromBeijing": {
+    "flag": "first_intercity_survived",
+    "graphId": "transit_first_departure"
+  }
+}

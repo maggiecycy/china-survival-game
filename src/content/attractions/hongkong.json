@@ -1,0 +1,23 @@
+{
+  "cityId": "hongkong",
+  "attractions": [
+    {
+      "id": "dual_currency",
+      "name": { "cn": "茶餐廳雙幣", "en": "Cha Chaan Teng FX" },
+      "coords": { "x": 48, "y": 55 },
+      "desc": { "cn": "不收人民幣掃碼。港幣／八達通考驗。", "en": "No RMB scan-pay. HKD / Octopus test." },
+      "graphId": "hongkong_dual_currency"
+    },
+    {
+      "id": "exit_checkpoint",
+      "name": { "cn": "離境口岸", "en": "Departure Checkpoint" },
+      "coords": { "x": 70, "y": 40 },
+      "desc": {
+        "cn": "完成後觸發結局判定。建議先解決支付再來。",
+        "en": "Triggers ending check. Fix payments first if you can."
+      },
+      "graphId": "hongkong_exit",
+      "isExit": true
+    }
+  ]
+}

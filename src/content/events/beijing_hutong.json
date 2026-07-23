@@ -1,0 +1,47 @@
+{
+  "id": "beijing_hutong",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "胡同漫步", "en": "Hutong Wander" },
+      "text": {
+        "cn": "南鑼鼓巷人潮裡，有家長推著小孩過來：『叔叔／阿姨，練兩句英語？』",
+        "en": "In Nanluoguxiang crowds, parents push a kid over: 'Uncle/Auntie, practice English?'"
+      },
+      "choices": [
+        {
+          "id": "snack",
+          "text": { "cn": "買souvenir + 喝杯貴咖啡。", "en": "Souvenir + overpriced coffee." },
+          "effect": { "money": -100, "sanity": 5, "battery": -10, "locality": 3 },
+          "next": "done"
+        },
+        {
+          "id": "quiet_lane",
+          "text": { "cn": "鑽進安靜支巷。", "en": "Slip into quiet lanes." },
+          "effect": { "money": -30, "sanity": 10, "battery": -8, "locality": 5 },
+          "next": "done"
+        },
+        {
+          "id": "english_tip",
+          "text": {
+            "cn": "💰 陪小孩練英語 20 分鐘，熱情家長塞小費。",
+            "en": "💰 20 minutes of English with a kid — enthusiastic parents tip you."
+          },
+          "effect": { "money": 150, "sanity": 5, "battery": -15, "locality": 6 },
+          "addFlags": ["did_english_tip"],
+          "feedback": {
+            "cn": "小孩說了 Hello 和 I love China。你收下小費，良心略微複雜。",
+            "en": "The kid says Hello and I love China. You take the tip with mixed feelings."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": { "cn": "胡同日結束。", "en": "Hutong day ends." }
+    }
+  }
+}

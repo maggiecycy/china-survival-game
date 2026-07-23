@@ -1,0 +1,49 @@
+{
+  "version": "0.4.1",
+  "defaultLanguage": "cn",
+  "defaultVisa": "L",
+  "startCityId": "beijing",
+  "deportationPenalty": {
+    "money": -300,
+    "sanity": -30
+  },
+  "flight": {
+    "arrivalDurationMs": 3000,
+    "cityHopDurationMs": 1500
+  },
+  "day": {
+    "hours": 24,
+    "overnightBatteryRestore": 50,
+    "note": "完成景點=一天；若當天電量沒歸零，住一晚回復 50 電量"
+  },
+  "powerBank": {
+    "cost": 40,
+    "restore": 60,
+    "requires": ["foreign_card_linked"],
+    "blocks_if": ["cash_only"],
+    "minBatteryToOffer": 45
+  },
+  "economy": {
+    "startingMoney": 2800
+  },
+  "lodgingTypes": {
+    "international": {
+      "type": "international",
+      "nightlyCost": 320,
+      "nightsLeft": null,
+      "label": { "cn": "國際連鎖酒店", "en": "International hotel" }
+    },
+    "foreigner_ok": {
+      "type": "foreigner_ok",
+      "nightlyCost": 220,
+      "nightsLeft": null,
+      "label": { "cn": "可接待外賓旅店", "en": "Foreigner-OK lodge" }
+    },
+    "couch": {
+      "type": "couch",
+      "nightlyCost": 0,
+      "nightsLeft": 1,
+      "label": { "cn": "臨時沙發/借住", "en": "Couch / temporary stay" }
+    }
+  }
+}

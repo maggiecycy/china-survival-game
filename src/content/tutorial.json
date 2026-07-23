@@ -1,0 +1,279 @@
+{
+  "tutorialCityId": "beijing",
+  "stages": [
+    {
+      "id": "network_setup",
+      "title": { "cn": "第一關：機場通訊（SIM）", "en": "Stage 1: Airport SIM" },
+      "desc": {
+        "cn": "首都機場落地。免費 Wi-Fi 要國內手機號收驗證碼。你與外界完全失聯，行李轉盤還在轉。",
+        "en": "Landed at Capital Airport. Free Wi-Fi needs a Chinese number for SMS. You are offline while baggage keeps spinning."
+      },
+      "options": [
+        {
+          "id": "buy_local_sim",
+          "text": {
+            "cn": "排隊辦預付卡（護照實名），忍痛買流量。",
+            "en": "Queue for a prepaid SIM (passport real-name). Pay for data."
+          },
+          "cost": { "money": 150, "sanity": -10, "time": 1.5, "battery": -5, "locality": 8 },
+          "effectFlag": "has_local_number",
+          "feedback": {
+            "cn": "花了 150 元和 1.5 小時。你終於有中國號了——後面綁 App 會絲滑很多。",
+            "en": "150 RMB and 1.5 hours later, you have a Chinese number. App binding will be smoother."
+          }
+        },
+        {
+          "id": "roaming_only",
+          "text": {
+            "cn": "拒絕辦卡，靠國際漫遊硬撐（無國內號）。",
+            "en": "Skip the SIM. Survive on international roaming (no local number)."
+          },
+          "cost": { "money": 0, "sanity": -5, "time": 0.5, "battery": -10, "locality": 0 },
+          "effectFlag": "roaming_only",
+          "feedback": {
+            "cn": "省了錢，但之後凡是要簡訊驗證的場景，都會變成噩夢。",
+            "en": "You saved money. Every SMS-verification scene ahead will be a nightmare."
+          }
+        }
+      ]
+    },
+    {
+      "id": "payment_setup",
+      "title": { "cn": "第二關：便利店支付", "en": "Stage 2: Convenience Store Payment" },
+      "desc": {
+        "cn": "肚子空了。便利店貼著：『不收大額外幣，建議掃碼。』你必須立刻決定要不要綁移動支付。",
+        "en": "You're starving. The store sign says: no large foreign cash — scan to pay. Decide on mobile payment now."
+      },
+      "options": [
+        {
+          "id": "bind_foreign_card",
+          "text": {
+            "cn": "下載支付寶/微信，上傳護照綁境外卡。",
+            "en": "Install Alipay/WeChat Pay, upload passport, link a foreign card."
+          },
+          "cost": { "money": 0, "sanity": -20, "time": 1.0, "battery": -15, "locality": 10 },
+          "effectFlag": "foreign_card_linked",
+          "feedback": {
+            "cn": "折騰一小時、護照傳兩次，終於綁上。之後大額可能吃 3% 外卡費。",
+            "en": "One hour and two passport uploads later, it works. Big spends may take a 3% fee."
+          }
+        },
+        {
+          "id": "cash_only",
+          "text": {
+            "cn": "拒絕上傳隱私，堅持人民幣現金硬闖。",
+            "en": "Refuse ID uploads. Survive on RMB cash only."
+          },
+          "cost": { "money": 0, "sanity": -10, "time": 0.5, "battery": -5, "locality": -2 },
+          "effectFlag": "cash_only",
+          "feedback": {
+            "cn": "店員找零找到懷疑人生。你隱約預感到：上海、深圳會更残酷。",
+            "en": "Making change becomes a negotiation. Shanghai and Shenzhen will be crueler."
+          }
+        }
+      ]
+    },
+    {
+      "id": "airport_transfer",
+      "title": { "cn": "第三關：機場到城區", "en": "Stage 3: Airport to City" },
+      "desc": {
+        "cn": "酒店在城區，離機場出奇的遠。夜色漸深，你要選一條能活著抵達的路。",
+        "en": "Your hotel is deep in the city — surprisingly far. Night falls. Pick a way that gets you there alive."
+      },
+      "options": [
+        {
+          "id": "airport_express",
+          "text": {
+            "cn": "坐機場快軌 + 地鐵換乘（便宜，但行李拖到懷疑人生）。",
+            "en": "Airport Express + metro transfers (cheap; luggage will hate you)."
+          },
+          "cost": { "money": 35, "sanity": -15, "time": 1.8, "battery": -20, "locality": 5 },
+          "effectFlag": "took_transit_from_airport",
+          "feedback": {
+            "cn": "行李在閘機卡了兩次。你學會了『先看進出站箭頭』這門北京必修課。",
+            "en": "Luggage jams the gate twice. You learn Beijing's mandatory lesson: watch the entry/exit arrows."
+          }
+        },
+        {
+          "id": "airport_bus",
+          "text": {
+            "cn": "坐機場大巴到市區站點，再步行/打車最後一公里。",
+            "en": "Airport bus to a city stop, then walk/taxi the last mile."
+          },
+          "cost": { "money": 40, "sanity": -10, "time": 2.2, "battery": -10, "locality": 3 },
+          "effectFlag": "took_airport_bus",
+          "feedback": {
+            "cn": "大巴準點，但『市區站』離你訂的酒店還有四站地鐵的心理距離。",
+            "en": "The bus is on time — the 'city stop' is still a mental four metro stops from your hotel."
+          }
+        },
+        {
+          "id": "ride_hailing",
+          "text": {
+            "cn": "網約車/計程車直達（貴、快，看你有沒有號與支付）。",
+            "en": "Ride-hail/taxi direct (pricey, fast — if you have number & payment)."
+          },
+          "cost": { "money": 180, "sanity": -5, "time": 1.0, "battery": -25, "locality": 2 },
+          "effectFlag": "took_taxi_from_airport",
+          "feedback": {
+            "cn": "司機用中文問目的地，你比劃酒店英文名。導航還算聽話，錢包先哭為敬。",
+            "en": "Driver asks in Chinese; you mime the hotel name. Navigation cooperates. Your wallet does not."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hotel_rejection",
+      "title": { "cn": "第四關：便宜酒店拒收", "en": "Stage 4: Budget Hotel Rejection" },
+      "desc": {
+        "cn": "你拖著行李走進評價不錯的經濟型酒店。前台掃一眼護照：『不好意思，我們不能接待境外客人。』——這不是刻板印象，這是政策與系統限制。",
+        "en": "You drag luggage into a well-reviewed budget hotel. Front desk glances at your passport: 'Sorry, we cannot host foreign guests.' Not a stereotype — policy and system limits."
+      },
+      "options": [
+        {
+          "id": "argue_politely",
+          "text": {
+            "cn": "禮貌理論、出示簽證頁，試圖通融。",
+            "en": "Argue politely, show visa page, try to negotiate."
+          },
+          "cost": { "money": 0, "sanity": -15, "time": 0.8, "battery": -10, "locality": 1 },
+          "effectFlag": "hotel_rejected_once",
+          "feedback": {
+            "cn": "前台打開公安登記系統搖頭：外賓字段是灰的。通融失敗，時間與自尊雙雙扣血。",
+            "en": "They open the police registration system — foreigner fields are greyed out. Negotiation fails. Time and dignity take damage."
+          }
+        },
+        {
+          "id": "search_again_outside",
+          "text": {
+            "cn": "立刻在路上用手機重搜『可接待外賓』的酒店。",
+            "en": "Search again on the street for hotels that accept foreigners."
+          },
+          "cost": { "money": 0, "sanity": -12, "time": 0.6, "battery": -20, "locality": 2 },
+          "effectFlag": "hotel_rejected_once",
+          "feedback": {
+            "cn": "篩選條件多打了幾個字，結果貴了一截。你開始理解為什麼攻略反覆提醒『外賓可住』。",
+            "en": "Extra filters appear. Prices jump. You finally get why guides spam 'foreigner-friendly'."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hotel_relocate",
+      "title": { "cn": "第五關：連夜換宿", "en": "Stage 5: Midnight Hotel Hop" },
+      "desc": {
+        "cn": "便宜的走不了。你必須再掏一筆交通費，搬去更貴、但系統允許登記的酒店。凌晨的北京街頭，行李箱輪子特別響。",
+        "en": "Budget is closed to you. Pay more transport and move to a pricier hotel that can register foreigners. Beijing at midnight — suitcase wheels are loud."
+      },
+      "options": [
+        {
+          "id": "international_chain",
+          "text": {
+            "cn": "入住國際連鎖/四星（貴，但護照一掃就過）。",
+            "en": "Check into an international/4-star (expensive; passport scans fine)."
+          },
+          "cost": { "money": 520, "sanity": 5, "time": 1.2, "battery": -15, "locality": 4 },
+          "effectFlag": "staying_international_hotel",
+          "feedback": {
+            "cn": "前台英語流利，登記 3 分鐘結束。你躺上床，第一次覺得『貴有貴的道理』。",
+            "en": "Fluent English at reception; check-in in 3 minutes. In bed, you admit expensive sometimes means possible."
+          }
+        },
+        {
+          "id": "foreigner_ok_boutique",
+          "text": {
+            "cn": "找標明可接待外賓的精品旅店（中等價，可能還要押金糾結）。",
+            "en": "Find a boutique that lists 'foreigners OK' (mid price; deposit drama possible)."
+          },
+          "cost": { "money": 320, "sanity": -5, "time": 1.5, "battery": -20, "locality": 6 },
+          "effectFlag": "staying_foreigner_ok_hotel",
+          "feedback": {
+            "cn": "押金要用移動支付預授權。你終於住下，但對『簡單入住』徹底祛魅。",
+            "en": "Deposit needs mobile pre-auth. You're in — and fully disillusioned about 'simple check-in'."
+          }
+        },
+        {
+          "id": "friend_couch_failsafe",
+          "text": {
+            "cn": "臨時找在北京的網友/同事沙發（省錢，但社交電量歸零）。",
+            "en": "Crash on a Beijing contact's couch (cheap; social battery = 0)."
+          },
+          "cost": { "money": 60, "sanity": -8, "time": 1.0, "battery": -25, "locality": 8 },
+          "effectFlag": "couchsurfing_beijing",
+          "feedback": {
+            "cn": "你欠了一個人情，也學會了北京的夜公車末班時間。",
+            "en": "You owe a favor — and learn Beijing's last-bus timetable the hard way."
+          }
+        }
+      ]
+    },
+    {
+      "id": "beijing_attractions",
+      "title": { "cn": "第六關：北京第一天去哪？", "en": "Stage 6: Beijing Day-One Destination" },
+      "desc": {
+        "cn": "你總算安頓下來。北京很大，時間有限——選一個『今天就去』的目標。每個選擇都很『北京刻板印象』，也都很真實。",
+        "en": "You're settled. Beijing is huge and time is finite — pick today's target. Each option is a stereotype… because it's real."
+      },
+      "options": [
+        {
+          "id": "forbidden_city_day",
+          "text": {
+            "cn": "衝故宮：預約地獄 + 安檢長隊（耗時巨獸）。",
+            "en": "Forbidden City: reservation hell + security lines (time monster)."
+          },
+          "cost": { "money": 60, "sanity": -25, "time": 5.0, "battery": -30, "locality": 6 },
+          "effectFlag": "booked_ticket_official",
+          "feedback": {
+            "cn": "護照格式報錯三次後你進了宮。太和殿很壯觀，腿比精神更先投降。",
+            "en": "Passport format fails thrice, then you're in. The halls are grand; your legs surrender before your mind."
+          }
+        },
+        {
+          "id": "great_wall_day",
+          "text": {
+            "cn": "衝長城（八達嶺/慕田峪）：車程長、人擠、腿軟。",
+            "en": "Great Wall (Badaling/Mutianyu): long ride, crowds, jelly legs."
+          },
+          "cost": { "money": 200, "sanity": -20, "time": 8.0, "battery": -40, "locality": 7 },
+          "effectFlag": "climbed_great_wall",
+          "feedback": {
+            "cn": "『不到長城非好漢』——你成為好漢的同時，也成為了防曬與瓶裝水的奴隸。",
+            "en": "'You're not a hero until the Wall' — you become a hero and a slave to sunscreen and bottled water."
+          }
+        },
+        {
+          "id": "hutong_day",
+          "text": {
+            "cn": "南鑼鼓巷/什剎海：網紅街 + 租金傳説 + 咖啡。",
+            "en": "Nanluoguxiang / Shichahai: influencer streets, rent myths, coffee."
+          },
+          "cost": { "money": 120, "sanity": -8, "time": 3.0, "battery": -15, "locality": 5 },
+          "effectFlag": "hutong_wandered",
+          "feedback": {
+            "cn": "你買了一個可能在別處更便宜的souvenir，但胡同光影確實好看。",
+            "en": "You buy a souvenir that is probably cheaper elsewhere — the hutong light is still worth it."
+          }
+        },
+        {
+          "id": "temple_heaven_day",
+          "text": {
+            "cn": "天壇：廣場空曠、太極大爺、相對『可呼吸』。",
+            "en": "Temple of Heaven: open plazas, tai-chi uncles, relatively breathable."
+          },
+          "cost": { "money": 30, "sanity": 5, "time": 2.5, "battery": -10, "locality": 4 },
+          "effectFlag": "visited_temple_heaven",
+          "feedback": {
+            "cn": "你站在圜丘上發呆。北京不一定總是預約戰爭——有時只是風很大。",
+            "en": "You zone out on the Circular Mound. Beijing isn't always reservation war — sometimes it's just windy."
+          }
+        }
+      ]
+    }
+  ],
+  "completionReward": {
+    "unlockWorldMap": true,
+    "sanityBonus": 8,
+    "localityBonus": 5,
+    "logMessage": "新手教程完成。你進入北京景點地圖：每個景點是獨立一天；沙發客需先重新安排住宿。"
+  }
+}

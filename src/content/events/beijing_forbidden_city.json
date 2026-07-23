@@ -1,0 +1,59 @@
+{
+  "id": "beijing_forbidden_city",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "故宮", "en": "Forbidden City" },
+      "text": {
+        "cn": "預約頁又在報錯，安檢隊伍像沒有盡頭。有人盯著你的臉：外國面孔在這裡是稀缺資源。",
+        "en": "Booking glitches, endless security. Someone stares at your face: foreign faces are a scarce resource here."
+      },
+      "choices": [
+        {
+          "id": "endure",
+          "text": { "cn": "硬著頭皮進宮逛完。", "en": "Endure and finish the visit." },
+          "effect": { "money": -60, "sanity": -12, "battery": -15, "locality": 4 },
+          "requires": ["booked_ticket_official"],
+          "showIfLocked": true,
+          "lockedHint": { "cn": "有官方預約會更順", "en": "Official booking helps" },
+          "next": "done"
+        },
+        {
+          "id": "scalper_gate",
+          "text": { "cn": "現場找渠道／黃牛補救。", "en": "Fix it on-site via scalper channels." },
+          "effect": { "money": -180, "sanity": -10, "battery": -12, "locality": 1 },
+          "next": "done"
+        },
+        {
+          "id": "photo_hustle",
+          "text": {
+            "cn": "💰 被遊客拉去合照，每人收費（奇葩但真實）。",
+            "en": "💰 Tourists drag you into photos — charge per shot (weird but real)."
+          },
+          "effect": { "money": 120, "sanity": -8, "battery": -18, "locality": 2 },
+          "addFlags": ["did_photo_hustle"],
+          "feedback": {
+            "cn": "你笑了二十次，錢包鼓了一點，臉部肌肉抽筋。",
+            "en": "You smiled twenty times. Wallet up; cheek muscles cramped."
+          },
+          "next": "done"
+        },
+        {
+          "id": "give_up_photo",
+          "text": { "cn": "進不去就在筒子河假裝打卡。", "en": "Can't enter — fake check-in by the moat." },
+          "effect": { "money": -10, "sanity": -6, "battery": -8, "locality": 1 },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "故宮日結束。若電量仍>0，過夜會自動回充。",
+        "en": "Forbidden City day ends. If battery > 0, overnight charge applies."
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "xian_muslim_quarter",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": { "cn": "回民街", "en": "Muslim Quarter" },
+      "text": {
+        "cn": "肉夾饃香氣開戰。有家長想讓孩子『用英語點餐』，並堅持給你小費。",
+        "en": "Rou jia mo aroma war. Parents want kids to 'order in English' — and insist on tipping you."
+      },
+      "choices": [
+        {
+          "id": "eat",
+          "text": { "cn": "排熱門攤自己吃。", "en": "Queue the famous stall for yourself." },
+          "effect": { "money": -70, "sanity": 10, "battery": -8, "locality": 4 },
+          "next": "done"
+        },
+        {
+          "id": "english_order_tip",
+          "text": {
+            "cn": "💰 教小孩用英語點兩家攤，收『口語小費』。",
+            "en": "💰 Coach kids to order in English at two stalls — collect speaking tips."
+          },
+          "effect": { "money": 130, "sanity": 8, "battery": -12, "locality": 5 },
+          "addFlags": ["did_english_tip"],
+          "next": "done"
+        }
+      ]
+    },
+    "done": { "id": "done", "end": true, "text": { "cn": "回民街日結束。", "en": "Muslim Quarter day ends." } }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "chongqing",
+  "entry": "gps_hell",
+  "nodes": {
+    "gps_hell": {
+      "id": "gps_hell",
+      "title": { "cn": "重慶：導航已死", "en": "Chongqing: GPS is Dead" },
+      "text": {
+        "cn": "App 說『直行 50 米』。你走進一棟樓的 8 樓，推門出去又是馬路。輕軌從樓裡穿過——歡迎來到 3D 城市。",
+        "en": "The app says 'straight 50m'. You enter floor 8 of a building and exit onto another street. A monorail pierces a tower — welcome to 3D city."
+      },
+      "choices": [
+        {
+          "id": "climb_stairs",
+          "text": {
+            "cn": "放棄電梯幻想，用雙腿征服洪崖洞附近台階。",
+            "en": "Forget elevators; conquer stairs near Hongyadong."
+          },
+          "effect": { "money": -40, "sanity": -18, "time": -2.5, "battery": -20, "locality": 4 },
+          "next": "cq_food"
+        },
+        {
+          "id": "ask_local",
+          "text": {
+            "cn": "抓一個路人用翻譯 App 問路（耗電）。",
+            "en": "Stop a local and translate directions (battery drain)."
+          },
+          "effect": { "sanity": -5, "time": -1, "battery": -25, "locality": 6 },
+          "requires": ["has_local_number"],
+          "showIfLocked": true,
+          "lockedHint": { "cn": "翻譯/地圖登錄更吃國內號", "en": "Maps/translate login prefer a local number" },
+          "next": "cq_food"
+        },
+        {
+          "id": "taxi_up",
+          "text": {
+            "cn": "直接叫車『送我到平地』。",
+            "en": "Ride-hail with 'take me to flat ground'."
+          },
+          "effect": { "money": -55, "sanity": -3, "time": -0.8, "battery": -15 },
+          "next": "cq_food"
+        }
+      ]
+    },
+    "cq_food": {
+      "id": "cq_food",
+      "title": { "cn": "宵夜選擇", "en": "Night Snack Choice" },
+      "text": {
+        "cn": "腿軟之後，路邊冒菜與火鍋的香氣開始攻擊理性。",
+        "en": "Legs jelly. Roadside maocai and hotpot aromas attack your rationality."
+      },
+      "choices": [
+        {
+          "id": "hotpot_brave",
+          "text": { "cn": "來一頓重慶火鍋（接受明天腸胃會議）。", "en": "Chongqing hotpot (accept tomorrow's gut meeting)." },
+          "effect": { "money": -100, "sanity": -10, "time": -1.5, "locality": 5 },
+          "next": "cq_end"
+        },
+        {
+          "id": "light_noodles",
+          "text": { "cn": "小麵解決，保留戰鬥力。", "en": "Xiaomian noodles; keep HP." },
+          "effect": { "money": -25, "sanity": 5, "time": -0.5, "locality": 3 },
+          "next": "cq_end"
+        }
+      ]
+    },
+    "cq_end": {
+      "id": "cq_end",
+      "end": true,
+      "text": {
+        "cn": "你學會了：在重慶，『對面』可能在上一層樓。",
+        "en": "Lesson learned: in Chongqing, 'across the street' may be one floor up."
+      }
+    }
+  }
+}
