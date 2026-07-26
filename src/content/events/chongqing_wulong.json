@@ -1,0 +1,69 @@
+{
+  "id": "chongqing_wulong",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "武隆天生三桥",
+        "en": "Wulong Bridges"
+      },
+      "text": {
+        "cn": "一日游车程不短。桥与天坑重新定义「大」。护照人工核验又在门口等你。",
+        "en": "Day-trip drive is real. Bridges redefine \"big\". Passport manual check waits again."
+      },
+      "choices": [
+        {
+          "id": "tour",
+          "text": {
+            "cn": "跟团走完核心景观。",
+            "en": "Tour the core sights."
+          },
+          "effect": {
+            "money": -280,
+            "sanity": 7,
+            "battery": -22,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "photo",
+          "text": {
+            "cn": "狂拍天坑，电量先死。",
+            "en": "Shoot sinkholes until battery dies."
+          },
+          "effect": {
+            "money": -260,
+            "sanity": 0,
+            "battery": -30,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "long_day",
+          "text": {
+            "cn": "车程 + 排队把人榨干。",
+            "en": "Drive + queues squeeze you dry."
+          },
+          "effect": {
+            "money": -300,
+            "sanity": -14,
+            "battery": -28,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "武隆天生三桥日結束。",
+        "en": "Wulong Bridges day ends."
+      }
+    }
+  }
+}

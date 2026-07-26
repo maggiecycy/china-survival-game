@@ -1,0 +1,69 @@
+{
+  "id": "hongkong_ocean_park",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "海洋公园",
+        "en": "Ocean Park"
+      },
+      "text": {
+        "cn": "缆车与海洋馆。山上风大，队列也长。",
+        "en": "Cable and aquarium. Windy ridges; long lines."
+      },
+      "choices": [
+        {
+          "id": "aqua",
+          "text": {
+            "cn": "看海洋生物展馆。",
+            "en": "Aquarium halls."
+          },
+          "effect": {
+            "money": -420,
+            "sanity": 7,
+            "battery": -16,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "cable",
+          "text": {
+            "cn": "坐缆车看海。",
+            "en": "Cable car sea views."
+          },
+          "effect": {
+            "money": -400,
+            "sanity": 12,
+            "battery": -14,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "queue",
+          "text": {
+            "cn": "热门项目排队耗尽耐心。",
+            "en": "Hot ride queue melts patience."
+          },
+          "effect": {
+            "money": -410,
+            "sanity": -14,
+            "battery": -22,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "海洋公园日結束。",
+        "en": "Ocean Park day ends."
+      }
+    }
+  }
+}

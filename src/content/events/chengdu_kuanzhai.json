@@ -1,0 +1,69 @@
+{
+  "id": "chengdu_kuanzhai",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "宽窄巷子",
+        "en": "Kuanzhai Alley"
+      },
+      "text": {
+        "cn": " Narrow and Wide alleys。茶馆竹椅，小吃甜辣并行。有人大爷招呼你坐下。",
+        "en": "Teahouse bamboo chairs; sweet-spicy snacks. An uncle waves you to sit."
+      },
+      "choices": [
+        {
+          "id": "tea",
+          "text": {
+            "cn": "坐茶馆慢喝盖碗茶。",
+            "en": "Slow covered-bowl tea."
+          },
+          "effect": {
+            "money": -60,
+            "sanity": 12,
+            "battery": -8,
+            "locality": 6
+          },
+          "next": "done"
+        },
+        {
+          "id": "snacks",
+          "text": {
+            "cn": "一路吃小吃打卡。",
+            "en": "Snack crawl check-ins."
+          },
+          "effect": {
+            "money": -150,
+            "sanity": 7,
+            "battery": -12,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "pushy",
+          "text": {
+            "cn": "被拉客进店，离开时 Sanity 受损。",
+            "en": "Hard sell shops; sanity tax on exit."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": -14,
+            "battery": -14,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "宽窄巷子日結束。",
+        "en": "Kuanzhai Alley day ends."
+      }
+    }
+  }
+}

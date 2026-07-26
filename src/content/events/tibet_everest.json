@@ -1,0 +1,75 @@
+{
+  "id": "tibet_everest",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "珠峰大本营",
+        "en": "Everest Base Camp"
+      },
+      "text": {
+        "cn": "路途极长。氧气、睡眠、耐心同时被考验。这不是轻松打卡。",
+        "en": "Extremely long road. Oxygen, sleep, patience all tested. Not a casual pin."
+      },
+      "choices": [
+        {
+          "id": "prepared",
+          "text": {
+            "cn": "有氧气与慢节奏，抵达观景。",
+            "en": "Oxygen + slow pace; reach viewpoint."
+          },
+          "effect": {
+            "money": -480,
+            "sanity": 7,
+            "battery": -28,
+            "locality": 5
+          },
+          "addFlags": [
+            "bought_oxygen"
+          ],
+          "next": "done"
+        },
+        {
+          "id": "push",
+          "text": {
+            "cn": "硬冲，高反加重。",
+            "en": "Push hard; altitude worsens."
+          },
+          "effect": {
+            "money": -400,
+            "sanity": -25,
+            "battery": -40,
+            "locality": 2
+          },
+          "addFlags": [
+            "altitude_sick"
+          ],
+          "next": "done"
+        },
+        {
+          "id": "turnback",
+          "text": {
+            "cn": "中途身体报警，折返。",
+            "en": "Body alarms; turn back."
+          },
+          "effect": {
+            "money": -300,
+            "sanity": -14,
+            "battery": -22,
+            "locality": 2
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "珠峰大本营日結束。",
+        "en": "Everest Base Camp day ends."
+      }
+    }
+  }
+}

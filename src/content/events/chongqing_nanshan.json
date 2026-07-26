@@ -1,0 +1,69 @@
+{
+  "id": "chongqing_nanshan",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "南山一棵树",
+        "en": "Nanshan One Tree"
+      },
+      "text": {
+        "cn": "夜景灯海。有人递分装酒，有人抽烟。风很大。",
+        "en": "Night light ocean. Someone offers pours; someone smokes. Wind heavy."
+      },
+      "choices": [
+        {
+          "id": "view",
+          "text": {
+            "cn": "看夜景发呆，少说话。",
+            "en": "Zone out on the view."
+          },
+          "effect": {
+            "money": -50,
+            "sanity": 12,
+            "battery": -12,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "toast",
+          "text": {
+            "cn": "跟游客碰杯（适量）。",
+            "en": "Toast with tourists (moderate)."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 7,
+            "battery": -14,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "smoke",
+          "text": {
+            "cn": "烟味太重，提前下山。",
+            "en": "Smoke too thick; descend early."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": -14,
+            "battery": -10,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "南山一棵树日結束。",
+        "en": "Nanshan One Tree day ends."
+      }
+    }
+  }
+}

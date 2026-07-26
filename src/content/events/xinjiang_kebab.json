@@ -1,0 +1,72 @@
+{
+  "id": "xinjiang_kebab",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "烤羊肉串",
+        "en": "Lamb Skewers"
+      },
+      "text": {
+        "cn": "串香直击灵魂。支付与 this/that 语言现场课可能并行。",
+        "en": "Skewers hit the soul. Payment and this/that linguistics may co-star."
+      },
+      "choices": [
+        {
+          "id": "feast",
+          "text": {
+            "cn": "大口吃串，心情回血。",
+            "en": "Feast; mood restore."
+          },
+          "effect": {
+            "money": -90,
+            "sanity": 12,
+            "battery": -8,
+            "locality": 5
+          },
+          "next": "done"
+        },
+        {
+          "id": "point",
+          "text": {
+            "cn": "手指点菜避开发音陷阱。",
+            "en": "Point-menu; dodge phonetics."
+          },
+          "effect": {
+            "money": -70,
+            "sanity": 7,
+            "battery": -8,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "card_fail",
+          "text": {
+            "cn": "卡失灵，现金换微信才吃上。",
+            "en": "Card fail; cash→WeChat then eat."
+          },
+          "effect": {
+            "money": -100,
+            "sanity": -5,
+            "battery": -12,
+            "locality": 6
+          },
+          "addFlags": [
+            "got_wallet_topup"
+          ],
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "烤羊肉串日結束。",
+        "en": "Lamb Skewers day ends."
+      }
+    }
+  }
+}

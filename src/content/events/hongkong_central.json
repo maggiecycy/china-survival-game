@@ -1,0 +1,69 @@
+{
+  "id": "hongkong_central",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "中环",
+        "en": "Central"
+      },
+      "text": {
+        "cn": "电梯大楼与中环吊车。国际化手感短暂回血。",
+        "en": "Tower lifts and Mid-Levels escalator. International feel restores you."
+      },
+      "choices": [
+        {
+          "id": "walk",
+          "text": {
+            "cn": "中环步行系统探索。",
+            "en": "Explore walkway system."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": 12,
+            "battery": -12,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "coffee",
+          "text": {
+            "cn": "咖啡店坐着回血。",
+            "en": "Café sanity restore."
+          },
+          "effect": {
+            "money": -90,
+            "sanity": 12,
+            "battery": 5,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "rush",
+          "text": {
+            "cn": "上班潮被卷着走。",
+            "en": "Swept by commute rush."
+          },
+          "effect": {
+            "money": -30,
+            "sanity": -5,
+            "battery": -14,
+            "locality": 2
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "中环日結束。",
+        "en": "Central day ends."
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "tibet_namtso",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "纳木错",
+        "en": "Namtso"
+      },
+      "text": {
+        "cn": "湖蓝得不真实。海拔更高——买氧气还是硬扛？",
+        "en": "Unreal blue lake. Higher still — oxygen or tough it out?"
+      },
+      "choices": [
+        {
+          "id": "oxygen",
+          "text": {
+            "cn": "带氧气慢看湖。",
+            "en": "Oxygen + slow lake view."
+          },
+          "effect": {
+            "money": -220,
+            "sanity": 12,
+            "battery": -18,
+            "locality": 4
+          },
+          "addFlags": [
+            "bought_oxygen"
+          ],
+          "next": "done"
+        },
+        {
+          "id": "tough",
+          "text": {
+            "cn": "硬扛拍照，留下不适。",
+            "en": "Tough photos; keep sickness."
+          },
+          "effect": {
+            "money": -180,
+            "sanity": -25,
+            "battery": -30,
+            "locality": 2
+          },
+          "addFlags": [
+            "altitude_sick"
+          ],
+          "next": "done"
+        },
+        {
+          "id": "skip_shore",
+          "text": {
+            "cn": "只在远处观景台停留。",
+            "en": "Stay at far viewpoint only."
+          },
+          "effect": {
+            "money": -160,
+            "sanity": 7,
+            "battery": -14,
+            "locality": 2
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "纳木错日結束。",
+        "en": "Namtso day ends."
+      }
+    }
+  }
+}

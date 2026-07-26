@@ -1,0 +1,69 @@
+{
+  "id": "shanghai_yuyuan",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "豫园",
+        "en": "Yuyuan Garden"
+      },
+      "text": {
+        "cn": "园林很精致，人潮更精致地堵住每一条路。小笼包蒸汽像迷雾。",
+        "en": "Delicate garden; denser crowds. Xiaolongbao steam like fog."
+      },
+      "choices": [
+        {
+          "id": "garden",
+          "text": {
+            "cn": "慢慢走园林，少买东西。",
+            "en": "Slow garden walk; buy little."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 7,
+            "battery": -12,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "bao",
+          "text": {
+            "cn": "排队买小笼包当仪式。",
+            "en": "Queue for xiaolongbao as ritual."
+          },
+          "effect": {
+            "money": -100,
+            "sanity": 7,
+            "battery": -16,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "crowd",
+          "text": {
+            "cn": "高峰挤到只剩自拍杆。",
+            "en": "Peak crush of selfie sticks."
+          },
+          "effect": {
+            "money": -90,
+            "sanity": -14,
+            "battery": -18,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "豫园日結束。",
+        "en": "Yuyuan Garden day ends."
+      }
+    }
+  }
+}

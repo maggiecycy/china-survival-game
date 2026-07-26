@@ -1,0 +1,72 @@
+{
+  "id": "xinjiang_duku",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "独库公路",
+        "en": "Duku Highway"
+      },
+      "text": {
+        "cn": "独库不是景点，是移动的辽阔。抽烟大巴与中文数字后四位可能同时出现。",
+        "en": "Duku isn't a pin — it's moving vastness. Smoky buses and Chinese digit checks may co-occur."
+      },
+      "choices": [
+        {
+          "id": "scenic",
+          "text": {
+            "cn": "分段走景观公路，接受漫长。",
+            "en": "Scenic segments; accept length."
+          },
+          "effect": {
+            "money": -350,
+            "sanity": 7,
+            "battery": -30,
+            "locality": 5
+          },
+          "next": "done"
+        },
+        {
+          "id": "private",
+          "text": {
+            "cn": "包车减少摩擦。",
+            "en": "Private hire reduces friction."
+          },
+          "effect": {
+            "money": -680,
+            "sanity": 12,
+            "battery": -18,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "bus_smoke",
+          "text": {
+            "cn": "大巴烟味 + 后四位沟通失败。",
+            "en": "Bus smoke + digit fail."
+          },
+          "effect": {
+            "money": -280,
+            "sanity": -25,
+            "battery": -28,
+            "locality": 2
+          },
+          "addFlags": [
+            "failed_chinese_digits"
+          ],
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "独库公路日結束。",
+        "en": "Duku Highway day ends."
+      }
+    }
+  }
+}

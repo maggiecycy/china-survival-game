@@ -2,25 +2,116 @@
   "cityId": "hangzhou",
   "attractions": [
     {
-      "id": "vinegar_fish",
-      "name": { "cn": "西湖醋魚陷阱", "en": "Vinegar Fish Trap" },
-      "coords": { "x": 48, "y": 55 },
-      "desc": { "cn": "導遊餐廳與模糊報價。", "en": "Touristy menus and vague prices." },
-      "graphId": "hangzhou_fish"
-    },
-    {
       "id": "west_lake",
-      "name": { "cn": "西湖", "en": "West Lake" },
-      "coords": { "x": 42, "y": 48 },
-      "desc": { "cn": "共享單車包圍中的風景。", "en": "Scenery inside a shared-bike siege." },
+      "name": {
+        "cn": "西湖",
+        "en": "West Lake"
+      },
+      "coords": {
+        "x": 48,
+        "y": 52
+      },
+      "desc": {
+        "cn": "游船与漫步。",
+        "en": "Boat and stroll."
+      },
       "graphId": "hangzhou_west_lake"
     },
     {
+      "id": "lingyin",
+      "name": {
+        "cn": "灵隐寺",
+        "en": "Lingyin Temple"
+      },
+      "coords": {
+        "x": 32,
+        "y": 40
+      },
+      "desc": {
+        "cn": "寺庙香火与人潮。",
+        "en": "Temple incense and crowds."
+      },
+      "graphId": "hangzhou_lingyin"
+    },
+    {
       "id": "longjing",
-      "name": { "cn": "龍井村", "en": "Longjing Village" },
-      "coords": { "x": 35, "y": 65 },
-      "desc": { "cn": "茶葉與爬山半日。", "en": "Tea and a half-day hike." },
+      "name": {
+        "cn": "龙井村",
+        "en": "Longjing Village"
+      },
+      "coords": {
+        "x": 28,
+        "y": 62
+      },
+      "desc": {
+        "cn": "采茶与茶馆。",
+        "en": "Tea picking and teahouses."
+      },
       "graphId": "hangzhou_longjing"
+    },
+    {
+      "id": "xixi",
+      "name": {
+        "cn": "西溪湿地",
+        "en": "Xixi Wetland"
+      },
+      "coords": {
+        "x": 30,
+        "y": 48
+      },
+      "desc": {
+        "cn": "湿地慢行。",
+        "en": "Wetland slow walk."
+      },
+      "graphId": "hangzhou_xixi"
+    },
+    {
+      "id": "songcheng",
+      "name": {
+        "cn": "宋城",
+        "en": "Songcheng"
+      },
+      "coords": {
+        "x": 55,
+        "y": 70
+      },
+      "desc": {
+        "cn": "演出主题园。",
+        "en": "Show theme park."
+      },
+      "graphId": "hangzhou_songcheng"
+    },
+    {
+      "id": "hefang",
+      "name": {
+        "cn": "河坊街",
+        "en": "Hefang Street"
+      },
+      "coords": {
+        "x": 52,
+        "y": 58
+      },
+      "desc": {
+        "cn": "小吃街与醋鱼风险。",
+        "en": "Snack street and vinegar-fish risk."
+      },
+      "graphId": "hangzhou_hefang"
+    },
+    {
+      "id": "qianjiang",
+      "name": {
+        "cn": "钱江新城",
+        "en": "Qianjiang New City"
+      },
+      "coords": {
+        "x": 70,
+        "y": 45
+      },
+      "desc": {
+        "cn": "夜景天际线。",
+        "en": "Skyline night view."
+      },
+      "graphId": "hangzhou_qianjiang"
     }
   ]
 }

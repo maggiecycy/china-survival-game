@@ -53,12 +53,14 @@ export function needsLodging(player) {
 /**
  * 完成景點 = 過一天
  * - 扣時間 + 房費
- * - 若當天電量尚未歸零（撐過事件），過夜回復 overnightBatteryRestore
+ * - 若當天電量尚未歸零，過夜回復 overnightBatteryRestore
+ * - 按住宿類型回復 overnightSanityByLodging（國際酒店 > 外賓旅店 > 沙發）
  */
 export function settleAttractionDay(player) {
   const hours = gameConfig.day?.hours ?? 24
   const nightly = player.lodging?.nightlyCost ?? 0
   const restore = gameConfig.day?.overnightBatteryRestore ?? 50
+  const sanityByLodging = gameConfig.day?.overnightSanityByLodging || {}
   const survivedDay = (player.battery ?? 0) > 0
 
   const effect = {
@@ -74,6 +76,17 @@ export function settleAttractionDay(player) {
     batteryRestored = player.battery - before
   }
 
+  let sanityRestored = 0
+  if (survivedDay) {
+    const lodgingType = player.lodging?.type
+    const sanityGain = lodgingType != null ? (sanityByLodging[lodgingType] ?? 0) : 0
+    if (sanityGain) {
+      const before = player.sanity ?? 0
+      player.sanity = Math.min(100, before + sanityGain)
+      sanityRestored = player.sanity - before
+    }
+  }
+
   let lodgingExpired = false
   if (player.lodging && player.lodging.nightsLeft != null) {
     player.lodging.nightsLeft -= 1
@@ -84,7 +97,15 @@ export function settleAttractionDay(player) {
   }
 
   clampStats(player)
-  return { effect, lodgingExpired, nightly, hours, batteryRestored, survivedDay }
+  return {
+    effect,
+    lodgingExpired,
+    nightly,
+    hours,
+    batteryRestored,
+    sanityRestored,
+    survivedDay,
+  }
 }
 
 export function applyLodgingFromChoice(player, choice) {

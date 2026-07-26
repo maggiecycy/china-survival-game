@@ -1,0 +1,89 @@
+{
+  "id": "nanjing_sun_yat_sen",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "中山陵台阶",
+        "en": "Mausoleum Stairs"
+      },
+      "text": {
+        "cn": "392 级台阶。队伍里有人一直回头看你。翻译 App 把「博爱坊」念成奇怪英文。人工核验护照会多花时间。",
+        "en": "392 steps. Someone keeps glancing back at you. Translate apps butcher the gate name. Passport means manual check — budget more time."
+      },
+      "choices": [
+        {
+          "id": "climb_stare",
+          "text": {
+            "cn": "硬爬上去，假装不在意注视。",
+            "en": "Climb up; pretend the stares are wind."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": -12,
+            "battery": -22,
+            "locality": 3
+          },
+          "feedback": {
+            "cn": "登顶了。你的小腿与社恐同时抽筋。",
+            "en": "Summit. Calves and social anxiety both cramp."
+          },
+          "next": "done"
+        },
+        {
+          "id": "friendly_hello",
+          "text": {
+            "cn": "友好搭话：「Hello, beautiful China!」换微笑合影。",
+            "en": "Friendly hello — smile, photo, small talk."
+          },
+          "effect": {
+            "money": -20,
+            "sanity": 6,
+            "battery": -18,
+            "locality": 5
+          },
+          "requiresStats": {
+            "sanityGte": 50
+          },
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "Sanity 太低，搭话会结巴。",
+            "en": "Sanity too low to small-talk."
+          },
+          "feedback": {
+            "cn": "对方说 welcome。注视变成合影，反而轻松一点。",
+            "en": "They say welcome. Stares become photos — lighter somehow."
+          },
+          "next": "done"
+        },
+        {
+          "id": "escape",
+          "text": {
+            "cn": "社恐逃跑：只拍门口就打车回酒店。",
+            "en": "Social-anxiety escape: gate photo, taxi back."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 2,
+            "battery": -10,
+            "locality": 1
+          },
+          "feedback": {
+            "cn": "你保住了精神值，错过了台阶成就。",
+            "en": "Sanity saved; stair achievement missed."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "中山陵日结束。",
+        "en": "Mausoleum day ends."
+      }
+    }
+  }
+}

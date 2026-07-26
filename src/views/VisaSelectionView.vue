@@ -81,7 +81,9 @@ const visaOrder = ['144', 'Visa-Free', 'L']
                   ✅ {{ language === 'en' ? 'Eligible for this entry type.' : '符合資格！' }}
                 </span>
                 <span v-else class="text-red-500">
-                  ❌ {{ language === 'en' ? 'Not found/Not eligible. (Double check spelling)' : '未找到或不符合此免簽資格。（請檢查英文拼寫）' }}
+                  ❌ {{ language === 'en'
+                    ? 'Not eligible. Match must be the full English name (case-insensitive), e.g. France — not "f".'
+                    : '不符合。請輸入完整英文國名（大小寫不敏感），例如 France，不能只打「f」。' }}
                 </span>
               </template>
             </div>
@@ -89,26 +91,33 @@ const visaOrder = ['144', 'Visa-Free', 'L']
 
           <div>
             <p class="text-[10px] text-stone-400 font-bold uppercase tracking-wider mb-1">
-              {{ language === 'en' ? 'Eligible Countries' : '適用國家' }}:
+              {{ language === 'en' ? 'Eligible Countries (full list)' : '適用國家（完整列表）' }}:
+              <span v-if="!visas[visaId].allCountries" class="font-normal normal-case tracking-normal text-stone-400">
+                {{ visas[visaId].list.length }}
+                {{ language === 'en' ? 'countries — type the full English name' : '個國家 — 請輸入完整英文國名' }}
+              </span>
             </p>
             <div v-if="visas[visaId].allCountries">
               <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded">
                 {{ language === 'en' ? 'Global / All Passports' : '全球所有護照通用' }}
               </span>
             </div>
-            <div v-else class="flex flex-wrap gap-1">
+            <div
+              v-else
+              class="flex flex-wrap gap-1 max-h-40 overflow-y-auto rounded-lg border border-stone-200/80 bg-white/70 p-2"
+            >
               <span
-                v-for="c in visas[visaId].list.slice(0, visas[visaId].eligibleCountHint ? 10 : undefined)"
+                v-for="c in visas[visaId].list"
                 :key="c"
-                class="bg-stone-200/60 text-stone-600 text-[10px] px-2 py-0.5 rounded-md"
+                :class="[
+                  'text-[10px] px-2 py-0.5 rounded-md',
+                  countrySearchQuery.trim()
+                    && c.toLowerCase() === countrySearchQuery.trim().toLowerCase()
+                    ? 'bg-green-200 text-green-900 font-bold ring-1 ring-green-500'
+                    : 'bg-stone-200/60 text-stone-600'
+                ]"
               >
                 {{ c }}
-              </span>
-              <span
-                v-if="visas[visaId].eligibleCountHint"
-                class="text-stone-400 text-[10px] px-1 py-0.5"
-              >
-                ...and {{ visas[visaId].eligibleCountHint - 10 }} more
               </span>
             </div>
           </div>

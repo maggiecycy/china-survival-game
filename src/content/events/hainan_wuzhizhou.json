@@ -1,0 +1,85 @@
+{
+  "id": "hainan_wuzhizhou",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "蜈支洲船班",
+        "en": "Wuzhizhou Ferry"
+      },
+      "text": {
+        "cn": "船班建议提前预约。现场余票看运气。潜水店要扫码填健康声明——外网验证码收不到。",
+        "en": "Ferries prefer advance booking. Walk-up is luck. Dive shop wants QR health forms — SMS codes may not arrive on roaming."
+      },
+      "choices": [
+        {
+          "id": "booked",
+          "text": {
+            "cn": "有号约到早班船 + 浮潜。",
+            "en": "Local number booked morning ferry + snorkel."
+          },
+          "requires": [
+            "has_local_number"
+          ],
+          "showIfLocked": true,
+          "effect": {
+            "money": -380,
+            "sanity": 8,
+            "battery": -20,
+            "locality": 5
+          },
+          "feedback": {
+            "cn": "海水清得像滤镜。你原谅了所有扫码。",
+            "en": "Water so clear it looks filtered. You forgive QR codes — briefly."
+          },
+          "next": "done"
+        },
+        {
+          "id": "walkup_ferry",
+          "text": {
+            "cn": "现场买下午票，晒着等。",
+            "en": "Walk-up afternoon ticket; bake in line."
+          },
+          "effect": {
+            "money": -260,
+            "sanity": -12,
+            "battery": -22,
+            "locality": 2
+          },
+          "feedback": {
+            "cn": "上船了。皮肤比票更贵。",
+            "en": "You board. Sunburn costs more than the ticket."
+          },
+          "next": "done"
+        },
+        {
+          "id": "skip_island",
+          "text": {
+            "cn": "约不上，回湾区骑行。",
+            "en": "No tickets; bike the bay instead."
+          },
+          "effect": {
+            "money": -60,
+            "sanity": 6,
+            "battery": -14,
+            "locality": 3
+          },
+          "feedback": {
+            "cn": "岛没去成，风还在。",
+            "en": "No island — wind still counts."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "蜈支洲日结束。",
+        "en": "Wuzhizhou day ends."
+      }
+    }
+  }
+}

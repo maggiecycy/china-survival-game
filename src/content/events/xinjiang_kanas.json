@@ -1,0 +1,69 @@
+{
+  "id": "xinjiang_kanas",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "喀纳斯",
+        "en": "Kanas"
+      },
+      "text": {
+        "cn": "去程本身就要「花掉一天」的心理预期。湖很静，路很长。",
+        "en": "Expect the journey to cost a mental day. Quiet lake; long road."
+      },
+      "choices": [
+        {
+          "id": "lake",
+          "text": {
+            "cn": "抵达湖边慢走。",
+            "en": "Arrive and slow-walk the lake."
+          },
+          "effect": {
+            "money": -320,
+            "sanity": 12,
+            "battery": -26,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "photo",
+          "text": {
+            "cn": "摄影为主。",
+            "en": "Photo-first day."
+          },
+          "effect": {
+            "money": -300,
+            "sanity": 7,
+            "battery": -24,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "long",
+          "text": {
+            "cn": "车程榨干 Sanity。",
+            "en": "Drive drains sanity."
+          },
+          "effect": {
+            "money": -280,
+            "sanity": -14,
+            "battery": -28,
+            "locality": 2
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "喀纳斯日結束。",
+        "en": "Kanas day ends."
+      }
+    }
+  }
+}

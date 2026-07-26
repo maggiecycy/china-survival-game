@@ -1,0 +1,69 @@
+{
+  "id": "chongqing_cable",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "长江索道",
+        "en": "Yangtze Cableway"
+      },
+      "text": {
+        "cn": "车厢晃过江面。对面楼群像被叠罗汉。有人在车厢里吃外卖——你选择呼吸或忍耐。",
+        "en": "Cabin sways over the river. Towers stack oddly. Someone eats takeout onboard — breathe or endure."
+      },
+      "choices": [
+        {
+          "id": "ride",
+          "text": {
+            "cn": "坐索道看江景，享受摇晃。",
+            "en": "Ride for river views; enjoy the sway."
+          },
+          "effect": {
+            "money": -60,
+            "sanity": 7,
+            "battery": -10,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "photo",
+          "text": {
+            "cn": "疯狂拍照，忽略晃动。",
+            "en": "Photo frenzy; ignore sway."
+          },
+          "effect": {
+            "money": -50,
+            "sanity": 0,
+            "battery": -14,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "crowd",
+          "text": {
+            "cn": "排队太长，挤舱位 Sanity 下降。",
+            "en": "Long queue; packed cabin drains you."
+          },
+          "effect": {
+            "money": -55,
+            "sanity": -14,
+            "battery": -16,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "长江索道日結束。",
+        "en": "Yangtze Cableway day ends."
+      }
+    }
+  }
+}

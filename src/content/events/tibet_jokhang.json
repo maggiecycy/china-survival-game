@@ -1,0 +1,72 @@
+{
+  "id": "tibet_jokhang",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "大昭寺",
+        "en": "Jokhang Temple"
+      },
+      "text": {
+        "cn": "朝圣者磕长头。香火浓。你放慢脚步，高原也要求你放慢。",
+        "en": "Prostrating pilgrims. Thick incense. You slow down — altitude insists."
+      },
+      "choices": [
+        {
+          "id": "respect",
+          "text": {
+            "cn": "安静随喜，不乱拍。",
+            "en": "Quiet respectful visit."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": 12,
+            "battery": -12,
+            "locality": 5
+          },
+          "next": "done"
+        },
+        {
+          "id": "photo",
+          "text": {
+            "cn": "小心拍照，被提醒。",
+            "en": "Careful photos; get reminded."
+          },
+          "effect": {
+            "money": -30,
+            "sanity": -5,
+            "battery": -10,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "altitude",
+          "text": {
+            "cn": "殿内气短，需吸氧休息。",
+            "en": "Breathless inside; oxygen break."
+          },
+          "effect": {
+            "money": -90,
+            "sanity": -14,
+            "battery": -16,
+            "locality": 2
+          },
+          "addFlags": [
+            "altitude_sick"
+          ],
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "大昭寺日結束。",
+        "en": "Jokhang Temple day ends."
+      }
+    }
+  }
+}

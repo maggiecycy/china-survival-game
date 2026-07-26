@@ -1,0 +1,69 @@
+{
+  "id": "guilin_silver_cave",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "银子岩",
+        "en": "Silver Cave"
+      },
+      "text": {
+        "cn": "溶洞冷且滑。灯光把石头变成科幻布景。",
+        "en": "Cold, slick cave. Lights turn rock into sci-fi set."
+      },
+      "choices": [
+        {
+          "id": "tour",
+          "text": {
+            "cn": "跟讲解慢慢走。",
+            "en": "Guided slow walk."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": 7,
+            "battery": -14,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "photo",
+          "text": {
+            "cn": "拍钟乳石到忘记看路。",
+            "en": "Shoot stalactites; forget footing."
+          },
+          "effect": {
+            "money": -110,
+            "sanity": 0,
+            "battery": -16,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "slip",
+          "text": {
+            "cn": "差点滑倒，吓出冷汗。",
+            "en": "Near slip; cold sweat."
+          },
+          "effect": {
+            "money": -100,
+            "sanity": -14,
+            "battery": -12,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "银子岩日結束。",
+        "en": "Silver Cave day ends."
+      }
+    }
+  }
+}

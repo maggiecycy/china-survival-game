@@ -1,0 +1,105 @@
+{
+  "id": "nanjing_fuzi_miao",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "夫子庙夜市",
+        "en": "Fuzi Miao Night"
+      },
+      "text": {
+        "cn": "银行卡突然失灵，你只剩机场换的现金。摊主摇头：最好转微信。路边有鸡爪、臭豆腐、鸭血粉丝——翻译写着「Chicken Feet of Happiness」。",
+        "en": "Your bank card dies. Only airport cash left. Vendors want WeChat. Menus say \"Chicken Feet of Happiness\" next to stinky tofu and duck-blood soup."
+      },
+      "choices": [
+        {
+          "id": "stranger_topup",
+          "text": {
+            "cn": "找留学生帮忙：现金换支付宝余额（小额手续费）。",
+            "en": "Ask a student to cash→Alipay top-up (small fee)."
+          },
+          "effect": {
+            "money": -60,
+            "sanity": -8,
+            "battery": -12,
+            "locality": 6
+          },
+          "addFlags": [
+            "got_wallet_topup"
+          ],
+          "feedback": {
+            "cn": "你学会了中国式「找人代充」。信任与尴尬并存。",
+            "en": "You learn Chinese-style peer top-up. Trust and awkwardness coexist."
+          },
+          "next": "done"
+        },
+        {
+          "id": "try_feet",
+          "text": {
+            "cn": "硬吃鸡爪 + 臭豆腐，当文化体验。",
+            "en": "Eat chicken feet + stinky tofu as culture."
+          },
+          "effect": {
+            "money": -70,
+            "sanity": -16,
+            "battery": -8,
+            "locality": 4
+          },
+          "feedback": {
+            "cn": "味道像挑战书。你活下来了，口腔记忆永久。",
+            "en": "Taste like a dare. You survive with permanent oral memory."
+          },
+          "next": "done"
+        },
+        {
+          "id": "allergy_trap",
+          "text": {
+            "cn": "点路边摊炒粉——没人说里面有花生碎。",
+            "en": "Order street noodles — nobody mentions peanut bits."
+          },
+          "effect": {
+            "money": -280,
+            "sanity": -25,
+            "battery": -15,
+            "locality": -2
+          },
+          "addFlags": [
+            "hospital_peanut"
+          ],
+          "feedback": {
+            "cn": "过敏发作。急诊 + 打针。钱与 Sanity 双双蒸发。",
+            "en": "Allergic reaction. ER + shot. Money and sanity both melt."
+          },
+          "next": "done"
+        },
+        {
+          "id": "boat",
+          "text": {
+            "cn": "改坐秦淮河画舫，避开食物轮盘。",
+            "en": "Take a Qinhuai boat; skip food roulette."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": 5,
+            "battery": -10,
+            "locality": 3
+          },
+          "feedback": {
+            "cn": "灯影里的秦淮很美。肚子空，眼睛饱。",
+            "en": "Lanterns on the river. Empty stomach, full eyes."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "夫子庙夜结束。",
+        "en": "Fuzi Miao night ends."
+      }
+    }
+  }
+}

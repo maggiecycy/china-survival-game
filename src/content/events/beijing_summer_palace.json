@@ -1,0 +1,69 @@
+{
+  "id": "beijing_summer_palace",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "颐和园",
+        "en": "Summer Palace"
+      },
+      "text": {
+        "cn": "昆明湖风很大。租船要扫码；长廊里游客像河流。",
+        "en": "Windy Kunming Lake. Boat rental wants QR; corridor crowds flow like a river."
+      },
+      "choices": [
+        {
+          "id": "boat",
+          "text": {
+            "cn": "租船慢划，把一天交给湖面。",
+            "en": "Rent a boat; give the day to the lake."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": 12,
+            "battery": -15,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "walk_tower",
+          "text": {
+            "cn": "漫步长廊 + 爬佛香阁。",
+            "en": "Corridor stroll + climb the tower."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 7,
+            "battery": -22,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "crowd",
+          "text": {
+            "cn": "高峰硬挤，被导游旗驱赶。",
+            "en": "Peak crowd; herded by tour flags."
+          },
+          "effect": {
+            "money": -60,
+            "sanity": -14,
+            "battery": -18,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "颐和园日結束。",
+        "en": "Summer Palace day ends."
+      }
+    }
+  }
+}

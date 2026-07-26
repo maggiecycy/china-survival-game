@@ -1,0 +1,81 @@
+{
+  "id": "hainan_yalong",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "亚龙湾海滩",
+        "en": "Yalong Bay Beach"
+      },
+      "text": {
+        "cn": "沙子很白。有人走过你身后还回头盯。餐厅里有人抽烟；隔壁桌把卤味外带进海景位——你的 San 值对「公共场合」定义产生动摇。",
+        "en": "White sand. People stare after passing. Someone smokes indoors; another brings takeout into the sea-view seat. Your sanity redefines \"public space\"."
+      },
+      "choices": [
+        {
+          "id": "swim",
+          "text": {
+            "cn": "游泳拍照，无视注视。",
+            "en": "Swim and shoot; ignore stares."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": -8,
+            "battery": -15,
+            "locality": 2
+          },
+          "feedback": {
+            "cn": "海水很舒服。相机电量先投降。",
+            "en": "Sea feels great. Battery surrenders first."
+          },
+          "next": "done"
+        },
+        {
+          "id": "confront_smoke",
+          "text": {
+            "cn": "礼貌请邻桌别在餐厅抽烟——收获困惑眼神。",
+            "en": "Politely ask neighbors not to smoke indoors — confused looks."
+          },
+          "effect": {
+            "money": -60,
+            "sanity": -18,
+            "battery": -10,
+            "locality": 3
+          },
+          "feedback": {
+            "cn": "文化冲突现场。你学会了：有时只能换座位。",
+            "en": "Culture clash live. Sometimes you just change seats."
+          },
+          "next": "done"
+        },
+        {
+          "id": "join_cheer",
+          "text": {
+            "cn": "跟沙滩排球大爷打成一片。",
+            "en": "Join beach volleyball uncles."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": 10,
+            "battery": -20,
+            "locality": 5
+          },
+          "feedback": {
+            "cn": "你被叫「老外朋友」。出汗是社交货币。",
+            "en": "They call you \"foreign friend\". Sweat is social currency."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "亚龙湾日结束。",
+        "en": "Yalong day ends."
+      }
+    }
+  }
+}

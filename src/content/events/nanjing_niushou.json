@@ -1,0 +1,69 @@
+{
+  "id": "nanjing_niushou",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "牛首山",
+        "en": "Niushou Mountain"
+      },
+      "text": {
+        "cn": "佛顶宫建筑像科幻片。景区很大，路像迷宫。",
+        "en": "Palace architecture feels sci-fi. Huge site; paths maze-like."
+      },
+      "choices": [
+        {
+          "id": "tour",
+          "text": {
+            "cn": "按路线慢慢参观。",
+            "en": "Follow route slowly."
+          },
+          "effect": {
+            "money": -160,
+            "sanity": 7,
+            "battery": -18,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "photo",
+          "text": {
+            "cn": "建筑摄影日。",
+            "en": "Architecture photo day."
+          },
+          "effect": {
+            "money": -150,
+            "sanity": 7,
+            "battery": -22,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "lost",
+          "text": {
+            "cn": "走错区域多绕一小时。",
+            "en": "Wrong zone; +1 hour loop."
+          },
+          "effect": {
+            "money": -140,
+            "sanity": -14,
+            "battery": -24,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "牛首山日結束。",
+        "en": "Niushou Mountain day ends."
+      }
+    }
+  }
+}

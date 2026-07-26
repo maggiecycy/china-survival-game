@@ -1,0 +1,81 @@
+{
+  "id": "zhangjiajie_glass",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "玻璃栈道",
+        "en": "Glass Walkway"
+      },
+      "text": {
+        "cn": "透明脚下是深渊。身后游客举起手机对准你——外国面孔在这里是稀缺打卡道具。",
+        "en": "Glass over abyss. Phones behind you aim at your face — a scarce check-in prop."
+      },
+      "choices": [
+        {
+          "id": "brave",
+          "text": {
+            "cn": "闭眼走完，完成挑战。",
+            "en": "Eyes half-closed; finish the walk."
+          },
+          "effect": {
+            "money": -180,
+            "sanity": -18,
+            "battery": -15,
+            "locality": 3
+          },
+          "feedback": {
+            "cn": "腿在抖。相册里全是天空与恐惧。",
+            "en": "Legs shake. Gallery: sky and fear."
+          },
+          "next": "done"
+        },
+        {
+          "id": "talk_back",
+          "text": {
+            "cn": "回头友好说 Hi，反客为主合影。",
+            "en": "Turn, say hi, flip into willing photo subject."
+          },
+          "effect": {
+            "money": -150,
+            "sanity": 2,
+            "battery": -18,
+            "locality": 5
+          },
+          "feedback": {
+            "cn": "注视变成互动。你稍微拿回控制权。",
+            "en": "Stares become interaction. You reclaim a little control."
+          },
+          "next": "done"
+        },
+        {
+          "id": "bail",
+          "text": {
+            "cn": "看到玻璃就撤退，改看远处山峰。",
+            "en": "Abort at glass; admire peaks from solid ground."
+          },
+          "effect": {
+            "money": -100,
+            "sanity": 6,
+            "battery": -8,
+            "locality": 1
+          },
+          "feedback": {
+            "cn": "胆小也是策略。山还在。",
+            "en": "Caution is a strategy. Mountains remain."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "栈道日结束。",
+        "en": "Glass day ends."
+      }
+    }
+  }
+}

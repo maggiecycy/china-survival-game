@@ -1,0 +1,69 @@
+{
+  "id": "guilin_gallery",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "十里画廊",
+        "en": "Ten-Mile Gallery"
+      },
+      "text": {
+        "cn": "骑行在喀斯特画廊里。电动车租借要押金扫码。",
+        "en": "Bike through karst gallery. E-bike deposit wants QR."
+      },
+      "choices": [
+        {
+          "id": "bike",
+          "text": {
+            "cn": "骑行半日，风很大很爽。",
+            "en": "Half-day bike; windy joy."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 12,
+            "battery": -20,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "ebike",
+          "text": {
+            "cn": "电动车省力。",
+            "en": "E-bike save legs."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": 7,
+            "battery": -12,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "rain",
+          "text": {
+            "cn": "遇雨湿透，狼狈回城。",
+            "en": "Rain soaks you; soggy retreat."
+          },
+          "effect": {
+            "money": -90,
+            "sanity": -14,
+            "battery": -16,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "十里画廊日結束。",
+        "en": "Ten-Mile Gallery day ends."
+      }
+    }
+  }
+}

@@ -21,7 +21,7 @@ import {
   getUnlocksFrom as unlocksFromCity,
   checkCountryStatus,
   evaluateStatEnding,
-  evaluateArrivalEnding,
+  evaluateExitEnding,
   getNode,
   getEntryNodeId,
   getAvailableChoices,
@@ -47,7 +47,7 @@ import {
 let flightTimer = null
 
 const language = ref(gameConfig.defaultLanguage || 'cn')
-const currentStep = ref('visa-selection')
+const currentStep = ref('welcome')
 const progress = ref(0)
 const flightTarget = ref(null)
 
@@ -375,40 +375,43 @@ const finishEvent = (city, restricted = false) => {
       visitedAttractionKeys.value.push(key)
     }
 
-    const settled = settleAttractionDay(playerState)
-    addLog(
-      '📅',
-      pickLang(
-        `度過一天：時間 -${settled.hours}h，住宿 -￥${settled.nightly}` +
-          (settled.batteryRestored
-            ? `，過夜充電 +${settled.batteryRestored}`
-            : settled.survivedDay
-              ? ''
-              : '（電量已耗盡，無法過夜回血）'),
-        `Day settled: -${settled.hours}h, lodging -￥${settled.nightly}` +
-          (settled.batteryRestored
-            ? `, overnight charge +${settled.batteryRestored}`
-            : settled.survivedDay
-              ? ''
-              : ' (battery dead — no overnight restore)'),
-        language.value
+    const isExit =
+      attraction.isExit || hasFlag(playerState, 'departed_hongkong')
+
+    // 離境口岸：不再扣「旅遊一天」的 24h，避免剛出境就被時間壞結局覆蓋
+    if (!isExit) {
+      const settled = settleAttractionDay(playerState)
+      addLog(
+        '📅',
+        pickLang(
+          `度過一天：時間 -${settled.hours}h，住宿 -￥${settled.nightly}` +
+            (settled.batteryRestored ? `，過夜充電 +${settled.batteryRestored}` : '') +
+            (settled.sanityRestored ? `，過夜精神 +${settled.sanityRestored}` : '') +
+            (!settled.survivedDay ? '（電量已耗盡，無法過夜回血）' : ''),
+          `Day settled: -${settled.hours}h, lodging -￥${settled.nightly}` +
+            (settled.batteryRestored ? `, overnight charge +${settled.batteryRestored}` : '') +
+            (settled.sanityRestored ? `, overnight sanity +${settled.sanityRestored}` : '') +
+            (!settled.survivedDay ? ' (battery dead — no overnight restore)' : ''),
+          language.value
+        )
       )
-    )
+    } else {
+      addLog(
+        '🛫',
+        pickLang('離境手續完成，結算旅途結局。', 'Exit cleared — resolving journey ending.', language.value)
+      )
+    }
 
     currentCityEvent.value = null
     playerState.currentNode = null
     activeAttraction.value = null
 
-    if (checkStatEnding()) return
-
-    // 香港離境景點 → 結局
-    if (attraction.isExit || hasFlag(playerState, 'departed_hongkong')) {
-      const ending = evaluateArrivalEnding(playerState, city.id, false)
-      if (ending) {
-        triggerEnding(ending)
-        return
-      }
+    if (isExit) {
+      triggerEnding(evaluateExitEnding(playerState))
+      return
     }
+
+    if (checkStatEnding()) return
 
     if (needsLodging(playerState)) {
       addLog('⚠️', pickLang('住宿已到期，需重新安排', 'Lodging expired — rebook needed', language.value))
@@ -551,9 +554,17 @@ const goToVisaSelection = () => {
   currentStep.value = 'visa-selection'
 }
 
+const startVisaSelection = () => {
+  currentStep.value = 'visa-selection'
+}
+
+const goToWelcome = () => {
+  currentStep.value = 'welcome'
+}
+
 const resetGame = () => {
   language.value = gameConfig.defaultLanguage || 'cn'
-  currentStep.value = 'visa-selection'
+  currentStep.value = 'welcome'
   progress.value = 0
   flightTarget.value = null
   if (flightTimer) {
@@ -646,6 +657,8 @@ export function useGameStore() {
     confirmCityFeedback,
     choiceLockReason,
     goToVisaSelection,
+    startVisaSelection,
+    goToWelcome,
     resetGame,
   }
 }

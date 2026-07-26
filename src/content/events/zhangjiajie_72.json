@@ -1,0 +1,69 @@
+{
+  "id": "zhangjiajie_72",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "七十二奇楼",
+        "en": "72 Odd Buildings"
+      },
+      "text": {
+        "cn": "夜景灯火与桥。打卡人潮比奇楼更奇。",
+        "en": "Night lights and bridges. Check-in crowds odder than buildings."
+      },
+      "choices": [
+        {
+          "id": "night",
+          "text": {
+            "cn": "夜游拍照。",
+            "en": "Night photos."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 7,
+            "battery": -16,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "food",
+          "text": {
+            "cn": "周边吃小吃休息。",
+            "en": "Snacks nearby and rest."
+          },
+          "effect": {
+            "money": -100,
+            "sanity": 7,
+            "battery": -10,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "crowd",
+          "text": {
+            "cn": "被人群挤到焦躁。",
+            "en": "Crowd irritability."
+          },
+          "effect": {
+            "money": -70,
+            "sanity": -14,
+            "battery": -14,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "七十二奇楼日結束。",
+        "en": "72 Odd Buildings day ends."
+      }
+    }
+  }
+}

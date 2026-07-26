@@ -1,0 +1,87 @@
+{
+  "id": "tibet_altitude",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "高原适应日",
+        "en": "Acclimatization Day"
+      },
+      "text": {
+        "cn": "导游建议：今天别猛爬。药店氧气瓶、红景天、还是硬扛——你会带着结果去后面的景点。",
+        "en": "Guide advice: don't rush today. Pharmacy oxygen, rhodiola, or tough-it-out — you'll carry the result forward."
+      },
+      "choices": [
+        {
+          "id": "buy_oxygen",
+          "text": {
+            "cn": "买氧气瓶 + 慢走适应。",
+            "en": "Buy oxygen cans + walk slow."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": 6,
+            "battery": -8,
+            "locality": 3
+          },
+          "addFlags": [
+            "bought_oxygen"
+          ],
+          "feedback": {
+            "cn": "吸一口，世界清晰一点。你买到了行动余量。",
+            "en": "One sip clearer. You bought action margin."
+          },
+          "next": "done"
+        },
+        {
+          "id": "tough",
+          "text": {
+            "cn": "不买，硬适应（可能留下不适）。",
+            "en": "Skip oxygen; tough acclimatize."
+          },
+          "effect": {
+            "money": -20,
+            "sanity": -15,
+            "battery": -20,
+            "locality": 2
+          },
+          "addFlags": [
+            "altitude_sick"
+          ],
+          "feedback": {
+            "cn": "省钱成功。头痛订阅制开启。",
+            "en": "Money saved. Headache: subscribed."
+          },
+          "next": "done"
+        },
+        {
+          "id": "tea_rest",
+          "text": {
+            "cn": "整日喝茶睡觉，彻底休息。",
+            "en": "Tea and sleep all day."
+          },
+          "effect": {
+            "money": -50,
+            "sanity": 12,
+            "battery": 15,
+            "locality": 2
+          },
+          "feedback": {
+            "cn": "你把一天交给海拔。明智。",
+            "en": "You donate a day to altitude. Wise."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "适应日结束。",
+        "en": "Acclimatization ends."
+      }
+    }
+  }
+}

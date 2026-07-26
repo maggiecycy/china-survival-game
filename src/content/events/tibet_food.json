@@ -1,0 +1,69 @@
+{
+  "id": "tibet_food",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "藏餐",
+        "en": "Tibetan Food"
+      },
+      "text": {
+        "cn": "酥油茶、牦牛肉、未知酱料。勇气与肠胃谈判。",
+        "en": "Butter tea, yak, mystery sauces. Courage negotiates with your gut."
+      },
+      "choices": [
+        {
+          "id": "brave",
+          "text": {
+            "cn": "全套尝试，文化体验拉满。",
+            "en": "Full set; culture max."
+          },
+          "effect": {
+            "money": -100,
+            "sanity": -5,
+            "battery": -8,
+            "locality": 6
+          },
+          "next": "done"
+        },
+        {
+          "id": "mild",
+          "text": {
+            "cn": "选温和口味，保留战斗力。",
+            "en": "Milder picks; keep fighting power."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 7,
+            "battery": -6,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "reject",
+          "text": {
+            "cn": "只喝甜茶，其余拍照。",
+            "en": "Sweet tea only; photo the rest."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": 0,
+            "battery": -4,
+            "locality": 2
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "藏餐日結束。",
+        "en": "Tibetan Food day ends."
+      }
+    }
+  }
+}

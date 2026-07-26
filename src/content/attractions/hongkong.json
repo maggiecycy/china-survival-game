@@ -2,19 +2,130 @@
   "cityId": "hongkong",
   "attractions": [
     {
-      "id": "dual_currency",
-      "name": { "cn": "茶餐廳雙幣", "en": "Cha Chaan Teng FX" },
-      "coords": { "x": 48, "y": 55 },
-      "desc": { "cn": "不收人民幣掃碼。港幣／八達通考驗。", "en": "No RMB scan-pay. HKD / Octopus test." },
-      "graphId": "hongkong_dual_currency"
+      "id": "disney",
+      "name": {
+        "cn": "香港迪士尼乐园",
+        "en": "Hong Kong Disneyland"
+      },
+      "coords": {
+        "x": 25,
+        "y": 55
+      },
+      "desc": {
+        "cn": "乐园与烟花。",
+        "en": "Park and fireworks."
+      },
+      "graphId": "hongkong_disney"
     },
     {
-      "id": "exit_checkpoint",
-      "name": { "cn": "離境口岸", "en": "Departure Checkpoint" },
-      "coords": { "x": 70, "y": 40 },
+      "id": "ocean_park",
+      "name": {
+        "cn": "香港海洋公园",
+        "en": "Ocean Park"
+      },
+      "coords": {
+        "x": 55,
+        "y": 70
+      },
       "desc": {
-        "cn": "完成後觸發結局判定。建議先解決支付再來。",
-        "en": "Triggers ending check. Fix payments first if you can."
+        "cn": "海洋馆与缆车。",
+        "en": "Aquarium and cable."
+      },
+      "graphId": "hongkong_ocean_park"
+    },
+    {
+      "id": "victoria",
+      "name": {
+        "cn": "维多利亚港",
+        "en": "Victoria Harbour"
+      },
+      "coords": {
+        "x": 52,
+        "y": 48
+      },
+      "desc": {
+        "cn": "维港与天星。",
+        "en": "Harbour and Star Ferry."
+      },
+      "graphId": "hongkong_victoria"
+    },
+    {
+      "id": "peak",
+      "name": {
+        "cn": "太平山顶",
+        "en": "Victoria Peak"
+      },
+      "coords": {
+        "x": 48,
+        "y": 40
+      },
+      "desc": {
+        "cn": "山顶夜景。",
+        "en": "Peak night view."
+      },
+      "graphId": "hongkong_peak"
+    },
+    {
+      "id": "mongkok",
+      "name": {
+        "cn": "旺角",
+        "en": "Mong Kok"
+      },
+      "coords": {
+        "x": 58,
+        "y": 45
+      },
+      "desc": {
+        "cn": "街头与小店。",
+        "en": "Streets and shops."
+      },
+      "graphId": "hongkong_mongkok"
+    },
+    {
+      "id": "central",
+      "name": {
+        "cn": "中环",
+        "en": "Central"
+      },
+      "coords": {
+        "x": 50,
+        "y": 50
+      },
+      "desc": {
+        "cn": "金融区步行。",
+        "en": "Finance district walk."
+      },
+      "graphId": "hongkong_central"
+    },
+    {
+      "id": "lkf",
+      "name": {
+        "cn": "兰桂坊",
+        "en": "Lan Kwai Fong"
+      },
+      "coords": {
+        "x": 49,
+        "y": 52
+      },
+      "desc": {
+        "cn": "酒吧街夜生活。",
+        "en": "Bar street nightlife."
+      },
+      "graphId": "hongkong_lan_kwai_fong"
+    },
+    {
+      "id": "exit_gate",
+      "name": {
+        "cn": "离境口岸",
+        "en": "Exit Border"
+      },
+      "coords": {
+        "x": 72,
+        "y": 62
+      },
+      "desc": {
+        "cn": "真正的结局闸口。",
+        "en": "True ending gate."
       },
       "graphId": "hongkong_exit",
       "isExit": true

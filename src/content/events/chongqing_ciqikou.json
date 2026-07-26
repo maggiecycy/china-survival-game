@@ -1,0 +1,69 @@
+{
+  "id": "chongqing_ciqikou",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "磁器口",
+        "en": "Ciqikou"
+      },
+      "text": {
+        "cn": "古镇石板路。陈麻花香气与叫卖声齐飞。奇葩小吃再次出现。",
+        "en": "Stone lanes. Fried dough aroma and hawkers. Weird snacks return."
+      },
+      "choices": [
+        {
+          "id": "snack",
+          "text": {
+            "cn": "适量小吃，避开生食冒险。",
+            "en": "Moderate snacks; skip raw adventures."
+          },
+          "effect": {
+            "money": -100,
+            "sanity": 7,
+            "battery": -12,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "feet",
+          "text": {
+            "cn": "挑战鸡爪与毛血旺。",
+            "en": "Challenge chicken feet & spicy blood stew."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": -5,
+            "battery": -10,
+            "locality": 5
+          },
+          "next": "done"
+        },
+        {
+          "id": "hard_sell",
+          "text": {
+            "cn": "被拉进店强买，争吵离开。",
+            "en": "Hard-sell shop; argue and leave."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": -14,
+            "battery": -14,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "磁器口日結束。",
+        "en": "Ciqikou day ends."
+      }
+    }
+  }
+}

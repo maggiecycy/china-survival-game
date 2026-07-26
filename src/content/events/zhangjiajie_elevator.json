@@ -1,0 +1,95 @@
+{
+  "id": "zhangjiajie_elevator",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "百龙天梯人工核验",
+        "en": "Bailong Elevator Manual Check"
+      },
+      "text": {
+        "cn": "电子票闸机不认你的护照流程。人工窗口队伍像第二条天梯。你必须预留更多时间。",
+        "en": "E-gates ignore your passport flow. Manual window is a second elevator of waiting. Budget more time."
+      },
+      "choices": [
+        {
+          "id": "manual_queue",
+          "text": {
+            "cn": "老老实实排人工核验。",
+            "en": "Queue for manual verification."
+          },
+          "effect": {
+            "money": -200,
+            "sanity": -14,
+            "battery": -20,
+            "locality": 4
+          },
+          "feedback": {
+            "cn": "上天梯的那一瞬，排队痛苦被风景冲淡。",
+            "en": "One elevator surge dilutes the queue pain."
+          },
+          "next": "done"
+        },
+        {
+          "id": "ride_digits",
+          "text": {
+            "cn": "打车回酒店：司机要手机号后四位，你不会说中文数字。",
+            "en": "Taxi back: driver wants last 4 digits — you can't say Chinese numbers."
+          },
+          "effect": {
+            "money": -90,
+            "sanity": -20,
+            "battery": -16,
+            "locality": 2
+          },
+          "addFlags": [
+            "failed_chinese_digits"
+          ],
+          "feedback": {
+            "cn": "你比划「four-eight-…」。司机笑了很久。Sanity -20。",
+            "en": "You mime \"four-eight…\". Driver laughs forever. Sanity -20."
+          },
+          "next": "done"
+        },
+        {
+          "id": "english_tip",
+          "text": {
+            "cn": "💰 帮旁边游客用英语问人工窗口流程，收小费。",
+            "en": "💰 Explain the manual line in English for a tip."
+          },
+          "effect": {
+            "money": 140,
+            "sanity": 2,
+            "battery": -18,
+            "locality": 6
+          },
+          "addFlags": [
+            "did_english_tip"
+          ],
+          "showIfLocked": true,
+          "requiresStats": {
+            "sanityGte": 70
+          },
+          "lockedHint": {
+            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
+            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
+          },
+          "feedback": {
+            "cn": "你成为队伍里的临时翻译官。",
+            "en": "You become the queue's temporary interpreter."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "天梯日结束。",
+        "en": "Elevator day ends."
+      }
+    }
+  }
+}

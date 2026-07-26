@@ -1,0 +1,69 @@
+{
+  "id": "xinjiang_sayram",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "赛里木湖",
+        "en": "Sayram Lake"
+      },
+      "text": {
+        "cn": "环湖像把蓝打开到最大。风大到说话要喊。",
+        "en": "Lake loop maxes out blue. Wind forces shouting."
+      },
+      "choices": [
+        {
+          "id": "loop",
+          "text": {
+            "cn": "环湖观景。",
+            "en": "Loop viewpoints."
+          },
+          "effect": {
+            "money": -200,
+            "sanity": 12,
+            "battery": -20,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "picnic",
+          "text": {
+            "cn": "湖边野餐。",
+            "en": "Lakeside picnic."
+          },
+          "effect": {
+            "money": -180,
+            "sanity": 12,
+            "battery": -14,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "wind",
+          "text": {
+            "cn": "风沙吹到提前结束。",
+            "en": "Wind ends day early."
+          },
+          "effect": {
+            "money": -160,
+            "sanity": -5,
+            "battery": -16,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "赛里木湖日結束。",
+        "en": "Sayram Lake day ends."
+      }
+    }
+  }
+}

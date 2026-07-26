@@ -3,24 +3,115 @@
   "attractions": [
     {
       "id": "terracotta",
-      "name": { "cn": "兵馬俑", "en": "Terracotta Army" },
-      "coords": { "x": 75, "y": 45 },
-      "desc": { "cn": "提防一日遊與強制購物。", "en": "Dodge day-tours and forced shopping." },
+      "name": {
+        "cn": "兵马俑",
+        "en": "Terracotta Army"
+      },
+      "coords": {
+        "x": 78,
+        "y": 48
+      },
+      "desc": {
+        "cn": "兵马与黄牛风险。",
+        "en": "Warriors and scalper risk."
+      },
       "graphId": "xian_terracotta"
     },
     {
-      "id": "muslim_quarter",
-      "name": { "cn": "回民街", "en": "Muslim Quarter" },
-      "coords": { "x": 45, "y": 55 },
-      "desc": { "cn": "肉夾饃與排隊。", "en": "Rou jia mo and queues." },
+      "id": "datang",
+      "name": {
+        "cn": "大唐不夜城",
+        "en": "Great Tang Everbright City"
+      },
+      "coords": {
+        "x": 52,
+        "y": 62
+      },
+      "desc": {
+        "cn": "夜游盛唐主题街。",
+        "en": "Tang-theme night street."
+      },
+      "graphId": "xian_datang"
+    },
+    {
+      "id": "wall",
+      "name": {
+        "cn": "西安城墙",
+        "en": "Xi'an City Wall"
+      },
+      "coords": {
+        "x": 48,
+        "y": 50
+      },
+      "desc": {
+        "cn": "城墙骑车。",
+        "en": "Bike the wall."
+      },
+      "graphId": "xian_city_wall"
+    },
+    {
+      "id": "bell_drum",
+      "name": {
+        "cn": "钟鼓楼",
+        "en": "Bell & Drum Towers"
+      },
+      "coords": {
+        "x": 50,
+        "y": 48
+      },
+      "desc": {
+        "cn": "钟鼓与广场。",
+        "en": "Towers and square."
+      },
+      "graphId": "xian_bell_drum"
+    },
+    {
+      "id": "muslim",
+      "name": {
+        "cn": "回民街",
+        "en": "Muslim Quarter"
+      },
+      "coords": {
+        "x": 46,
+        "y": 52
+      },
+      "desc": {
+        "cn": "美食与英语小费。",
+        "en": "Food and English tips."
+      },
       "graphId": "xian_muslim_quarter"
     },
     {
-      "id": "city_wall",
-      "name": { "cn": "城牆", "en": "City Wall" },
-      "coords": { "x": 50, "y": 40 },
-      "desc": { "cn": "騎行吹風，日落很美。", "en": "Bike in the wind; sunset is lovely." },
-      "graphId": "xian_city_wall"
+      "id": "museum",
+      "name": {
+        "cn": "陕西历史博物馆",
+        "en": "Shaanxi History Museum"
+      },
+      "coords": {
+        "x": 55,
+        "y": 58
+      },
+      "desc": {
+        "cn": "预约看展。",
+        "en": "Booked exhibits."
+      },
+      "graphId": "xian_museum"
+    },
+    {
+      "id": "huashan",
+      "name": {
+        "cn": "华山",
+        "en": "Mount Hua"
+      },
+      "coords": {
+        "x": 85,
+        "y": 30
+      },
+      "desc": {
+        "cn": "险峰与腿抖。",
+        "en": "Steep peaks and shaky legs."
+      },
+      "graphId": "xian_huashan"
     }
   ]
 }

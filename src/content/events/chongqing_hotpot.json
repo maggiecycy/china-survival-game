@@ -1,0 +1,80 @@
+{
+  "id": "chongqing_hotpot",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "火鍋巷",
+        "en": "Hotpot Alley"
+      },
+      "text": {
+        "cn": "油辣子香氣開戰。服務員微笑：『微辣就行。』你的成都創傷可能復發。",
+        "en": "Chili-oil aroma war. Staff smiles: 'Mild is fine.' Your Chengdu trauma may relapse."
+      },
+      "choices": [
+        {
+          "id": "trust_mild",
+          "text": {
+            "cn": "再次相信『微辣』。",
+            "en": "Trust 'mild' again."
+          },
+          "effect": {
+            "money": -95,
+            "sanity": -18,
+            "battery": -8,
+            "locality": 3
+          },
+          "addFlags": [
+            "chili_trauma"
+          ],
+          "next": "done"
+        },
+        {
+          "id": "no_spice",
+          "text": {
+            "cn": "堅持清湯／少辣（有號更好溝通）。",
+            "en": "Insist clear broth / less spice (local number helps)."
+          },
+          "requires": [
+            "has_local_number"
+          ],
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "國內號更好溝通口味",
+            "en": "Local number helps order spice level"
+          },
+          "effect": {
+            "money": -85,
+            "sanity": 6,
+            "battery": -6,
+            "locality": 5
+          },
+          "next": "done"
+        },
+        {
+          "id": "xiaomian",
+          "text": {
+            "cn": "改吃小麵，保留戰鬥力。",
+            "en": "Switch to xiaomian; keep HP."
+          },
+          "effect": {
+            "money": -30,
+            "sanity": 8,
+            "battery": -5,
+            "locality": 3
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "火鍋日結束。嘴唇發麻是重慶給你的紀念章。",
+        "en": "Hotpot day ends. Numb lips are Chongqing's souvenir stamp."
+      }
+    }
+  }
+}

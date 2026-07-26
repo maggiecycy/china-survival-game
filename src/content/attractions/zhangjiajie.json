@@ -1,0 +1,101 @@
+{
+  "cityId": "zhangjiajie",
+  "attractions": [
+    {
+      "id": "forest",
+      "name": {
+        "cn": "张家界国家森林公园",
+        "en": "Zhangjiajie National Forest Park"
+      },
+      "coords": {
+        "x": 42,
+        "y": 48
+      },
+      "desc": {
+        "cn": "石峰迷宫。",
+        "en": "Pillar maze."
+      },
+      "graphId": "zhangjiajie_forest"
+    },
+    {
+      "id": "tianmen",
+      "name": {
+        "cn": "天门山",
+        "en": "Tianmen Mountain"
+      },
+      "coords": {
+        "x": 60,
+        "y": 32
+      },
+      "desc": {
+        "cn": "天门洞与盘山公路。",
+        "en": "Heaven gate and hairpin road."
+      },
+      "graphId": "zhangjiajie_tianmen"
+    },
+    {
+      "id": "glass",
+      "name": {
+        "cn": "玻璃栈道",
+        "en": "Glass Walkway"
+      },
+      "coords": {
+        "x": 58,
+        "y": 38
+      },
+      "desc": {
+        "cn": "透明深渊。",
+        "en": "Glass over abyss."
+      },
+      "graphId": "zhangjiajie_glass"
+    },
+    {
+      "id": "bailong",
+      "name": {
+        "cn": "百龙天梯",
+        "en": "Bailong Elevator"
+      },
+      "coords": {
+        "x": 50,
+        "y": 68
+      },
+      "desc": {
+        "cn": "电梯与人工核验。",
+        "en": "Elevator and manual check."
+      },
+      "graphId": "zhangjiajie_elevator"
+    },
+    {
+      "id": "huangshi",
+      "name": {
+        "cn": "黄石寨",
+        "en": "Huangshi Village"
+      },
+      "coords": {
+        "x": 38,
+        "y": 42
+      },
+      "desc": {
+        "cn": "观景台徒步。",
+        "en": "Viewpoint hike."
+      },
+      "graphId": "zhangjiajie_huangshi"
+    },
+    {
+      "id": "72",
+      "name": {
+        "cn": "七十二奇楼",
+        "en": "72 Odd Buildings"
+      },
+      "coords": {
+        "x": 55,
+        "y": 72
+      },
+      "desc": {
+        "cn": "奇楼夜景打卡。",
+        "en": "Odd buildings night check-in."
+      },
+      "graphId": "zhangjiajie_72"
+    }
+  ]
+}

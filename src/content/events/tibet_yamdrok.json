@@ -1,0 +1,69 @@
+{
+  "id": "tibet_yamdrok",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "羊卓雍措",
+        "en": "Yamdrok"
+      },
+      "text": {
+        "cn": "碧湖弯道。车程中的风景比目的地更长。",
+        "en": "Turquoise bends. Scenery lasts longer than the destination."
+      },
+      "choices": [
+        {
+          "id": "view",
+          "text": {
+            "cn": "观景台发呆回血。",
+            "en": "Viewpoint zoning restore."
+          },
+          "effect": {
+            "money": -150,
+            "sanity": 12,
+            "battery": -14,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "photo",
+          "text": {
+            "cn": "环湖拍照。",
+            "en": "Photo the bends."
+          },
+          "effect": {
+            "money": -160,
+            "sanity": 7,
+            "battery": -18,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "carsick",
+          "text": {
+            "cn": "山路晕车。",
+            "en": "Mountain-road carsick."
+          },
+          "effect": {
+            "money": -140,
+            "sanity": -14,
+            "battery": -16,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "羊卓雍措日結束。",
+        "en": "Yamdrok day ends."
+      }
+    }
+  }
+}

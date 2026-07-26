@@ -1,0 +1,69 @@
+{
+  "id": "nanjing_presidential",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "总统府",
+        "en": "Presidential Palace"
+      },
+      "text": {
+        "cn": "近代史展板很长。安静时 Sanity 回血，遇到导游喊麦时下降。",
+        "en": "Long modern-history panels. Quiet restores; loud guides drain."
+      },
+      "choices": [
+        {
+          "id": "deep",
+          "text": {
+            "cn": "认真看展半日。",
+            "en": "Half-day deep read."
+          },
+          "effect": {
+            "money": -50,
+            "sanity": 12,
+            "battery": -14,
+            "locality": 5
+          },
+          "next": "done"
+        },
+        {
+          "id": "photo",
+          "text": {
+            "cn": "建筑打卡为主。",
+            "en": "Architecture check-ins."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": 0,
+            "battery": -12,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "guide_noise",
+          "text": {
+            "cn": "被扩音团包围。",
+            "en": "Boxed in by PA tour groups."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": -14,
+            "battery": -14,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "总统府日結束。",
+        "en": "Presidential Palace day ends."
+      }
+    }
+  }
+}

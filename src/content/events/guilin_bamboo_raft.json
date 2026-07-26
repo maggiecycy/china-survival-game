@@ -1,0 +1,84 @@
+{
+  "id": "guilin_bamboo_raft",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "灕江竹筏",
+        "en": "Bamboo Raft"
+      },
+      "text": {
+        "cn": "江風很舒服。師傅舉起相機：『合影只要——』價格隨江風上漲。",
+        "en": "The river breeze is nice. The rower lifts a camera: 'Just a photo—' prices rise with the wind."
+      },
+      "choices": [
+        {
+          "id": "pay_photo",
+          "text": {
+            "cn": "付錢了事，保住心情。",
+            "en": "Pay to end it; keep the mood."
+          },
+          "effect": {
+            "money": -180,
+            "sanity": -6,
+            "battery": -8,
+            "locality": 1
+          },
+          "next": "done"
+        },
+        {
+          "id": "refuse",
+          "text": {
+            "cn": "拒絕。接受可能的龜速漂流。",
+            "en": "Refuse. Accept possible turtle-speed drifting."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": -16,
+            "battery": -10,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "reverse_hustle",
+          "text": {
+            "cn": "💰 反客為主：用英語幫旁邊遊客砍價／翻譯，收小費。",
+            "en": "💰 Flip it: translate/bargain for other tourists in English — take a tip."
+          },
+          "effect": {
+            "money": 110,
+            "sanity": -5,
+            "battery": -14,
+            "locality": 6
+          },
+          "addFlags": [
+            "did_english_tip"
+          ],
+          "feedback": {
+            "cn": "你成了竹筏上的臨時翻譯。師傅看你的眼神變複雜了。",
+            "en": "You became the raft's temp translator. The rower's look got complicated."
+          },
+          "next": "done",
+          "showIfLocked": true,
+          "requiresStats": {
+            "sanityGte": 70
+          },
+          "lockedHint": {
+            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
+            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
+          }
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "竹筏日結束。山水還在，議價殘影也在。",
+        "en": "Raft day ends. Peaks remain; haggling afterimages too."
+      }
+    }
+  }
+}

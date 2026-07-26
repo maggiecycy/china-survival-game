@@ -1,0 +1,99 @@
+{
+  "id": "hainan_duty_free",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "免税城支付危机",
+        "en": "Duty-Free Payment Crisis"
+      },
+      "text": {
+        "cn": "银行卡突然失灵。柜台只认移动支付或特定卡。你口袋里只有机场换的现金——免税柜姐微笑摇头。",
+        "en": "Card suddenly fails. Counter wants mobile pay or specific cards. Airport cash gets a polite headshake."
+      },
+      "choices": [
+        {
+          "id": "topup_help",
+          "text": {
+            "cn": "找人现金换微信余额，再扫码结账。",
+            "en": "Cash→WeChat via a helper, then scan-pay."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": -10,
+            "battery": -14,
+            "locality": 6
+          },
+          "requiresStats": {
+            "localityGte": 15
+          },
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "Locality 太低，你不好意思开这个口。",
+            "en": "Locality too low to ask for this favor."
+          },
+          "addFlags": [
+            "duty_free_topup"
+          ],
+          "feedback": {
+            "cn": "买到了。你也买到了中国式应急金融课。",
+            "en": "Purchase done. Also: Chinese emergency-finance 101."
+          },
+          "next": "done"
+        },
+        {
+          "id": "linked_card",
+          "text": {
+            "cn": "用已绑外卡的支付宝硬刚。",
+            "en": "Force it with linked foreign-card Alipay."
+          },
+          "requires": [
+            "foreign_card_linked"
+          ],
+          "blocks_if": [
+            "cash_only"
+          ],
+          "showIfLocked": true,
+          "effect": {
+            "money": -400,
+            "sanity": -5,
+            "battery": -10,
+            "locality": 4
+          },
+          "feedback": {
+            "cn": "额度提示跳出来。钱包哭，程序笑。",
+            "en": "Quota warnings pop. Wallet cries; UI smiles."
+          },
+          "next": "done"
+        },
+        {
+          "id": "leave_empty",
+          "text": {
+            "cn": "两手空空离开，去吃椰子。",
+            "en": "Leave empty-handed; buy a coconut."
+          },
+          "effect": {
+            "money": -25,
+            "sanity": 5,
+            "battery": -6,
+            "locality": 1
+          },
+          "feedback": {
+            "cn": "椰子比口红诚实。",
+            "en": "Coconuts are more honest than lipstick."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "免税日结束。",
+        "en": "Duty-free day ends."
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "chongqing_liziba",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "李子壩穿樓",
+        "en": "Liziba Through-Building"
+      },
+      "text": {
+        "cn": "輕軌真的從居民樓穿過。觀景平台上相機比人多，你的站位決定今天的 sanity。",
+        "en": "The monorail really does pierce the building. More cameras than people — your spot decides today's sanity."
+      },
+      "choices": [
+        {
+          "id": "wait_train",
+          "text": {
+            "cn": "耐心等那一班『穿樓瞬間』。",
+            "en": "Wait patiently for the through-building moment."
+          },
+          "effect": {
+            "money": -20,
+            "sanity": 8,
+            "battery": -20,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "crowd_fight",
+          "text": {
+            "cn": "擠進最佳機位（可能被肘擊）。",
+            "en": "Fight for the best angle (elbows possible)."
+          },
+          "effect": {
+            "money": -10,
+            "sanity": -12,
+            "battery": -15,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "english_crowd",
+          "text": {
+            "cn": "💰 幫外國團用英語解說『這樓為什麼被火車穿過』，收小費。",
+            "en": "💰 Explain in English why a train goes through a building — collect tips."
+          },
+          "effect": {
+            "money": 160,
+            "sanity": 5,
+            "battery": -18,
+            "locality": 6
+          },
+          "addFlags": [
+            "did_english_tip"
+          ],
+          "feedback": {
+            "cn": "你成了臨時導遊。有人以為你住在那棟樓裡。",
+            "en": "You became a temp guide. Someone assumed you lived in that building."
+          },
+          "next": "done",
+          "showIfLocked": true,
+          "requiresStats": {
+            "sanityGte": 70
+          },
+          "lockedHint": {
+            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
+            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
+          }
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "李子壩日結束。相機快門聲還在耳裡回放。",
+        "en": "Liziba day ends. Shutter sounds still loop in your ears."
+      }
+    }
+  }
+}

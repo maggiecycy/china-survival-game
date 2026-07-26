@@ -1,0 +1,73 @@
+{
+  "id": "beijing_national_museum",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "国家博物馆",
+        "en": "National Museum"
+      },
+      "text": {
+        "cn": "免费但要预约。展厅安静，手机信号像被历史吸走。",
+        "en": "Free with booking. Quiet halls; signal feels historically absorbed."
+      },
+      "choices": [
+        {
+          "id": "booked",
+          "text": {
+            "cn": "有预约：认真看展做笔记。",
+            "en": "Booked: deep exhibit notes."
+          },
+          "effect": {
+            "money": 0,
+            "sanity": 12,
+            "battery": -14,
+            "locality": 6
+          },
+          "requires": [
+            "has_local_number"
+          ],
+          "showIfLocked": true,
+          "next": "done"
+        },
+        {
+          "id": "walkup",
+          "text": {
+            "cn": "碰运气现场入馆，排长队。",
+            "en": "Walk-up lottery + long queue."
+          },
+          "effect": {
+            "money": 0,
+            "sanity": -5,
+            "battery": -20,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "gift",
+          "text": {
+            "cn": "看一半去文创店「收集历史周边」。",
+            "en": "Half exhibits, then gift-shop history."
+          },
+          "effect": {
+            "money": -150,
+            "sanity": 7,
+            "battery": -12,
+            "locality": 3
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "国家博物馆日結束。",
+        "en": "National Museum day ends."
+      }
+    }
+  }
+}

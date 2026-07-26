@@ -2,25 +2,116 @@
   "cityId": "shenzhen",
   "attractions": [
     {
-      "id": "face_gate",
-      "name": { "cn": "地鐵刷臉閘機", "en": "Facial Gate" },
-      "coords": { "x": 50, "y": 50 },
-      "desc": { "cn": "外國面孔識別失敗現場。", "en": "Foreign-face recognition failure live." },
-      "graphId": "shenzhen_face_gate"
+      "id": "window",
+      "name": {
+        "cn": "世界之窗",
+        "en": "Window of the World"
+      },
+      "coords": {
+        "x": 35,
+        "y": 55
+      },
+      "desc": {
+        "cn": "微缩世界与演出。",
+        "en": "Mini world and shows."
+      },
+      "graphId": "shenzhen_window"
     },
     {
-      "id": "tech_mall",
-      "name": { "cn": "華強北", "en": "Huaqiangbei" },
-      "coords": { "x": 40, "y": 62 },
-      "desc": { "cn": "電子零件迷宮與砍價。", "en": "Electronics maze and haggling." },
+      "id": "happy_valley",
+      "name": {
+        "cn": "欢乐谷",
+        "en": "Happy Valley"
+      },
+      "coords": {
+        "x": 40,
+        "y": 48
+      },
+      "desc": {
+        "cn": "过山车与尖叫。",
+        "en": "Coasters and screams."
+      },
+      "graphId": "shenzhen_happy_valley"
+    },
+    {
+      "id": "bay",
+      "name": {
+        "cn": "深圳湾公园",
+        "en": "Shenzhen Bay Park"
+      },
+      "coords": {
+        "x": 55,
+        "y": 70
+      },
+      "desc": {
+        "cn": "骑行看海。",
+        "en": "Bike and sea."
+      },
+      "graphId": "shenzhen_bay"
+    },
+    {
+      "id": "huaqiangbei",
+      "name": {
+        "cn": "华强北",
+        "en": "Huaqiangbei"
+      },
+      "coords": {
+        "x": 58,
+        "y": 42
+      },
+      "desc": {
+        "cn": "电子产品与 DIY。",
+        "en": "Electronics and DIY."
+      },
       "graphId": "shenzhen_tech_mall"
     },
     {
-      "id": "window_of_world",
-      "name": { "cn": "世界之窗／海邊", "en": "Window / Bay" },
-      "coords": { "x": 65, "y": 70 },
-      "desc": { "cn": "打卡或吹風半天。", "en": "Check-in or sea breeze half-day." },
-      "graphId": "shenzhen_bay"
+      "id": "dameisha",
+      "name": {
+        "cn": "大梅沙",
+        "en": "Dameisha Beach"
+      },
+      "coords": {
+        "x": 78,
+        "y": 58
+      },
+      "desc": {
+        "cn": "海边与游泳。",
+        "en": "Beach and swim."
+      },
+      "graphId": "shenzhen_dameisha"
+    },
+    {
+      "id": "pingan",
+      "name": {
+        "cn": "平安金融中心",
+        "en": "Ping An Finance Centre"
+      },
+      "coords": {
+        "x": 52,
+        "y": 38
+      },
+      "desc": {
+        "cn": "登高俯瞰。",
+        "en": "Observation deck."
+      },
+      "graphId": "shenzhen_pingan"
+    },
+    {
+      "id": "nantou",
+      "name": {
+        "cn": "南头古城",
+        "en": "Nantou Ancient Town"
+      },
+      "coords": {
+        "x": 30,
+        "y": 62
+      },
+      "desc": {
+        "cn": "City walk 与咖啡。",
+        "en": "City walk and coffee."
+      },
+      "graphId": "shenzhen_nantou"
     }
   ]
 }

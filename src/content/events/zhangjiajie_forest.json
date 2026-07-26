@@ -1,0 +1,92 @@
+{
+  "id": "zhangjiajie_forest",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "森林迷宫",
+        "en": "Forest Maze"
+      },
+      "text": {
+        "cn": "景区大到像另一个行政区。路牌中英对照互相矛盾。IG 一个一分钟视频上传显示要十几分钟——还经常失败。",
+        "en": "The park feels like another prefecture. Bilingual signs disagree. A 1-minute IG upload estimates 15+ minutes — and often fails."
+      },
+      "choices": [
+        {
+          "id": "wander",
+          "text": {
+            "cn": "跟着人潮走，把迷路当徒步。",
+            "en": "Follow crowds; treat getting lost as hiking."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": -10,
+            "battery": -25,
+            "locality": 3
+          },
+          "feedback": {
+            "cn": "石峰很美。你的定位点在地图上画抽象画。",
+            "en": "Pillars are stunning. Your GPS draws abstract art."
+          },
+          "next": "done"
+        },
+        {
+          "id": "offline_map",
+          "text": {
+            "cn": "下载离线地图硬撑（外网不稳）。",
+            "en": "Download offline maps (foreign net unstable)."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 2,
+            "battery": -30,
+            "locality": 4
+          },
+          "feedback": {
+            "cn": "电量换方向感。值得。",
+            "en": "Battery for orientation. Worth it."
+          },
+          "next": "done"
+        },
+        {
+          "id": "photo_hustle",
+          "text": {
+            "cn": "💰 在观景台合照收费。",
+            "en": "💰 Charge for viewpoint photos."
+          },
+          "effect": {
+            "money": 160,
+            "sanity": -8,
+            "battery": -20,
+            "locality": 2
+          },
+          "addFlags": [
+            "did_photo_hustle"
+          ],
+          "showIfLocked": true,
+          "requiresStats": {
+            "sanityGte": 70
+          },
+          "lockedHint": {
+            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
+            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
+          },
+          "feedback": {
+            "cn": "阿凡达背景板日薪。外网传不出去，本地收款还行。",
+            "en": "Avatar-backdrop day rate. Upload fails; local pay works."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "森林公园日结束。",
+        "en": "Forest park day ends."
+      }
+    }
+  }
+}

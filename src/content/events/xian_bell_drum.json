@@ -1,0 +1,69 @@
+{
+  "id": "xian_bell_drum",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "钟鼓楼",
+        "en": "Bell & Drum Towers"
+      },
+      "text": {
+        "cn": "广场鸽子与鼓声。登楼看城墙圈。",
+        "en": "Square pigeons and drums. Climb for wall-ring views."
+      },
+      "choices": [
+        {
+          "id": "climb",
+          "text": {
+            "cn": "登楼远眺。",
+            "en": "Climb for views."
+          },
+          "effect": {
+            "money": -60,
+            "sanity": 7,
+            "battery": -14,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "square",
+          "text": {
+            "cn": "广场坐着看人。",
+            "en": "Sit on square people-watching."
+          },
+          "effect": {
+            "money": -20,
+            "sanity": 12,
+            "battery": -8,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "hawkers",
+          "text": {
+            "cn": "被拉客干扰。",
+            "en": "Hawker interruptions."
+          },
+          "effect": {
+            "money": -30,
+            "sanity": -5,
+            "battery": -10,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "钟鼓楼日結束。",
+        "en": "Bell & Drum Towers day ends."
+      }
+    }
+  }
+}

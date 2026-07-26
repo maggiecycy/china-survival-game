@@ -3,6 +3,7 @@
     "id": "hongkong_departure",
     "type": "good",
     "icon": "🛫",
+    "badge": { "cn": "生還離境", "en": "Survived Exit" },
     "title": {
       "cn": "成功自香港離境",
       "en": "Departed via Hong Kong"
@@ -16,6 +17,7 @@
     "id": "china_pro",
     "type": "good",
     "icon": "🏅",
+    "badge": { "cn": "本地通", "en": "Local Pro" },
     "title": {
       "cn": "中國通認證",
       "en": "China Pro Certified"
@@ -25,10 +27,39 @@
       "en": "High locality means you learned scanning, booking, and improvising. Hong Kong is just the graduation gate."
     }
   },
+  "thrifty_master": {
+    "id": "thrifty_master",
+    "type": "good",
+    "icon": "💸",
+    "badge": { "cn": "省錢大師", "en": "Thrifty Master" },
+    "title": {
+      "cn": "省錢大師：錢包還很厚",
+      "en": "Thrifty Master — Wallet Still Thick"
+    },
+    "desc": {
+      "cn": "你在掃碼陷阱與景點消費之間活了下來，離境時仍握著可觀餘額。精打細算也是一種生存。",
+      "en": "You survived QR traps and attraction spends with serious cash left. Frugality is a survival skill too."
+    }
+  },
+  "optimist": {
+    "id": "optimist",
+    "type": "good",
+    "icon": "🌤️",
+    "badge": { "cn": "樂天派", "en": "Optimist" },
+    "title": {
+      "cn": "樂天派：精神值還在線",
+      "en": "Optimist — Sanity Still Online"
+    },
+    "desc": {
+      "cn": "排隊、注视與支付故障都沒把你擊垮。你帶著幾乎滿格的 Sanity 走出關口——這很罕見。",
+      "en": "Queues, stares, and payment fails never broke you. Walking out with high sanity is rare — and earned."
+    }
+  },
   "bad_end_sanity": {
     "id": "bad_end_sanity",
     "type": "bad",
     "icon": "😵",
+    "badge": { "cn": "崩潰離場", "en": "Meltdown" },
     "title": {
       "cn": "精神值歸零：買機票回國",
       "en": "Sanity Melted — Flight Home"
@@ -42,19 +73,21 @@
     "id": "bad_end_overstay",
     "type": "bad",
     "icon": "⏳",
+    "badge": { "cn": "簽證歸零", "en": "Visa Zero" },
     "title": {
       "cn": "時間耗盡：簽證壓力爆表",
       "en": "Time's Up — Visa Pressure"
     },
     "desc": {
-      "cn": "剩餘停留時間歸零。你來不及走完地圖，只能倉促處理離境或延期焦慮。",
-      "en": "Remaining stay hits zero. The map is unfinished — only exit anxiety remains."
+      "cn": "剩餘停留時間歸零，且你尚未完成香港離境。來不及走完路線，只能倉促處理延期焦慮。",
+      "en": "Visa time hit zero before a Hong Kong exit. The route is unfinished — only extension anxiety remains."
     }
   },
   "bad_end_battery": {
     "id": "bad_end_battery",
     "type": "bad",
     "icon": "🔋",
+    "badge": { "cn": "失聯夜", "en": "Dead Phone" },
     "title": {
       "cn": "手機沒電：深夜迷失",
       "en": "Phone Dead — Lost at Night"
@@ -65,10 +98,12 @@
     }
   },
   "rules": [
+    { "id": "china_pro", "when": { "exit": true, "localityGte": 80 } },
+    { "id": "thrifty_master", "when": { "exit": true, "moneyGte": 1500 } },
+    { "id": "optimist", "when": { "exit": true, "sanityGte": 80 } },
+    { "id": "hongkong_departure", "when": { "exit": true } },
     { "id": "bad_end_sanity", "when": { "stat": "sanity", "lte": 0 } },
     { "id": "bad_end_overstay", "when": { "stat": "timeRemaining", "lte": 0 } },
-    { "id": "bad_end_battery", "when": { "stat": "battery", "lte": 0 } },
-    { "id": "china_pro", "when": { "arrivedCity": "hongkong", "localityGte": 80 } },
-    { "id": "hongkong_departure", "when": { "arrivedCity": "hongkong" } }
+    { "id": "bad_end_battery", "when": { "stat": "battery", "lte": 0 } }
   ]
 }

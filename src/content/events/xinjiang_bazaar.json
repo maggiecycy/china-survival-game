@@ -1,0 +1,113 @@
+{
+  "id": "xinjiang_bazaar",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "大巴扎语言与烤肉",
+        "en": "Bazaar Language & Kebabs"
+      },
+      "text": {
+        "cn": "烤羊肉串香气直击灵魂。点餐时你听到有人用 this / that 区分「那个」——有个外国游客突然卡住：为什么听起来像…？摊主完全不明白他在尴尬什么。旁边还有人在吃鸡爪。",
+        "en": "Lamb skewers hit the soul. Someone orders with this/that for \"that one\" — a foreign tourist freezes: why does that sound like…? The vendor has no idea. Someone nearby eats chicken feet."
+      },
+      "choices": [
+        {
+          "id": "point_menu",
+          "text": {
+            "cn": "用手指菜单避开 this/that 发音陷阱。",
+            "en": "Point at the menu; dodge this/that phonetics."
+          },
+          "effect": {
+            "money": -70,
+            "sanity": 2,
+            "battery": -10,
+            "locality": 4
+          },
+          "feedback": {
+            "cn": "手指是最安全的语言。串很香。",
+            "en": "Fingers are the safest language. Skewers slap."
+          },
+          "next": "done"
+        },
+        {
+          "id": "explain_joke",
+          "text": {
+            "cn": "小声跟同伴解释「那是指示词，不是你想的那个词」。",
+            "en": "Whisper: it's a demonstrative, not That Word."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": -6,
+            "battery": -8,
+            "locality": 5
+          },
+          "feedback": {
+            "cn": "文化误读现场教学。你笑不出来又想笑。",
+            "en": "Live cultural false-friend lesson. Laugh-cry energy."
+          },
+          "next": "done"
+        },
+        {
+          "id": "cash_transfer",
+          "text": {
+            "cn": "卡又不行：现金找人换微信付串。",
+            "en": "Card fails again: cash→WeChat for skewers."
+          },
+          "effect": {
+            "money": -90,
+            "sanity": -8,
+            "battery": -12,
+            "locality": 6
+          },
+          "addFlags": [
+            "got_wallet_topup"
+          ],
+          "feedback": {
+            "cn": "串到了。中国移动支付应急课第 N 次。",
+            "en": "Skewers acquired. Mobile-pay emergency class #N."
+          },
+          "next": "done"
+        },
+        {
+          "id": "english_tip",
+          "text": {
+            "cn": "💰 帮游客翻译菜单换小费。",
+            "en": "💰 Tip for translating menus."
+          },
+          "effect": {
+            "money": 120,
+            "sanity": 5,
+            "battery": -14,
+            "locality": 6
+          },
+          "addFlags": [
+            "did_english_tip"
+          ],
+          "showIfLocked": true,
+          "requiresStats": {
+            "sanityGte": 70
+          },
+          "lockedHint": {
+            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
+            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
+          },
+          "feedback": {
+            "cn": "你成为大巴扎临时外交官。",
+            "en": "Temporary bazaar diplomat."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "大巴扎日结束。",
+        "en": "Bazaar day ends."
+      }
+    }
+  }
+}

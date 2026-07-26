@@ -1,0 +1,102 @@
+{
+  "id": "nanjing_park_social",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "公园打成一片",
+        "en": "Park Social Blend"
+      },
+      "text": {
+        "cn": "早晨太极，晚上广场舞音响开到「整条街都能听见」。有大爷比划：来家里吃饭！翻译软件显示「Come home eat rice」。",
+        "en": "Morning tai chi; evening square dance at street-volume. An uncle gestures: come eat at my home! App says \"Come home eat rice\"."
+      },
+      "choices": [
+        {
+          "id": "tai_chi",
+          "text": {
+            "cn": "跟着打太极，被纠正动作十八次。",
+            "en": "Join tai chi; get corrected 18 times."
+          },
+          "effect": {
+            "money": 0,
+            "sanity": 12,
+            "battery": -15,
+            "locality": 6
+          },
+          "feedback": {
+            "cn": "你学会了「松」。大爷竖拇指。",
+            "en": "You learn \"song\" (relax). Uncle gives a thumbs-up."
+          },
+          "next": "done"
+        },
+        {
+          "id": "square_dance",
+          "text": {
+            "cn": "加入广场舞外圈，步伐像报错的机器人。",
+            "en": "Join the square-dance outer ring like a glitchy robot."
+          },
+          "effect": {
+            "money": -30,
+            "sanity": 8,
+            "battery": -20,
+            "locality": 5
+          },
+          "feedback": {
+            "cn": "音响震耳，笑容真实。你短暂属于这座公园。",
+            "en": "Speakers deafening, smiles real. You briefly belong to this park."
+          },
+          "next": "done"
+        },
+        {
+          "id": "home_dinner",
+          "text": {
+            "cn": "接受大爷邀请去家里吃饭（热情好客线）。",
+            "en": "Accept uncle's home dinner invite (hospitality route)."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": 15,
+            "battery": -18,
+            "locality": 8
+          },
+          "addFlags": [
+            "invited_home_dinner"
+          ],
+          "feedback": {
+            "cn": "满桌菜与反复劝酒。你感叹：中国人真的太热情了。",
+            "en": "Table full of dishes and pour-more toasts. You think: Chinese hospitality is real."
+          },
+          "next": "done"
+        },
+        {
+          "id": "run",
+          "text": {
+            "cn": "微笑摆手逃跑，回酒店点外卖。",
+            "en": "Smile, wave, flee to hotel delivery."
+          },
+          "effect": {
+            "money": -55,
+            "sanity": -3,
+            "battery": -8,
+            "locality": 0
+          },
+          "feedback": {
+            "cn": "安全社交距离保住了，也错过一顿故事。",
+            "en": "Safe distance kept; a story dinner missed."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "公园社交日结束。",
+        "en": "Park social day ends."
+      }
+    }
+  }
+}

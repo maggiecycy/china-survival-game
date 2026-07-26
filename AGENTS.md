@@ -29,7 +29,7 @@ Content（剧情 JSON） → Engine（纯 JS 规则） → Store（编排） →
 ## 主流程（currentStep）
 
 ```
-visa-selection → arrival-loading → tutorial
+welcome（玩法说明）→ visa-selection → arrival-loading → tutorial
   → city-map（城市景点地图）↔ city-event（景点/住宿/交通事件）
   → map-planning（中国地图）→ travel-mode →（首次离京 transit 一次）
   → city-map … → ending
@@ -69,8 +69,10 @@ visa-selection → arrival-loading → tutorial
 ### 结局
 
 - `content/endings.json` + `engine/ending.js`
-- 坏：sanity≤0 / time≤0 / battery≤0
-- 好：香港离境；locality≥80 → 中国通
+- 坏：sanity≤0 / time≤0 / battery≤0（**未**完成离境时）
+- 好：完成香港「离境口岸」后结算（离境**不扣**景点日 24h）
+  - 本地通 locality≥80 → 省钱大师 money≥1500 → 乐天派 sanity≥80 → 普通生还离境
+- 住宿：`international` / `foreigner_ok` / `youth_hostel` / `couch`
 
 ### 赚钱 / Tutorial flags（示例）
 
@@ -95,8 +97,8 @@ visa-selection → arrival-loading → tutorial
 
 ## 建议的下一步（优先级）
 
-1. 为重庆/桂林/南京/海南等补全 `attractions/*.json` + 独立景点事件（去掉仅靠 legacy hub）  
-2. 打磨数值：夜租 vs 赚钱支线 vs 充电宝的经济平衡  
+1. ~~14 城按清单景点针脚（约 6～8/城）~~ → 继续打磨文案深度与数值平衡  
+2. Sanity：选项档位 + 过夜按住宿回复（`gameConfig.sanityTiers` / `overnightSanityByLodging`）  
 3. 欢迎页/语言选择；UI 去 emoji 依赖、统一视觉  
 4. 存档（localStorage）+ `saveVersion`  
 5. 需要「大家一起玩」时再上 Supabase 排行榜/云存档（先别上实时联机）

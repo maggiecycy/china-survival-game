@@ -1,14 +1,15 @@
 <script setup>
 /**
  * App.vue
- * visa → arrival → tutorial → city-map ↔ attraction/lodging
- *                → map-planning → travel → city-map → ending
+ * welcome → visa → arrival → tutorial → city-map ↔ attraction/lodging
+ *                         → map-planning → travel → city-map → ending
  */
 import { provide } from 'vue'
 import { useGameStore } from './stores/useGameStore'
 import GameHeader from './components/GameHeader.vue'
 import StatusBar from './components/StatusBar.vue'
 import DebugPanel from './components/DebugPanel.vue'
+import HowToPlayView from './views/HowToPlayView.vue'
 import VisaSelectionView from './views/VisaSelectionView.vue'
 import ArrivalLoadingView from './views/ArrivalLoadingView.vue'
 import TutorialView from './views/TutorialView.vue'
@@ -32,7 +33,8 @@ provide('tutorialData', tutorial)
     <StatusBar />
 
     <main class="flex-grow p-4 flex flex-col gap-4 justify-center">
-      <VisaSelectionView v-if="currentStep === 'visa-selection'" />
+      <HowToPlayView v-if="currentStep === 'welcome'" />
+      <VisaSelectionView v-else-if="currentStep === 'visa-selection'" />
       <ArrivalLoadingView v-else-if="currentStep === 'arrival-loading'" />
       <TutorialView v-else-if="currentStep === 'tutorial'" />
       <CityMapView v-else-if="currentStep === 'city-map'" />

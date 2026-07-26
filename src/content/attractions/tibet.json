@@ -1,0 +1,117 @@
+{
+  "cityId": "tibet",
+  "attractions": [
+    {
+      "id": "potala",
+      "name": {
+        "cn": "布达拉宫",
+        "en": "Potala Palace"
+      },
+      "coords": {
+        "x": 48,
+        "y": 42
+      },
+      "desc": {
+        "cn": "预约与高原。",
+        "en": "Booking and altitude."
+      },
+      "graphId": "tibet_potala"
+    },
+    {
+      "id": "jokhang",
+      "name": {
+        "cn": "大昭寺",
+        "en": "Jokhang Temple"
+      },
+      "coords": {
+        "x": 55,
+        "y": 52
+      },
+      "desc": {
+        "cn": "朝圣与香火。",
+        "en": "Pilgrims and incense."
+      },
+      "graphId": "tibet_jokhang"
+    },
+    {
+      "id": "barkhor",
+      "name": {
+        "cn": "八廓街",
+        "en": "Barkhor Street"
+      },
+      "coords": {
+        "x": 58,
+        "y": 58
+      },
+      "desc": {
+        "cn": "转经与市集。",
+        "en": "Circuit and market."
+      },
+      "graphId": "tibet_barkhor"
+    },
+    {
+      "id": "namtso",
+      "name": {
+        "cn": "纳木错",
+        "en": "Namtso"
+      },
+      "coords": {
+        "x": 40,
+        "y": 22
+      },
+      "desc": {
+        "cn": "圣湖与高反风险。",
+        "en": "Holy lake and altitude risk."
+      },
+      "graphId": "tibet_namtso"
+    },
+    {
+      "id": "yamdrok",
+      "name": {
+        "cn": "羊卓雍措",
+        "en": "Yamdrok Lake"
+      },
+      "coords": {
+        "x": 60,
+        "y": 70
+      },
+      "desc": {
+        "cn": "碧蓝湖景。",
+        "en": "Turquoise lake."
+      },
+      "graphId": "tibet_yamdrok"
+    },
+    {
+      "id": "everest",
+      "name": {
+        "cn": "珠峰大本营",
+        "en": "Everest Base Camp"
+      },
+      "coords": {
+        "x": 25,
+        "y": 80
+      },
+      "desc": {
+        "cn": "漫长路程与极限。",
+        "en": "Long road and extremes."
+      },
+      "graphId": "tibet_everest"
+    },
+    {
+      "id": "food",
+      "name": {
+        "cn": "藏餐",
+        "en": "Tibetan Food"
+      },
+      "coords": {
+        "x": 50,
+        "y": 60
+      },
+      "desc": {
+        "cn": "酥油茶与勇气。",
+        "en": "Butter tea and courage."
+      },
+      "graphId": "tibet_food"
+    }
+  ]
+}

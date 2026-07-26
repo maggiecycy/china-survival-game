@@ -1,0 +1,84 @@
+{
+  "id": "hainan_seafood",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "海鲜市场轮盘",
+        "en": "Seafood Roulette"
+      },
+      "text": {
+        "cn": "活物水箱、模糊标价、热情推销。菜单有内脏拼盘与皮蛋——旁边小字像没有。有摊位油炸物可能含花生碎。",
+        "en": "Live tanks, fuzzy prices, hard sell. Offal platters and century eggs. Fine print may be imaginary. Fry stalls may hide peanut bits."
+      },
+      "choices": [
+        {
+          "id": "careful",
+          "text": {
+            "cn": "反复确认「无花生／先称再做」，并拍照留证。",
+            "en": "Confirm no peanuts, weigh first, photo the scale."
+          },
+          "effect": {
+            "money": -180,
+            "sanity": -6,
+            "battery": -12,
+            "locality": 5
+          },
+          "feedback": {
+            "cn": "贵一点，但肠胃与喉咙安全。",
+            "en": "Pricier — throat and gut stay safe."
+          },
+          "next": "done"
+        },
+        {
+          "id": "offal",
+          "text": {
+            "cn": "挑战内脏拼盘 + 皮蛋。",
+            "en": "Challenge: offal platter + century egg."
+          },
+          "effect": {
+            "money": -150,
+            "sanity": -22,
+            "battery": -8,
+            "locality": 4
+          },
+          "feedback": {
+            "cn": "你完成了勇气成就。味道投票弃权。",
+            "en": "Courage achievement unlocked. Taste abstains."
+          },
+          "next": "done"
+        },
+        {
+          "id": "allergy",
+          "text": {
+            "cn": "随便点炸海鲜小吃——触发花生过敏急诊。",
+            "en": "Random fried snack — peanut ER ending."
+          },
+          "effect": {
+            "money": -320,
+            "sanity": -30,
+            "battery": -16,
+            "locality": -3
+          },
+          "addFlags": [
+            "hospital_peanut"
+          ],
+          "feedback": {
+            "cn": "医院比海滩印象更深。下次你会问到对方不耐烦。",
+            "en": "Hospital outranks the beach. Next time you'll ask until they're annoyed."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "海鲜日结束。",
+        "en": "Seafood day ends."
+      }
+    }
+  }
+}

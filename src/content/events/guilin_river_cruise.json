@@ -1,0 +1,69 @@
+{
+  "id": "guilin_river_cruise",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "两江四湖",
+        "en": "Two Rivers Four Lakes"
+      },
+      "text": {
+        "cn": "夜游船灯光秀。甲板风凉，喇叭很热情。",
+        "en": "Night cruise light show. Cool deck wind; enthusiastic loudspeakers."
+      },
+      "choices": [
+        {
+          "id": "deck",
+          "text": {
+            "cn": "站甲板吹风看灯。",
+            "en": "Deck wind and lights."
+          },
+          "effect": {
+            "money": -180,
+            "sanity": 12,
+            "battery": -12,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "cabin",
+          "text": {
+            "cn": "坐舱内休息。",
+            "en": "Rest in cabin."
+          },
+          "effect": {
+            "money": -180,
+            "sanity": 7,
+            "battery": -8,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "speaker",
+          "text": {
+            "cn": "广播循环播放到烦。",
+            "en": "Looping PA until annoyed."
+          },
+          "effect": {
+            "money": -170,
+            "sanity": -5,
+            "battery": -10,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "两江四湖日結束。",
+        "en": "Two Rivers Four Lakes day ends."
+      }
+    }
+  }
+}

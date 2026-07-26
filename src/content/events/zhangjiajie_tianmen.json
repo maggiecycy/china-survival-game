@@ -1,0 +1,69 @@
+{
+  "id": "zhangjiajie_tianmen",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "天门山",
+        "en": "Tianmen Mountain"
+      },
+      "text": {
+        "cn": "九十九弯与天门洞。车程本身就是景点——也是 Sanity 考验。",
+        "en": "99 bends and Heaven Gate. The road is the attraction — and a sanity test."
+      },
+      "choices": [
+        {
+          "id": "bus",
+          "text": {
+            "cn": "坐观光车看弯道。",
+            "en": "Sightseeing bus for bends."
+          },
+          "effect": {
+            "money": -220,
+            "sanity": 7,
+            "battery": -16,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "climb",
+          "text": {
+            "cn": "挑战天门洞台阶。",
+            "en": "Climb Heaven Gate stairs."
+          },
+          "effect": {
+            "money": -240,
+            "sanity": 12,
+            "battery": -28,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "carsick",
+          "text": {
+            "cn": "晕车到怀疑人生。",
+            "en": "Carsick existential crisis."
+          },
+          "effect": {
+            "money": -200,
+            "sanity": -14,
+            "battery": -18,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "天门山日結束。",
+        "en": "Tianmen Mountain day ends."
+      }
+    }
+  }
+}

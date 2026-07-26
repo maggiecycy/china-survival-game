@@ -1,0 +1,69 @@
+{
+  "id": "xian_datang",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "大唐不夜城",
+        "en": "Datang Night City"
+      },
+      "text": {
+        "cn": "灯火与不倒翁小姐姐。人潮密度重新定义「夜」。",
+        "en": "Lights and viral performers. Crowd density redefines night."
+      },
+      "choices": [
+        {
+          "id": "stroll",
+          "text": {
+            "cn": "夜游散步，少买周边。",
+            "en": "Night stroll; light merch."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 7,
+            "battery": -16,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "show",
+          "text": {
+            "cn": "追演出打卡。",
+            "en": "Chase performance check-ins."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": 7,
+            "battery": -20,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "crush",
+          "text": {
+            "cn": "被人群挤到焦虑。",
+            "en": "Crowd crush anxiety."
+          },
+          "effect": {
+            "money": -70,
+            "sanity": -14,
+            "battery": -18,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "大唐不夜城日結束。",
+        "en": "Datang Night City day ends."
+      }
+    }
+  }
+}

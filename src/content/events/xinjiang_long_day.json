@@ -1,0 +1,84 @@
+{
+  "id": "xinjiang_long_day",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "疆内长途",
+        "en": "Xinjiang Long Haul"
+      },
+      "text": {
+        "cn": "导航显示还有 4 小时。新疆的「附近」重新定义了距离。大巴上有人抽烟，你开始重新协商 San 值。网约车司机要手机号后四位——中文数字考验。",
+        "en": "Nav says 4 hours more. \"Nearby\" has a new meaning. Someone smokes on the bus. The driver wants last-4 digits in Chinese numbers."
+      },
+      "choices": [
+        {
+          "id": "endure_bus",
+          "text": {
+            "cn": "坐长途大巴硬撑，看戈壁。",
+            "en": "Long bus; stare at Gobi light."
+          },
+          "effect": {
+            "money": -180,
+            "sanity": -16,
+            "battery": -28,
+            "locality": 4
+          },
+          "feedback": {
+            "cn": "辽阔治愈了一半，烟味消耗了另一半。",
+            "en": "Vastness heals half; smoke spends the other half."
+          },
+          "next": "done"
+        },
+        {
+          "id": "digits_fail",
+          "text": {
+            "cn": "打车：后四位说成英文，司机两次听错。",
+            "en": "Taxi: say digits in English; driver mishears twice."
+          },
+          "effect": {
+            "money": -220,
+            "sanity": -20,
+            "battery": -18,
+            "locality": 2
+          },
+          "addFlags": [
+            "failed_chinese_digits"
+          ],
+          "feedback": {
+            "cn": "你最终出示屏幕。数字羞耻拉满。",
+            "en": "You show the screen. Digit shame: maxed."
+          },
+          "next": "done"
+        },
+        {
+          "id": "private_hire",
+          "text": {
+            "cn": "包车含司机（贵，少沟通摩擦）。",
+            "en": "Private hire with driver (pricey, less friction)."
+          },
+          "effect": {
+            "money": -480,
+            "sanity": 5,
+            "battery": -15,
+            "locality": 3
+          },
+          "feedback": {
+            "cn": "钱换平静。新疆公路仍漫长。",
+            "en": "Money buys calm. The highway stays endless."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "长途日结束——你其实只「到了路上」。",
+        "en": "Long-haul day ends — you mostly reached the road."
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "nanjing_jiming",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "鸡鸣寺",
+        "en": "Jiming Temple"
+      },
+      "text": {
+        "cn": "香火与红墙。旺季人多到像车站。蹲厕可能再次出现。",
+        "en": "Incense and red walls. Peak season feels like a station. Squat toilets may return."
+      },
+      "choices": [
+        {
+          "id": "pray",
+          "text": {
+            "cn": "安静随喜，少拍照。",
+            "en": "Quiet visit; fewer photos."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": 12,
+            "battery": -10,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "crowd",
+          "text": {
+            "cn": "人潮中硬拍。",
+            "en": "Shoot through crowds."
+          },
+          "effect": {
+            "money": -30,
+            "sanity": -5,
+            "battery": -14,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "toilet",
+          "text": {
+            "cn": "如厕文化冲击，提前离开。",
+            "en": "Toilet culture shock; leave early."
+          },
+          "effect": {
+            "money": -20,
+            "sanity": -14,
+            "battery": -8,
+            "locality": 2
+          },
+          "addFlags": [
+            "survived_squat_toilet"
+          ],
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "鸡鸣寺日結束。",
+        "en": "Jiming Temple day ends."
+      }
+    }
+  }
+}

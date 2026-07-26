@@ -1,0 +1,73 @@
+{
+  "id": "hainan_diving",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "潜水",
+        "en": "Diving"
+      },
+      "text": {
+        "cn": "浮潜店要扫码填表。海里很美，教练很催。",
+        "en": "Snorkel shop wants QR forms. Sea is beautiful; instructors hurry."
+      },
+      "choices": [
+        {
+          "id": "snorkel",
+          "text": {
+            "cn": "浮潜看鱼（有号填表更顺）。",
+            "en": "Snorkel (local number helps forms)."
+          },
+          "effect": {
+            "money": -350,
+            "sanity": 12,
+            "battery": -18,
+            "locality": 4
+          },
+          "requires": [
+            "has_local_number"
+          ],
+          "showIfLocked": true,
+          "next": "done"
+        },
+        {
+          "id": "intro_dive",
+          "text": {
+            "cn": "体验潜水，紧张又兴奋。",
+            "en": "Intro dive; scared-excited."
+          },
+          "effect": {
+            "money": -680,
+            "sanity": 7,
+            "battery": -22,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "cancel",
+          "text": {
+            "cn": "浪大取消，改看海。",
+            "en": "Waves cancel; watch sea instead."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": -5,
+            "battery": -8,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "潜水日結束。",
+        "en": "Diving day ends."
+      }
+    }
+  }
+}

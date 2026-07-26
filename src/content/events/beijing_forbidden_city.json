@@ -4,7 +4,10 @@
   "nodes": {
     "main": {
       "id": "main",
-      "title": { "cn": "故宮", "en": "Forbidden City" },
+      "title": {
+        "cn": "故宮",
+        "en": "Forbidden City"
+      },
       "text": {
         "cn": "預約頁又在報錯，安檢隊伍像沒有盡頭。有人盯著你的臉：外國面孔在這裡是稀缺資源。",
         "en": "Booking glitches, endless security. Someone stares at your face: foreign faces are a scarce resource here."
@@ -12,17 +15,37 @@
       "choices": [
         {
           "id": "endure",
-          "text": { "cn": "硬著頭皮進宮逛完。", "en": "Endure and finish the visit." },
-          "effect": { "money": -60, "sanity": -12, "battery": -15, "locality": 4 },
-          "requires": ["booked_ticket_official"],
+          "text": {
+            "cn": "硬著頭皮進宮逛完。",
+            "en": "Endure and finish the visit."
+          },
+          "effect": {
+            "money": -60,
+            "sanity": -12,
+            "battery": -15,
+            "locality": 8
+          },
+          "requires": [
+            "booked_ticket_official"
+          ],
           "showIfLocked": true,
-          "lockedHint": { "cn": "有官方預約會更順", "en": "Official booking helps" },
-          "next": "done"
+          "next": "done",
+          "requiresStats": {
+            "localityGte": 20
+          }
         },
         {
           "id": "scalper_gate",
-          "text": { "cn": "現場找渠道／黃牛補救。", "en": "Fix it on-site via scalper channels." },
-          "effect": { "money": -180, "sanity": -10, "battery": -12, "locality": 1 },
+          "text": {
+            "cn": "現場找渠道／黃牛補救。",
+            "en": "Fix it on-site via scalper channels."
+          },
+          "effect": {
+            "money": -180,
+            "sanity": -10,
+            "battery": -12,
+            "locality": -3
+          },
           "next": "done"
         },
         {
@@ -31,18 +54,41 @@
             "cn": "💰 被遊客拉去合照，每人收費（奇葩但真實）。",
             "en": "💰 Tourists drag you into photos — charge per shot (weird but real)."
           },
-          "effect": { "money": 120, "sanity": -8, "battery": -18, "locality": 2 },
-          "addFlags": ["did_photo_hustle"],
+          "effect": {
+            "money": 120,
+            "sanity": -8,
+            "battery": -18,
+            "locality": 2
+          },
+          "addFlags": [
+            "did_photo_hustle"
+          ],
           "feedback": {
             "cn": "你笑了二十次，錢包鼓了一點，臉部肌肉抽筋。",
             "en": "You smiled twenty times. Wallet up; cheek muscles cramped."
           },
-          "next": "done"
+          "next": "done",
+          "showIfLocked": true,
+          "requiresStats": {
+            "sanityGte": 70
+          },
+          "lockedHint": {
+            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
+            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
+          }
         },
         {
           "id": "give_up_photo",
-          "text": { "cn": "進不去就在筒子河假裝打卡。", "en": "Can't enter — fake check-in by the moat." },
-          "effect": { "money": -10, "sanity": -6, "battery": -8, "locality": 1 },
+          "text": {
+            "cn": "進不去就在筒子河假裝打卡。",
+            "en": "Can't enter — fake check-in by the moat."
+          },
+          "effect": {
+            "money": -10,
+            "sanity": -6,
+            "battery": -8,
+            "locality": 1
+          },
           "next": "done"
         }
       ]

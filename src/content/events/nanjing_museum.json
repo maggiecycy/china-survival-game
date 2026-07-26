@@ -1,0 +1,85 @@
+{
+  "id": "nanjing_museum",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "南京博物院预约",
+        "en": "Museum Booking"
+      },
+      "text": {
+        "cn": "热门展览要提前很多天。现场窗口写着「余票未知」。人工核验护照比电子票慢一截。",
+        "en": "Hot shows need booking days ahead. Walk-up window: \"tickets unknown\". Passport manual check is slower than e-tickets."
+      },
+      "choices": [
+        {
+          "id": "advance",
+          "text": {
+            "cn": "你提前约到了（有国内号收验证码）。",
+            "en": "You booked ahead (local number for SMS)."
+          },
+          "requires": [
+            "has_local_number"
+          ],
+          "showIfLocked": true,
+          "effect": {
+            "money": 0,
+            "sanity": 10,
+            "battery": -12,
+            "locality": 7
+          },
+          "feedback": {
+            "cn": "安检顺利。历史展厅让你短暂忘记扫码战争。",
+            "en": "Security smooth. History briefly replaces QR wars."
+          },
+          "next": "done"
+        },
+        {
+          "id": "walkup",
+          "text": {
+            "cn": "碰运气现场买票，排长队。",
+            "en": "Walk-up lottery + long queue."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": -10,
+            "battery": -18,
+            "locality": 2
+          },
+          "feedback": {
+            "cn": "挤进去了，但脚比大脑先累。",
+            "en": "You get in — feet tire before your brain."
+          },
+          "next": "done"
+        },
+        {
+          "id": "fail_book",
+          "text": {
+            "cn": "约不上，去鸡鸣寺外墙拍照了事。",
+            "en": "No tickets; photograph Jiming Temple walls instead."
+          },
+          "effect": {
+            "money": -20,
+            "sanity": -5,
+            "battery": -8,
+            "locality": 1
+          },
+          "feedback": {
+            "cn": "打卡完成，深度为零。",
+            "en": "Check-in complete. Depth: zero."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "博物院日结束。",
+        "en": "Museum day ends."
+      }
+    }
+  }
+}

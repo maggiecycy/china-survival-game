@@ -1,0 +1,69 @@
+{
+  "id": "shanghai_oriental_pearl",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "东方明珠",
+        "en": "Oriental Pearl"
+      },
+      "text": {
+        "cn": "电梯上升时耳朵发闷。玻璃栈道上有人尖叫，有人拍照，有人盯着你。",
+        "en": "Ears pop in the lift. On glass, screams, photos, and stares at you."
+      },
+      "choices": [
+        {
+          "id": "deck",
+          "text": {
+            "cn": "登塔看陆家嘴，慢慢呼吸。",
+            "en": "Deck view; breathe slowly."
+          },
+          "effect": {
+            "money": -220,
+            "sanity": 7,
+            "battery": -16,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "glass",
+          "text": {
+            "cn": "走玻璃栈道挑战恐高。",
+            "en": "Glass walk vs fear of heights."
+          },
+          "effect": {
+            "money": -280,
+            "sanity": -5,
+            "battery": -18,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "queue_melt",
+          "text": {
+            "cn": "旺季排队到怀疑人生。",
+            "en": "Peak queue melts your will."
+          },
+          "effect": {
+            "money": -200,
+            "sanity": -14,
+            "battery": -25,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "东方明珠日結束。",
+        "en": "Oriental Pearl day ends."
+      }
+    }
+  }
+}

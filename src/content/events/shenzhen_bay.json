@@ -4,17 +4,66 @@
   "nodes": {
     "main": {
       "id": "main",
-      "title": { "cn": "灣區吹風", "en": "Bay Breeze" },
-      "text": { "cn": "看海或人造景點，節奏比閘機人類。", "en": "Sea or theme parks — slower than gate anxiety." },
+      "title": {
+        "cn": "深圳湾公园",
+        "en": "Shenzhen Bay Park"
+      },
+      "text": {
+        "cn": "海边骑行道很长。晚风把华强北的电子味吹淡。",
+        "en": "Long sea bike path. Evening wind dilutes Huaqiangbei electronics smell."
+      },
       "choices": [
         {
-          "id": "chill",
-          "text": { "cn": "散步吹風。", "en": "Walk and breathe." },
-          "effect": { "money": -40, "sanity": 10, "battery": -12, "locality": 2 },
+          "id": "bike",
+          "text": {
+            "cn": "骑行看海，日落收工。",
+            "en": "Bike the bay; clock out at sunset."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": 12,
+            "battery": -18,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "picnic",
+          "text": {
+            "cn": "草地上坐着发呆。",
+            "en": "Sit on grass and zone out."
+          },
+          "effect": {
+            "money": -20,
+            "sanity": 12,
+            "battery": -6,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "wind_sand",
+          "text": {
+            "cn": "风沙吹脸，提前撤退。",
+            "en": "Wind-sand face; early retreat."
+          },
+          "effect": {
+            "money": -15,
+            "sanity": -5,
+            "battery": -10,
+            "locality": 1
+          },
           "next": "done"
         }
       ]
     },
-    "done": { "id": "done", "end": true, "text": { "cn": "灣區日結束。", "en": "Bay day ends." } }
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "深圳湾公园日結束。",
+        "en": "Shenzhen Bay Park day ends."
+      }
+    }
   }
 }

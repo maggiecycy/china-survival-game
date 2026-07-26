@@ -1,0 +1,69 @@
+{
+  "id": "hongkong_mongkok",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "旺角",
+        "en": "Mong Kok"
+      },
+      "text": {
+        "cn": "女人街、球鞋店、小吃。密度很高，节奏很快。",
+        "en": "Ladies Market, sneakers, snacks. Dense and fast."
+      },
+      "choices": [
+        {
+          "id": "street",
+          "text": {
+            "cn": "街头小吃漫步。",
+            "en": "Street-food stroll."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": 7,
+            "battery": -14,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "shop",
+          "text": {
+            "cn": "买球鞋/电子配件。",
+            "en": "Sneakers / gadgets."
+          },
+          "effect": {
+            "money": -500,
+            "sanity": 0,
+            "battery": -12,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "crowd",
+          "text": {
+            "cn": "人挤人到想逃。",
+            "en": "Crowd density escape urge."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": -14,
+            "battery": -16,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "旺角日結束。",
+        "en": "Mong Kok day ends."
+      }
+    }
+  }
+}

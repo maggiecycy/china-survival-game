@@ -1,0 +1,73 @@
+{
+  "id": "xian_museum",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "陕西历史博物馆",
+        "en": "Shaanxi History Museum"
+      },
+      "text": {
+        "cn": "热门馆要提前预约。现场余票看运气。",
+        "en": "Hot museum needs advance booking. Walk-up is luck."
+      },
+      "choices": [
+        {
+          "id": "booked",
+          "text": {
+            "cn": "预约入馆，安静看展。",
+            "en": "Booked entry; quiet exhibits."
+          },
+          "effect": {
+            "money": 0,
+            "sanity": 12,
+            "battery": -12,
+            "locality": 6
+          },
+          "requires": [
+            "has_local_number"
+          ],
+          "showIfLocked": true,
+          "next": "done"
+        },
+        {
+          "id": "walkup",
+          "text": {
+            "cn": "现场碰运气排队。",
+            "en": "Walk-up queue lottery."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": -5,
+            "battery": -18,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "miss",
+          "text": {
+            "cn": "没进去，买文创自我安慰。",
+            "en": "Missed entry; souvenir consolation."
+          },
+          "effect": {
+            "money": -100,
+            "sanity": -5,
+            "battery": -8,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "陕西历史博物馆日結束。",
+        "en": "Shaanxi History Museum day ends."
+      }
+    }
+  }
+}

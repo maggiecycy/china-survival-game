@@ -1,0 +1,69 @@
+{
+  "id": "hangzhou_xixi",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "西溪湿地",
+        "en": "Xixi Wetland"
+      },
+      "text": {
+        "cn": "芦苇与船。手机信号时有时无——外网更不必说。",
+        "en": "Reeds and boats. Signal flickers — foreign net even more."
+      },
+      "choices": [
+        {
+          "id": "boat",
+          "text": {
+            "cn": "坐船慢游湿地。",
+            "en": "Slow wetland boat."
+          },
+          "effect": {
+            "money": -100,
+            "sanity": 12,
+            "battery": -10,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "walk",
+          "text": {
+            "cn": "栈道步行观鸟。",
+            "en": "Boardwalk birdwatching."
+          },
+          "effect": {
+            "money": -60,
+            "sanity": 12,
+            "battery": -14,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "bug",
+          "text": {
+            "cn": "蚊虫进攻，狼狈撤退。",
+            "en": "Mosquito assault; retreat."
+          },
+          "effect": {
+            "money": -50,
+            "sanity": -5,
+            "battery": -12,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "西溪湿地日結束。",
+        "en": "Xixi Wetland day ends."
+      }
+    }
+  }
+}

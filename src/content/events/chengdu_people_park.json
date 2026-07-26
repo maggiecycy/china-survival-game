@@ -1,0 +1,69 @@
+{
+  "id": "chengdu_people_park",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "人民公园",
+        "en": "People's Park"
+      },
+      "text": {
+        "cn": "盖碗茶、掏耳朵、相亲角传单。成都的慢，是一种攻击性治愈。",
+        "en": "Tea, ear cleaning, matchmaking flyers. Chengdu slow is aggressive healing."
+      },
+      "choices": [
+        {
+          "id": "tea_ear",
+          "text": {
+            "cn": "喝茶 + 掏耳朵全套松弛。",
+            "en": "Tea + ear cleaning full relax."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 12,
+            "battery": -10,
+            "locality": 7
+          },
+          "next": "done"
+        },
+        {
+          "id": "match",
+          "text": {
+            "cn": "误入相亲角，笑着逃出。",
+            "en": "Stumble into matchmaking corner; escape smiling."
+          },
+          "effect": {
+            "money": -20,
+            "sanity": 7,
+            "battery": -12,
+            "locality": 5
+          },
+          "next": "done"
+        },
+        {
+          "id": "noise",
+          "text": {
+            "cn": "音响广场舞太响，待不住。",
+            "en": "Square-dance speakers too loud to stay."
+          },
+          "effect": {
+            "money": -10,
+            "sanity": -5,
+            "battery": -8,
+            "locality": 2
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "人民公园日結束。",
+        "en": "People's Park day ends."
+      }
+    }
+  }
+}

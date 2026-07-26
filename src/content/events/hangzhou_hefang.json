@@ -1,0 +1,72 @@
+{
+  "id": "hangzhou_hefang",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "河坊街",
+        "en": "Hefang Street"
+      },
+      "text": {
+        "cn": "小吃街蒸汽与叫卖。西湖醋鱼陷阱可能再次出现；花生碎风险也在。",
+        "en": "Snack steam and hawkers. Vinegar-fish trap may return; peanut risk too."
+      },
+      "choices": [
+        {
+          "id": "safe",
+          "text": {
+            "cn": "选连锁店，避开生食冒险。",
+            "en": "Chain shop; skip food roulette."
+          },
+          "effect": {
+            "money": -90,
+            "sanity": 7,
+            "battery": -10,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "fish",
+          "text": {
+            "cn": "点西湖醋鱼「打卡」。",
+            "en": "Order vinegar fish to check in."
+          },
+          "effect": {
+            "money": -130,
+            "sanity": -14,
+            "battery": -8,
+            "locality": 1
+          },
+          "next": "done"
+        },
+        {
+          "id": "allergy",
+          "text": {
+            "cn": "随便点炸物——花生过敏急诊。",
+            "en": "Random fry — peanut ER."
+          },
+          "effect": {
+            "money": -300,
+            "sanity": -25,
+            "battery": -15,
+            "locality": -3
+          },
+          "addFlags": [
+            "hospital_peanut"
+          ],
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "河坊街日結束。",
+        "en": "Hefang Street day ends."
+      }
+    }
+  }
+}

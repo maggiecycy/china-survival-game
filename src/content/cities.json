@@ -1,338 +1,503 @@
 [
-    {
-      "id": "beijing",
-      "name": { "en": "Beijing", "cn": "北京" },
-      "coords": { "x": 68, "y": 38 },
-      "unlockRequired": [],
-      "visaRestriction": [],
-      "tier": "high",
-      "baseCost": 150,
-      "region": "jing-jin-ji",
-      "desc": {
-        "en": "The capital. Facing the 'reservation hell' of the Forbidden City and identity checks everywhere.",
-        "cn": "首都。直面故宮「預約地獄」與無處不在的身份核驗。"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "故宮門票預約失敗！你不得不花高價向黃牛買票，資金 -200，精神值 -10。",
-            "en": "Failed to reserve Forbidden City ticket! You had to buy from a scalper. Money -200, Sanity -10."
-          },
-          "effect": { "money": -200, "sanity": -10, "time": 0 }
-        }
-      ]
+  {
+    "id": "beijing",
+    "name": {
+      "en": "Beijing",
+      "cn": "北京"
     },
-    {
-      "id": "shanghai",
-      "name": { "en": "Shanghai", "cn": "上海" },
-      "coords": { "x": 78, "y": 55 },
-      "unlockRequired": [],
-      "visaRestriction": [],
-      "tier": "high",
-      "baseCost": 160,
-      "region": "yangtze-delta",
-      "desc": {
-        "en": "A futuristic metropolis where scan-to-order and mini-programs rule the daily life.",
-        "cn": "魔都。體驗掃碼點單與小程序強制綁定的高科技生活。"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "點單時強制要求綁定微信小程序並授權個人資訊，你花了 15 分鐘才關掉廣告彈窗，精神值 -5，時間 -0.5小時。",
-            "en": "Forced to use WeChat mini-program to order. Spent 15 mins closing ads. Sanity -5, Time -0.5h."
-          },
-          "effect": { "money": 0, "sanity": -5, "time": -0.5 }
-        }
-      ]
+    "coords": {
+      "x": 68,
+      "y": 38
     },
-    {
-      "id": "chengdu",
-      "name": { "en": "Chengdu", "cn": "成都" },
-      "coords": { "x": 48, "y": 62 },
-      "unlockRequired": [],
-      "visaRestriction": [],
-      "tier": "medium",
-      "baseCost": 90,
-      "region": "southwest",
-      "desc": {
-        "en": "Spicy hotpot warning! Challenge your stomach and line up 4 hours for giant pandas.",
-        "cn": "「微辣」警告！挑戰你的腸胃，並在熊貓基地排隊4小時。"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "低估了四川「微辣」的威力，你在馬桶上度過了大半天。精神值 -20，時間 -4小時。",
-            "en": "Underestimated Sichuan's 'mild spicy'. Spent half the day in the restroom. Sanity -20, Time -4h."
-          },
-          "effect": { "money": 0, "sanity": -20, "time": -4 }
-        }
-      ]
+    "unlockRequired": [],
+    "visaRestriction": [],
+    "tier": "high",
+    "baseCost": 150,
+    "region": "jing-jin-ji",
+    "desc": {
+      "cn": "首都節奏：預約系統、安檢長隊與「外國面孔」注視同時在線。故宮與長城是必修，環球影城會燒乾錢包；國博免費但要搶票。北京教你第一課——在中國，時間常常比錢更貴。",
+      "en": "Capital tempo: reservation systems, security lines, and constant stares at a foreign face. Palace and Wall are required reading; Universal melts wallets; the National Museum is free if you can book. Beijing’s first lesson: time often costs more than money."
     },
-    {
-      "id": "chongqing",
-      "name": { "en": "Chongqing", "cn": "重慶" },
-      "coords": { "x": 51, "y": 66 },
-      "unlockRequired": ["chengdu"],
-      "visaRestriction": [],
-      "tier": "medium",
-      "baseCost": 85,
-      "region": "southwest",
-      "desc": {
-        "en": "3D cyber city. GPS navigation will fail completely. Prepare to climb endless stairs.",
-        "cn": "3D魔幻立體城市。導航集體失靈，準備好用雙腿征服百級台階。"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "導航帶你走進了某棟大樓的 8 樓，出去發現居然又是馬路。你迷路了 2 小時，精神值 -15，時間 -2小時。",
-            "en": "GPS led you to the 8th floor, only to find it connects to another street. Lost for 2h. Sanity -15, Time -2h."
-          },
-          "effect": { "money": 0, "sanity": -15, "time": -2 }
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "故宮門票預約失敗！你不得不花高價向黃牛買票，資金 -200，精神值 -10。",
+          "en": "Failed to reserve Forbidden City ticket! You had to buy from a scalper. Money -200, Sanity -10."
+        },
+        "effect": {
+          "money": -200,
+          "sanity": -10,
+          "time": 0
         }
-      ]
+      }
+    ]
+  },
+  {
+    "id": "shanghai",
+    "name": {
+      "en": "Shanghai",
+      "cn": "上海"
     },
-    {
-      "id": "shenzhen",
-      "name": { "en": "Shenzhen", "cn": "深圳" },
-      "coords": { "x": 70, "y": 80 },
-      "unlockRequired": [],
-      "visaRestriction": [],
-      "tier": "high",
-      "baseCost": 140,
-      "region": "greater-bay",
-      "desc": {
-        "en": "Silicon Valley of hardware. Experience unmanned retail and intense face recognition.",
-        "cn": "硬件硅谷。體驗無人零售與無孔不入的人臉識別。"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "地鐵站出站體驗無人刷臉閘機失敗，被迫排長隊人工核驗。精神值 -5，時間 -0.5小時。",
-            "en": "Failed to use facial recognition gate at subway. Forced to wait in a long manual line. Sanity -5, Time -0.5h."
-          },
-          "effect": { "money": 0, "sanity": -5, "time": -0.5 }
-        }
-      ]
+    "coords": {
+      "x": 78,
+      "y": 55
     },
-    {
-      "id": "hongkong",
-      "name": { "en": "Hong Kong", "cn": "香港" },
-      "coords": { "x": 70, "y": 84 },
-      "unlockRequired": ["shenzhen"],
-      "visaRestriction": [],
-      "tier": "high",
-      "baseCost": 220,
-      "region": "greater-bay",
-      "desc": {
-        "en": "The exit port. Test your ability to manage dual currencies and pass immigration checkpoints.",
-        "cn": "離境口岸。考驗雙幣切換與海關健康申報的絲滑程度。"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "在茶餐廳因為沒有港幣現金被加收了高額匯率差，資金 -50，精神值 -10。",
-            "en": "Charged extra exchange fee at a cafe because you had no HKD cash. Money -50, Sanity -10."
-          },
-          "effect": { "money": -50, "sanity": -10, "time": 0 }
-        }
-      ]
+    "unlockRequired": [],
+    "visaRestriction": [],
+    "tier": "high",
+    "baseCost": 160,
+    "region": "yangtze-delta",
+    "desc": {
+      "cn": "魔都規則：幾乎一切都要掃碼。外灘夜景浪漫，南京路和小程序點單現實；迪士尼是時間黑洞，武康路是喘息口。上海不缺國際化表象——缺的是「沒有微信也能活」的幻覺。",
+      "en": "Shanghai rules: almost everything wants a QR code. The Bund is romance; Nanjing Road and mini-programs are reality. Disney is a time sink, Wukang a breather. The city looks international — until you try living without WeChat."
     },
-    {
-      "id": "xian",
-      "name": { "en": "Xi'an", "cn": "西安" },
-      "coords": { "x": 57, "y": 48 },
-      "unlockRequired": ["beijing"],
-      "visaRestriction": [],
-      "tier": "medium",
-      "baseCost": 80,
-      "region": "northwest",
-      "desc": {
-        "en": "Ancient capital. Watch out for fake tour guides to Terracotta Army and explore Muslim Quarter.",
-        "cn": "十三朝古都。提防兵馬俑山寨一日游，深夜探秘回民街。"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "成功識破路邊山寨兵馬俑一日遊導遊的騙局！精神值 +10，省下了冤枉錢。",
-            "en": "Successfully spotted a fake Terracotta Army tour guide! Sanity +10, saved money."
-          },
-          "effect": { "money": 0, "sanity": 10, "time": 0 }
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "點單時強制要求綁定微信小程序並授權個人資訊，你花了 15 分鐘才關掉廣告彈窗，精神值 -5，時間 -0.5小時。",
+          "en": "Forced to use WeChat mini-program to order. Spent 15 mins closing ads. Sanity -5, Time -0.5h."
+        },
+        "effect": {
+          "money": 0,
+          "sanity": -5,
+          "time": -0.5
         }
-      ]
+      }
+    ]
+  },
+  {
+    "id": "chengdu",
+    "name": {
+      "en": "Chengdu",
+      "cn": "成都"
     },
-    {
-      "id": "zhangjiajie",
-      "name": { "en": "Zhangjiajie", "cn": "張家界" },
-      "coords": { "x": 61, "y": 68 },
-      "unlockRequired": ["shanghai"],
-      "visaRestriction": [],
-      "tier": "medium",
-      "baseCost": 100,
-      "region": "central-south",
-      "desc": {
-        "en": "The Avatar mountains. Test your sanity on the terrifying glass bridge and infinite cableways.",
-        "cn": "阿凡達懸浮山。在高空玻璃棧道與漫長索道中經受San值考驗。"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "站在高空玻璃棧道上雙腿發軟，進退兩難。精神值 -25，時間 -1.5小時。",
-            "en": "Legs shaking on the glass bridge, paralyzed with fear. Sanity -25, Time -1.5h."
-          },
-          "effect": { "money": 0, "sanity": -25, "time": -1.5 }
-        }
-      ]
+    "coords": {
+      "x": 48,
+      "y": 62
     },
-    {
-      "id": "guilin",
-      "name": { "en": "Guilin", "cn": "桂林" },
-      "coords": { "x": 59, "y": 77 },
-      "unlockRequired": ["chengdu"],
-      "visaRestriction": [],
-      "tier": "medium",
-      "baseCost": 90,
-      "region": "south",
-      "desc": {
-        "en": "Stunning karst mountains. Dodge pushy bamboo raft vendors and chill in West Street bar zone.",
-        "cn": "山水甲天下。在灕江竹筏消費陷阱與陽朔西街酒吧中周旋。"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "在灕江竹筏被強推拍照服務，拒絕後遭遇竹筏師傅「龜速前行」報復。精神值 -15，時間 -1小時。",
-            "en": "Refused photo service on bamboo raft. Driver retaliated by going extremely slow. Sanity -15, Time -1h."
-          },
-          "effect": { "money": 0, "sanity": -15, "time": -1 }
-        }
-      ]
+    "unlockRequired": [],
+    "visaRestriction": [],
+    "tier": "medium",
+    "baseCost": 90,
+    "region": "southwest",
+    "desc": {
+      "cn": "慢城攻擊性治愈：熊貓、蓋碗茶、掏耳朵與「微辣」火鍋並行。春熙路打卡與人民公園相親角同樣熱鬧。成都讓你學會一件事——把一天交給竹椅，比把一天交給導航更像勝利。",
+      "en": "Aggressive chill: pandas, covered-bowl tea, ear cleaning, and “mild” hotpot that isn’t. Chunxi check-ins and People’s Park matchmaking are equally loud. Chengdu teaches you that surrendering a day to a bamboo chair can beat winning at navigation."
     },
-    {
-      "id": "tibet",
-      "name": { "en": "Tibet", "cn": "西藏" },
-      "coords": { "x": 15, "y": 60 },
-      "unlockRequired": ["xian"],
-      "visaRestriction": ["Visa-Free", "144"],
-      "tier": "high",
-      "baseCost": 130,
-      "region": "tibet-region",
-      "desc": {
-        "en": "Requires special Tibet Travel Permit. Entering illegally will trigger immediate deportation!",
-        "cn": "需要額外申請「入藏函」。免簽或144小時過境簽強行前往會被直接遣返！"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "高原反應突襲！你不得不花錢買高壓氧氣瓶並在旅館躺了一整天。資金 -150，精神值 -20，時間 -24小時。",
-            "en": "Altitude sickness struck! Had to buy oxygen cylinders and rest in hotel. Money -150, Sanity -20, Time -24h."
-          },
-          "effect": { "money": -150, "sanity": -20, "time": -24 }
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "低估了四川「微辣」的威力，你在馬桶上度過了大半天。精神值 -20，時間 -4小時。",
+          "en": "Underestimated Sichuan's 'mild spicy'. Spent half the day in the restroom. Sanity -20, Time -4h."
+        },
+        "effect": {
+          "money": 0,
+          "sanity": -20,
+          "time": -4
         }
-      ]
+      }
+    ]
+  },
+  {
+    "id": "chongqing",
+    "name": {
+      "en": "Chongqing",
+      "cn": "重慶"
     },
-    {
-      "id": "xinjiang",
-      "name": { "en": "Xinjiang", "cn": "新疆" },
-      "coords": { "x": 15, "y": 25 },
-      "unlockRequired": ["xian"],
-      "visaRestriction": ["144"],
-      "tier": "medium",
-      "baseCost": 110,
-      "region": "xinjiang-region",
-      "desc": {
-        "en": "Extreme security checks at every checkpoint and drone bans. Sunset is at 10 PM here!",
-        "cn": "極其頻繁的安全檢查與無人機禁飛限制。這裡晚上10點太陽才下山！"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "安全檢查排隊長達 2 小時，無人機開機直接被扣押警告。精神值 -20，時間 -2小時。",
-            "en": "Waited 2 hours for security check. Drone confiscated. Sanity -20, Time -2h."
-          },
-          "effect": { "money": 0, "sanity": -20, "time": -2 }
-        }
-      ]
+    "coords": {
+      "x": 51,
+      "y": 66
     },
-    {
-      "id": "nanjing",
-      "name": { "cn": "南京", "en": "Nanjing" },
-      "coords": { "x": 74, "y": 62 },
-      "unlockRequired": ["beijing"],
-      "visaRestriction": [],
-      "tier": "medium",
-      "baseCost": 95,
-      "region": "yangtze-delta",
-      "desc": {
-        "en": "The ancient southern capital. Battle the immense crowds at Confucius Temple and experience the city's obsession with duck dishes.",
-        "cn": "六朝古都。在夫子廟的人潮中擠進擠出，體驗金陵人「無鴨不成席」的執念。"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "在排隊買鴨血粉絲湯時被插隊，精神值 -10。但分量很足，飽腹感 +15（精神值微幅恢復 +5）。",
-            "en": "Someone cut in front of you while queuing for duck soup. Sanity -5."
-          },
-          "effect": { "money": -25, "sanity": -5, "time": -0.5 }
-        }
-      ]
+    "unlockRequired": [
+      "chengdu"
+    ],
+    "visaRestriction": [],
+    "tier": "medium",
+    "baseCost": 85,
+    "region": "southwest",
+    "desc": {
+      "cn": "3D 立體迷宮：洪崖洞燈火、李子壩穿樓、索道過江。導航說「直行」時你可能在 8 樓。重慶用台階重寫 GPS，用夜景補償膝蓋；解放碑商場與磁器口古鎮是兩種完全不同的擁擠。",
+      "en": "A 3D maze: Hongyadong lights, Liziba’s train-through-building, cableways over the Yangtze. “Go straight” may exit on floor 8. Chongqing rewrites GPS with stairs and pays you back in night views; Jiefangbei malls and Ciqikou lanes are two different kinds of crowd."
     },
-    {
-      "id": "hangzhou",
-      "name": { "cn": "杭州", "en": "Hangzhou" },
-      "coords": { "x": 78, "y": 70 },
-      "unlockRequired": ["shanghai"],
-      "visaRestriction": [],
-      "tier": "high",
-      "baseCost": 130,
-      "region": "yangtze-delta",
-      "desc": {
-        "en": "Paradise on Earth, or maybe a 'desert of gourmet food'. Navigate through shared-bike gridlocks to find a quiet spot on the West Lake.",
-        "cn": "人間天堂，亦是傳說中的「美食沙漠」。在共享單車的重重包圍中，尋找西湖畔最後一絲清靜。"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "午餐嘗試了西湖醋魚，味道一言難盡。花費了高昂餐費，胃部與心靈同時受到重創。資金 -120，精神值 -25。",
-            "en": "Tried West Lake Vinegar Fish. Terrible taste, expensive price. Money -120, Sanity -25."
-          },
-          "effect": { "money": -120, "sanity": -25, "time": -1 }
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "導航帶你走進了某棟大樓的 8 樓，出去發現居然又是馬路。你迷路了 2 小時，精神值 -15，時間 -2小時。",
+          "en": "GPS led you to the 8th floor, only to find it connects to another street. Lost for 2h. Sanity -15, Time -2h."
+        },
+        "effect": {
+          "money": 0,
+          "sanity": -15,
+          "time": -2
         }
-      ]
+      }
+    ]
+  },
+  {
+    "id": "shenzhen",
+    "name": {
+      "en": "Shenzhen",
+      "cn": "深圳"
     },
-    {
-      "id": "hainan",
-      "name": { "cn": "海南", "en": "Hainan" },
-      "coords": { "x": 55, "y": 92 },
-      "unlockRequired": ["shenzhen"],
-      "visaRestriction": [],
-      "tier": "high",
-      "baseCost": 150,
-      "region": "hainan-region",
-      "desc": {
-        "en": "Tropical escape. Dodge duty-free shopping traps and hold onto your wallet against high-priced seafood restaurants.",
-        "cn": "熱帶避寒勝地。在免稅店的剁手誘惑與海鮮大排檔的價格刺客中努力保持理智。"
-      },
-      "events": [
-        {
-          "trigger": "arrival",
-          "text": {
-            "cn": "在海鮮大排檔遭遇「天價椰子雞與海鮮秤重刺客」，錢包大出血！資金 -450，精神值 -20。",
-            "en": "Encountered seafood rip-off. Huge loss of money. Money -450, Sanity -20."
-          },
-          "effect": { "money": -450, "sanity": -20, "time": -1.5 }
+    "coords": {
+      "x": 70,
+      "y": 80
+    },
+    "unlockRequired": [],
+    "visaRestriction": [],
+    "tier": "high",
+    "baseCost": 140,
+    "region": "greater-bay",
+    "desc": {
+      "cn": "硬件與閘機之城：華強北像未來零件市場，地鐵刷臉常把外國面孔拒之門外。深圳灣適合騎行回血，歡樂谷與世界之窗消耗電量與耐心。這裡創業口號很多——真正的生存技能是乘車碼。",
+      "en": "Hardware and gates: Huaqiangbei feels like a futures market for parts; face gates often reject foreign faces. Shenzhen Bay restores you by bike; Happy Valley and Window of the World spend battery and patience. Startup slogans are everywhere — the real skill is the transit QR."
+    },
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "地鐵站出站體驗無人刷臉閘機失敗，被迫排長隊人工核驗。精神值 -5，時間 -0.5小時。",
+          "en": "Failed to use facial recognition gate at subway. Forced to wait in a long manual line. Sanity -5, Time -0.5h."
+        },
+        "effect": {
+          "money": 0,
+          "sanity": -5,
+          "time": -0.5
         }
-      ]
-    }
-  ]
+      }
+    ]
+  },
+  {
+    "id": "hongkong",
+    "name": {
+      "en": "Hong Kong",
+      "cn": "香港"
+    },
+    "coords": {
+      "x": 70,
+      "y": 84
+    },
+    "unlockRequired": [
+      "shenzhen"
+    ],
+    "visaRestriction": [],
+    "tier": "high",
+    "baseCost": 220,
+    "region": "greater-bay",
+    "desc": {
+      "cn": "離境前的緩衝區：維港風、太平山燈、旺角密度與蘭桂坊噪音。雙幣、八達通與突然恢復的外網會讓你恍惚。香港既是玩樂站，也是結局閘口——走到「離境口岸」才算真正通關。",
+      "en": "A buffer before exit: harbour wind, Peak lights, Mong Kok density, LKF noise. Dual currency, Octopus, and suddenly working foreign internet feel surreal. Hong Kong is both playground and ending gate — you only truly finish at Exit Border."
+    },
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "在茶餐廳因為沒有港幣現金被加收了高額匯率差，資金 -50，精神值 -10。",
+          "en": "Charged extra exchange fee at a cafe because you had no HKD cash. Money -50, Sanity -10."
+        },
+        "effect": {
+          "money": -50,
+          "sanity": -10,
+          "time": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "xian",
+    "name": {
+      "en": "Xi'an",
+      "cn": "西安"
+    },
+    "coords": {
+      "x": 57,
+      "y": 48
+    },
+    "unlockRequired": [
+      "beijing"
+    ],
+    "visaRestriction": [],
+    "tier": "medium",
+    "baseCost": 80,
+    "region": "northwest",
+    "desc": {
+      "cn": "十三朝古都的現代陷阱：兵馬俑周邊黃牛話術很熟練，回民街香氣與英語小費並存，城牆騎行能短暫逃離地麵噪音。大唐不夜城把盛唐做成燈會；華山用腿抖重新定義「打卡」。",
+      "en": "An ancient capital with modern traps: polished scalper scripts near the Terracotta Army, Muslim Quarter aromas beside English-tip hustles, wall biking as escape from street noise. Datang Night City turns Tang into neon; Mount Hua redefines check-ins as leg terror."
+    },
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "成功識破路邊山寨兵馬俑一日遊導遊的騙局！精神值 +10，省下了冤枉錢。",
+          "en": "Successfully spotted a fake Terracotta Army tour guide! Sanity +10, saved money."
+        },
+        "effect": {
+          "money": 0,
+          "sanity": 10,
+          "time": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "zhangjiajie",
+    "name": {
+      "en": "Zhangjiajie",
+      "cn": "張家界"
+    },
+    "coords": {
+      "x": 61,
+      "y": 68
+    },
+    "unlockRequired": [
+      "shanghai"
+    ],
+    "visaRestriction": [],
+    "tier": "medium",
+    "baseCost": 100,
+    "region": "central-south",
+    "desc": {
+      "cn": "阿凡達石峰現場：森林公園像迷宮行政區，玻璃棧道專治腿軟，百龍天梯專治排隊。外網上傳慢到像懲罰。張家界的特色不是「看山」，而是「在巨大裡找路，還要保持 Sanity」。",
+      "en": "Avatar pillars IRL: the forest park feels like a prefecture-sized maze, glass walks punish knees, Bailong Elevator punishes queues. Foreign uploads crawl like a penalty. The point isn’t “see mountains” — it’s navigating hugeness without melting your sanity."
+    },
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "站在高空玻璃棧道上雙腿發軟，進退兩難。精神值 -25，時間 -1.5小時。",
+          "en": "Legs shaking on the glass bridge, paralyzed with fear. Sanity -25, Time -1.5h."
+        },
+        "effect": {
+          "money": 0,
+          "sanity": -25,
+          "time": -1.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "guilin",
+    "name": {
+      "en": "Guilin",
+      "cn": "桂林"
+    },
+    "coords": {
+      "x": 59,
+      "y": 77
+    },
+    "unlockRequired": [
+      "chengdu"
+    ],
+    "visaRestriction": [],
+    "tier": "medium",
+    "baseCost": 90,
+    "region": "south",
+    "desc": {
+      "cn": "山水甲天下，消費也甲天下：灕江竹筏、象鼻山角度戰、兩江四湖夜燈。陽朔西街把酒吧與合照經濟疊加；十里畫廊騎行最接近「詩意」，溶洞則把冷與滑一道送來。",
+      "en": "Karst postcard, commerce included: Li River rafts, Elephant Hill angle wars, Two Rivers night lights. Yangshuo stacks bars with photo economies; the Ten-Mile Gallery bike ride is the closest thing to poetry; caves deliver cold and slick footing as a set."
+    },
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "在灕江竹筏被強推拍照服務，拒絕後遭遇竹筏師傅「龜速前行」報復。精神值 -15，時間 -1小時。",
+          "en": "Refused photo service on bamboo raft. Driver retaliated by going extremely slow. Sanity -15, Time -1h."
+        },
+        "effect": {
+          "money": 0,
+          "sanity": -15,
+          "time": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "tibet",
+    "name": {
+      "en": "Tibet",
+      "cn": "西藏"
+    },
+    "coords": {
+      "x": 15,
+      "y": 60
+    },
+    "unlockRequired": [
+      "xian"
+    ],
+    "visaRestriction": [
+      "Visa-Free",
+      "144"
+    ],
+    "tier": "high",
+    "baseCost": 130,
+    "region": "tibet-region",
+    "desc": {
+      "cn": "信仰與海拔同時在線：布達拉預約嚴格，八廓轉經要你放慢，納木錯與珠峰用高反改寫行程。免簽/144 常被拒之門外。西藏不是打卡清單——是氧氣、耐心與敬畏的壓力測試。",
+      "en": "Faith and altitude at once: strict Potala booking, Barkhor circuits that force you slow, Namtso and Everest rewriting plans via thin air. Visa-free/144 often cannot enter. Tibet isn’t a checklist — it’s a stress test of oxygen, patience, and respect."
+    },
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "高原反應突襲！你不得不花錢買高壓氧氣瓶並在旅館躺了一整天。資金 -150，精神值 -20，時間 -24小時。",
+          "en": "Altitude sickness struck! Had to buy oxygen cylinders and rest in hotel. Money -150, Sanity -20, Time -24h."
+        },
+        "effect": {
+          "money": -150,
+          "sanity": -20,
+          "time": -24
+        }
+      }
+    ]
+  },
+  {
+    "id": "xinjiang",
+    "name": {
+      "en": "Xinjiang",
+      "cn": "新疆"
+    },
+    "coords": {
+      "x": 15,
+      "y": 25
+    },
+    "unlockRequired": [
+      "xian"
+    ],
+    "visaRestriction": [
+      "144"
+    ],
+    "tier": "medium",
+    "baseCost": 110,
+    "region": "xinjiang-region",
+    "desc": {
+      "cn": "遼闊本身就是機制：大巴扎串香與語言梗，天池清靜，喀納斯/賽里木/那拉提都在「遠」裡。獨庫公路讓你明白「附近」的定義被重寫；安檢與長途會同時消耗 Sanity 與時間。",
+      "en": "Distance is the mechanic: bazaar skewers and language false friends, quiet Tianchi, Kanas/Sayram/Nalati all living inside “far”. Duku Highway redefines “nearby”; security and long hauls spend sanity and hours together."
+    },
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "安全檢查排隊長達 2 小時，無人機開機直接被扣押警告。精神值 -20，時間 -2小時。",
+          "en": "Waited 2 hours for security check. Drone confiscated. Sanity -20, Time -2h."
+        },
+        "effect": {
+          "money": 0,
+          "sanity": -20,
+          "time": -2
+        }
+      }
+    ]
+  },
+  {
+    "id": "nanjing",
+    "name": {
+      "cn": "南京",
+      "en": "Nanjing"
+    },
+    "coords": {
+      "x": 74,
+      "y": 62
+    },
+    "unlockRequired": [
+      "beijing"
+    ],
+    "visaRestriction": [],
+    "tier": "medium",
+    "baseCost": 95,
+    "region": "yangtze-delta",
+    "desc": {
+      "cn": "六朝煙水氣：中山陵臺階、夫子廟燈火、秦淮河畫舫。總統府與南博偏靜，雞鳴寺與牛首山偏視覺衝擊。南京用「鴨」與近代史同時招待你——人潮是標配，安靜要自己搶。",
+      "en": "Southern-capital mist: mausoleum stairs, Confucius Temple lanterns, Qinhuai boats. Presidential Palace and the museum lean quiet; Jiming and Niushou lean spectacle. Nanjing serves duck and modern history together — crowds are default, quiet is earned."
+    },
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "在排隊買鴨血粉絲湯時被插隊，精神值 -10。但分量很足，飽腹感 +15（精神值微幅恢復 +5）。",
+          "en": "Someone cut in front of you while queuing for duck soup. Sanity -5."
+        },
+        "effect": {
+          "money": -25,
+          "sanity": -5,
+          "time": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "hangzhou",
+    "name": {
+      "cn": "杭州",
+      "en": "Hangzhou"
+    },
+    "coords": {
+      "x": 78,
+      "y": 70
+    },
+    "unlockRequired": [
+      "shanghai"
+    ],
+    "visaRestriction": [],
+    "tier": "high",
+    "baseCost": 130,
+    "region": "yangtze-delta",
+    "desc": {
+      "cn": "人間天堂的精緻壓力：西湖要慢，靈隱要早，龍井要走，河坊街要小心菜單陷阱。西溪與錢江新城分別提供自然與天際線回血。杭州很美——美到你會為「詩意」支付時間稅。",
+      "en": "Paradise with polish-tax: West Lake wants slow, Lingyin wants early, Longjing wants walking, Hefang wants menu caution. Xixi and Qianjiang restore via nature and skyline. Hangzhou is beautiful enough to charge a time tax for poetry."
+    },
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "午餐嘗試了西湖醋魚，味道一言難盡。花費了高昂餐費，胃部與心靈同時受到重創。資金 -120，精神值 -25。",
+          "en": "Tried West Lake Vinegar Fish. Terrible taste, expensive price. Money -120, Sanity -25."
+        },
+        "effect": {
+          "money": -120,
+          "sanity": -25,
+          "time": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "hainan",
+    "name": {
+      "cn": "海南",
+      "en": "Hainan"
+    },
+    "coords": {
+      "x": 55,
+      "y": 92
+    },
+    "unlockRequired": [
+      "shenzhen"
+    ],
+    "visaRestriction": [],
+    "tier": "high",
+    "baseCost": 150,
+    "region": "hainan-region",
+    "desc": {
+      "cn": "熱帶度假的現實面：亞龍灣海風治愈，蜈支洲看船班運氣，免税城考验支付，海鲜市场考验报价与过敏。南山与天涯是打卡碑石；潜水店要扫码填表。三亚教你：阳光不等于低压力。",
+      "en": "Tropical escape, unfiltered: Yalong wind heals, Wuzhizhou depends on ferry luck, duty-free tests payment, seafood markets test quotes and allergies. Nanshan and Tianya are stone check-ins; dive shops want QR forms. Sanya’s lesson: sunshine ≠ low stress."
+    },
+    "events": [
+      {
+        "trigger": "arrival",
+        "text": {
+          "cn": "在海鮮大排檔遭遇「天價椰子雞與海鮮秤重刺客」，錢包大出血！資金 -450，精神值 -20。",
+          "en": "Encountered seafood rip-off. Huge loss of money. Money -450, Sanity -20."
+        },
+        "effect": {
+          "money": -450,
+          "sanity": -20,
+          "time": -1.5
+        }
+      }
+    ]
+  }
+]

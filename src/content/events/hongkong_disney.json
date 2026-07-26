@@ -1,0 +1,69 @@
+{
+  "id": "hongkong_disney",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "香港迪士尼",
+        "en": "HK Disneyland"
+      },
+      "text": {
+        "cn": "相对内地人少一点，但排队仍在。你终于比较顺畅地上传了一条 IG。",
+        "en": "Slightly calmer than mainland parks; queues remain. IG upload finally works."
+      },
+      "choices": [
+        {
+          "id": "rides",
+          "text": {
+            "cn": "玩项目到腿软。",
+            "en": "Rides until legs fail."
+          },
+          "effect": {
+            "money": -650,
+            "sanity": 7,
+            "battery": -30,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "parade",
+          "text": {
+            "cn": "看巡游与烟花。",
+            "en": "Parade and fireworks."
+          },
+          "effect": {
+            "money": -600,
+            "sanity": 12,
+            "battery": -20,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "price",
+          "text": {
+            "cn": "物价冲击，快乐打折。",
+            "en": "Price shock discounts joy."
+          },
+          "effect": {
+            "money": -800,
+            "sanity": -5,
+            "battery": -18,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "香港迪士尼日結束。",
+        "en": "HK Disneyland day ends."
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "hangzhou_qianjiang",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "钱江新城",
+        "en": "Qianjiang New City"
+      },
+      "text": {
+        "cn": "钱江两岸灯火。城市天际线让你短暂觉得「国际化」回来了。",
+        "en": "River lights. Skyline briefly returns an international feeling."
+      },
+      "choices": [
+        {
+          "id": "night",
+          "text": {
+            "cn": "夜景漫步。",
+            "en": "Night skyline walk."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": 12,
+            "battery": -12,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "photo",
+          "text": {
+            "cn": "长曝光摄影。",
+            "en": "Long-exposure photos."
+          },
+          "effect": {
+            "money": -50,
+            "sanity": 7,
+            "battery": -18,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "wind",
+          "text": {
+            "cn": "江风太大，提早回酒店。",
+            "en": "River wind too strong; hotel early."
+          },
+          "effect": {
+            "money": -30,
+            "sanity": -5,
+            "battery": -8,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "钱江新城日結束。",
+        "en": "Qianjiang New City day ends."
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "cityId": "chongqing",
+  "attractions": [
+    {
+      "id": "hongyadong",
+      "name": {
+        "cn": "洪崖洞",
+        "en": "Hongyadong"
+      },
+      "coords": {
+        "x": 42,
+        "y": 58
+      },
+      "desc": {
+        "cn": "夜景、火锅、拍照。",
+        "en": "Night view, hotpot, photos."
+      },
+      "graphId": "chongqing_hongyadong"
+    },
+    {
+      "id": "liziba",
+      "name": {
+        "cn": "李子坝",
+        "en": "Liziba"
+      },
+      "coords": {
+        "x": 58,
+        "y": 42
+      },
+      "desc": {
+        "cn": "轻轨穿楼。",
+        "en": "Monorail through building."
+      },
+      "graphId": "chongqing_liziba"
+    },
+    {
+      "id": "cable",
+      "name": {
+        "cn": "长江索道",
+        "en": "Yangtze Cableway"
+      },
+      "coords": {
+        "x": 50,
+        "y": 52
+      },
+      "desc": {
+        "cn": "坐缆车过江。",
+        "en": "Cable across the river."
+      },
+      "graphId": "chongqing_cable"
+    },
+    {
+      "id": "jiefangbei",
+      "name": {
+        "cn": "解放碑",
+        "en": "Jiefangbei"
+      },
+      "coords": {
+        "x": 48,
+        "y": 48
+      },
+      "desc": {
+        "cn": "购物中心。",
+        "en": "Shopping hub."
+      },
+      "graphId": "chongqing_jiefangbei"
+    },
+    {
+      "id": "ciqikou",
+      "name": {
+        "cn": "磁器口",
+        "en": "Ciqikou"
+      },
+      "coords": {
+        "x": 28,
+        "y": 40
+      },
+      "desc": {
+        "cn": "古镇与美食。",
+        "en": "Ancient town and food."
+      },
+      "graphId": "chongqing_ciqikou"
+    },
+    {
+      "id": "nanshan",
+      "name": {
+        "cn": "南山一棵树",
+        "en": "Nanshan Tree"
+      },
+      "coords": {
+        "x": 65,
+        "y": 60
+      },
+      "desc": {
+        "cn": "夜景观景台。",
+        "en": "Night viewpoint."
+      },
+      "graphId": "chongqing_nanshan"
+    },
+    {
+      "id": "wulong",
+      "name": {
+        "cn": "武隆天生三桥",
+        "en": "Wulong Three Natural Bridges"
+      },
+      "coords": {
+        "x": 80,
+        "y": 72
+      },
+      "desc": {
+        "cn": "自然奇观一日游。",
+        "en": "Nature day trip."
+      },
+      "graphId": "chongqing_wulong"
+    }
+  ]
+}

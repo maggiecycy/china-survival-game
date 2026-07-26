@@ -1,0 +1,69 @@
+{
+  "id": "chongqing_jiefangbei",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "解放碑",
+        "en": "Jiefangbei"
+      },
+      "text": {
+        "cn": "碑在商场海里。购物与地下通道像迷宫。",
+        "en": "Monument in a mall ocean. Shopping and underpasses feel maze-like."
+      },
+      "choices": [
+        {
+          "id": "window",
+          "text": {
+            "cn": "只逛街不买，观察人流。",
+            "en": "Window-shop; watch the flow."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": 7,
+            "battery": -12,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "buy",
+          "text": {
+            "cn": "商场血拼。",
+            "en": "Mall spree."
+          },
+          "effect": {
+            "money": -450,
+            "sanity": -5,
+            "battery": -15,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "lost",
+          "text": {
+            "cn": "地下通道迷路半小时。",
+            "en": "Lost 30 minutes underground."
+          },
+          "effect": {
+            "money": -30,
+            "sanity": -14,
+            "battery": -18,
+            "locality": 2
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "解放碑日結束。",
+        "en": "Jiefangbei day ends."
+      }
+    }
+  }
+}

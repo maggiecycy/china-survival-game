@@ -1,0 +1,117 @@
+{
+  "cityId": "xinjiang",
+  "attractions": [
+    {
+      "id": "tianchi",
+      "name": {
+        "cn": "天山天池",
+        "en": "Heavenly Lake"
+      },
+      "coords": {
+        "x": 40,
+        "y": 32
+      },
+      "desc": {
+        "cn": "湖光与缆车。",
+        "en": "Lake and cable."
+      },
+      "graphId": "xinjiang_tianchi"
+    },
+    {
+      "id": "kanas",
+      "name": {
+        "cn": "喀纳斯",
+        "en": "Kanas"
+      },
+      "coords": {
+        "x": 70,
+        "y": 20
+      },
+      "desc": {
+        "cn": "湖与森林长途。",
+        "en": "Lake/forest long trip."
+      },
+      "graphId": "xinjiang_kanas"
+    },
+    {
+      "id": "sayram",
+      "name": {
+        "cn": "赛里木湖",
+        "en": "Sayram Lake"
+      },
+      "coords": {
+        "x": 25,
+        "y": 40
+      },
+      "desc": {
+        "cn": "环湖风光。",
+        "en": "Loop lake views."
+      },
+      "graphId": "xinjiang_sayram"
+    },
+    {
+      "id": "nalati",
+      "name": {
+        "cn": "那拉提草原",
+        "en": "Nalati Grassland"
+      },
+      "coords": {
+        "x": 55,
+        "y": 55
+      },
+      "desc": {
+        "cn": "草原与骑马。",
+        "en": "Grassland and horses."
+      },
+      "graphId": "xinjiang_nalati"
+    },
+    {
+      "id": "bazaar",
+      "name": {
+        "cn": "国际大巴扎",
+        "en": "International Bazaar"
+      },
+      "coords": {
+        "x": 48,
+        "y": 55
+      },
+      "desc": {
+        "cn": "市集与语言梗。",
+        "en": "Market and language jokes."
+      },
+      "graphId": "xinjiang_bazaar"
+    },
+    {
+      "id": "duku",
+      "name": {
+        "cn": "独库公路",
+        "en": "Duku Highway"
+      },
+      "coords": {
+        "x": 35,
+        "y": 50
+      },
+      "desc": {
+        "cn": "长距离公路旅行。",
+        "en": "Long highway travel."
+      },
+      "graphId": "xinjiang_duku"
+    },
+    {
+      "id": "kebab",
+      "name": {
+        "cn": "烤羊肉串",
+        "en": "Lamb Skewers"
+      },
+      "coords": {
+        "x": 50,
+        "y": 60
+      },
+      "desc": {
+        "cn": "串香与支付。",
+        "en": "Skewers and payment."
+      },
+      "graphId": "xinjiang_kebab"
+    }
+  ]
+}

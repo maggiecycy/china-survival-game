@@ -1,0 +1,76 @@
+{
+  "id": "shanghai_nanjing_road",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "南京路",
+        "en": "Nanjing Road"
+      },
+      "text": {
+        "cn": "霓虹与商场。点单强制小程序；银行卡偶尔失灵。你开始理解「扫码生存」。",
+        "en": "Neon and malls. Mini-programs gate orders; cards flake. Welcome to scan-survival."
+      },
+      "choices": [
+        {
+          "id": "scan",
+          "text": {
+            "cn": "用已绑外卡硬扫吃一顿。",
+            "en": "Scan-pay a meal with linked card."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": -5,
+            "battery": -12,
+            "locality": 5
+          },
+          "requires": [
+            "foreign_card_linked"
+          ],
+          "blocks_if": [
+            "cash_only"
+          ],
+          "showIfLocked": true,
+          "next": "done"
+        },
+        {
+          "id": "shop",
+          "text": {
+            "cn": "逛街购物，钱包与 Sanity 同降。",
+            "en": "Shop until wallet and sanity dip."
+          },
+          "effect": {
+            "money": -400,
+            "sanity": -5,
+            "battery": -15,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "cash_fail",
+          "text": {
+            "cn": "现金硬刚，被拒多次。",
+            "en": "Cash-only struggle; repeated refusals."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": -14,
+            "battery": -14,
+            "locality": -3
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "南京路日結束。",
+        "en": "Nanjing Road day ends."
+      }
+    }
+  }
+}

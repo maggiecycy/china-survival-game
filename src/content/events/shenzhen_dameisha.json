@@ -1,0 +1,69 @@
+{
+  "id": "shenzhen_dameisha",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "大梅沙",
+        "en": "Dameisha"
+      },
+      "text": {
+        "cn": "海水与沙滩排球。有人抽烟经过——你的公共空间定义再次抖动。",
+        "en": "Sea and volleyball. Smoke drifts by — public-space definitions wobble again."
+      },
+      "choices": [
+        {
+          "id": "swim",
+          "text": {
+            "cn": "游泳放松。",
+            "en": "Swim and unwind."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 12,
+            "battery": -15,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "bike_beach",
+          "text": {
+            "cn": "海岸骑行。",
+            "en": "Coast bike ride."
+          },
+          "effect": {
+            "money": -60,
+            "sanity": 7,
+            "battery": -18,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "smoke_annoy",
+          "text": {
+            "cn": "烟味驱离沙滩位，郁闷离开。",
+            "en": "Smoke drives you off the spot."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": -14,
+            "battery": -10,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "大梅沙日結束。",
+        "en": "Dameisha day ends."
+      }
+    }
+  }
+}

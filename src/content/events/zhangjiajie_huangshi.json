@@ -1,0 +1,69 @@
+{
+  "id": "zhangjiajie_huangshi",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "黄石寨",
+        "en": "Huangshi Village"
+      },
+      "text": {
+        "cn": "观景台石峰海。路不短，翻译地图互相打架。",
+        "en": "Sea of pillars from the platform. Path is long; maps disagree."
+      },
+      "choices": [
+        {
+          "id": "hike",
+          "text": {
+            "cn": "徒步上寨，换清静。",
+            "en": "Hike up for quiet views."
+          },
+          "effect": {
+            "money": -140,
+            "sanity": 12,
+            "battery": -26,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "cable",
+          "text": {
+            "cn": "缆车节省体力。",
+            "en": "Cable to save stamina."
+          },
+          "effect": {
+            "money": -200,
+            "sanity": 7,
+            "battery": -12,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "lost",
+          "text": {
+            "cn": "岔路迷路，多耗两小时。",
+            "en": "Wrong fork; +2 hours lost."
+          },
+          "effect": {
+            "money": -150,
+            "sanity": -14,
+            "battery": -24,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "黄石寨日結束。",
+        "en": "Huangshi Village day ends."
+      }
+    }
+  }
+}

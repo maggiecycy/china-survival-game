@@ -4,7 +4,10 @@
   "nodes": {
     "main": {
       "id": "main",
-      "title": { "cn": "熊貓基地", "en": "Panda Base" },
+      "title": {
+        "cn": "熊貓基地",
+        "en": "Panda Base"
+      },
       "text": {
         "cn": "國寶在睡覺。遊客更想跟你合照：『外國人+熊貓標誌=朋友圈勝利。』",
         "en": "Pandas sleep. Tourists want you in frame: 'Foreigner + panda sign = Moments win.'"
@@ -12,8 +15,16 @@
       "choices": [
         {
           "id": "go",
-          "text": { "cn": "完整逛完看熊貓。", "en": "Do the full panda visit." },
-          "effect": { "money": -70, "sanity": 12, "battery": -15, "locality": 4 },
+          "text": {
+            "cn": "完整逛完看熊貓。",
+            "en": "Do the full panda visit."
+          },
+          "effect": {
+            "money": -70,
+            "sanity": 12,
+            "battery": -15,
+            "locality": 4
+          },
           "next": "done"
         },
         {
@@ -22,12 +33,34 @@
             "cn": "💰 在門口合照收費，順便看一眼熊貓。",
             "en": "💰 Charge for gate photos, glance at pandas."
           },
-          "effect": { "money": 160, "sanity": -5, "battery": -18, "locality": 3 },
-          "addFlags": ["did_photo_hustle"],
-          "next": "done"
+          "effect": {
+            "money": 160,
+            "sanity": -5,
+            "battery": -18,
+            "locality": 2
+          },
+          "addFlags": [
+            "did_photo_hustle"
+          ],
+          "next": "done",
+          "showIfLocked": true,
+          "requiresStats": {
+            "sanityGte": 70
+          },
+          "lockedHint": {
+            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
+            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
+          }
         }
       ]
     },
-    "done": { "id": "done", "end": true, "text": { "cn": "熊貓日結束。", "en": "Panda day ends." } }
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "熊貓日結束。",
+        "en": "Panda day ends."
+      }
+    }
   }
 }

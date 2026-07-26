@@ -1,0 +1,69 @@
+{
+  "id": "guilin_elephant",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "象鼻山",
+        "en": "Elephant Trunk Hill"
+      },
+      "text": {
+        "cn": "象鼻啃江的经典角度挤满镜头。路牌翻译再次抽象。",
+        "en": "Classic trunk angle jammed with lenses. Sign translations go abstract again."
+      },
+      "choices": [
+        {
+          "id": "view",
+          "text": {
+            "cn": "找角度慢慢拍，不挤人。",
+            "en": "Find an angle; no shoving."
+          },
+          "effect": {
+            "money": -70,
+            "sanity": 7,
+            "battery": -12,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "climb",
+          "text": {
+            "cn": "登山看全景。",
+            "en": "Climb for panorama."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 7,
+            "battery": -18,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "crowd",
+          "text": {
+            "cn": "被自拍杆包围。",
+            "en": "Surrounded by selfie sticks."
+          },
+          "effect": {
+            "money": -60,
+            "sanity": -14,
+            "battery": -14,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "象鼻山日結束。",
+        "en": "Elephant Trunk Hill day ends."
+      }
+    }
+  }
+}

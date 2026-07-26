@@ -1,0 +1,69 @@
+{
+  "id": "tibet_barkhor",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "八廓街",
+        "en": "Barkhor Street"
+      },
+      "text": {
+        "cn": "顺时针转经人流。市集与藏香并行。",
+        "en": "Clockwise pilgrim flow. Market and incense together."
+      },
+      "choices": [
+        {
+          "id": "circuit",
+          "text": {
+            "cn": "跟着转经一圈。",
+            "en": "One circuit with the flow."
+          },
+          "effect": {
+            "money": -50,
+            "sanity": 12,
+            "battery": -16,
+            "locality": 5
+          },
+          "next": "done"
+        },
+        {
+          "id": "shop",
+          "text": {
+            "cn": "市集买小物件。",
+            "en": "Market small buys."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": 7,
+            "battery": -12,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "stare",
+          "text": {
+            "cn": "被注视到社恐撤退。",
+            "en": "Stared into retreat."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": -14,
+            "battery": -10,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "八廓街日結束。",
+        "en": "Barkhor Street day ends."
+      }
+    }
+  }
+}

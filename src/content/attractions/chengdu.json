@@ -2,25 +2,116 @@
   "cityId": "chengdu",
   "attractions": [
     {
-      "id": "hotpot",
-      "name": { "cn": "火鍋「微辣」", "en": "Hotpot 'Mild'" },
-      "coords": { "x": 45, "y": 55 },
-      "desc": { "cn": "微辣警告。腸胃命運分水嶺。", "en": "'Mild' warning. Gut destiny." },
-      "graphId": "chengdu_hotpot"
-    },
-    {
       "id": "pandas",
-      "name": { "cn": "熊貓基地", "en": "Panda Base" },
-      "coords": { "x": 70, "y": 35 },
-      "desc": { "cn": "早起排隊看睡覺的國寶。", "en": "Early queues for sleeping national treasures." },
+      "name": {
+        "cn": "大熊猫基地",
+        "en": "Panda Base"
+      },
+      "coords": {
+        "x": 70,
+        "y": 28
+      },
+      "desc": {
+        "cn": "看熊猫与拍照。",
+        "en": "Pandas and photos."
+      },
       "graphId": "chengdu_pandas"
     },
     {
+      "id": "kuanzhai",
+      "name": {
+        "cn": "宽窄巷子",
+        "en": "Kuanzhai Alley"
+      },
+      "coords": {
+        "x": 42,
+        "y": 48
+      },
+      "desc": {
+        "cn": "小吃与茶馆。",
+        "en": "Snacks and teahouses."
+      },
+      "graphId": "chengdu_kuanzhai"
+    },
+    {
       "id": "jinli",
-      "name": { "cn": "錦里／寬窄", "en": "Jinli / Kuanzhai" },
-      "coords": { "x": 40, "y": 70 },
-      "desc": { "cn": "小吃街拍照半日。", "en": "Snack-street photo half-day." },
+      "name": {
+        "cn": "锦里",
+        "en": "Jinli"
+      },
+      "coords": {
+        "x": 48,
+        "y": 62
+      },
+      "desc": {
+        "cn": "夜游与手工艺。",
+        "en": "Night stroll and crafts."
+      },
       "graphId": "chengdu_jinli"
+    },
+    {
+      "id": "chunxi",
+      "name": {
+        "cn": "春熙路",
+        "en": "Chunxi Road"
+      },
+      "coords": {
+        "x": 55,
+        "y": 45
+      },
+      "desc": {
+        "cn": "购物与 IFS 熊猫打卡。",
+        "en": "Shopping and IFS panda."
+      },
+      "graphId": "chengdu_chunxi"
+    },
+    {
+      "id": "people_park",
+      "name": {
+        "cn": "人民公园",
+        "en": "People's Park"
+      },
+      "coords": {
+        "x": 40,
+        "y": 55
+      },
+      "desc": {
+        "cn": "盖碗茶与掏耳朵。",
+        "en": "Covered-bowl tea and ear cleaning."
+      },
+      "graphId": "chengdu_people_park"
+    },
+    {
+      "id": "hotpot",
+      "name": {
+        "cn": "火锅",
+        "en": "Hotpot"
+      },
+      "coords": {
+        "x": 50,
+        "y": 70
+      },
+      "desc": {
+        "cn": "聚餐与微辣警告。",
+        "en": "Gathering and mild-spicy warning."
+      },
+      "graphId": "chengdu_hotpot"
+    },
+    {
+      "id": "qingcheng",
+      "name": {
+        "cn": "青城山",
+        "en": "Mount Qingcheng"
+      },
+      "coords": {
+        "x": 22,
+        "y": 40
+      },
+      "desc": {
+        "cn": "徒步与缆车。",
+        "en": "Hike and cable car."
+      },
+      "graphId": "chengdu_qingcheng"
     }
   ]
 }

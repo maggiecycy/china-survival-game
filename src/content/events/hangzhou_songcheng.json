@@ -1,0 +1,69 @@
+{
+  "id": "hangzhou_songcheng",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "宋城",
+        "en": "Songcheng"
+      },
+      "text": {
+        "cn": "大型演出《宋城千古情》。音响与观众尖叫同场竞技。",
+        "en": "Big show energy. Speakers and audience screams compete."
+      },
+      "choices": [
+        {
+          "id": "show",
+          "text": {
+            "cn": "看演出，被灯光砸中。",
+            "en": "Watch the show; hit by lights."
+          },
+          "effect": {
+            "money": -280,
+            "sanity": 7,
+            "battery": -16,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "park",
+          "text": {
+            "cn": "逛园区打卡。",
+            "en": "Park stroll check-ins."
+          },
+          "effect": {
+            "money": -250,
+            "sanity": 0,
+            "battery": -14,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "loud",
+          "text": {
+            "cn": "音量过大，提早离场。",
+            "en": "Too loud; leave early."
+          },
+          "effect": {
+            "money": -260,
+            "sanity": -14,
+            "battery": -12,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "宋城日結束。",
+        "en": "Songcheng day ends."
+      }
+    }
+  }
+}

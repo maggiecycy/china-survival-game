@@ -2,44 +2,116 @@
   "cityId": "shanghai",
   "attractions": [
     {
-      "id": "miniprogram_lunch",
-      "name": { "cn": "小程序點單", "en": "Mini-Program Lunch" },
-      "coords": { "x": 48, "y": 55 },
-      "desc": {
-        "cn": "不收現金、強制授權。支付能力決定你能不能吃上熱麵。",
-        "en": "No cash, forced permissions. Payment setup decides if you eat."
+      "id": "bund",
+      "name": {
+        "cn": "外滩",
+        "en": "The Bund"
       },
-      "graphId": "shanghai_miniprogram"
-    },
-    {
-      "id": "the_bund",
-      "name": { "cn": "外灘／陸家嘴", "en": "The Bund" },
-      "coords": { "x": 62, "y": 48 },
+      "coords": {
+        "x": 62,
+        "y": 48
+      },
       "desc": {
-        "cn": "天際線打卡。傍晚更耗電。",
-        "en": "Skyline check-in. Evenings drain battery harder."
+        "cn": "夜景、散步、游船。",
+        "en": "Night view, walk, cruise."
       },
       "graphId": "shanghai_bund"
     },
     {
-      "id": "disney",
-      "name": { "cn": "迪士尼", "en": "Disney" },
-      "coords": { "x": 78, "y": 70 },
+      "id": "oriental_pearl",
+      "name": {
+        "cn": "东方明珠",
+        "en": "Oriental Pearl"
+      },
+      "coords": {
+        "x": 68,
+        "y": 42
+      },
       "desc": {
-        "cn": "排隊才是主線。時間怪獸。",
-        "en": "Queuing is the main quest. Time monster."
+        "cn": "登塔与玻璃观光。",
+        "en": "Tower and glass views."
+      },
+      "graphId": "shanghai_oriental_pearl"
+    },
+    {
+      "id": "nanjing_road",
+      "name": {
+        "cn": "南京路",
+        "en": "Nanjing Road"
+      },
+      "coords": {
+        "x": 55,
+        "y": 50
+      },
+      "desc": {
+        "cn": "购物美食与扫码点单。",
+        "en": "Shopping, food, scan-order."
+      },
+      "graphId": "shanghai_nanjing_road"
+    },
+    {
+      "id": "yuyuan",
+      "name": {
+        "cn": "豫园",
+        "en": "Yuyuan Garden"
+      },
+      "coords": {
+        "x": 58,
+        "y": 62
+      },
+      "desc": {
+        "cn": "古典园林与小笼包。",
+        "en": "Classical garden and xiaolongbao."
+      },
+      "graphId": "shanghai_yuyuan"
+    },
+    {
+      "id": "disney",
+      "name": {
+        "cn": "上海迪士尼",
+        "en": "Shanghai Disney"
+      },
+      "coords": {
+        "x": 82,
+        "y": 70
+      },
+      "desc": {
+        "cn": "项目与烟花秀。",
+        "en": "Rides and fireworks."
       },
       "graphId": "shanghai_disney"
     },
     {
       "id": "wukang",
-      "name": { "cn": "武康路", "en": "Wukang Road" },
-      "coords": { "x": 40, "y": 62 },
+      "name": {
+        "cn": "武康路",
+        "en": "Wukang Road"
+      },
+      "coords": {
+        "x": 40,
+        "y": 55
+      },
       "desc": {
-        "cn": "網紅街與咖啡半日。",
-        "en": "Influencer street + cafe half-day."
+        "cn": "City walk 与咖啡。",
+        "en": "City walk and coffee."
       },
       "graphId": "shanghai_wukang"
+    },
+    {
+      "id": "museum",
+      "name": {
+        "cn": "上海博物馆",
+        "en": "Shanghai Museum"
+      },
+      "coords": {
+        "x": 50,
+        "y": 58
+      },
+      "desc": {
+        "cn": "看展充电。",
+        "en": "Exhibits to recharge."
+      },
+      "graphId": "shanghai_museum"
     }
   ]
 }

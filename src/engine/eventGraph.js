@@ -3,7 +3,7 @@
  * 节点 → choices → next；用 requires / blocks_if 读取 activeEffects / flags
  */
 
-import { matchesEventConditions } from './conditions.js'
+import { matchesEventConditions, describeStatLock } from './conditions.js'
 import { applyEffect, addFlag, clampStats, hasFlag } from './effects.js'
 import { applyLodgingFromChoice } from './lodging.js'
 
@@ -77,22 +77,37 @@ export function getLockedChoices(node, player) {
 }
 
 export function describeChoiceLock(choice, player, language = 'cn') {
+  const parts = []
   const flags = new Set([...(player.flags || []), ...(player.activeEffects || [])])
   const missing = (choice.requires || []).filter((f) => !flags.has(f))
   const blocked = (choice.blocks_if || []).filter((f) => flags.has(f))
+  const statMsg = describeStatLock(choice, player, language)
 
-  if (choice.lockedHint) {
-    return choice.lockedHint[language] || choice.lockedHint.cn
-  }
   if (missing.length) {
-    return language === 'en'
-      ? `Requires: ${missing.join(', ')}`
-      : `需要標記：${missing.join(', ')}`
+    parts.push(
+      language === 'en'
+        ? `Requires: ${missing.join(', ')}`
+        : `需要標記：${missing.join(', ')}`,
+    )
   }
   if (blocked.length) {
-    return language === 'en'
-      ? `Blocked by: ${blocked.join(', ')}`
-      : `被標記阻擋：${blocked.join(', ')}`
+    parts.push(
+      language === 'en'
+        ? `Blocked by: ${blocked.join(', ')}`
+        : `被標記阻擋：${blocked.join(', ')}`,
+    )
+  }
+  if (statMsg) parts.push(statMsg)
+
+  // 仅有数值门槛失败、且配置了 flavor 文案时，优先用 lockedHint（赚钱支线）
+  if (!missing.length && !blocked.length && statMsg && choice.lockedHint) {
+    return choice.lockedHint[language] || choice.lockedHint.cn
+  }
+  if (parts.length) {
+    return parts.join(language === 'en' ? '; ' : '；')
+  }
+  if (choice.lockedHint) {
+    return choice.lockedHint[language] || choice.lockedHint.cn
   }
   return language === 'en' ? 'Unavailable' : '目前不可用'
 }

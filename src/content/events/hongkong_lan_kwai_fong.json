@@ -1,0 +1,69 @@
+{
+  "id": "hongkong_lan_kwai_fong",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "兰桂坊",
+        "en": "Lan Kwai Fong"
+      },
+      "text": {
+        "cn": "酒吧街噪音与酒气。你可以社交，也可以社恐。",
+        "en": "Bar street noise and booze. Social or socially anxious — your call."
+      },
+      "choices": [
+        {
+          "id": "one_drink",
+          "text": {
+            "cn": "喝一杯就走。",
+            "en": "One drink then leave."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": 7,
+            "battery": -10,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "party",
+          "text": {
+            "cn": "跟外国人聊天到很晚。",
+            "en": "Chat with travelers late."
+          },
+          "effect": {
+            "money": -250,
+            "sanity": 12,
+            "battery": -16,
+            "locality": 5
+          },
+          "next": "done"
+        },
+        {
+          "id": "overwhelm",
+          "text": {
+            "cn": "噪音过载，逃回酒店。",
+            "en": "Noise overload; flee to hotel."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": -14,
+            "battery": -12,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "兰桂坊日結束。",
+        "en": "Lan Kwai Fong day ends."
+      }
+    }
+  }
+}

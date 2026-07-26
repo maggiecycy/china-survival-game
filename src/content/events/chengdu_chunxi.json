@@ -1,0 +1,94 @@
+{
+  "id": "chengdu_chunxi",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "春熙路",
+        "en": "Chunxi Road"
+      },
+      "text": {
+        "cn": "IFS 爬墙熊猫是打卡圣物。商场空调很舒服，钱包很危险。",
+        "en": "IFS climbing panda is sacred check-in. AC comfort; wallet danger."
+      },
+      "choices": [
+        {
+          "id": "panda_photo",
+          "text": {
+            "cn": "拍熊猫打卡，少购物。",
+            "en": "Panda photo; minimal shopping."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": 7,
+            "battery": -14,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "mall",
+          "text": {
+            "cn": "商场血拼。",
+            "en": "Mall spree."
+          },
+          "effect": {
+            "money": -500,
+            "sanity": -5,
+            "battery": -16,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "stare",
+          "text": {
+            "cn": "被围观合影到社恐。",
+            "en": "Surrounded for photos; social drain."
+          },
+          "effect": {
+            "money": -30,
+            "sanity": -14,
+            "battery": -18,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "hustle",
+          "text": {
+            "cn": "💰 合照收费。",
+            "en": "💰 Charge for photos."
+          },
+          "effect": {
+            "money": 160,
+            "sanity": -5,
+            "battery": -16,
+            "locality": 2
+          },
+          "addFlags": [
+            "did_photo_hustle"
+          ],
+          "showIfLocked": true,
+          "requiresStats": {
+            "sanityGte": 70
+          },
+          "lockedHint": {
+            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
+            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "春熙路日結束。",
+        "en": "Chunxi Road day ends."
+      }
+    }
+  }
+}

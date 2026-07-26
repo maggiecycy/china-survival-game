@@ -1,0 +1,101 @@
+{
+  "cityId": "guilin",
+  "attractions": [
+    {
+      "id": "li_river",
+      "name": {
+        "cn": "漓江",
+        "en": "Li River"
+      },
+      "coords": {
+        "x": 45,
+        "y": 50
+      },
+      "desc": {
+        "cn": "竹筏漂流。",
+        "en": "Bamboo rafting."
+      },
+      "graphId": "guilin_bamboo_raft"
+    },
+    {
+      "id": "elephant",
+      "name": {
+        "cn": "象鼻山",
+        "en": "Elephant Trunk Hill"
+      },
+      "coords": {
+        "x": 52,
+        "y": 42
+      },
+      "desc": {
+        "cn": "经典象鼻轮廓。",
+        "en": "Classic elephant silhouette."
+      },
+      "graphId": "guilin_elephant"
+    },
+    {
+      "id": "two_rivers",
+      "name": {
+        "cn": "两江四湖",
+        "en": "Two Rivers Four Lakes"
+      },
+      "coords": {
+        "x": 48,
+        "y": 55
+      },
+      "desc": {
+        "cn": "夜游船。",
+        "en": "Night cruise."
+      },
+      "graphId": "guilin_river_cruise"
+    },
+    {
+      "id": "yangshuo",
+      "name": {
+        "cn": "阳朔西街",
+        "en": "Yangshuo West Street"
+      },
+      "coords": {
+        "x": 70,
+        "y": 72
+      },
+      "desc": {
+        "cn": "酒吧与美食。",
+        "en": "Bars and food."
+      },
+      "graphId": "guilin_yangshuo"
+    },
+    {
+      "id": "gallery",
+      "name": {
+        "cn": "十里画廊",
+        "en": "Ten-Mile Gallery"
+      },
+      "coords": {
+        "x": 68,
+        "y": 65
+      },
+      "desc": {
+        "cn": "骑车看喀斯特。",
+        "en": "Bike the karst."
+      },
+      "graphId": "guilin_gallery"
+    },
+    {
+      "id": "silver_cave",
+      "name": {
+        "cn": "银子岩",
+        "en": "Silver Cave"
+      },
+      "coords": {
+        "x": 60,
+        "y": 58
+      },
+      "desc": {
+        "cn": "溶洞奇观。",
+        "en": "Cave wonder."
+      },
+      "graphId": "guilin_silver_cave"
+    }
+  ]
+}

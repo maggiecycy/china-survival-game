@@ -1,0 +1,69 @@
+{
+  "id": "hainan_tianyahaijiao",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "天涯海角",
+        "en": "Tianya Haijiao"
+      },
+      "text": {
+        "cn": "石头刻字与合影经济。海风很大。",
+        "en": "Carved stones and photo economy. Strong sea wind."
+      },
+      "choices": [
+        {
+          "id": "photo",
+          "text": {
+            "cn": "打卡天涯石。",
+            "en": "Check in at the stones."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 7,
+            "battery": -12,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "beach",
+          "text": {
+            "cn": "海边走走发呆。",
+            "en": "Beach walk and zone out."
+          },
+          "effect": {
+            "money": -60,
+            "sanity": 12,
+            "battery": -10,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "sellers",
+          "text": {
+            "cn": "被推销缠住。",
+            "en": "Hawker sticky time."
+          },
+          "effect": {
+            "money": -70,
+            "sanity": -14,
+            "battery": -12,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "天涯海角日結束。",
+        "en": "Tianya Haijiao day ends."
+      }
+    }
+  }
+}

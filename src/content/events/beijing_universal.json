@@ -1,0 +1,69 @@
+{
+  "id": "beijing_universal",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "环球影城",
+        "en": "Universal Beijing"
+      },
+      "text": {
+        "cn": "门票贵、项目排队更贵（用时间付）。周边店闪着光诱惑你的钱包。",
+        "en": "Tickets pricey; queues cost time. Merch glows at your wallet."
+      },
+      "choices": [
+        {
+          "id": "rides",
+          "text": {
+            "cn": "狂玩项目，接受腿软与排队。",
+            "en": "Ride hard; accept queues and jelly legs."
+          },
+          "effect": {
+            "money": -650,
+            "sanity": -5,
+            "battery": -35,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "show",
+          "text": {
+            "cn": "看演出 + 少排队策略。",
+            "en": "Shows + low-queue strategy."
+          },
+          "effect": {
+            "money": -520,
+            "sanity": 7,
+            "battery": -22,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "merch_melt",
+          "text": {
+            "cn": "买周边买到理智归边。",
+            "en": "Merch until sanity thins."
+          },
+          "effect": {
+            "money": -900,
+            "sanity": -14,
+            "battery": -20,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "环球影城日結束。",
+        "en": "Universal Beijing day ends."
+      }
+    }
+  }
+}

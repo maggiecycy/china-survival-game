@@ -1,0 +1,69 @@
+{
+  "id": "beijing_tiananmen",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "天安门广场",
+        "en": "Tiananmen Square"
+      },
+      "text": {
+        "cn": "广场很大。安检严格。有人建议凌晨看升旗——你的睡眠与 Sanity 要投票。",
+        "en": "Huge square, strict security. Dawn flag-raising vs sleep — Sanity votes."
+      },
+      "choices": [
+        {
+          "id": "flag",
+          "text": {
+            "cn": "熬夜看升旗（免费，极耗精神）。",
+            "en": "Dawn flag-raising (free, sanity costly)."
+          },
+          "effect": {
+            "money": 0,
+            "sanity": -14,
+            "battery": -28,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "walk",
+          "text": {
+            "cn": "白天散步拍照，接受安检。",
+            "en": "Daytime walk and photos; accept security."
+          },
+          "effect": {
+            "money": -20,
+            "sanity": -5,
+            "battery": -12,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "quick",
+          "text": {
+            "cn": "快速打卡就走，少停留。",
+            "en": "Quick check-in, minimal linger."
+          },
+          "effect": {
+            "money": -10,
+            "sanity": 0,
+            "battery": -8,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "天安门广场日結束。",
+        "en": "Tiananmen Square day ends."
+      }
+    }
+  }
+}

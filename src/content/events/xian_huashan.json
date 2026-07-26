@@ -1,0 +1,69 @@
+{
+  "id": "xian_huashan",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "华山",
+        "en": "Mount Hua"
+      },
+      "text": {
+        "cn": "险、陡、腿抖。索道是尊严选项。夜晚还能选日出——以及失眠。",
+        "en": "Steep, exposed, leg-shaking. Cable is dignity. Sunrise means insomnia."
+      },
+      "choices": [
+        {
+          "id": "cable",
+          "text": {
+            "cn": "索道上下，保留膝盖。",
+            "en": "Cable both ways; keep knees."
+          },
+          "effect": {
+            "money": -320,
+            "sanity": 7,
+            "battery": -18,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "hike",
+          "text": {
+            "cn": "徒步挑战，成就感爆棚。",
+            "en": "Hike challenge; achievement high."
+          },
+          "effect": {
+            "money": -200,
+            "sanity": 12,
+            "battery": -35,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "fear",
+          "text": {
+            "cn": "恐高卡关，半途折返。",
+            "en": "Height fear; turn back mid-way."
+          },
+          "effect": {
+            "money": -180,
+            "sanity": -14,
+            "battery": -22,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "华山日結束。",
+        "en": "Mount Hua day ends."
+      }
+    }
+  }
+}

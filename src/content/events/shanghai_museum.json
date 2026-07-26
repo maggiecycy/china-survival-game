@@ -1,0 +1,69 @@
+{
+  "id": "shanghai_museum",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "上海博物馆",
+        "en": "Shanghai Museum"
+      },
+      "text": {
+        "cn": "免费预约制。青铜器沉默，游客喧哗被保安眼神管理。",
+        "en": "Free with booking. Bronzes silent; guards manage tourist volume with eyes."
+      },
+      "choices": [
+        {
+          "id": "deep",
+          "text": {
+            "cn": "认真看青铜与书画。",
+            "en": "Deep dive: bronzes and painting."
+          },
+          "effect": {
+            "money": 0,
+            "sanity": 12,
+            "battery": -12,
+            "locality": 5
+          },
+          "next": "done"
+        },
+        {
+          "id": "quick",
+          "text": {
+            "cn": "快闪打卡三件镇馆。",
+            "en": "Speed-run three highlights."
+          },
+          "effect": {
+            "money": 0,
+            "sanity": 0,
+            "battery": -10,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "no_slot",
+          "text": {
+            "cn": "约不上，在馆外坐着生闷气。",
+            "en": "No slot; sulk outside."
+          },
+          "effect": {
+            "money": -20,
+            "sanity": -5,
+            "battery": -8,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "上海博物馆日結束。",
+        "en": "Shanghai Museum day ends."
+      }
+    }
+  }
+}

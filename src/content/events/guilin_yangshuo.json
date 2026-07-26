@@ -1,0 +1,80 @@
+{
+  "id": "guilin_yangshuo",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "陽朔西街",
+        "en": "Yangshuo West Street"
+      },
+      "text": {
+        "cn": "酒吧燈開始閃。有人遞菜單，有人遞『騎行團』傳單，有人只是想跟你合照。",
+        "en": "Bar lights blink. Menus appear, bike-tour flyers appear, and someone just wants a photo with you."
+      },
+      "choices": [
+        {
+          "id": "bar_crawl",
+          "text": {
+            "cn": "來一杯，聽聽西街租金傳說。",
+            "en": "Have a drink; listen to West Street rent myths."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": 6,
+            "battery": -12,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "early_sleep",
+          "text": {
+            "cn": "拒絕續攤，早點回旅館充電。",
+            "en": "Skip the crawl; charge at the hotel early."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": 10,
+            "battery": 10,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "photo_hustle",
+          "text": {
+            "cn": "💰 西街合照收費（外國面孔溢價區）。",
+            "en": "💰 Charge for West Street photos (foreign-face premium zone)."
+          },
+          "effect": {
+            "money": 150,
+            "sanity": -8,
+            "battery": -18,
+            "locality": 2
+          },
+          "addFlags": [
+            "did_photo_hustle"
+          ],
+          "next": "done",
+          "showIfLocked": true,
+          "requiresStats": {
+            "sanityGte": 70
+          },
+          "lockedHint": {
+            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
+            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
+          }
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "西街日結束。燈還亮著，你的社交電量不一定。",
+        "en": "West Street day ends. Lights still on; your social battery maybe not."
+      }
+    }
+  }
+}

@@ -14,8 +14,24 @@
   "day": {
     "hours": 24,
     "overnightBatteryRestore": 50,
-    "note": "完成景點=一天；若當天電量沒歸零，住一晚回復 50 電量"
+    "overnightSanityByLodging": {
+      "international": 8,
+      "foreigner_ok": 5,
+      "youth_hostel": 4,
+      "couch": 2
+    },
+    "note": "完成景點=一天；電量>0 過夜回電解；按住宿類型小幅回復 Sanity"
   },
+  "sanityTiers": {
+    "restoreDeep": { "min": 10, "max": 15, "note": "湖景/公园/太极/茶馆/慢旅行治愈" },
+    "restoreLight": { "min": 5, "max": 9, "note": "顺利游玩、美食愉悦、社交成功" },
+    "neutral": { "min": -2, "max": 2, "note": "普通打卡、花钱观光" },
+    "friction": { "min": -8, "max": -3, "note": "排队/扫码摩擦/轻度文化冲击/注视" },
+    "stress": { "min": -18, "max": -10, "note": "黄牛/迷路/支付失灵/社恐/烟味" },
+    "crisis": { "min": -30, "max": -20, "note": "过敏急诊/高原硬扛/严重冲突" },
+    "note": "选项 effect.sanity 按档位取值；坏结局 sanity≤0；赚钱支线需 sanity≥70"
+  },
+
   "powerBank": {
     "cost": 40,
     "restore": 60,
@@ -26,6 +42,21 @@
   "economy": {
     "startingMoney": 2800
   },
+  "gates": {
+    "hustleSanityGte": 70,
+    "modelBatteryGte": 25,
+    "localTrickLocalityGte": 20,
+    "note": "赚钱支线需 Sanity≥70；模特另需 Battery≥25；少量本地捷径需 Locality≥20"
+  },
+  "localityTiers": {
+    "infra": { "min": 8, "max": 10, "note": "办号/绑支付/预约基建" },
+    "deepLocal": { "min": 5, "max": 7, "note": "英语小费/识破陷阱/沙发社交" },
+    "authentic": { "min": 3, "max": 4, "note": "正规游玩/当地吃喝" },
+    "tourist": { "min": 1, "max": 2, "note": "打卡消费/合照模特赚钱" },
+    "zero": { "min": 0, "max": 0, "note": "漫游硬撑/回避" },
+    "antiLocal": { "min": -5, "max": -2, "note": "现金死磕/黄牛/被宰" }
+  },
+
   "lodgingTypes": {
     "international": {
       "type": "international",
@@ -38,6 +69,12 @@
       "nightlyCost": 220,
       "nightsLeft": null,
       "label": { "cn": "可接待外賓旅店", "en": "Foreigner-OK lodge" }
+    },
+    "youth_hostel": {
+      "type": "youth_hostel",
+      "nightlyCost": 90,
+      "nightsLeft": null,
+      "label": { "cn": "青年旅舍", "en": "Youth hostel" }
     },
     "couch": {
       "type": "couch",

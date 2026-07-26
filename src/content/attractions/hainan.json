@@ -1,0 +1,117 @@
+{
+  "cityId": "hainan",
+  "attractions": [
+    {
+      "id": "yalong",
+      "name": {
+        "cn": "亚龙湾",
+        "en": "Yalong Bay"
+      },
+      "coords": {
+        "x": 58,
+        "y": 62
+      },
+      "desc": {
+        "cn": "海滩放松。",
+        "en": "Beach unwind."
+      },
+      "graphId": "hainan_yalong"
+    },
+    {
+      "id": "wuzhizhou",
+      "name": {
+        "cn": "蜈支洲岛",
+        "en": "Wuzhizhou Island"
+      },
+      "coords": {
+        "x": 70,
+        "y": 48
+      },
+      "desc": {
+        "cn": "海岛船班。",
+        "en": "Island ferry."
+      },
+      "graphId": "hainan_wuzhizhou"
+    },
+    {
+      "id": "nanshan",
+      "name": {
+        "cn": "南山文化旅游区",
+        "en": "Nanshan Cultural Zone"
+      },
+      "coords": {
+        "x": 40,
+        "y": 55
+      },
+      "desc": {
+        "cn": "海上观音与寺庙。",
+        "en": "Sea Guanyin and temple."
+      },
+      "graphId": "hainan_nanshan"
+    },
+    {
+      "id": "tianyahaijiao",
+      "name": {
+        "cn": "天涯海角",
+        "en": "Tianya Haijiao"
+      },
+      "coords": {
+        "x": 35,
+        "y": 68
+      },
+      "desc": {
+        "cn": "天涯石打卡。",
+        "en": "End-of-earth stones."
+      },
+      "graphId": "hainan_tianyahaijiao"
+    },
+    {
+      "id": "duty_free",
+      "name": {
+        "cn": "三亚国际免税城",
+        "en": "Sanya Duty-Free"
+      },
+      "coords": {
+        "x": 42,
+        "y": 40
+      },
+      "desc": {
+        "cn": "购物与支付危机。",
+        "en": "Shopping and pay crisis."
+      },
+      "graphId": "hainan_duty_free"
+    },
+    {
+      "id": "seafood",
+      "name": {
+        "cn": "第一市场海鲜市场",
+        "en": "First Market Seafood"
+      },
+      "coords": {
+        "x": 36,
+        "y": 70
+      },
+      "desc": {
+        "cn": "海鲜轮盘。",
+        "en": "Seafood roulette."
+      },
+      "graphId": "hainan_seafood"
+    },
+    {
+      "id": "diving",
+      "name": {
+        "cn": "潜水",
+        "en": "Diving"
+      },
+      "coords": {
+        "x": 72,
+        "y": 55
+      },
+      "desc": {
+        "cn": "浮潜/潜水体验。",
+        "en": "Snorkel / dive."
+      },
+      "graphId": "hainan_diving"
+    }
+  ]
+}

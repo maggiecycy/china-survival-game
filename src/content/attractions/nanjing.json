@@ -1,0 +1,117 @@
+{
+  "cityId": "nanjing",
+  "attractions": [
+    {
+      "id": "sun_yat_sen",
+      "name": {
+        "cn": "中山陵",
+        "en": "Sun Yat-sen Mausoleum"
+      },
+      "coords": {
+        "x": 62,
+        "y": 34
+      },
+      "desc": {
+        "cn": "长台阶与注视。",
+        "en": "Long stairs and stares."
+      },
+      "graphId": "nanjing_sun_yat_sen"
+    },
+    {
+      "id": "fuzi_miao",
+      "name": {
+        "cn": "夫子庙",
+        "en": "Confucius Temple"
+      },
+      "coords": {
+        "x": 48,
+        "y": 58
+      },
+      "desc": {
+        "cn": "灯火与小吃。",
+        "en": "Lights and snacks."
+      },
+      "graphId": "nanjing_fuzi_miao"
+    },
+    {
+      "id": "qinhuai",
+      "name": {
+        "cn": "秦淮河",
+        "en": "Qinhuai River"
+      },
+      "coords": {
+        "x": 50,
+        "y": 62
+      },
+      "desc": {
+        "cn": "画舫夜游。",
+        "en": "Night boat."
+      },
+      "graphId": "nanjing_qinhuai"
+    },
+    {
+      "id": "presidential",
+      "name": {
+        "cn": "总统府",
+        "en": "Presidential Palace"
+      },
+      "coords": {
+        "x": 52,
+        "y": 48
+      },
+      "desc": {
+        "cn": "近代史展馆。",
+        "en": "Modern history site."
+      },
+      "graphId": "nanjing_presidential"
+    },
+    {
+      "id": "museum",
+      "name": {
+        "cn": "南京博物院",
+        "en": "Nanjing Museum"
+      },
+      "coords": {
+        "x": 70,
+        "y": 48
+      },
+      "desc": {
+        "cn": "预约看展。",
+        "en": "Booked museum."
+      },
+      "graphId": "nanjing_museum"
+    },
+    {
+      "id": "jiming",
+      "name": {
+        "cn": "鸡鸣寺",
+        "en": "Jiming Temple"
+      },
+      "coords": {
+        "x": 56,
+        "y": 42
+      },
+      "desc": {
+        "cn": "寺庙与樱花季人潮。",
+        "en": "Temple and cherry crowds."
+      },
+      "graphId": "nanjing_jiming"
+    },
+    {
+      "id": "niushou",
+      "name": {
+        "cn": "牛首山",
+        "en": "Niushou Mountain"
+      },
+      "coords": {
+        "x": 40,
+        "y": 75
+      },
+      "desc": {
+        "cn": "佛顶宫建筑震撼。",
+        "en": "Dramatic temple architecture."
+      },
+      "graphId": "nanjing_niushou"
+    }
+  ]
+}

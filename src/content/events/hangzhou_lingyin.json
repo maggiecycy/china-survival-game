@@ -1,0 +1,69 @@
+{
+  "id": "hangzhou_lingyin",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "灵隐寺",
+        "en": "Lingyin Temple"
+      },
+      "text": {
+        "cn": "飞来峰石刻与香火。旺季像大型车站。翻译耳机把佛号念成奇怪英文。",
+        "en": "Carvings and incense. Peak season = mega station. Audio guide mangles chants."
+      },
+      "choices": [
+        {
+          "id": "quiet",
+          "text": {
+            "cn": "早到避开人潮，安静随喜。",
+            "en": "Arrive early; quiet visit."
+          },
+          "effect": {
+            "money": -80,
+            "sanity": 12,
+            "battery": -12,
+            "locality": 4
+          },
+          "next": "done"
+        },
+        {
+          "id": "crowd",
+          "text": {
+            "cn": "高峰硬挤参观。",
+            "en": "Peak crush visit."
+          },
+          "effect": {
+            "money": -70,
+            "sanity": -14,
+            "battery": -18,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "tourist",
+          "text": {
+            "cn": "买香烛套餐当体验。",
+            "en": "Incense package as experience."
+          },
+          "effect": {
+            "money": -120,
+            "sanity": 0,
+            "battery": -10,
+            "locality": 3
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "灵隐寺日結束。",
+        "en": "Lingyin Temple day ends."
+      }
+    }
+  }
+}

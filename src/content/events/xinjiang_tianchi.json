@@ -1,0 +1,84 @@
+{
+  "id": "xinjiang_tianchi",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "天山天池",
+        "en": "Heavenly Lake"
+      },
+      "text": {
+        "cn": "湖很安静。路牌英文像随机抽词。厕所是蹲厕——你在「憋着」与「回酒店」之间哲学辩论。",
+        "en": "The lake is quiet. English signs feel RNG. Squat toilets force a philosophy: hold it, or retreat to the hotel."
+      },
+      "choices": [
+        {
+          "id": "cable",
+          "text": {
+            "cn": "坐缆车上看湖，接受翻译路牌。",
+            "en": "Cable car lake view; accept sign chaos."
+          },
+          "effect": {
+            "money": -160,
+            "sanity": 8,
+            "battery": -12,
+            "locality": 3
+          },
+          "feedback": {
+            "cn": "蓝色冷静。你原谅了翻译。",
+            "en": "Blue calm. You forgive the translators."
+          },
+          "next": "done"
+        },
+        {
+          "id": "squat_shock",
+          "text": {
+            "cn": "挑战蹲厕，完成如厕文化冲击成就。",
+            "en": "Attempt squat toilet; unlock culture-shock achievement."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": -14,
+            "battery": -8,
+            "locality": 4
+          },
+          "addFlags": [
+            "survived_squat_toilet"
+          ],
+          "feedback": {
+            "cn": "腿在抖。你获得了新的肌肉记忆。",
+            "en": "Legs shake. New muscle memory installed."
+          },
+          "next": "done"
+        },
+        {
+          "id": "hold_hotel",
+          "text": {
+            "cn": "憋着，提前结束回酒店卫生间。",
+            "en": "Hold it; abort day for hotel bathroom."
+          },
+          "effect": {
+            "money": -90,
+            "sanity": -6,
+            "battery": -10,
+            "locality": 1
+          },
+          "feedback": {
+            "cn": "尊严路线。景点打卡不完整但膀胱完整。",
+            "en": "Dignity route. Incomplete check-in; intact bladder."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "天池日结束。",
+        "en": "Tianchi day ends."
+      }
+    }
+  }
+}

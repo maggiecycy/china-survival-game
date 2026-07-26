@@ -1,0 +1,88 @@
+{
+  "id": "tibet_potala",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "布达拉宫预约",
+        "en": "Potala Booking"
+      },
+      "text": {
+        "cn": "门票常要提前很多天。现场基本无票。爬升时胸口发紧——高原不跟你开玩笑。护照核验又是人工窗口。",
+        "en": "Tickets often need booking days ahead. Walk-up is rare. Chest tightens on the climb — altitude is not a vibe. Passport: manual window again."
+      },
+      "choices": [
+        {
+          "id": "booked_slow",
+          "text": {
+            "cn": "有预约：慢慢登，遇喘就停。",
+            "en": "Booked: climb slow, stop when breathless."
+          },
+          "requires": [
+            "has_local_number"
+          ],
+          "showIfLocked": true,
+          "effect": {
+            "money": -150,
+            "sanity": -8,
+            "battery": -25,
+            "locality": 5
+          },
+          "feedback": {
+            "cn": "白墙红宫在缺氧里仍然震撼。",
+            "en": "White-and-red palace still stuns through thin air."
+          },
+          "next": "done"
+        },
+        {
+          "id": "no_ticket",
+          "text": {
+            "cn": "没约上，只能在广场远眺拍照。",
+            "en": "No ticket; photograph from the square."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": -10,
+            "battery": -12,
+            "locality": 1
+          },
+          "feedback": {
+            "cn": "远眺也美。深度印象留给下次。",
+            "en": "Distant views still beautiful. Depth waits for next time."
+          },
+          "next": "done"
+        },
+        {
+          "id": "push_hard",
+          "text": {
+            "cn": "硬闯节奏往上冲（高风险）。",
+            "en": "Push the pace upward (risky)."
+          },
+          "effect": {
+            "money": -150,
+            "sanity": -22,
+            "battery": -35,
+            "locality": 2
+          },
+          "addFlags": [
+            "altitude_sick"
+          ],
+          "feedback": {
+            "cn": "头开始嗡。你获得 flag：高原不适。",
+            "en": "Head buzzes. Flag gained: altitude sickness."
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "布达拉日结束。",
+        "en": "Potala day ends."
+      }
+    }
+  }
+}

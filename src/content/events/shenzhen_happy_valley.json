@@ -1,0 +1,69 @@
+{
+  "id": "shenzhen_happy_valley",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "欢乐谷",
+        "en": "Happy Valley"
+      },
+      "text": {
+        "cn": "过山车队列像另一条通勤。尖叫是门票附赠音效。",
+        "en": "Coaster queues feel like commute 2.0. Screams are included audio."
+      },
+      "choices": [
+        {
+          "id": "coaster",
+          "text": {
+            "cn": "狂坐过山车，肾上腺素换 Sanity。",
+            "en": "Coasters: adrenaline for sanity."
+          },
+          "effect": {
+            "money": -320,
+            "sanity": 7,
+            "battery": -30,
+            "locality": 2
+          },
+          "next": "done"
+        },
+        {
+          "id": "mild",
+          "text": {
+            "cn": "选温和项目，保护颈椎。",
+            "en": "Mild rides; protect your neck."
+          },
+          "effect": {
+            "money": -280,
+            "sanity": 0,
+            "battery": -18,
+            "locality": 1
+          },
+          "next": "done"
+        },
+        {
+          "id": "queue",
+          "text": {
+            "cn": "排队三小时只坐一个。",
+            "en": "Three-hour queue for one ride."
+          },
+          "effect": {
+            "money": -300,
+            "sanity": -14,
+            "battery": -25,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "欢乐谷日結束。",
+        "en": "Happy Valley day ends."
+      }
+    }
+  }
+}

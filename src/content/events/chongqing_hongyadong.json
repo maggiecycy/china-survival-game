@@ -1,0 +1,90 @@
+{
+  "id": "chongqing_hongyadong",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "洪崖洞階梯",
+        "en": "Hongyadong Stairs"
+      },
+      "text": {
+        "cn": "App 說『直行 50 米』。你走進大樓 8 樓，推門出去又是馬路。夜景很美，膝蓋很吵。",
+        "en": "The app says 'straight 50m'. Floor 8 exits onto another street. The night view is pretty; your knees are loud."
+      },
+      "choices": [
+        {
+          "id": "climb",
+          "text": {
+            "cn": "放棄電梯幻想，用雙腿征服台階。",
+            "en": "Forget elevators; conquer the stairs."
+          },
+          "effect": {
+            "money": -40,
+            "sanity": -15,
+            "battery": -18,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "ask_local",
+          "text": {
+            "cn": "抓路人用翻譯問路（耗電）。",
+            "en": "Ask locals via translate app (battery drain)."
+          },
+          "requires": [
+            "has_local_number"
+          ],
+          "showIfLocked": true,
+          "effect": {
+            "sanity": -5,
+            "battery": -22,
+            "locality": 6
+          },
+          "next": "done",
+          "requiresStats": {
+            "localityGte": 20
+          }
+        },
+        {
+          "id": "photo_hustle",
+          "text": {
+            "cn": "💰 在觀景台被拉去合照收費（3D 城市限定）。",
+            "en": "💰 Charge for photos at the viewpoint (3D-city special)."
+          },
+          "effect": {
+            "money": 140,
+            "sanity": -8,
+            "battery": -16,
+            "locality": 2
+          },
+          "addFlags": [
+            "did_photo_hustle"
+          ],
+          "feedback": {
+            "cn": "你當了一晚『洪崖洞背景板』。錢包暖了，小腿在抗議。",
+            "en": "You were Hongyadong's background prop. Wallet warm; calves complaining."
+          },
+          "next": "done",
+          "showIfLocked": true,
+          "requiresStats": {
+            "sanityGte": 70
+          },
+          "lockedHint": {
+            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
+            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
+          }
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "洪崖洞日結束。你學會了：在重慶，『對面』可能在上一層樓。",
+        "en": "Hongyadong day ends. Lesson: in Chongqing, 'across' may be one floor up."
+      }
+    }
+  }
+}

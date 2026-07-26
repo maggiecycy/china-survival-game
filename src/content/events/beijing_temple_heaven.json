@@ -4,7 +4,10 @@
   "nodes": {
     "main": {
       "id": "main",
-      "title": { "cn": "天壇", "en": "Temple of Heaven" },
+      "title": {
+        "cn": "天壇",
+        "en": "Temple of Heaven"
+      },
       "text": {
         "cn": "風很大，太極很穩。這裡比較不像預約戰場。",
         "en": "Windy, tai-chi steady. Less like a reservation battlefield."
@@ -12,8 +15,16 @@
       "choices": [
         {
           "id": "walk",
-          "text": { "cn": "慢慢走完圜丘與祈年殿外圍。", "en": "Slow walk around the mounds and halls." },
-          "effect": { "money": -30, "sanity": 8, "battery": -10, "locality": 3 },
+          "text": {
+            "cn": "慢慢走完圜丘與祈年殿外圍。",
+            "en": "Slow walk around the mounds and halls."
+          },
+          "effect": {
+            "money": -30,
+            "sanity": 8,
+            "battery": -10,
+            "locality": 4
+          },
           "next": "done"
         }
       ]
@@ -21,7 +32,10 @@
     "done": {
       "id": "done",
       "end": true,
-      "text": { "cn": "天壇日結束。你呼吸到了北京少見的空曠。", "en": "Temple day ends. Rare Beijing open air." }
+      "text": {
+        "cn": "天壇日結束。你呼吸到了北京少見的空曠。",
+        "en": "Temple day ends. Rare Beijing open air."
+      }
     }
   }
 }

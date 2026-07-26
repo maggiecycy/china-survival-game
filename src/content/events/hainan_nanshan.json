@@ -1,0 +1,69 @@
+{
+  "id": "hainan_nanshan",
+  "entry": "main",
+  "nodes": {
+    "main": {
+      "id": "main",
+      "title": {
+        "cn": "南山文化旅游区",
+        "en": "Nanshan"
+      },
+      "text": {
+        "cn": "海上观音很震撼。景区大，电瓶车是膝盖的朋友。",
+        "en": "Sea Guanyin impresses. Huge site; carts befriend knees."
+      },
+      "choices": [
+        {
+          "id": "guanyin",
+          "text": {
+            "cn": "看海上观音，安静片刻。",
+            "en": "Sea Guanyin; quiet moment."
+          },
+          "effect": {
+            "money": -160,
+            "sanity": 12,
+            "battery": -14,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "temple",
+          "text": {
+            "cn": "寺庙随喜。",
+            "en": "Temple visit."
+          },
+          "effect": {
+            "money": -140,
+            "sanity": 7,
+            "battery": -12,
+            "locality": 3
+          },
+          "next": "done"
+        },
+        {
+          "id": "heat",
+          "text": {
+            "cn": "暴晒排队，中暑边缘。",
+            "en": "Heat queue; near heatstroke."
+          },
+          "effect": {
+            "money": -150,
+            "sanity": -14,
+            "battery": -20,
+            "locality": 1
+          },
+          "next": "done"
+        }
+      ]
+    },
+    "done": {
+      "id": "done",
+      "end": true,
+      "text": {
+        "cn": "南山文化旅游区日結束。",
+        "en": "Nanshan day ends."
+      }
+    }
+  }
+}
