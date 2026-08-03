@@ -5,25 +5,29 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "中环",
-        "en": "Central"
+        "cn": "中环：国际化回血点",
+        "en": "Central: International Sanity Station"
       },
       "text": {
-        "cn": "电梯大楼与中环吊车。国际化手感短暂回血。",
-        "en": "Tower lifts and Mid-Levels escalator. International feel restores you."
+        "cn": "电梯大楼与中环吊车。西装与旅行背包并行。你突然有种错觉：自己又会「正常上网」了——其实只是心情。",
+        "en": "Tower lifts and the Mid-Levels escalator. Suits beside backpacks. You feel briefly “normally online” again — mostly a mood."
       },
       "choices": [
         {
           "id": "walk",
           "text": {
             "cn": "中环步行系统探索。",
-            "en": "Explore walkway system."
+            "en": "Explore the walkway system."
           },
           "effect": {
             "money": -40,
             "sanity": 12,
             "battery": -12,
             "locality": 4
+          },
+          "feedback": {
+            "cn": "立体步行像城市插件。你走得像本地人——至少看起来像。",
+            "en": "Layered walkways feel like city DLC. You walk like a local — optically."
           },
           "next": "done"
         },
@@ -39,6 +43,10 @@
             "battery": 5,
             "locality": 3
           },
+          "feedback": {
+            "cn": "咖啡贵，插座香。你第一次觉得「贵得合理」。",
+            "en": "Coffee pricey, outlet precious. First time expensive feels fair."
+          },
           "next": "done"
         },
         {
@@ -53,6 +61,10 @@
             "battery": -14,
             "locality": 2
           },
+          "feedback": {
+            "cn": "你成为人流的一部分。中环不等人，包括游客。",
+            "en": "You become part of the flow. Central waits for no one — including tourists."
+          },
           "next": "done"
         }
       ]
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "中环日結束。",
-        "en": "Central day ends."
+        "cn": "中环日结束。玻璃幕墙把你的倒影照得很「国际」。",
+        "en": "Central ends. Glass reflects a very “international” you."
       }
     }
   }

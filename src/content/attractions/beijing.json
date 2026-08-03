@@ -12,8 +12,8 @@
         "y": 40
       },
       "desc": {
-        "cn": "预约地狱与宫殿漫游。",
-        "en": "Reservation hell and palace wander."
+        "cn": "预约报错、安检长龙与「外国面孔」打卡经济。",
+        "en": "Booking errors, security dragons, foreign-face photo economy."
       },
       "graphId": "beijing_forbidden_city"
     },
@@ -28,8 +28,8 @@
         "y": 52
       },
       "desc": {
-        "cn": "升旗、安检、空旷广场。",
-        "en": "Flag-raising, security, open square."
+        "cn": "空旷、严肃、升旗与睡眠的对赌。",
+        "en": "Open air, seriousness, flag vs sleep."
       },
       "graphId": "beijing_tiananmen"
     },
@@ -44,8 +44,8 @@
         "y": 26
       },
       "desc": {
-        "cn": "登城、缆车、腿软。",
-        "en": "Climb, cable car, jelly legs."
+        "cn": "好汉认证：台阶、缆车与日结外模名片。",
+        "en": "Hero cert: stairs, cable, same-day model cards."
       },
       "graphId": "beijing_great_wall"
     },
@@ -60,8 +60,8 @@
         "y": 38
       },
       "desc": {
-        "cn": "昆明湖划船与佛香阁。",
-        "en": "Kunming Lake boat and towers."
+        "cn": "昆明湖风大，租船要扫码，长廊是人潮河道。",
+        "en": "Windy lake, QR boats, corridor as human river."
       },
       "graphId": "beijing_summer_palace"
     },
@@ -76,8 +76,8 @@
         "y": 48
       },
       "desc": {
-        "cn": "小吃、文创、咖啡馆。",
-        "en": "Snacks, souvenirs, cafés."
+        "cn": "网红街、租金传说、英语小费与支巷逃生。",
+        "en": "Influencer street, rent myths, English tips, lane escapes."
       },
       "graphId": "beijing_hutong"
     },
@@ -92,8 +92,8 @@
         "y": 58
       },
       "desc": {
-        "cn": "项目、演出、周边烧钱。",
-        "en": "Rides, shows, merch burn."
+        "cn": "快乐用钱买，用腿付；周边店负责催眠。",
+        "en": "Joy costs cash and legs; merch hypnotizes."
       },
       "graphId": "beijing_universal"
     },
@@ -108,8 +108,8 @@
         "y": 56
       },
       "desc": {
-        "cn": "看展、历史知识收集。",
-        "en": "Exhibits and history collect."
+        "cn": "免费的安静奢侈——前提是你约到了。",
+        "en": "Free quiet luxury — if you booked."
       },
       "graphId": "beijing_national_museum"
     }

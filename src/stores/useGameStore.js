@@ -4,7 +4,7 @@
  *          ↘ map-planning → travel-mode → (transit once) → city-map
  */
 import { ref, reactive, computed } from 'vue'
-import { cities, tutorial, visas, gameConfig, eventGraphs } from '../content'
+import { cities, tutorial, visas, gameConfig, eventGraphs, characters } from '../content'
 import {
   t as translate,
   pickLang,
@@ -17,7 +17,6 @@ import {
   hasFlag,
   isCityRestricted,
   isCityUnlocked,
-  getUnlockedCityIds,
   getUnlocksFrom as unlocksFromCity,
   checkCountryStatus,
   evaluateStatEnding,
@@ -31,6 +30,8 @@ import {
   applyNodeEffect,
   listTravelModes,
   estimateTravelCost,
+  listModeAvailability,
+  firstAvailableModeId,
   shouldPlayFirstBeijingDeparture,
   getFirstDepartureGraphId,
   syncLodgingFromTutorialFlags,
@@ -42,6 +43,7 @@ import {
   getCityAttractions,
   getVisitedKey,
   collectTutorialVisitedAttractions,
+  getNearestCityIds,
 } from '../engine'
 
 let flightTimer = null
@@ -63,6 +65,8 @@ const tutorialSelectedOptionId = ref(null)
 const currentTutorialStage = computed(() => tutorial.stages[tutorialStageIndex.value])
 
 const visitedCities = ref([])
+const exploredCities = ref([])
+const unlockedCityIds = ref([gameConfig.startCityId || 'beijing'])
 const visitedAttractionKeys = ref([])
 const activeCity = ref(null)
 const activeAttraction = ref(null)
@@ -74,8 +78,6 @@ const travelModes = listTravelModes()
 
 const activeEnding = ref(null)
 const gameLogs = ref([])
-
-const unlockedCityIds = computed(() => getUnlockedCityIds(cities, visitedCities.value))
 
 const currentCity = computed(() =>
   cities.find((c) => c.id === playerState.currentCity) || null
@@ -93,6 +95,11 @@ const powerBankConfig = getPowerBankConfig()
 const travelEstimate = computed(() => {
   if (!pendingDestination.value) return null
   return estimateTravelCost(currentCity.value, pendingDestination.value, selectedTravelMode.value)
+})
+
+const travelModeOptions = computed(() => {
+  if (!pendingDestination.value) return []
+  return listModeAvailability(currentCity.value, pendingDestination.value)
 })
 
 const currentEventNode = computed(() => {
@@ -173,6 +180,18 @@ const selectVisa = (visaType) => {
   selectedVisa.value = visaType
   applyVisaInitial(playerState, visas[visaType])
   addLog('🛂', pickLang(`簽證確認：${visaType}`, `Visa confirmed: ${visaType}`, language.value))
+  currentStep.value = 'character-selection'
+}
+
+const selectedCharacter = computed(() =>
+  characters.find((c) => c.id === playerState.characterId) || null
+)
+
+const selectCharacter = (characterId) => {
+  const found = characters.find((c) => c.id === characterId)
+  if (!found) return
+  playerState.characterId = characterId
+  addLog('🧳', pickLang(`旅人：${found.name.cn}`, `Traveler: ${found.name.en}`, language.value))
   flyTo({ cn: '北京', en: 'Beijing' }, gameConfig.flight.arrivalDurationMs, () => {
     currentStep.value = 'tutorial'
   })
@@ -234,7 +253,7 @@ const confirmTutorialFeedback = () => {
 }
 
 const cityRestricted = (city) => isCityRestricted(city, selectedVisa.value)
-const cityUnlocked = (city) => isCityUnlocked(city, visitedCities.value)
+const cityUnlocked = (city) => isCityUnlocked(city, unlockedCityIds.value)
 const getUnlocksFrom = (city) => unlocksFromCity(city, cities)
 
 const handleSelectCity = (city) => {
@@ -339,8 +358,36 @@ const arriveAtCity = (city) => {
 }
 
 const leaveCityToWorldMap = () => {
+  // 离开城市地图视作「探索过」：解锁地图上最近 2 座城
+  markCityExplored(playerState.currentCity)
   activeAttraction.value = null
   currentStep.value = 'map-planning'
+}
+
+const markCityExplored = (cityId) => {
+  if (!cityId) return
+  if (!exploredCities.value.includes(cityId)) {
+    exploredCities.value.push(cityId)
+  }
+  const city = cities.find((c) => c.id === cityId)
+  const nearest = getNearestCityIds(city, cities, 2)
+  let unlockedNew = false
+  for (const id of nearest) {
+    if (!unlockedCityIds.value.includes(id)) {
+      unlockedCityIds.value.push(id)
+      unlockedNew = true
+      const c = cities.find((x) => x.id === id)
+      if (c) {
+        addLog(
+          '🔓',
+          pickLang(`解鎖鄰近城市：${c.name.cn}`, `Unlocked nearby: ${c.name.en}`, language.value)
+        )
+      }
+    }
+  }
+  if (unlockedNew) {
+    /* keep reactive array mutation */
+  }
 }
 
 const finishEvent = (city, restricted = false) => {
@@ -443,11 +490,13 @@ const travelToCity = (city) => {
     return
   }
   pendingDestination.value = city
-  selectedTravelMode.value = 'hsr'
+  selectedTravelMode.value = firstAvailableModeId(currentCity.value, city)
   currentStep.value = 'travel-mode'
 }
 
 const selectTravelMode = (modeId) => {
+  const estimate = estimateTravelCost(currentCity.value, pendingDestination.value, modeId)
+  if (!estimate.available) return
   selectedTravelMode.value = modeId
 }
 
@@ -455,12 +504,13 @@ const confirmTravel = () => {
   const dest = pendingDestination.value
   if (!dest) return
   const estimate = estimateTravelCost(currentCity.value, dest, selectedTravelMode.value)
+  if (!estimate.available) return
   applyEffect(playerState, estimate.effect)
   addLog(
     '🚆',
     pickLang(
-      `選擇${estimate.mode.label.cn}前往${dest.name.cn}`,
-      `${estimate.mode.label.en} to ${dest.name.en}`,
+      `選擇${estimate.mode.label.cn}前往${dest.name.cn}（￥${Math.abs(estimate.effect.money)} / ${Math.abs(estimate.effect.time)}h）`,
+      `${estimate.mode.label.en} to ${dest.name.en} (￥${Math.abs(estimate.effect.money)} / ${Math.abs(estimate.effect.time)}h)`,
       language.value
     )
   )
@@ -579,6 +629,8 @@ const resetGame = () => {
   tutorialFeedback.value = null
   tutorialSelectedOptionId.value = null
   visitedCities.value = []
+  exploredCities.value = []
+  unlockedCityIds.value = [gameConfig.startCityId || 'beijing']
   visitedAttractionKeys.value = []
   activeCity.value = null
   activeAttraction.value = null
@@ -596,6 +648,7 @@ export function useGameStore() {
     visas,
     gameConfig,
     eventGraphs,
+    characters,
     travelModes,
 
     language,
@@ -604,6 +657,7 @@ export function useGameStore() {
     flightTarget,
     playerState,
     selectedVisa,
+    selectedCharacter,
     expandedVisa,
     countrySearchQuery,
     tutorialStageIndex,
@@ -611,6 +665,8 @@ export function useGameStore() {
     tutorialSelectedOptionId,
     currentTutorialStage,
     visitedCities,
+    exploredCities,
+    unlockedCityIds,
     visitedAttractionKeys,
     activeCity,
     activeAttraction,
@@ -626,9 +682,9 @@ export function useGameStore() {
     pendingDestination,
     selectedTravelMode,
     travelEstimate,
+    travelModeOptions,
     activeEnding,
     gameLogs,
-    unlockedCityIds,
 
     t,
     addLog,
@@ -636,6 +692,7 @@ export function useGameStore() {
     toggleExpand,
     countryStatus,
     selectVisa,
+    selectCharacter,
     chooseTutorialOption,
     confirmTutorialFeedback,
     cityRestricted,

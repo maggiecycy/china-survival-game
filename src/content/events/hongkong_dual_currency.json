@@ -5,27 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "茶餐廳",
-        "en": "Cha Chaan Teng"
+        "cn": "茶餐厅：双币现场考试",
+        "en": "Cha Chaan Teng: Dual-Currency Pop Quiz"
       },
       "text": {
-        "cn": "不收人民幣移動支付。八達通？港幣？",
-        "en": "No RMB mobile pay. Octopus? HKD?"
+        "cn": "不收人民币移动支付。菜单很密，像一份压缩文件。服务员问八达通还是港币——你的大脑开始加载汇率插件。",
+        "en": "No RMB mobile pay. The menu is dense like a zip file. Octopus or HKD? Your brain loads an FX plugin."
       },
       "choices": [
         {
           "id": "octopus",
           "text": {
-            "cn": "用國內號輔助開通交通卡聯動。",
-            "en": "Link transit pay with local number help."
-          },
-          "requires": [
-            "has_local_number"
-          ],
-          "showIfLocked": true,
-          "lockedHint": {
-            "cn": "國內號更絲滑",
-            "en": "Local number helps"
+            "cn": "用八达通（有号/卡更顺）。",
+            "en": "Pay with Octopus (number/card helps)."
           },
           "effect": {
             "money": -30,
@@ -33,19 +25,35 @@
             "battery": -10,
             "locality": 5
           },
+          "requires": [
+            "has_local_number"
+          ],
+          "showIfLocked": true,
+          "lockedHint": {
+            "cn": "没有本地号时，八达通开通/绑定可能更折腾——先准备港币现金也行。",
+            "en": "Without a local number, Octopus setup can be fiddly — HKD cash also works."
+          },
+          "feedback": {
+            "cn": "嘀一声，过关。你对「一张卡走天下」产生短暂信仰。",
+            "en": "Beep. Cleared. You briefly believe in one-card-to-rule-them-all."
+          },
           "next": "done"
         },
         {
           "id": "hkd",
           "text": {
-            "cn": "兌換港幣現金。",
-            "en": "Exchange HKD cash."
+            "cn": "掏港币现金：最原始也最稳。",
+            "en": "Pay HKD cash: primitive and reliable."
           },
           "effect": {
             "money": -50,
             "sanity": -8,
             "battery": -5,
             "locality": 2
+          },
+          "feedback": {
+            "cn": "找零像一场小型谈判。奶茶很甜，汇率很现实。",
+            "en": "Change feels like a mini negotiation. Milk tea sweet; FX ruthless."
           },
           "next": "done"
         }
@@ -55,8 +63,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "雙幣日結束。",
-        "en": "FX day ends."
+        "cn": "茶餐厅战役结束。你开始理解「到了香港，货币也要换脑」。",
+        "en": "Café battle ends. Hong Kong requires a currency brain swap."
       }
     }
   }

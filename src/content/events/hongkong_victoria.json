@@ -5,12 +5,12 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "维多利亚港",
-        "en": "Victoria Harbour"
+        "cn": "维多利亚港：海风把内地焦躁吹薄",
+        "en": "Victoria Harbour: Thin the Mainland Static"
       },
       "text": {
-        "cn": "天星小轮、霓虹与海风。这里突然又能比较顺畅地上传 IG——你意识到「外网」也是一种心情。仍有人回头看你，但节奏不同。",
-        "en": "Star Ferry, neon, sea wind. IG uploads suddenly feel possible — \"foreign internet\" is a mood. Stares continue, but the tempo differs."
+        "cn": "天星小轮、霓虹与海风。IG 上传突然顺畅——你意识到「外网」也是情绪管理。仍有人回头看你，但节奏不像内地那么紧。",
+        "en": "Star Ferry, neon, sea wind. IG uploads suddenly behave — foreign net is mood management. Stares continue, but the tempo is less clenched."
       },
       "choices": [
         {
@@ -26,8 +26,8 @@
             "locality": 3
           },
           "feedback": {
-            "cn": "海风把内地行程的焦躁吹淡一点。",
-            "en": "Sea wind softens mainland hustle anxiety."
+            "cn": "海风把扫码焦虑吹淡一点。你允许自己发呆三分钟。",
+            "en": "Sea wind softens QR anxiety. You allow three minutes of zoning out."
           },
           "next": "done"
         },
@@ -44,8 +44,8 @@
             "locality": 2
           },
           "feedback": {
-            "cn": "灯海很贵，也很值。",
-            "en": "Light ocean: expensive and worth it."
+            "cn": "灯海很贵，也很值。你的小腿提交加班申请。",
+            "en": "Light ocean: expensive and worth it. Calves file overtime."
           },
           "next": "done"
         },
@@ -69,12 +69,12 @@
             "sanityGte": 70
           },
           "lockedHint": {
-            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
-            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
+            "cn": "精神面貌太差（Sanity < 70）：没人想付钱给一张「我快裂开了」的脸。",
+            "en": "Sanity < 70: nobody pays a face that says \"I am dissolving\"."
           },
           "feedback": {
-            "cn": "港风背景板溢价。离境资金回血。",
-            "en": "Harbour backdrop premium. Exit fund refilled."
+            "cn": "港风背景板溢价。离境资金回血，笑容职业化。",
+            "en": "Harbour backdrop premium. Exit fund refilled; smile professionalized."
           },
           "next": "done"
         }
@@ -84,8 +84,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "维港日结束。",
-        "en": "Harbour day ends."
+        "cn": "维港日结束。霓虹还亮，你的社交电量不一定。",
+        "en": "Harbour day ends. Neon on; social battery maybe not."
       }
     }
   }

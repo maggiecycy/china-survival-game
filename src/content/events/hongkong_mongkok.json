@@ -5,12 +5,12 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "旺角",
-        "en": "Mong Kok"
+        "cn": "旺角：密度是一种风景",
+        "en": "Mong Kok: Density as Scenery"
       },
       "text": {
-        "cn": "女人街、球鞋店、小吃。密度很高，节奏很快。",
-        "en": "Ladies Market, sneakers, snacks. Dense and fast."
+        "cn": "女人街、球鞋店、小吃蒸汽。密度高到像被轻轻挤压的城市海绵。有人边走边讲价，有人边走边打游戏。",
+        "en": "Ladies’ Market, sneakers, snack steam. Density like a lightly squeezed city sponge. Bargaining and mobile games, both walking."
       },
       "choices": [
         {
@@ -25,19 +25,27 @@
             "battery": -14,
             "locality": 4
           },
+          "feedback": {
+            "cn": "蛋挞很烫，心情不烫。你开始喜欢这种「吵但有秩序」的吵。",
+            "en": "Egg tart hot; mood not. You like this loud-but-ordered loud."
+          },
           "next": "done"
         },
         {
           "id": "shop",
           "text": {
-            "cn": "买球鞋/电子配件。",
-            "en": "Sneakers / gadgets."
+            "cn": "买球鞋/电子配件：钱包做深蹲。",
+            "en": "Sneakers/gadgets: wallet squats."
           },
           "effect": {
             "money": -500,
             "sanity": 0,
             "battery": -12,
             "locality": 2
+          },
+          "feedback": {
+            "cn": "袋子变多。回国行李额开始在脑海闪红灯。",
+            "en": "Bags multiply. Baggage allowance flashes red in your mind."
           },
           "next": "done"
         },
@@ -53,6 +61,10 @@
             "battery": -16,
             "locality": 1
           },
+          "feedback": {
+            "cn": "你学会了贴墙走。旺角教会你：个人空间是奢侈品。",
+            "en": "You learn to walk along walls. Mong Kok lesson: personal space is luxury."
+          },
           "next": "done"
         }
       ]
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "旺角日結束。",
-        "en": "Mong Kok day ends."
+        "cn": "旺角日结束。耳朵还在响，脚还在前进。",
+        "en": "Mong Kok ends. Ears still ringing; feet still moving."
       }
     }
   }

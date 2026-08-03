@@ -5,12 +5,12 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "太平山顶",
-        "en": "Victoria Peak"
+        "cn": "太平山：排队也是夜景的一部分",
+        "en": "The Peak: Queues Are Part of the View"
       },
       "text": {
-        "cn": "山顶缆车排队是一门功课。夜景值得。",
-        "en": "Peak tram queue is coursework. Night view pays off."
+        "cn": "山顶缆车排队是一门功课。有人研究攻略像在备考。夜景值得——前提是你的耐心还没先毕业。",
+        "en": "Peak tram queue is coursework. People study guides like exams. The night view pays — if patience graduates first."
       },
       "choices": [
         {
@@ -25,19 +25,27 @@
             "battery": -14,
             "locality": 3
           },
+          "feedback": {
+            "cn": "城市像一块发光电路板。你突然理解为什么有人愿意为这一眼付排队税。",
+            "en": "The city looks like a glowing PCB. You get why people pay the queue tax."
+          },
           "next": "done"
         },
         {
           "id": "bus",
           "text": {
-            "cn": "巴士上山省钱。",
-            "en": "Bus up to save money."
+            "cn": "巴士上山省钱：旅行者的现实主义。",
+            "en": "Bus up: traveler realism."
           },
           "effect": {
             "money": -60,
             "sanity": 7,
             "battery": -16,
             "locality": 3
+          },
+          "feedback": {
+            "cn": "省了钱，多了弯。风景仍然在。",
+            "en": "Money saved, bends gained. View still there."
           },
           "next": "done"
         },
@@ -53,6 +61,10 @@
             "battery": -20,
             "locality": 1
           },
+          "feedback": {
+            "cn": "你看见了队伍的尽头——心理上的。实际上还没有。",
+            "en": "You see the end of the line — psychologically. Physically, not yet."
+          },
           "next": "done"
         }
       ]
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "太平山顶日結束。",
-        "en": "Victoria Peak day ends."
+        "cn": "太平山日结束。高度留下，队形解散。",
+        "en": "Peak day ends. Altitude stays; formation dissolves."
       }
     }
   }

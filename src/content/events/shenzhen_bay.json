@@ -5,12 +5,12 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "深圳湾公园",
-        "en": "Shenzhen Bay Park"
+        "cn": "深圳湾：把电子味吹淡",
+        "en": "Shenzhen Bay: Rinse the Electronics Smell"
       },
       "text": {
-        "cn": "海边骑行道很长。晚风把华强北的电子味吹淡。",
-        "en": "Long sea bike path. Evening wind dilutes Huaqiangbei electronics smell."
+        "cn": "海边骑行道很长，晚风把华强北的塑料味吹淡一点。对面有人直播「湾区日落」，你只想把手机亮度调低。",
+        "en": "The sea bike path is long. Evening wind dilutes Huaqiangbei plastic smell. Someone livestreams “bay sunset”; you just want lower screen brightness."
       },
       "choices": [
         {
@@ -25,19 +25,27 @@
             "battery": -18,
             "locality": 3
           },
+          "feedback": {
+            "cn": "肺像被冲洗过。你暂时原谅了所有闸机。",
+            "en": "Lungs feel rinsed. You briefly forgive every gate."
+          },
           "next": "done"
         },
         {
           "id": "picnic",
           "text": {
-            "cn": "草地上坐着发呆。",
-            "en": "Sit on grass and zone out."
+            "cn": "草地上坐着发呆：高级的什么都不做。",
+            "en": "Sit on grass and zone out: premium doing-nothing."
           },
           "effect": {
             "money": -20,
             "sanity": 12,
             "battery": -6,
             "locality": 2
+          },
+          "feedback": {
+            "cn": "发呆成功。有人问你是不是在冥想——你其实在想晚饭。",
+            "en": "Zoning succeeds. Someone asks if you’re meditating — you’re thinking about dinner."
           },
           "next": "done"
         },
@@ -53,6 +61,10 @@
             "battery": -10,
             "locality": 1
           },
+          "feedback": {
+            "cn": "眼睛进沙。浪漫减分，现实加分。",
+            "en": "Sand in eyes. Romance −1, realism +1."
+          },
           "next": "done"
         }
       ]
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "深圳湾公园日結束。",
-        "en": "Shenzhen Bay Park day ends."
+        "cn": "深圳湾日结束。海还在，焦虑轻了一点。",
+        "en": "Bay day ends. Sea remains; anxiety slightly lighter."
       }
     }
   }

@@ -1,0 +1,189 @@
+[
+  {
+    "id": "traveler_00",
+    "sprite": "/art/chars/char_00.png",
+    "name": { "cn": "阿琳", "en": "Aline" },
+    "job": { "cn": "自由插画师", "en": "Freelance Illustrator" },
+    "trait": { "cn": "观察力强 · 怕吵", "en": "Observant · Noise-averse" },
+    "bio": {
+      "cn": "带着速写本旅行。喜欢慢走看人，讨厌被催着打卡。",
+      "en": "Travels with a sketchbook. Loves watching people, hates being rushed through landmarks."
+    }
+  },
+  {
+    "id": "traveler_01",
+    "sprite": "/art/chars/char_01.png",
+    "name": { "cn": "凯文", "en": "Kevin" },
+    "job": { "cn": "研究生 / 穷游党", "en": "Grad Student / Budget Nomad" },
+    "trait": { "cn": "省钱高手 · 容易慌", "en": "Frugal · Easily flustered" },
+    "bio": {
+      "cn": "行李箱里一半是泡面。地图软件是他的安全感来源。",
+      "en": "Half his suitcase is instant noodles. Offline maps are his comfort blanket."
+    }
+  },
+  {
+    "id": "traveler_02",
+    "sprite": "/art/chars/char_02.png",
+    "name": { "cn": "玛雅", "en": "Maya" },
+    "job": { "cn": "内容创作者", "en": "Content Creator" },
+    "trait": { "cn": "社交达人 · 电量杀手", "en": "Social · Battery vampire" },
+    "bio": {
+      "cn": "走到哪拍到哪。手机没电比没钱更让她崩溃。",
+      "en": "Films everything. A dead phone freaks her out more than an empty wallet."
+    }
+  },
+  {
+    "id": "traveler_03",
+    "sprite": "/art/chars/char_03.png",
+    "name": { "cn": "俊", "en": "Jun" },
+    "job": { "cn": "街头舞者", "en": "Street Dancer" },
+    "trait": { "cn": "冲动 · 运气好", "en": "Impulsive · Lucky" },
+    "bio": {
+      "cn": "计划写了就改。相信「到了再说」，也常因此迷路。",
+      "en": "Plans change mid-sentence. Believes in winging it — and often gets lost."
+    }
+  },
+  {
+    "id": "traveler_04",
+    "sprite": "/art/chars/char_04.png",
+    "name": { "cn": "艾薇", "en": "Ivy" },
+    "job": { "cn": "户外教练", "en": "Outdoor Guide" },
+    "trait": { "cn": "体能强 · 直来直去", "en": "Fit · Blunt" },
+    "bio": {
+      "cn": "喜欢爬高走远。对排队和室内商场耐心有限。",
+      "en": "Prefers climbs and long walks. Little patience for queues or malls."
+    }
+  },
+  {
+    "id": "traveler_05",
+    "sprite": "/art/chars/char_05.png",
+    "name": { "cn": "马可", "en": "Marco" },
+    "job": { "cn": "纪实摄影师", "en": "Documentary Photographer" },
+    "trait": { "cn": "冷静 · 话少", "en": "Calm · Quiet" },
+    "bio": {
+      "cn": "镜头比嘴巴勤快。遇到冲突会先退后三步观察。",
+      "en": "Shoots more than he speaks. Steps back to observe when conflict starts."
+    }
+  },
+  {
+    "id": "traveler_06",
+    "sprite": "/art/chars/char_06.png",
+    "name": { "cn": "泰", "en": "Ty" },
+    "job": { "cn": "滑板店员", "en": "Skateshop Clerk" },
+    "trait": { "cn": "随性 · 路痴", "en": "Laid-back · Directionally challenged" },
+    "bio": {
+      "cn": "导航开着也会走错。但总能在小巷碰到好人。",
+      "en": "Gets lost even with GPS on. Somehow always meets kind strangers in alleys."
+    }
+  },
+  {
+    "id": "traveler_07",
+    "sprite": "/art/chars/char_07.png",
+    "name": { "cn": "诺拉", "en": "Nora" },
+    "job": { "cn": "独立音乐人", "en": "Indie Musician" },
+    "trait": { "cn": "敏感 · 夜猫子", "en": "Sensitive · Night owl" },
+    "bio": {
+      "cn": "耳机几乎不摘。白天精神值掉得比别人快。",
+      "en": "Rarely takes off her headphones. Daytime drains her sanity faster than most."
+    }
+  },
+  {
+    "id": "traveler_08",
+    "sprite": "/art/chars/char_08.png",
+    "name": { "cn": "伊桑", "en": "Ethan" },
+    "job": { "cn": "远程产品经理", "en": "Remote Product Manager" },
+    "trait": { "cn": "规划狂 · 怕失控", "en": "Planner · Control freak" },
+    "bio": {
+      "cn": "行程表精确到小时。一旦 Wi-Fi 不稳就开始焦虑。",
+      "en": "Schedules down to the hour. Unstable Wi-Fi triggers instant anxiety."
+    }
+  },
+  {
+    "id": "traveler_09",
+    "sprite": "/art/chars/char_09.png",
+    "name": { "cn": "扎拉", "en": "Zara" },
+    "job": { "cn": "时尚买手", "en": "Fashion Buyer" },
+    "trait": { "cn": "大胆 · 爱砍价", "en": "Bold · Bargain hunter" },
+    "bio": {
+      "cn": "市场和夜市是她的主场。对「明码实价」半信半疑。",
+      "en": "Markets are her home turf. Treats fixed prices with healthy suspicion."
+    }
+  },
+  {
+    "id": "traveler_10",
+    "sprite": "/art/chars/char_10.png",
+    "name": { "cn": "里奥", "en": "Leo" },
+    "job": { "cn": "足球青训教练", "en": "Youth Soccer Coach" },
+    "trait": { "cn": "热血 · 爱凑热闹", "en": "Energetic · Crowd magnet" },
+    "bio": {
+      "cn": "走到哪都能交到朋友。也容易被热情的推销带走。",
+      "en": "Makes friends everywhere — and gets swept into sales pitches just as easily."
+    }
+  },
+  {
+    "id": "traveler_11",
+    "sprite": "/art/chars/char_11.png",
+    "name": { "cn": "阿玛", "en": "Amara" },
+    "job": { "cn": "社区志愿者", "en": "Community Volunteer" },
+    "trait": { "cn": "共情强 · 护短", "en": "Empathetic · Protective" },
+    "bio": {
+      "cn": "看到别人为难会忍不住插手。自己的钱反而管不紧。",
+      "en": "Can't ignore someone in trouble. Worse at guarding her own budget."
+    }
+  },
+  {
+    "id": "traveler_12",
+    "sprite": "/art/chars/char_12.png",
+    "name": { "cn": "萨姆", "en": "Sam" },
+    "job": { "cn": "中学教师", "en": "Middle-school Teacher" },
+    "trait": { "cn": "稳重 · 讲规则", "en": "Steady · Rule-minded" },
+    "bio": {
+      "cn": "出门前会核对证件三遍。不喜欢「差不多就行」。",
+      "en": "Checks documents three times before leaving. Hates 'close enough'."
+    }
+  },
+  {
+    "id": "traveler_13",
+    "sprite": "/art/chars/char_13.png",
+    "name": { "cn": "普莉娅", "en": "Priya" },
+    "job": { "cn": "语言交换达人", "en": "Language Exchange Buff" },
+    "trait": { "cn": "好奇 · 敢开口", "en": "Curious · Brave speaker" },
+    "bio": {
+      "cn": "单词记不住也敢比划。语言门槛对她几乎不是门槛。",
+      "en": "Will mime when words fail. Language barriers barely slow her down."
+    }
+  },
+  {
+    "id": "traveler_14",
+    "sprite": "/art/chars/char_14.png",
+    "name": { "cn": "拉杰", "en": "Raj" },
+    "job": { "cn": "软件工程师", "en": "Software Engineer" },
+    "trait": { "cn": "逻辑控 · 社恐边缘", "en": "Logical · Mildly antisocial" },
+    "bio": {
+      "cn": "更信攻略不信感觉。人多的地方会默默掉精神值。",
+      "en": "Trusts guides over gut feeling. Crowds quietly drain his sanity."
+    }
+  },
+  {
+    "id": "traveler_15",
+    "sprite": "/art/chars/char_15.png",
+    "name": { "cn": "海伦", "en": "Helen" },
+    "job": { "cn": "极地科考助理", "en": "Field Research Assistant" },
+    "trait": { "cn": "耐寒 · 独立", "en": "Hardy · Independent" },
+    "bio": {
+      "cn": "装备比行李还重。习惯自己解决，不太会求人。",
+      "en": "Gear outweighs souvenirs. Used to solving things alone — asks for help late."
+    }
+  },
+  {
+    "id": "traveler_16",
+    "sprite": "/art/chars/char_16.png",
+    "name": { "cn": "欧文", "en": "Owen" },
+    "job": { "cn": "登山向导", "en": "Mountain Guide" },
+    "trait": { "cn": "可靠 · 话少认真", "en": "Reliable · Quietly serious" },
+    "bio": {
+      "cn": "风险意识很强。会提醒你带水，但不会替你做决定。",
+      "en": "Risk-aware. Will remind you to pack water — won't make choices for you."
+    }
+  }
+]

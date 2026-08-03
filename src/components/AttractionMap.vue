@@ -23,7 +23,7 @@ const isLit = (attraction, cityId, visitedKeys) =>
       </span>
     </div>
 
-    <div class="relative w-full aspect-[4/3] bg-stone-950 rounded-xl overflow-hidden border border-stone-800">
+    <div class="relative w-full aspect-[4/3] lg:aspect-[16/9] bg-stone-950 rounded-xl overflow-hidden border border-stone-800">
       <div class="absolute inset-0 opacity-20 pointer-events-none"
         style="background-image: radial-gradient(circle at 30% 40%, #44403c 0.5px, transparent 0.6px); background-size: 12px 12px;"
       ></div>

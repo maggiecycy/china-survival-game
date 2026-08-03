@@ -172,7 +172,7 @@
             "cn": "入住國際連鎖/四星（貴，但護照一掃就過）。",
             "en": "Check into an international/4-star (expensive; passport scans fine)."
           },
-          "cost": { "money": 520, "sanity": 5, "time": 1.2, "battery": -15, "locality": 3 },
+          "cost": { "money": 480, "sanity": 5, "time": 1.2, "battery": -15, "locality": 3 },
           "effectFlag": "staying_international_hotel",
           "feedback": {
             "cn": "前台英語流利，登記 3 分鐘結束。你躺上床，第一次覺得『貴有貴的道理』。",
@@ -185,7 +185,7 @@
             "cn": "找標明可接待外賓的精品旅店（中等價，可能還要押金糾結）。",
             "en": "Find a boutique that lists 'foreigners OK' (mid price; deposit drama possible)."
           },
-          "cost": { "money": 320, "sanity": -5, "time": 1.5, "battery": -20, "locality": 6 },
+          "cost": { "money": 260, "sanity": -5, "time": 1.5, "battery": -20, "locality": 6 },
           "effectFlag": "staying_foreigner_ok_hotel",
           "feedback": {
             "cn": "押金要用移動支付預授權。你終於住下，但對『簡單入住』徹底祛魅。",
@@ -198,7 +198,7 @@
             "cn": "臨時找在北京的網友/同事沙發（省錢，但社交電量歸零）。",
             "en": "Crash on a Beijing contact's couch (cheap; social battery = 0)."
           },
-          "cost": { "money": 60, "sanity": -8, "time": 1.0, "battery": -25, "locality": 8 },
+          "cost": { "money": 100, "sanity": -8, "time": 1.0, "battery": -25, "locality": 8 },
           "effectFlag": "couchsurfing_beijing",
           "feedback": {
             "cn": "你欠了一個人情，也學會了北京的夜公車末班時間。",

@@ -138,17 +138,43 @@ export function isCityRestricted(city, visaType) {
   return !!(city?.visaRestriction && city.visaRestriction.includes(visaType))
 }
 
-export function isCityUnlocked(city, visitedCities = []) {
-  if (!city?.unlockRequired || city.unlockRequired.length === 0) return true
-  return city.unlockRequired.every((req) => visitedCities.includes(req))
+/**
+ * 探索解锁：仅看 unlockedCityIds（开局仅起点城；探索完某城后加入其地图上最近 2 城）。
+ * unlockRequired 字段保留兼容，但不再作为主逻辑。
+ */
+export function isCityUnlocked(city, unlockedCityIds = []) {
+  if (!city?.id) return false
+  return unlockedCityIds.includes(city.id)
 }
 
-export function getUnlockedCityIds(cities, visitedCities) {
-  return cities.filter((c) => isCityUnlocked(c, visitedCities)).map((c) => c.id)
+export function getUnlockedCityIds(cities, unlockedCityIds = []) {
+  const set = new Set(unlockedCityIds)
+  return cities.filter((c) => set.has(c.id)).map((c) => c.id)
 }
 
+export function distanceOnMap(a, b) {
+  if (!a?.coords || !b?.coords) return Infinity
+  const dx = a.coords.x - b.coords.x
+  const dy = a.coords.y - b.coords.y
+  return Math.hypot(dx, dy)
+}
+
+/** 地图坐标上最近的 n 座其他城市 */
+export function getNearestCities(fromCity, cities, n = 2) {
+  if (!fromCity) return []
+  return [...cities]
+    .filter((c) => c.id !== fromCity.id)
+    .sort((a, b) => distanceOnMap(fromCity, a) - distanceOnMap(fromCity, b))
+    .slice(0, n)
+}
+
+export function getNearestCityIds(fromCity, cities, n = 2) {
+  return getNearestCities(fromCity, cities, n).map((c) => c.id)
+}
+
+/** 探索某城后将解锁谁（预览用） */
 export function getUnlocksFrom(city, cities) {
-  return cities.filter((c) => c.unlockRequired?.includes(city.id))
+  return getNearestCities(city, cities, 2)
 }
 
 /**

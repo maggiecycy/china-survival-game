@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "世界之窗",
-        "en": "Window of the World"
+        "cn": "世界之窗：缩小版地球村",
+        "en": "Window of the World: Mini Earth Village"
       },
       "text": {
-        "cn": "埃菲尔铁塔缩小版前有人拉你合影。演出喇叭很用力。",
-        "en": "Mini Eiffel; photo solicitors. Show speakers try hard."
+        "cn": "埃菲尔铁塔缩小版前，有人已经举起手机对准你：『合影吗？朋友！』演出喇叭很用力，像要把快乐灌进每个人的耳道。",
+        "en": "At the mini Eiffel, someone already aims a phone: “Photo, friend?” Show speakers try to pour joy directly into ear canals."
       },
       "choices": [
         {
           "id": "show",
           "text": {
-            "cn": "看演出，当文化拼盘。",
-            "en": "Watch the show as culture buffet."
+            "cn": "看演出：当文化拼盘自助餐。",
+            "en": "Watch the show as a culture buffet."
           },
           "effect": {
             "money": -260,
@@ -25,13 +25,17 @@
             "battery": -16,
             "locality": 2
           },
+          "feedback": {
+            "cn": "你看见了世界各地的浓缩版。真实感一般，热闹感满分。",
+            "en": "Condensed world versions. Authenticity: mid. Energy: max."
+          },
           "next": "done"
         },
         {
           "id": "walk",
           "text": {
-            "cn": "慢慢逛微缩建筑。",
-            "en": "Stroll the miniatures."
+            "cn": "慢慢逛微缩建筑：当城市模型收藏家。",
+            "en": "Stroll miniatures like a city-model collector."
           },
           "effect": {
             "money": -220,
@@ -39,19 +43,27 @@
             "battery": -14,
             "locality": 3
           },
+          "feedback": {
+            "cn": "你拍了很多「我去过」的错觉。膝盖谢谢你没有跑步打卡。",
+            "en": "Many photos of “I’ve been there” illusions. Knees thank you for not speed-running."
+          },
           "next": "done"
         },
         {
           "id": "photo_push",
           "text": {
-            "cn": "被合影缠到烦。",
-            "en": "Photo hustle annoyance."
+            "cn": "被合影缠到烦：外国面孔溢价现场。",
+            "en": "Photo hustle annoyance: foreign-face premium live."
           },
           "effect": {
             "money": -230,
             "sanity": -14,
             "battery": -18,
             "locality": 1
+          },
+          "feedback": {
+            "cn": "你学会了连续说 No thank you。嘴部肌肉比腿更累。",
+            "en": "You master rapid-fire No thank you. Mouth muscles beat legs today."
           },
           "next": "done"
         }
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "世界之窗日結束。",
-        "en": "Window of the World day ends."
+        "cn": "世界之窗日结束。地球没变小，你的耐心变小了。",
+        "en": "Window day ends. Earth didn’t shrink; your patience did."
       }
     }
   }

@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "南头古城",
-        "en": "Nantou Ancient Town"
+        "cn": "南头古城：终于像「玩」不是「闯关」",
+        "en": "Nantou: Play Mode, Not Level Mode"
       },
       "text": {
-        "cn": "城墙与咖啡馆并存。City walk 节奏终于像「玩」而不是「闯关」。",
-        "en": "Walls and cafés. City walk finally feels like play, not levels."
+        "cn": "城墙与咖啡馆并存。City walk 节奏终于像休闲，而不是副本。有人在拍汉服，有人在讨论下一杯美式要不要少冰。",
+        "en": "Walls and cafés coexist. City walk finally feels like leisure, not a dungeon. Hanfu photos here; “less ice Americano?” debates there."
       },
       "choices": [
         {
           "id": "cafe",
           "text": {
-            "cn": "咖啡馆坐一下午。",
-            "en": "Café afternoon."
+            "cn": "咖啡馆坐一下午：合法摸鱼。",
+            "en": "Café afternoon: licensed loafing."
           },
           "effect": {
             "money": -90,
@@ -25,13 +25,17 @@
             "battery": 5,
             "locality": 4
           },
+          "feedback": {
+            "cn": "插座有了，Wi‑Fi 有了，焦虑淡了。深圳也可以很慢。",
+            "en": "Outlet found, Wi‑Fi found, anxiety diluted. Shenzhen can be slow."
+          },
           "next": "done"
         },
         {
           "id": "walk",
           "text": {
-            "cn": "古城漫步拍照。",
-            "en": "Old-town stroll and photos."
+            "cn": "古城漫步拍照：轻量历史体验包。",
+            "en": "Old-town stroll: lightweight history pack."
           },
           "effect": {
             "money": -50,
@@ -39,19 +43,27 @@
             "battery": -12,
             "locality": 3
           },
+          "feedback": {
+            "cn": "你拍到了墙砖纹理。比闸机人脸识别温柔多了。",
+            "en": "Brick textures captured. Gentler than face-gate recognition."
+          },
           "next": "done"
         },
         {
           "id": "crowd_weekend",
           "text": {
             "cn": "周末人挤人，走不动。",
-            "en": "Weekend gridlock of people."
+            "en": "Weekend human gridlock."
           },
           "effect": {
             "money": -40,
             "sanity": -5,
             "battery": -14,
             "locality": 1
+          },
+          "feedback": {
+            "cn": "古城变成慢速传送带。你学会了「周末避开」这条本地知识。",
+            "en": "Old town becomes a slow conveyor. You learn the local tip: avoid weekends."
           },
           "next": "done"
         }
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "南头古城日結束。",
-        "en": "Nantou Ancient Town day ends."
+        "cn": "南头日结束。你第一次觉得深圳也可以「逛着玩」。",
+        "en": "Nantou ends. First time Shenzhen feels strollable."
       }
     }
   }

@@ -5,12 +5,12 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "香港迪士尼",
-        "en": "HK Disneyland"
+        "cn": "香港迪士尼：外网突然听话",
+        "en": "HK Disneyland: Foreign Net Obeys"
       },
       "text": {
-        "cn": "相对内地人少一点，但排队仍在。你终于比较顺畅地上传了一条 IG。",
-        "en": "Slightly calmer than mainland parks; queues remain. IG upload finally works."
+        "cn": "人比内地乐园少一点，但排队仍在。你终于比较顺畅地上传了一条 IG——原来「外网」也是一种心情。物价用港币计价，快乐用脚付款。",
+        "en": "Slightly calmer than mainland parks; queues remain. An IG upload finally works — “foreign internet” is a mood. Prices in HKD; joy paid in footsteps."
       },
       "choices": [
         {
@@ -25,13 +25,17 @@
             "battery": -30,
             "locality": 2
           },
+          "feedback": {
+            "cn": "你笑得很用力。下来后开始计算回程地铁时间。",
+            "en": "You smile hard. Then you calculate the MTR home."
+          },
           "next": "done"
         },
         {
           "id": "parade",
           "text": {
-            "cn": "看巡游与烟花。",
-            "en": "Parade and fireworks."
+            "cn": "看巡游与烟花：坐着完成快乐 KPI。",
+            "en": "Parade and fireworks: seated joy KPIs."
           },
           "effect": {
             "money": -600,
@@ -39,12 +43,16 @@
             "battery": -20,
             "locality": 2
           },
+          "feedback": {
+            "cn": "烟花很贵，也很值。你允许自己当一晚游客。",
+            "en": "Fireworks expensive and worth it. You allow one night of pure tourist mode."
+          },
           "next": "done"
         },
         {
           "id": "price",
           "text": {
-            "cn": "物价冲击，快乐打折。",
+            "cn": "物价冲击：快乐打折扣。",
             "en": "Price shock discounts joy."
           },
           "effect": {
@@ -52,6 +60,10 @@
             "sanity": -5,
             "battery": -18,
             "locality": 1
+          },
+          "feedback": {
+            "cn": "收据像一张小小说。主角是你的钱包。",
+            "en": "The receipt is a short novel starring your wallet."
           },
           "next": "done"
         }
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "香港迪士尼日結束。",
-        "en": "HK Disneyland day ends."
+        "cn": "迪士尼日结束。老鼠耳朵很可爱，账单很清醒。",
+        "en": "Disney day ends. Ears cute; bill sober."
       }
     }
   }

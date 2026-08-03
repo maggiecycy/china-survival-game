@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "故宮",
-        "en": "Forbidden City"
+        "cn": "故宫：预约地狱实地考察",
+        "en": "Forbidden City: Reservation Field Trip"
       },
       "text": {
-        "cn": "預約頁又在報錯，安檢隊伍像沒有盡頭。有人盯著你的臉：外國面孔在這裡是稀缺資源。",
-        "en": "Booking glitches, endless security. Someone stares at your face: foreign faces are a scarce resource here."
+        "cn": "预约页再次报错：护照号码格式「不符合规范」。安检队伍像一条缓慢蠕动的龙。身后有人用手机悄悄对准你的侧脸——外国面孔在这里，是稀缺打卡素材。",
+        "en": "The booking page rejects your passport format again. Security is a slow-moving dragon. Someone behind you quietly frames your profile — foreign faces are scarce check-in props here."
       },
       "choices": [
         {
           "id": "endure",
           "text": {
-            "cn": "硬著頭皮進宮逛完。",
-            "en": "Endure and finish the visit."
+            "cn": "硬着头皮进宫：把报错当门票的一部分。",
+            "en": "Endure entry: treat error messages as part of the ticket."
           },
           "effect": {
             "money": -60,
@@ -29,16 +29,20 @@
             "booked_ticket_official"
           ],
           "showIfLocked": true,
-          "next": "done",
           "requiresStats": {
             "localityGte": 20
-          }
+          },
+          "feedback": {
+            "cn": "太和殿很壮观。你的腿比精神先投降，但你终于明白：在北京，「成功进入」本身就是成就。",
+            "en": "The halls are grand. Your legs surrender before your mind — and you learn Beijing’s real achievement is simply getting in."
+          },
+          "next": "done"
         },
         {
           "id": "scalper_gate",
           "text": {
-            "cn": "現場找渠道／黃牛補救。",
-            "en": "Fix it on-site via scalper channels."
+            "cn": "找「现场渠道」补救（听起来很香，闻起来像风险）。",
+            "en": "Fix it via “on-site channels” (smells like risk)."
           },
           "effect": {
             "money": -180,
@@ -46,13 +50,17 @@
             "battery": -12,
             "locality": -3
           },
+          "feedback": {
+            "cn": "你进了。钱包瘦了。你对「渠道」这个词产生了终身阴影。",
+            "en": "You’re in. Wallet thinner. The word “channel” now has lifelong trauma attached."
+          },
           "next": "done"
         },
         {
           "id": "photo_hustle",
           "text": {
-            "cn": "💰 被遊客拉去合照，每人收費（奇葩但真實）。",
-            "en": "💰 Tourists drag you into photos — charge per shot (weird but real)."
+            "cn": "💰 被拉去合照，每人收费（奇葩但真实）。",
+            "en": "💰 Charged for group photos (weirdly real)."
           },
           "effect": {
             "money": 120,
@@ -63,31 +71,35 @@
           "addFlags": [
             "did_photo_hustle"
           ],
-          "feedback": {
-            "cn": "你笑了二十次，錢包鼓了一點，臉部肌肉抽筋。",
-            "en": "You smiled twenty times. Wallet up; cheek muscles cramped."
-          },
-          "next": "done",
           "showIfLocked": true,
           "requiresStats": {
             "sanityGte": 70
           },
           "lockedHint": {
-            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
-            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
-          }
+            "cn": "精神面貌太差（Sanity < 70）：没人想付钱给一张「我快裂开了」的脸。",
+            "en": "Sanity < 70: nobody pays a face that says \"I am dissolving\"."
+          },
+          "feedback": {
+            "cn": "三组游客，六个「Cheese」。你赚到了钱，也赚到了职业微笑抽筋。",
+            "en": "Three groups, six Cheeses. You earn cash and a professional smile cramp."
+          },
+          "next": "done"
         },
         {
           "id": "give_up_photo",
           "text": {
-            "cn": "進不去就在筒子河假裝打卡。",
-            "en": "Can't enter — fake check-in by the moat."
+            "cn": "拒绝合照，把脸藏进口罩与墨镜。",
+            "en": "Refuse photos; hide behind mask and sunglasses."
           },
           "effect": {
             "money": -10,
             "sanity": -6,
             "battery": -8,
             "locality": 1
+          },
+          "feedback": {
+            "cn": "社恐策略成功。相册里只有红墙，没有你的灵魂出窍。",
+            "en": "Social-anxiety strategy works. Album: red walls, zero soul-leaving selfies."
           },
           "next": "done"
         }
@@ -97,8 +109,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "故宮日結束。若電量仍>0，過夜會自動回充。",
-        "en": "Forbidden City day ends. If battery > 0, overnight charge applies."
+        "cn": "故宫日结束。你带走了历史，也带走了安检的味道。",
+        "en": "Palace day ends. You leave with history — and the smell of security lines."
       }
     }
   }

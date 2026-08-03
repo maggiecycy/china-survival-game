@@ -12,8 +12,8 @@
         "y": 55
       },
       "desc": {
-        "cn": "乐园与烟花。",
-        "en": "Park and fireworks."
+        "cn": "外网突然听话的乐园账单。",
+        "en": "Park where foreign net obeys — and bills bite."
       },
       "graphId": "hongkong_disney"
     },
@@ -28,8 +28,8 @@
         "y": 70
       },
       "desc": {
-        "cn": "海洋馆与缆车。",
-        "en": "Aquarium and cable."
+        "cn": "缆车改发型，海洋馆不扫码。",
+        "en": "Cable redesigns hair; fish skip QR."
       },
       "graphId": "hongkong_ocean_park"
     },
@@ -44,8 +44,8 @@
         "y": 48
       },
       "desc": {
-        "cn": "维港与天星。",
-        "en": "Harbour and Star Ferry."
+        "cn": "天星、霓虹、海风：毕业前的深呼吸。",
+        "en": "Ferry, neon, wind: deep breath before graduation."
       },
       "graphId": "hongkong_victoria"
     },
@@ -60,8 +60,8 @@
         "y": 40
       },
       "desc": {
-        "cn": "山顶夜景。",
-        "en": "Peak night view."
+        "cn": "夜景很值，排队是门票外的功课。",
+        "en": "View worth it; queue is extra homework."
       },
       "graphId": "hongkong_peak"
     },
@@ -76,8 +76,8 @@
         "y": 45
       },
       "desc": {
-        "cn": "街头与小店。",
-        "en": "Streets and shops."
+        "cn": "密度风景：小吃、球鞋与贴墙走位。",
+        "en": "Density scenery: snacks, sneakers, wall-walking."
       },
       "graphId": "hongkong_mongkok"
     },
@@ -92,8 +92,8 @@
         "y": 50
       },
       "desc": {
-        "cn": "金融区步行。",
-        "en": "Finance district walk."
+        "cn": "玻璃幕墙回血点，国际化错觉加油站。",
+        "en": "Glass reset station; international illusion refill."
       },
       "graphId": "hongkong_central"
     },
@@ -108,8 +108,8 @@
         "y": 52
       },
       "desc": {
-        "cn": "酒吧街夜生活。",
-        "en": "Bar street nightlife."
+        "cn": "噪音社交副本：一杯或逃回酒店。",
+        "en": "Noise social dungeon: one drink or hotel flee."
       },
       "graphId": "hongkong_lan_kwai_fong"
     },
@@ -124,8 +124,8 @@
         "y": 62
       },
       "desc": {
-        "cn": "真正的结局闸口。",
-        "en": "True ending gate."
+        "cn": "真正的毕业闸：提交证件，结算你是谁。",
+        "en": "Real graduation gate: stamp, then who you became."
       },
       "graphId": "hongkong_exit",
       "isExit": true

@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "胡同漫步",
-        "en": "Hutong Wander"
+        "cn": "南锣鼓巷：网红街生存指南",
+        "en": "Nanluoguxiang: Influencer Street Survival"
       },
       "text": {
-        "cn": "南鑼鼓巷人潮裡，有家長推著小孩過來：『叔叔／阿姨，練兩句英語？』",
-        "en": "In Nanluoguxiang crowds, parents push a kid over: 'Uncle/Auntie, practice English?'"
+        "cn": "巷子里租金传说比风还大。有家长推着小孩过来：『叔叔／阿姨，练两句英语？』小孩比你更紧张。旁边酸奶店在放循环神曲。",
+        "en": "Rent myths are louder than the wind. Parents push a kid over: “Uncle/Auntie, practice English?” The kid is more nervous than you. A yogurt shop loops a cursed earworm."
       },
       "choices": [
         {
           "id": "snack",
           "text": {
-            "cn": "買souvenir + 喝杯貴咖啡。",
-            "en": "Souvenir + overpriced coffee."
+            "cn": "买 souvenir + 喝杯贵咖啡：完成消费打卡。",
+            "en": "Souvenir + overpriced coffee: consumption check-in."
           },
           "effect": {
             "money": -100,
@@ -25,13 +25,17 @@
             "battery": -10,
             "locality": 2
           },
+          "feedback": {
+            "cn": "咖啡一般，收据很贵。你怀疑同款在别的城市半价——但光影确实好看。",
+            "en": "Coffee average, receipt elite. Same cup is probably half price elsewhere — the light is still pretty."
+          },
           "next": "done"
         },
         {
           "id": "quiet_lane",
           "text": {
-            "cn": "鑽進安靜支巷。",
-            "en": "Slip into quiet lanes."
+            "cn": "钻进安静支巷：逃离自拍杆射程。",
+            "en": "Slip into quiet lanes: leave selfie-stick range."
           },
           "effect": {
             "money": -30,
@@ -39,13 +43,17 @@
             "battery": -8,
             "locality": 5
           },
+          "feedback": {
+            "cn": "突然能听见自己的脚步声。北京原来也有「小声模式」。",
+            "en": "You hear your own footsteps. Beijing has a quiet mode after all."
+          },
           "next": "done"
         },
         {
           "id": "english_tip",
           "text": {
-            "cn": "💰 陪小孩練英語 20 分鐘，熱情家長塞小費。",
-            "en": "💰 20 minutes of English with a kid — enthusiastic parents tip you."
+            "cn": "💰 陪小孩练英语 20 分钟，热情家长塞小费。",
+            "en": "💰 20 minutes of English — parents tip hard."
           },
           "effect": {
             "money": 150,
@@ -56,19 +64,19 @@
           "addFlags": [
             "did_english_tip"
           ],
-          "feedback": {
-            "cn": "小孩說了 Hello 和 I love China。你收下小費，良心略微複雜。",
-            "en": "The kid says Hello and I love China. You take the tip with mixed feelings."
-          },
-          "next": "done",
           "showIfLocked": true,
           "requiresStats": {
             "sanityGte": 70
           },
           "lockedHint": {
-            "cn": "精神面貌太差（Sanity < 70），没人想付钱找你。",
-            "en": "You look too drained (Sanity < 70). Nobody wants to pay you."
-          }
+            "cn": "精神面貌太差（Sanity < 70）：没人想付钱给一张「我快裂开了」的脸。",
+            "en": "Sanity < 70: nobody pays a face that says \"I am dissolving\"."
+          },
+          "feedback": {
+            "cn": "小孩说了 Hello 和 I love China。你收下小费，良心略微复杂，笑容很职业。",
+            "en": "The kid says Hello and I love China. You take the tip with mixed feelings and a professional smile."
+          },
+          "next": "done"
         }
       ]
     },
@@ -76,8 +84,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "胡同日結束。",
-        "en": "Hutong day ends."
+        "cn": "胡同日结束。你的社交电量与手机电量同步下降。",
+        "en": "Hutong day ends. Social battery syncs with phone battery — both down."
       }
     }
   }

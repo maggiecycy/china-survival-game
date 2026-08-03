@@ -5,12 +5,12 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "海洋公园",
-        "en": "Ocean Park"
+        "cn": "海洋公园：山上的风与海里的排队",
+        "en": "Ocean Park: Mountain Wind, Ocean Queues"
       },
       "text": {
-        "cn": "缆车与海洋馆。山上风大，队列也长。",
-        "en": "Cable and aquarium. Windy ridges; long lines."
+        "cn": "缆车晃过山脊，风把发型重新设计。海洋馆很治愈，队列也很诚实。有人问你是不是来度假——你说：来毕业。",
+        "en": "Cable cars redesign your hair. The aquarium heals; queues stay honest. Someone asks if you’re on holiday — you say: graduating."
       },
       "choices": [
         {
@@ -25,19 +25,27 @@
             "battery": -16,
             "locality": 2
           },
+          "feedback": {
+            "cn": "鱼不扫码。你突然很羡慕。",
+            "en": "Fish don’t scan QR. You envy them briefly."
+          },
           "next": "done"
         },
         {
           "id": "cable",
           "text": {
-            "cn": "坐缆车看海。",
-            "en": "Cable car sea views."
+            "cn": "坐缆车看海：风大到像免费护肤。",
+            "en": "Cable sea views: wind as free skincare."
           },
           "effect": {
             "money": -400,
             "sanity": 12,
             "battery": -14,
             "locality": 3
+          },
+          "feedback": {
+            "cn": "景色很好。你的刘海从此有了自己的想法。",
+            "en": "Views great. Your bangs develop independent opinions."
           },
           "next": "done"
         },
@@ -53,6 +61,10 @@
             "battery": -22,
             "locality": 1
           },
+          "feedback": {
+            "cn": "你开始怀疑「海洋」是不是「人海」的谐音梗。",
+            "en": "You suspect “ocean” is a pun for “ocean of people”."
+          },
           "next": "done"
         }
       ]
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "海洋公园日結束。",
-        "en": "Ocean Park day ends."
+        "cn": "海洋公园日结束。盐风还在衣服上。",
+        "en": "Ocean Park ends. Salt wind stays in your clothes."
       }
     }
   }

@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "天安门广场",
-        "en": "Tiananmen Square"
+        "cn": "天安门广场：空旷的严肃",
+        "en": "Tiananmen Square: Serious Open Air"
       },
       "text": {
-        "cn": "广场很大。安检严格。有人建议凌晨看升旗——你的睡眠与 Sanity 要投票。",
-        "en": "Huge square, strict security. Dawn flag-raising vs sleep — Sanity votes."
+        "cn": "广场大到让你怀疑自己的腿是不是订小了。安检比咖啡店更热情。有人认真建议你「凌晨看升旗」——那人显然不在乎你的睡眠，只在乎仪式感。",
+        "en": "The square is so big your legs feel undersized. Security is more enthusiastic than any café. Someone earnestly suggests dawn flag-raising — they care about ritual, not your REM cycle."
       },
       "choices": [
         {
           "id": "flag",
           "text": {
-            "cn": "熬夜看升旗（免费，极耗精神）。",
-            "en": "Dawn flag-raising (free, sanity costly)."
+            "cn": "熬夜看升旗（免费，精神另计）。",
+            "en": "Dawn flag-raising (free; sanity billed separately)."
           },
           "effect": {
             "money": 0,
@@ -25,13 +25,17 @@
             "battery": -28,
             "locality": 4
           },
+          "feedback": {
+            "cn": "国歌响起时你在发抖——不完全是感动，也有低温与缺觉。仪式感：满分；睡眠：零分。",
+            "en": "You shiver at the anthem — partly awe, partly cold and sleep debt. Ritual: 10. Sleep: 0."
+          },
           "next": "done"
         },
         {
           "id": "walk",
           "text": {
-            "cn": "白天散步拍照，接受安检。",
-            "en": "Daytime walk and photos; accept security."
+            "cn": "白天散步拍照，把安检当热身运动。",
+            "en": "Daytime walk and photos; treat security as cardio."
           },
           "effect": {
             "money": -20,
@@ -39,19 +43,27 @@
             "battery": -12,
             "locality": 3
           },
+          "feedback": {
+            "cn": "你拍到了旗帜、石板与一只非常敬业的鸽子。北京的空旷，有时是一种压力。",
+            "en": "You capture flags, stone, and one very professional pigeon. Beijing emptiness can feel like pressure."
+          },
           "next": "done"
         },
         {
           "id": "quick",
           "text": {
-            "cn": "快速打卡就走，少停留。",
-            "en": "Quick check-in, minimal linger."
+            "cn": "快速打卡就走：完成「我来过」成就。",
+            "en": "Speed check-in: unlock “I was here”."
           },
           "effect": {
             "money": -10,
             "sanity": 0,
             "battery": -8,
             "locality": 1
+          },
+          "feedback": {
+            "cn": "十分钟结束。深度为零，焦虑也较低。有时这就是最优解。",
+            "en": "Ten minutes. Depth: zero. Anxiety: manageable. Sometimes that’s optimal."
           },
           "next": "done"
         }
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "天安门广场日結束。",
-        "en": "Tiananmen Square day ends."
+        "cn": "广场日结束。你的步数很诚实，心情一般。",
+        "en": "Square day ends. Step count honest; mood average."
       }
     }
   }

@@ -1,0 +1,1797 @@
+{
+  "version": 1,
+  "currency": "CNY",
+  "meta": {
+    "cn": "票价为公开渠道常见区间的中位近似（12306/携程等，2025–2026）。estimated:true 为按地图距离补全的估算。null=该方式在本局不可选（置灰）。",
+    "en": "Fares are midpoints of public ranges (12306/Ctrip-like, 2025–2026). estimated:true = distance fill-in. null = unavailable (greyed out)."
+  },
+  "routes": {
+    "beijing|shanghai": {
+      "hsr": {
+        "money": 600,
+        "time": 5.5,
+        "note": "二等座常见约550-670，车程约4.5-6h+地铁",
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 900,
+        "time": 5.0,
+        "note": "经济舱中位+机场往返",
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 340,
+        "time": 12.0,
+        "note": "硬卧/动卧常见约300-400",
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "beijing|xian": {
+      "hsr": {
+        "money": 550,
+        "time": 5.5,
+        "note": "二等约515-593",
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 700,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": {
+        "money": 260,
+        "time": 12.0,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": {
+        "money": 280,
+        "time": 12.0,
+        "note": "硬卧约270",
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "beijing|nanjing": {
+      "hsr": {
+        "money": 480,
+        "time": 4.5,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 750,
+        "time": 4.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 300,
+        "time": 11.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "beijing|hangzhou": {
+      "hsr": {
+        "money": 620,
+        "time": 5.5,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 850,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 360,
+        "time": 13.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "beijing|chengdu": {
+      "hsr": {
+        "money": 850,
+        "time": 8.5,
+        "note": "G/D二等常见约780-1030，约7.5-10h",
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 950,
+        "time": 5.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 450,
+        "time": 16.0,
+        "note": "硬卧/动卧约400-670",
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "beijing|chongqing": {
+      "hsr": {
+        "money": 820,
+        "time": 8.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 900,
+        "time": 5.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 430,
+        "time": 15.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "beijing|shenzhen": {
+      "hsr": {
+        "money": 950,
+        "time": 9.0,
+        "note": "京广深高铁二等常见约900-1100",
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 850,
+        "time": 5.5,
+        "note": "经济舱常见约500-1200，取中位",
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 500,
+        "time": 18.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "beijing|hongkong": {
+      "hsr": {
+        "money": 1100,
+        "time": 9.5,
+        "note": "经西九/福田等，票价偏高",
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 1200,
+        "time": 6.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "beijing|zhangjiajie": {
+      "hsr": {
+        "money": 650,
+        "time": 7.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 900,
+        "time": 5.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": {
+        "money": 320,
+        "time": 14.0,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": {
+        "money": 380,
+        "time": 14.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "beijing|guilin": {
+      "hsr": {
+        "money": 700,
+        "time": 8.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 950,
+        "time": 5.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 400,
+        "time": 16.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "beijing|hainan": {
+      "hsr": null,
+      "flight": {
+        "money": 1100,
+        "time": 6.5,
+        "note": "进岛以民航为主",
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "beijing|tibet": {
+      "hsr": null,
+      "flight": {
+        "money": 1800,
+        "time": 7.0,
+        "note": "经成都/西安中转常见，单段拉萨机票中位偏高",
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 700,
+        "time": 40.0,
+        "note": "青藏线火车极长，硬卧约数百至千+",
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "beijing|xinjiang": {
+      "hsr": null,
+      "flight": {
+        "money": 1600,
+        "time": 7.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 650,
+        "time": 32.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "hangzhou|shanghai": {
+      "hsr": {
+        "money": 80,
+        "time": 1.5,
+        "note": "沪杭二等常见约73-100",
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": null,
+      "bus": {
+        "money": 55,
+        "time": 2.5,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": null
+    },
+    "nanjing|shanghai": {
+      "hsr": {
+        "money": 150,
+        "time": 2.0,
+        "note": "沪宁二等常见约135-160",
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": null,
+      "bus": {
+        "money": 80,
+        "time": 4.0,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": null
+    },
+    "hangzhou|nanjing": {
+      "hsr": {
+        "money": 140,
+        "time": 2.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": null,
+      "bus": {
+        "money": 70,
+        "time": 3.5,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": null
+    },
+    "shanghai|shenzhen": {
+      "hsr": {
+        "money": 700,
+        "time": 7.5,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 800,
+        "time": 4.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 420,
+        "time": 14.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "hongkong|shanghai": {
+      "hsr": {
+        "money": 900,
+        "time": 8.5,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 1000,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "shanghai|xian": {
+      "hsr": {
+        "money": 650,
+        "time": 6.5,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 850,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 380,
+        "time": 14.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "chengdu|shanghai": {
+      "hsr": {
+        "money": 750,
+        "time": 11.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 950,
+        "time": 5.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 450,
+        "time": 18.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "chongqing|shanghai": {
+      "hsr": {
+        "money": 720,
+        "time": 10.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 900,
+        "time": 5.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 430,
+        "time": 17.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "shanghai|zhangjiajie": {
+      "hsr": {
+        "money": 550,
+        "time": 7.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 850,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": {
+        "money": 280,
+        "time": 12.0,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": {
+        "money": 350,
+        "time": 13.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "guilin|shanghai": {
+      "hsr": {
+        "money": 500,
+        "time": 8.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 900,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 360,
+        "time": 15.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "hainan|shanghai": {
+      "hsr": null,
+      "flight": {
+        "money": 1000,
+        "time": 5.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "shanghai|tibet": {
+      "hsr": null,
+      "flight": {
+        "money": 2000,
+        "time": 8.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "shanghai|xinjiang": {
+      "hsr": null,
+      "flight": {
+        "money": 1800,
+        "time": 8.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 700,
+        "time": 34.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "hongkong|shenzhen": {
+      "hsr": {
+        "money": 80,
+        "time": 1.2,
+        "note": "高铁西九/福田或地铁过关，综合约50-100",
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": null,
+      "bus": {
+        "money": 40,
+        "time": 1.5,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": null
+    },
+    "guilin|shenzhen": {
+      "hsr": {
+        "money": 280,
+        "time": 3.5,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 700,
+        "time": 4.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": {
+        "money": 180,
+        "time": 8.0,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": null
+    },
+    "hainan|shenzhen": {
+      "hsr": null,
+      "flight": {
+        "money": 700,
+        "time": 3.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "hangzhou|shenzhen": {
+      "hsr": {
+        "money": 650,
+        "time": 7.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 750,
+        "time": 4.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 400,
+        "time": 14.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "nanjing|shenzhen": {
+      "hsr": {
+        "money": 680,
+        "time": 7.5,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 800,
+        "time": 4.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 410,
+        "time": 14.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "hainan|hongkong": {
+      "hsr": null,
+      "flight": {
+        "money": 900,
+        "time": 4.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "guilin|hongkong": {
+      "hsr": {
+        "money": 350,
+        "time": 4.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 800,
+        "time": 4.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "chengdu|chongqing": {
+      "hsr": {
+        "money": 160,
+        "time": 1.5,
+        "note": "成渝高铁二等约150-180",
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": null,
+      "bus": {
+        "money": 100,
+        "time": 4.0,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": null
+    },
+    "chengdu|xian": {
+      "hsr": {
+        "money": 280,
+        "time": 3.5,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 650,
+        "time": 3.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": {
+        "money": 180,
+        "time": 10.0,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": {
+        "money": 220,
+        "time": 11.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "chengdu|zhangjiajie": {
+      "hsr": {
+        "money": 320,
+        "time": 5.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 750,
+        "time": 4.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": {
+        "money": 200,
+        "time": 10.0,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": null
+    },
+    "chengdu|guilin": {
+      "hsr": {
+        "money": 400,
+        "time": 6.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 800,
+        "time": 4.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 300,
+        "time": 12.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "chengdu|tibet": {
+      "hsr": null,
+      "flight": {
+        "money": 1400,
+        "time": 4.5,
+        "note": "成都-拉萨航线常见中位",
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 500,
+        "time": 36.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "chengdu|xinjiang": {
+      "hsr": null,
+      "flight": {
+        "money": 1300,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 550,
+        "time": 30.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "chengdu|hainan": {
+      "hsr": null,
+      "flight": {
+        "money": 1000,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "chongqing|zhangjiajie": {
+      "hsr": {
+        "money": 250,
+        "time": 4.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 700,
+        "time": 3.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": {
+        "money": 160,
+        "time": 8.0,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": null
+    },
+    "chongqing|guilin": {
+      "hsr": {
+        "money": 350,
+        "time": 5.5,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 750,
+        "time": 4.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "guilin|zhangjiajie": {
+      "hsr": {
+        "money": 220,
+        "time": 4.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": null,
+      "bus": {
+        "money": 140,
+        "time": 7.0,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": null
+    },
+    "guilin|hainan": {
+      "hsr": null,
+      "flight": {
+        "money": 750,
+        "time": 3.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "tibet|xian": {
+      "hsr": null,
+      "flight": {
+        "money": 1600,
+        "time": 5.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 600,
+        "time": 34.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "xian|xinjiang": {
+      "hsr": null,
+      "flight": {
+        "money": 1400,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 550,
+        "time": 28.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "xian|zhangjiajie": {
+      "hsr": {
+        "money": 450,
+        "time": 6.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 800,
+        "time": 4.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": {
+        "money": 250,
+        "time": 12.0,
+        "sanity": -12,
+        "battery": -10
+      },
+      "sleeper": null
+    },
+    "tibet|xinjiang": {
+      "hsr": null,
+      "flight": {
+        "money": 1800,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "nanjing|xian": {
+      "hsr": {
+        "money": 500,
+        "time": 5.5,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 800,
+        "time": 4.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 320,
+        "time": 13.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "hangzhou|xian": {
+      "hsr": {
+        "money": 650,
+        "time": 7.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 850,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 380,
+        "time": 15.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "chengdu|nanjing": {
+      "hsr": {
+        "money": 700,
+        "time": 10.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 900,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 420,
+        "time": 16.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "chengdu|hangzhou": {
+      "hsr": {
+        "money": 720,
+        "time": 11.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 920,
+        "time": 5.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 430,
+        "time": 17.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "chengdu|shenzhen": {
+      "hsr": {
+        "money": 750,
+        "time": 9.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 850,
+        "time": 4.5,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 450,
+        "time": 16.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "shenzhen|xian": {
+      "hsr": {
+        "money": 800,
+        "time": 9.0,
+        "sanity": -6,
+        "battery": -18
+      },
+      "flight": {
+        "money": 900,
+        "time": 5.0,
+        "sanity": -8,
+        "battery": -22
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 480,
+        "time": 18.0,
+        "sanity": -10,
+        "battery": -8
+      }
+    },
+    "chengdu|hongkong": {
+      "hsr": {
+        "money": 760,
+        "time": 8.2,
+        "sanity": -10,
+        "battery": -25,
+        "estimated": true
+      },
+      "flight": {
+        "money": 1184,
+        "time": 4.7,
+        "sanity": -11,
+        "battery": -21,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 553,
+        "time": 20.4,
+        "sanity": -12,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "chongqing|shenzhen": {
+      "hsr": {
+        "money": 624,
+        "time": 6.9,
+        "sanity": -7,
+        "battery": -25,
+        "estimated": true
+      },
+      "flight": {
+        "money": 1019,
+        "time": 4.4,
+        "sanity": -8,
+        "battery": -21,
+        "estimated": true
+      },
+      "bus": {
+        "money": 356,
+        "time": 11.9,
+        "sanity": -10,
+        "battery": -17,
+        "estimated": true
+      },
+      "sleeper": {
+        "money": 463,
+        "time": 17.9,
+        "sanity": -9,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "chongqing|hongkong": {
+      "hsr": {
+        "money": 671,
+        "time": 7.4,
+        "sanity": -8,
+        "battery": -25,
+        "estimated": true
+      },
+      "flight": {
+        "money": 1075,
+        "time": 4.5,
+        "sanity": -9,
+        "battery": -21,
+        "estimated": true
+      },
+      "bus": {
+        "money": 381,
+        "time": 12.5,
+        "sanity": -11,
+        "battery": -17,
+        "estimated": true
+      },
+      "sleeper": {
+        "money": 494,
+        "time": 18.7,
+        "sanity": -10,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "chongqing|xian": {
+      "hsr": {
+        "money": 541,
+        "time": 6.2,
+        "sanity": -6,
+        "battery": -22,
+        "estimated": true
+      },
+      "flight": {
+        "money": 917,
+        "time": 4.3,
+        "sanity": -7,
+        "battery": -18,
+        "estimated": true
+      },
+      "bus": {
+        "money": 309,
+        "time": 10.7,
+        "sanity": -9,
+        "battery": -15,
+        "estimated": true
+      },
+      "sleeper": {
+        "money": 407,
+        "time": 16.3,
+        "sanity": -8,
+        "battery": -11,
+        "estimated": true
+      }
+    },
+    "chongqing|tibet": {
+      "hsr": null,
+      "flight": {
+        "money": 1677,
+        "time": 5.3,
+        "sanity": -14,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 754,
+        "time": 26.5,
+        "sanity": -16,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "chongqing|xinjiang": {
+      "hsr": null,
+      "flight": {
+        "money": 2200,
+        "time": 6.2,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 990,
+        "time": 31.0,
+        "sanity": -18,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "chongqing|nanjing": {
+      "hsr": {
+        "money": 620,
+        "time": 6.9,
+        "sanity": -7,
+        "battery": -25,
+        "estimated": true
+      },
+      "flight": {
+        "money": 1013,
+        "time": 4.4,
+        "sanity": -8,
+        "battery": -21,
+        "estimated": true
+      },
+      "bus": {
+        "money": 353,
+        "time": 11.8,
+        "sanity": -10,
+        "battery": -17,
+        "estimated": true
+      },
+      "sleeper": {
+        "money": 460,
+        "time": 17.8,
+        "sanity": -9,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "chongqing|hangzhou": {
+      "hsr": {
+        "money": 691,
+        "time": 7.5,
+        "sanity": -9,
+        "battery": -25,
+        "estimated": true
+      },
+      "flight": {
+        "money": 1100,
+        "time": 4.6,
+        "sanity": -10,
+        "battery": -21,
+        "estimated": true
+      },
+      "bus": {
+        "money": 392,
+        "time": 12.8,
+        "sanity": -12,
+        "battery": -17,
+        "estimated": true
+      },
+      "sleeper": {
+        "money": 507,
+        "time": 19.1,
+        "sanity": -11,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "chongqing|hainan": {
+      "hsr": null,
+      "flight": {
+        "money": 1320,
+        "time": 4.8,
+        "sanity": -10,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "shenzhen|zhangjiajie": {
+      "hsr": {
+        "money": 470,
+        "time": 5.5,
+        "sanity": -5,
+        "battery": -18,
+        "estimated": true
+      },
+      "flight": {
+        "money": 830,
+        "time": 4.1,
+        "sanity": -6,
+        "battery": -14,
+        "estimated": true
+      },
+      "bus": {
+        "money": 270,
+        "time": 9.8,
+        "sanity": -8,
+        "battery": -12,
+        "estimated": true
+      },
+      "sleeper": null
+    },
+    "shenzhen|tibet": {
+      "hsr": null,
+      "flight": {
+        "money": 2200,
+        "time": 6.4,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 990,
+        "time": 32.0,
+        "sanity": -18,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "shenzhen|xinjiang": {
+      "hsr": null,
+      "flight": {
+        "money": 2200,
+        "time": 7.4,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 990,
+        "time": 37.0,
+        "sanity": -18,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "hongkong|xian": {
+      "hsr": {
+        "money": 888,
+        "time": 9.4,
+        "sanity": -12,
+        "battery": -25,
+        "estimated": true
+      },
+      "flight": {
+        "money": 1342,
+        "time": 5.0,
+        "sanity": -13,
+        "battery": -21,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 639,
+        "time": 22.8,
+        "sanity": -14,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "hongkong|zhangjiajie": {
+      "hsr": {
+        "money": 530,
+        "time": 6.1,
+        "sanity": -6,
+        "battery": -22,
+        "estimated": true
+      },
+      "flight": {
+        "money": 903,
+        "time": 4.2,
+        "sanity": -7,
+        "battery": -18,
+        "estimated": true
+      },
+      "bus": {
+        "money": 303,
+        "time": 10.6,
+        "sanity": -9,
+        "battery": -15,
+        "estimated": true
+      },
+      "sleeper": {
+        "money": 400,
+        "time": 16.1,
+        "sanity": -8,
+        "battery": -11,
+        "estimated": true
+      }
+    },
+    "hongkong|tibet": {
+      "hsr": null,
+      "flight": {
+        "money": 2200,
+        "time": 6.5,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "hongkong|xinjiang": {
+      "hsr": null,
+      "flight": {
+        "money": 2200,
+        "time": 7.5,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "hongkong|nanjing": {
+      "hsr": {
+        "money": 602,
+        "time": 6.7,
+        "sanity": -7,
+        "battery": -25,
+        "estimated": true
+      },
+      "flight": {
+        "money": 991,
+        "time": 4.4,
+        "sanity": -8,
+        "battery": -21,
+        "estimated": true
+      },
+      "bus": {
+        "money": 343,
+        "time": 11.6,
+        "sanity": -10,
+        "battery": -17,
+        "estimated": true
+      },
+      "sleeper": {
+        "money": 448,
+        "time": 17.5,
+        "sanity": -9,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "hangzhou|hongkong": {
+      "hsr": {
+        "money": 490,
+        "time": 5.7,
+        "sanity": -5,
+        "battery": -19,
+        "estimated": true
+      },
+      "flight": {
+        "money": 854,
+        "time": 4.1,
+        "sanity": -6,
+        "battery": -15,
+        "estimated": true
+      },
+      "bus": {
+        "money": 281,
+        "time": 10.0,
+        "sanity": -8,
+        "battery": -13,
+        "estimated": true
+      },
+      "sleeper": {
+        "money": 373,
+        "time": 15.4,
+        "sanity": -7,
+        "battery": -9,
+        "estimated": true
+      }
+    },
+    "guilin|xian": {
+      "hsr": {
+        "money": 723,
+        "time": 7.8,
+        "sanity": -9,
+        "battery": -25,
+        "estimated": true
+      },
+      "flight": {
+        "money": 1139,
+        "time": 4.7,
+        "sanity": -10,
+        "battery": -21,
+        "estimated": true
+      },
+      "bus": {
+        "money": 410,
+        "time": 13.3,
+        "sanity": -12,
+        "battery": -17,
+        "estimated": true
+      },
+      "sleeper": {
+        "money": 528,
+        "time": 19.7,
+        "sanity": -11,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "hainan|xian": {
+      "hsr": null,
+      "flight": {
+        "money": 1941,
+        "time": 5.7,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "tibet|zhangjiajie": {
+      "hsr": null,
+      "flight": {
+        "money": 2034,
+        "time": 5.8,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 915,
+        "time": 29.0,
+        "sanity": -18,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "xinjiang|zhangjiajie": {
+      "hsr": null,
+      "flight": {
+        "money": 2200,
+        "time": 6.6,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 990,
+        "time": 33.0,
+        "sanity": -18,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "nanjing|zhangjiajie": {
+      "hsr": {
+        "money": 457,
+        "time": 5.4,
+        "sanity": -4,
+        "battery": -17,
+        "estimated": true
+      },
+      "flight": {
+        "money": 814,
+        "time": 4.1,
+        "sanity": -5,
+        "battery": -13,
+        "estimated": true
+      },
+      "bus": {
+        "money": 263,
+        "time": 9.6,
+        "sanity": -7,
+        "battery": -11,
+        "estimated": true
+      },
+      "sleeper": null
+    },
+    "hangzhou|zhangjiajie": {
+      "hsr": {
+        "money": 508,
+        "time": 5.9,
+        "sanity": -5,
+        "battery": -20,
+        "estimated": true
+      },
+      "flight": {
+        "money": 876,
+        "time": 4.2,
+        "sanity": -6,
+        "battery": -16,
+        "estimated": true
+      },
+      "bus": {
+        "money": 291,
+        "time": 10.3,
+        "sanity": -8,
+        "battery": -14,
+        "estimated": true
+      },
+      "sleeper": {
+        "money": 385,
+        "time": 15.7,
+        "sanity": -7,
+        "battery": -10,
+        "estimated": true
+      }
+    },
+    "hainan|zhangjiajie": {
+      "hsr": null,
+      "flight": {
+        "money": 1265,
+        "time": 4.7,
+        "sanity": -10,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "guilin|tibet": {
+      "hsr": null,
+      "flight": {
+        "money": 2050,
+        "time": 5.9,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 922,
+        "time": 29.5,
+        "sanity": -18,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "guilin|xinjiang": {
+      "hsr": null,
+      "flight": {
+        "money": 2200,
+        "time": 6.9,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 990,
+        "time": 34.5,
+        "sanity": -18,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "guilin|nanjing": {
+      "hsr": {
+        "money": 581,
+        "time": 6.5,
+        "sanity": -7,
+        "battery": -25,
+        "estimated": true
+      },
+      "flight": {
+        "money": 966,
+        "time": 4.3,
+        "sanity": -8,
+        "battery": -21,
+        "estimated": true
+      },
+      "bus": {
+        "money": 332,
+        "time": 11.3,
+        "sanity": -10,
+        "battery": -17,
+        "estimated": true
+      },
+      "sleeper": {
+        "money": 434,
+        "time": 17.1,
+        "sanity": -9,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "guilin|hangzhou": {
+      "hsr": {
+        "money": 564,
+        "time": 6.4,
+        "sanity": -6,
+        "battery": -24,
+        "estimated": true
+      },
+      "flight": {
+        "money": 945,
+        "time": 4.3,
+        "sanity": -7,
+        "battery": -20,
+        "estimated": true
+      },
+      "bus": {
+        "money": 322,
+        "time": 11.1,
+        "sanity": -9,
+        "battery": -16,
+        "estimated": true
+      },
+      "sleeper": {
+        "money": 422,
+        "time": 16.7,
+        "sanity": -8,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "nanjing|tibet": {
+      "hsr": null,
+      "flight": {
+        "money": 2200,
+        "time": 6.5,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 990,
+        "time": 32.5,
+        "sanity": -18,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "hangzhou|tibet": {
+      "hsr": null,
+      "flight": {
+        "money": 2200,
+        "time": 6.7,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 990,
+        "time": 33.5,
+        "sanity": -18,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "hainan|tibet": {
+      "hsr": null,
+      "flight": {
+        "money": 2192,
+        "time": 6.1,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "nanjing|xinjiang": {
+      "hsr": null,
+      "flight": {
+        "money": 2200,
+        "time": 7.0,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 990,
+        "time": 35.0,
+        "sanity": -18,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "hangzhou|xinjiang": {
+      "hsr": null,
+      "flight": {
+        "money": 2200,
+        "time": 7.4,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": {
+        "money": 990,
+        "time": 37.0,
+        "sanity": -18,
+        "battery": -12,
+        "estimated": true
+      }
+    },
+    "hainan|xinjiang": {
+      "hsr": null,
+      "flight": {
+        "money": 2200,
+        "time": 7.4,
+        "sanity": -16,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "hainan|nanjing": {
+      "hsr": null,
+      "flight": {
+        "money": 1642,
+        "time": 5.3,
+        "sanity": -13,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": null
+    },
+    "hainan|hangzhou": {
+      "hsr": null,
+      "flight": {
+        "money": 1513,
+        "time": 5.1,
+        "sanity": -12,
+        "battery": -25,
+        "estimated": true
+      },
+      "bus": null,
+      "sleeper": null
+    }
+  }
+}

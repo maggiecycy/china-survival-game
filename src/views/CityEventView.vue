@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue'
+import FeedbackModal from '../components/FeedbackModal.vue'
 import { useGameStore } from '../stores/useGameStore'
 
 const {
@@ -8,6 +9,7 @@ const {
   currentEventNode,
   availableChoices,
   lockedChoices,
+  selectedCharacter,
   t,
   resolveRestrictedEvent,
   resolveTerminalNode,
@@ -47,6 +49,12 @@ const formatEffect = (effect) => {
   if (effect.locality) parts.push({ key: 'locality', label: `🧭 ${effect.locality}` })
   return parts
 }
+
+const feedbackEffects = computed(() => {
+  const choice = currentCityEvent.value?.lastChoice
+  if (!choice) return []
+  return formatEffect(choice.effect || choice.costs)
+})
 </script>
 
 <template>
@@ -161,29 +169,14 @@ const formatEffect = (effect) => {
     </button>
 
     <!-- Feedback 弹窗 -->
-    <div
+    <FeedbackModal
       v-if="currentCityEvent?.feedback"
-      class="fixed inset-0 bg-stone-950/60 flex items-center justify-center p-6 z-50 fade-in"
-    >
-      <div class="bg-white rounded-2xl p-5 max-w-sm w-full space-y-4 shadow-xl scale-in">
-        <div class="text-4xl text-center">📝</div>
-        <p class="text-xs text-stone-700 leading-relaxed">{{ t(currentCityEvent.feedback) }}</p>
-        <div
-          v-if="currentCityEvent.lastChoice"
-          class="flex flex-wrap justify-center gap-2 text-[10px] font-mono text-stone-400"
-        >
-          <span
-            v-for="p in formatEffect(currentCityEvent.lastChoice.effect || currentCityEvent.lastChoice.costs)"
-            :key="p.key"
-          >{{ p.label }}</span>
-        </div>
-        <button
-          @click="confirmCityFeedback"
-          class="w-full bg-stone-900 text-stone-100 font-bold py-2.5 rounded-xl hover:bg-stone-800 transition active:scale-[0.98]"
-        >
-          {{ language === 'en' ? 'Continue' : '繼續' }}
-        </button>
-      </div>
-    </div>
+      :text="t(currentCityEvent.feedback)"
+      :effects="feedbackEffects"
+      :confirm-label="language === 'en' ? 'Continue' : '繼續'"
+      :character-src="selectedCharacter?.sprite || ''"
+      :character-name="selectedCharacter ? t(selectedCharacter.name) : ''"
+      @confirm="confirmCityFeedback"
+    />
   </section>
 </template>

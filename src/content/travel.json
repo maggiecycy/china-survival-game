@@ -3,34 +3,38 @@
     {
       "id": "hsr",
       "label": { "cn": "高鐵", "en": "High-Speed Rail" },
-      "desc": { "cn": "快、準、貴一點。站內安檢與實名制是必修。", "en": "Fast and punctual. Station security + real-name tickets are mandatory." },
+      "desc": { "cn": "快、準。票價對標二等座常見成交價；另含進出站地鐵約 0.5–1h。", "en": "Fast & punctual. Fares track typical 2nd-class HSR; +0.5–1h metro to stations." },
       "multiplier": { "money": 1.0, "time": 1.0, "sanity": 1.0, "battery": 1.0 }
     },
     {
       "id": "flight",
       "label": { "cn": "飛機", "en": "Flight" },
-      "desc": { "cn": "遠程最快，但機場往返吃時間，延誤風險真實存在。", "en": "Fastest for long hops — airport transfers eat time; delays are real." },
-      "multiplier": { "money": 1.6, "time": 0.7, "sanity": 1.2, "battery": 1.3 }
+      "desc": { "cn": "遠程常見選擇。票價偏經濟艙中位；機場往返與安檢吃掉時間。", "en": "Common for long hops. Mid-range economy fare; airports eat door-to-door time." },
+      "multiplier": { "money": 1.35, "time": 0.85, "sanity": 1.15, "battery": 1.25 }
     },
     {
       "id": "bus",
       "label": { "cn": "長途大巴", "en": "Coach Bus" },
-      "desc": { "cn": "最省錢，腰與 sanity 一起繳稅。", "en": "Cheapest. Your spine and sanity both pay tax." },
-      "multiplier": { "money": 0.45, "time": 1.8, "sanity": 1.6, "battery": 0.8 }
+      "desc": { "cn": "省錢但慢。對標省際大巴常見價，腰與 sanity 一起繳稅。", "en": "Cheap & slow. Tracks typical coach fares; spine and sanity both pay." },
+      "multiplier": { "money": 0.4, "time": 1.7, "sanity": 1.55, "battery": 0.85 }
     },
     {
       "id": "sleeper",
       "label": { "cn": "綠皮/硬臥", "en": "Overnight Sleeper" },
-      "desc": { "cn": "用睡眠換票價。隔天像重生，也像沒睡。", "en": "Trade sleep for fare. Next day feels reborn and unrested." },
-      "multiplier": { "money": 0.55, "time": 2.2, "sanity": 1.4, "battery": 0.5 }
+      "desc": { "cn": "用一晚睡眠換票價。對標硬臥/動臥常見區間。", "en": "Trade a night’s sleep for fare. Tracks hard-sleeper / D-sleeper ranges." },
+      "multiplier": { "money": 0.55, "time": 2.0, "sanity": 1.35, "battery": 0.55 }
     }
   ],
   "tierBase": {
-    "high": { "money": 280, "time": 3.5, "sanity": -6, "battery": -18 },
-    "medium": { "money": 180, "time": 4.5, "sanity": -8, "battery": -15 },
-    "low": { "money": 120, "time": 5.5, "sanity": -10, "battery": -12 }
+    "high": { "money": 580, "time": 6, "sanity": -6, "battery": -18 },
+    "medium": { "money": 450, "time": 6.5, "sanity": -8, "battery": -15 },
+    "low": { "money": 280, "time": 7, "sanity": -10, "battery": -12 }
   },
-  "sameRegionFactor": 0.65,
+  "sameRegionFactor": 0.45,
+  "notes": {
+    "sources": "12306/Ctrip ranges 2025–2026: BJ–SH 2nd-class ~¥550–670 (~5–6h); BJ–XA ~¥515–593 (~4.5–6h); flights BJ–SZ/CD often ¥500–1200 economy. sameRegionFactor discounts e.g. SH–HZ / CD–CQ short hops. Sanity/battery are game friction, not published fares.",
+    "attractionTickets": "Palace Museum adult ¥60; Badaling Wall peak ¥40 (+shuttle/cable often pushes day to ¥150–250); Universal Beijing day ticket commonly ¥500+; panda base ~¥55–58. Event JSON tickets aligned to these bands."
+  },
   "firstDepartureFromBeijing": {
     "flag": "first_intercity_survived",
     "graphId": "transit_first_departure"

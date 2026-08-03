@@ -28,16 +28,9 @@ const isRestrictedByVisa = (city) => {
   return city.visaRestriction.includes(props.currentVisa)
 }
 
-// 判斷城市是否被解鎖
+// 判斷城市是否被解鎖（探索系統傳入的 unlockedCities id 列表）
 const isUnlocked = (city) => {
-  // 1. 如果被簽證限制，強制鎖死
-  if (isRestrictedByVisa(city)) return false
-  
-  // 2. 如果無前置解鎖要求，默認解鎖
-  if (!city.unlockRequired || city.unlockRequired.length === 0) return true
-  
-  // 3. 檢查前置解鎖城市是否都已通關/解鎖
-  return city.unlockRequired.every(reqId => props.unlockedCities.includes(reqId))
+  return props.unlockedCities.includes(city.id)
 }
 
 const handleCityClick = (city) => {
@@ -52,8 +45,8 @@ const handleCityClick = (city) => {
   if (!isUnlocked(city)) {
     alert(
       props.language === 'en'
-        ? `🔒 Travel to connected cities first to unlock ${city.name.en}!`
-        : `🔒 请先通关前置关联城市以解锁${city.name.cn}！`
+        ? `🔒 Explore a nearby city first to unlock ${city.name.en}.`
+        : `🔒 先探索鄰近城市，才能解鎖${city.name.cn}。`
     )
     return
   }
@@ -75,7 +68,7 @@ const handleCityClick = (city) => {
     </div>
 
     <!-- 地圖主畫布 -->
-    <div class="relative w-full aspect-[4/3] bg-stone-950 rounded-xl overflow-hidden border border-stone-800">
+    <div class="relative w-full aspect-[4/3] lg:aspect-[16/9] bg-stone-950 rounded-xl overflow-hidden border border-stone-800">
       
       <!-- 极简中国地图轮廓背景 (SVG 示意) -->
       <svg class="absolute inset-0 w-full h-full opacity-20 pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor">
@@ -137,7 +130,7 @@ const handleCityClick = (city) => {
     <!-- 狀態說明 -->
     <div class="mt-3 flex gap-4 justify-center text-[10px] text-stone-400">
       <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-amber-400 border border-stone-900 inline-block"></span> {{ language === 'en' ? 'Unlocked' : '可前往' }}</span>
-      <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-stone-800 border border-stone-700 inline-block"></span> {{ language === 'en' ? 'Locked' : '前置未解锁' }}</span>
+      <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-stone-800 border border-stone-700 inline-block"></span> {{ language === 'en' ? 'Locked' : '尚未解鎖' }}</span>
       <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-red-950 border border-red-700 inline-block flex items-center justify-center text-[6px]">🚫</span> {{ language === 'en' ? 'Restricted' : '签证不可达' }}</span>
     </div>
   </div>

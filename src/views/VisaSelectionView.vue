@@ -27,12 +27,12 @@ const visaOrder = ['144', 'Visa-Free', 'L']
       <h2 class="text-2xl font-black text-stone-900 tracking-tight">
         {{ language === 'en' ? 'Choose Your Visa' : '選擇你的中國簽證' }}
       </h2>
-      <p class="text-xs text-stone-500 max-w-xs mx-auto">
+      <p class="text-xs text-stone-500 max-w-md mx-auto">
         {{ language === 'en' ? 'Your survival difficulty and routing depend entirely on this document.' : '入境文件將直接決定你的生存難度與活動範圍。' }}
       </p>
     </div>
 
-    <div class="flex flex-col gap-3">
+    <div class="flex flex-col gap-3 lg:grid lg:grid-cols-3 lg:gap-4 lg:items-start">
       <div
         v-for="visaId in visaOrder"
         :key="visaId"

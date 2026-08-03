@@ -20,18 +20,20 @@ const {
 </script>
 
 <template>
-  <section class="flex flex-col gap-4 fade-in">
-    <div class="bg-white rounded-2xl p-4 border border-stone-200 shadow-sm">
+  <section class="flex flex-col gap-4 fade-in lg:grid lg:grid-cols-[1fr_minmax(280px,340px)] lg:gap-5 lg:items-start">
+    <div class="bg-white rounded-2xl p-4 border border-stone-200 shadow-sm lg:col-span-2">
       <h3 class="font-bold text-sm mb-1 text-stone-900">
         {{ language === 'en' ? '🗺️ Select Destination' : '🗺️ 選擇你的目的地' }}
       </h3>
       <p class="text-xs text-stone-500 leading-relaxed">
         {{ language === 'en'
-          ? 'Pick a city. Leaving costs money/time — first exit from Beijing triggers a one-time transit event.'
-          : '點選城市。離城會花時間與錢；首次離開北京會觸發一次性交通事件。' }}
+          ? 'Pick a city. Exploring a city unlocks its 2 nearest neighbours on the map. Leaving costs money/time — first exit from Beijing triggers a one-time transit event.'
+          : '點選城市。探索完一座城會解鎖地圖上最近的兩座鄰城。離城花時間與錢；首次離開北京會觸發一次性交通事件。' }}
       </p>
       <p class="text-[10px] font-mono text-stone-400 mt-2">
-        {{ language === 'en' ? `Visited: ${visitedCities.length} / ${cities.length}` : `已抵達城市：${visitedCities.length} / ${cities.length}` }}
+        {{ language === 'en'
+          ? `Unlocked: ${unlockedCityIds.length} · Visited: ${visitedCities.length} / ${cities.length}`
+          : `已解鎖：${unlockedCityIds.length} · 已抵達：${visitedCities.length} / ${cities.length}` }}
       </p>
     </div>
 
@@ -43,7 +45,7 @@ const {
       @select-city="handleSelectCity"
     />
 
-    <div v-if="activeCity" class="bg-white rounded-2xl p-4 border-2 border-amber-400 shadow-md fade-in space-y-3">
+    <div v-if="activeCity" class="bg-white rounded-2xl p-4 border-2 border-amber-400 shadow-md fade-in space-y-3 lg:sticky lg:top-4">
       <div class="flex justify-between items-start gap-3">
         <div>
           <h4 class="font-black text-lg text-stone-950">📍 {{ activeCity.name[language] }}</h4>
@@ -76,14 +78,14 @@ const {
       </div>
 
       <div v-if="getUnlocksFrom(activeCity).length" class="text-[10px] text-stone-400">
-        🔓 {{ language === 'en' ? 'Unlocks after visiting:' : '抵達後將解鎖：' }}
+        🔓 {{ language === 'en' ? 'Exploring here unlocks:' : '探索此地後將解鎖：' }}
         {{ getUnlocksFrom(activeCity).map(c => c.name[language]).join('、') }}
       </div>
     </div>
 
     <button
       @click="goToVisaSelection"
-      class="text-xs text-stone-400 hover:text-stone-600 transition text-center underline py-2"
+      class="text-xs text-stone-400 hover:text-stone-600 transition text-center underline py-2 lg:col-span-2"
     >
       {{ language === 'en' ? '← Change Visa Type' : '← 重新選擇簽證類型' }}
     </button>

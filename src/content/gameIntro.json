@@ -1,83 +1,43 @@
 {
   "title": {
-    "cn": "怎麼玩 China Survival",
-    "en": "How to Play China Survival"
+    "cn": "China Survival",
+    "en": "China Survival"
   },
   "tagline": {
-    "cn": "你是外籍旅客。錢、精神、簽證時間、手機電量、本地化——五條命一起走。",
-    "en": "You're a foreign traveler. Money, sanity, visa time, phone battery, and locality — five lives at once."
+    "cn": "外籍旅客。签证在倒计时。目标：活着从香港出去。",
+    "en": "Foreign traveler. Visa clock ticking. Goal: leave via Hong Kong — alive."
   },
-  "goal": {
-    "title": { "cn": "勝利條件", "en": "How to Win" },
+  "howto": {
+    "title": { "cn": "玩法", "en": "How to Play" },
     "body": {
-      "cn": "抵達香港並完成「離境口岸」。好結局會依屬性分檔：本地通（Locality≥80）＞省錢大師（餘額≥1500）＞樂天派（Sanity≥80）＞普通生還離境。離境不再因當天扣 24h 被誤判壞結局。",
-      "en": "Reach Hong Kong and finish Exit Border. Good endings tier by stats: Local Pro (Locality≥80) > Thrifty Master (money≥1500) > Optimist (Sanity≥80) > Survived Exit. Exit no longer falsely triggers the time Bad End."
+      "cn": "选签证 → 在城市点景点过日子 → 换城赶路 → 去香港离境。其余规则，自己撞。",
+      "en": "Pick a visa → burn days on city pins → travel between cities → exit via Hong Kong. The rest: learn by colliding."
     }
   },
-  "lose": {
-    "title": { "cn": "失敗條件", "en": "How You Lose" },
+  "resources": {
+    "title": { "cn": "资源", "en": "Resources" },
     "body": {
-      "cn": "Sanity、剩餘簽證時間、或電量任一歸零 → Bad End。144 小時簽證尤其吃緊：每個景點約消耗一天（24h）。",
-      "en": "If Sanity, remaining visa time, or Battery hits 0 → Bad End. 144-hour visas are especially tight: each attraction costs about one day (24h)."
+      "cn": "钱 · 精神 · 时间 · 电量 · 本地化。归零通常很糟。具体怎么涨跌，玩了才知道。",
+      "en": "Money · Sanity · Time · Battery · Locality. Hitting zero is usually bad. How they move: discover in play."
     }
   },
-  "loop": {
-    "title": { "cn": "主循環", "en": "Core Loop" },
-    "body": {
-      "cn": "選簽證 → 北京新手教程 → 城市景點地圖（一針=一天）→ 城際交通換城 → 最終衝香港離境。",
-      "en": "Pick a visa → Beijing tutorial → city attraction map (one pin = one day) → intercity travel → push to Hong Kong exit."
-    }
-  },
-  "stats": [
-    {
-      "key": "money",
-      "cn": "Money：景點、交通、住宿、急救都會花錢；景點內💰選項可賺錢（需 Sanity ≥ 70）。",
-      "en": "Money: attractions, travel, lodging, and emergencies cost RMB. 💰 hustles inside pins can earn cash (needs Sanity ≥ 70)."
-    },
-    {
-      "key": "sanity",
-      "cn": "Sanity：排隊、支付失靈、文化衝擊會掉；湖景/茶館/慢旅行可回血；住宿越好過夜回復越多。",
-      "en": "Sanity: queues, payment fails, and culture shock drain it; lakes/tea/slow travel restore it; better lodging restores more overnight."
-    },
-    {
-      "key": "time",
-      "cn": "Time：簽證剩餘小時。完成景點約 -24h，再加城際交通耗時。時間到 = 簽證壓力 Bad End。",
-      "en": "Time: remaining visa hours. Finishing a pin ≈ -24h, plus intercity travel. Hit 0 = visa-pressure Bad End."
-    },
-    {
-      "key": "battery",
-      "cn": "Battery：導航、翻譯、掃碼都耗電。當天電量 > 0 過夜可回電解；也可掃共享充電寶（需移動支付）。",
-      "en": "Battery: maps, translate apps, and QR scans drain it. Survive the day with battery > 0 for overnight charge; shared power banks need mobile pay."
-    },
-    {
-      "key": "locality",
-      "cn": "Locality：你有多「會活在中國」。辦號、綁支付、識破陷阱會漲；現金死磕/被宰會掉。影響部分選項與香港結局檔位。",
-      "en": "Locality: how well you operate in China. SIMs, mobile pay, and spotting scams raise it; cash stubbornness / getting scammed lowers it. Gates some choices and your Hong Kong ending tier."
-    }
-  ],
   "tips": {
-    "title": { "cn": "實用提示", "en": "Practical Tips" },
-    "items": [
-      {
-        "cn": "教程裡的選擇會留下 flags（有國內號／現金硬剛等），後面城市選項會因此鎖定或解鎖。",
-        "en": "Tutorial choices leave flags (local number / cash-only, etc.) that lock or unlock later options."
-      },
-      {
-        "cn": "沙發客只能湊合一晚；換城或到期後要先安排住宿才能繼續點景點。",
-        "en": "Couch stays last one night. After expiry or city changes, arrange lodging before more pins."
-      },
-      {
-        "cn": "地圖上部分城市要先通關前置城；西藏/新疆還受簽證限制。",
-        "en": "Some cities need prerequisite visits; Tibet/Xinjiang also have visa restrictions."
-      },
-      {
-        "cn": "下方 Debug / Status Monitor 可查看 flags 與階段；英文介面時會顯示英文標籤。",
-        "en": "The Debug / Status Monitor below shows flags and step; labels follow your language toggle."
-      }
-    ]
+    "title": { "cn": "提示", "en": "Hints" },
+    "body": {
+      "cn": "教程里的选择会留下后果。有的门要钥匙，有的路看起来便宜其实很贵。",
+      "en": "Tutorial choices leave consequences. Some doors need keys; some cheap paths are expensive."
+    }
   },
   "cta": {
-    "cn": "開始選簽證",
+    "cn": "开始选签证",
     "en": "Choose Your Visa"
+  },
+  "expand": {
+    "cn": "展开",
+    "en": "Expand"
+  },
+  "collapse": {
+    "cn": "收起",
+    "en": "Collapse"
   }
 }

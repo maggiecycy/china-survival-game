@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "颐和园",
-        "en": "Summer Palace"
+        "cn": "颐和园：皇家空调外景地",
+        "en": "Summer Palace: Imperial Outdoor AC"
       },
       "text": {
-        "cn": "昆明湖风很大。租船要扫码；长廊里游客像河流。",
-        "en": "Windy Kunming Lake. Boat rental wants QR; corridor crowds flow like a river."
+        "cn": "昆明湖风大到说话要喊。租船要扫码——皇帝当年大概不用验证码。长廊里游客像潮汐，导游旗是灯塔。",
+        "en": "Kunming Lake wind forces shouting. Boat rental wants QR — emperors never needed SMS codes. The Long Corridor is tidal with tourists; guide flags are lighthouses."
       },
       "choices": [
         {
           "id": "boat",
           "text": {
-            "cn": "租船慢划，把一天交给湖面。",
-            "en": "Rent a boat; give the day to the lake."
+            "cn": "租船慢划：把一天交给湖面与胳膊酸痛。",
+            "en": "Rent a boat: donate the day to water and sore arms."
           },
           "effect": {
             "money": -120,
@@ -25,13 +25,17 @@
             "battery": -15,
             "locality": 4
           },
+          "feedback": {
+            "cn": "你划得像一条犹豫的鸭子，但 Sanity 明显回升。皇家园林：治疗系。",
+            "en": "You paddle like an indecisive duck, but sanity rises. Imperial gardens: healing type."
+          },
           "next": "done"
         },
         {
           "id": "walk_tower",
           "text": {
-            "cn": "漫步长廊 + 爬佛香阁。",
-            "en": "Corridor stroll + climb the tower."
+            "cn": "漫步长廊 + 爬佛香阁：台阶再次背叛承诺。",
+            "en": "Corridor + tower climb: stairs betray again."
           },
           "effect": {
             "money": -80,
@@ -39,19 +43,27 @@
             "battery": -22,
             "locality": 3
           },
+          "feedback": {
+            "cn": "俯瞰昆明湖很美。你的膝盖提交了辞职信，尚未获批。",
+            "en": "The lake view is beautiful. Your knees submit a resignation — pending approval."
+          },
           "next": "done"
         },
         {
           "id": "crowd",
           "text": {
-            "cn": "高峰硬挤，被导游旗驱赶。",
-            "en": "Peak crowd; herded by tour flags."
+            "cn": "高峰硬挤：被导游旗驱赶的羊群体验。",
+            "en": "Peak crush: herded-sheep experience under tour flags."
           },
           "effect": {
             "money": -60,
             "sanity": -14,
             "battery": -18,
             "locality": 1
+          },
+          "feedback": {
+            "cn": "你看见了佛香阁的屋顶一角。其余时间在看别人的后脑勺。",
+            "en": "You glimpse a corner of the tower roof. The rest of the day: other people’s haircuts."
           },
           "next": "done"
         }
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "颐和园日結束。",
-        "en": "Summer Palace day ends."
+        "cn": "颐和园日结束。风还在，队伍也还在。",
+        "en": "Summer Palace day ends. Wind remains; so do queues."
       }
     }
   }

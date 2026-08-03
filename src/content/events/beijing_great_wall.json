@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "長城",
-        "en": "Great Wall"
+        "cn": "八达岭：好汉与小腿谈判",
+        "en": "Badaling: Hero vs Calves"
       },
       "text": {
-        "cn": "大巴搖晃、臺階無窮。有人塞名片：『外模？拍戶外大片，日結。』",
-        "en": "Bus shakes, endless stairs. A card appears: 'Foreign model? Outdoor shoot, paid same day.'"
+        "cn": "大巴摇晃得像在做核心训练。台阶无穷，人群更无穷。有人塞名片：『外模？拍户外大片，日结。』风很大，名片差点飞去蒙古。",
+        "en": "The bus shakes like core training. Stairs endless; crowds more endless. A card is pressed into your hand: “Foreign model? Outdoor shoot, paid today.” Wind almost mails it to Mongolia."
       },
       "choices": [
         {
           "id": "climb",
           "text": {
-            "cn": "往上爬，拍那張必拍角度。",
-            "en": "Climb for the mandatory angle."
+            "cn": "徒步登城：用腿兑换「不到长城非好汉」。",
+            "en": "Hike the wall: pay calves for hero status."
           },
           "effect": {
             "money": -180,
@@ -25,13 +25,17 @@
             "battery": -22,
             "locality": 4
           },
+          "feedback": {
+            "cn": "你成为好汉的同时，也成为了防晒与瓶装水的奴隶。远处烽火台在笑。",
+            "en": "You become a hero and a slave to sunscreen and bottled water. A distant watchtower seems amused."
+          },
           "next": "done"
         },
         {
           "id": "cable",
           "text": {
-            "cn": "能坐纜車就坐，保住膝蓋。",
-            "en": "Take the cable car; keep your knees."
+            "cn": "坐缆车：保留膝盖，保留尊严的一部分。",
+            "en": "Cable car: keep knees, keep partial dignity."
           },
           "effect": {
             "money": -250,
@@ -39,13 +43,17 @@
             "battery": -12,
             "locality": 2
           },
+          "feedback": {
+            "cn": "贵，但腿还在。有人在缆车上拍 vlog，你在心里拍「省力纪录片」。",
+            "en": "Pricey, but legs intact. Someone shoots a vlog; you shoot a mental “energy conservation doc”."
+          },
           "next": "done"
         },
         {
           "id": "model_gig",
           "text": {
-            "cn": "💰 接模特單：在牆垛上吹風擺姿勢兩小時。",
-            "en": "💰 Take the model gig: pose on battlements for two windy hours."
+            "cn": "💰 接模特单：在墙垛上吹风摆姿势两小时。",
+            "en": "💰 Model gig: pose in the wind for two hours."
           },
           "effect": {
             "money": 280,
@@ -56,20 +64,20 @@
           "addFlags": [
             "did_model_gig"
           ],
-          "feedback": {
-            "cn": "日結到賬（或微信轉帳）。你感覺自己像長城周邊的移動道具。",
-            "en": "Same-day pay (or WeChat transfer). You feel like a mobile prop for the Wall."
-          },
-          "next": "done",
           "showIfLocked": true,
           "requiresStats": {
             "sanityGte": 70,
             "batteryGte": 25
           },
           "lockedHint": {
-            "cn": "需要 Sanity ≥ 70 且电量 ≥ 25，才敢接高强度约拍。",
-            "en": "Needs Sanity ≥ 70 and Battery ≥ 25 for a demanding gig."
-          }
+            "cn": "约拍门槛：Sanity ≥ 70 且电量 ≥ 25。没电的模特只是一块会走路的背景板。",
+            "en": "Gig gate: Sanity ≥ 70 and Battery ≥ 25. A dead-phone model is just a walking backdrop."
+          },
+          "feedback": {
+            "cn": "日结到账。笑容僵住。你开始理解「外模」有时只是会走路的滤镜。",
+            "en": "Paid. Smile frozen. You learn “foreign model” sometimes means a walking filter."
+          },
+          "next": "done"
         }
       ]
     },
@@ -77,8 +85,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "長城日結束。",
-        "en": "Wall day ends."
+        "cn": "长城日结束。小腿在抗议，风景不退款。",
+        "en": "Wall day ends. Calves protest; scenery offers no refunds."
       }
     }
   }

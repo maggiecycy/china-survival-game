@@ -12,8 +12,8 @@
         "y": 55
       },
       "desc": {
-        "cn": "微缩世界与演出。",
-        "en": "Mini world and shows."
+        "cn": "微缩地球村：合影热情与喇叭快乐。",
+        "en": "Mini Earth: photo enthusiasm and speaker joy."
       },
       "graphId": "shenzhen_window"
     },
@@ -28,8 +28,8 @@
         "y": 48
       },
       "desc": {
-        "cn": "过山车与尖叫。",
-        "en": "Coasters and screams."
+        "cn": "过山车通勤高峰，尖叫含在票价里。",
+        "en": "Coaster rush hour; screams included."
       },
       "graphId": "shenzhen_happy_valley"
     },
@@ -44,8 +44,8 @@
         "y": 70
       },
       "desc": {
-        "cn": "骑行看海。",
-        "en": "Bike and sea."
+        "cn": "骑行把华强北的电子味吹淡。",
+        "en": "Bike away the electronics smell."
       },
       "graphId": "shenzhen_bay"
     },
@@ -60,8 +60,8 @@
         "y": 42
       },
       "desc": {
-        "cn": "电子产品与 DIY。",
-        "en": "Electronics and DIY."
+        "cn": "零件迷宫；日结广告随时拦截你。",
+        "en": "Parts maze; same-day ads intercept you."
       },
       "graphId": "shenzhen_tech_mall"
     },
@@ -76,8 +76,8 @@
         "y": 58
       },
       "desc": {
-        "cn": "海边与游泳。",
-        "en": "Beach and swim."
+        "cn": "海风治愈，二手烟谈判。",
+        "en": "Sea breeze heals; smoke negotiates."
       },
       "graphId": "shenzhen_dameisha"
     },
@@ -92,8 +92,8 @@
         "y": 38
       },
       "desc": {
-        "cn": "登高俯瞰。",
-        "en": "Observation deck."
+        "cn": "登高看湾区电路板，电梯也是早高峰。",
+        "en": "Deck over bay PCB; lifts are rush hour."
       },
       "graphId": "shenzhen_pingan"
     },
@@ -108,8 +108,8 @@
         "y": 62
       },
       "desc": {
-        "cn": "City walk 与咖啡。",
-        "en": "City walk and coffee."
+        "cn": "城墙+咖啡：深圳的慢速插件。",
+        "en": "Walls + coffee: Shenzhen slow-mode DLC."
       },
       "graphId": "shenzhen_nantou"
     }

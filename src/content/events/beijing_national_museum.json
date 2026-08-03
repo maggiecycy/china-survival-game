@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "国家博物馆",
-        "en": "National Museum"
+        "cn": "国家博物馆：免费的安静奢侈",
+        "en": "National Museum: Free Quiet Luxury"
       },
       "text": {
-        "cn": "免费但要预约。展厅安静，手机信号像被历史吸走。",
-        "en": "Free with booking. Quiet halls; signal feels historically absorbed."
+        "cn": "免费，但要预约——免费从不等于随便进。展厅安静得像把城市静音了。手机信号像被青铜器吸走。",
+        "en": "Free, but booked — free never means casual entry. Halls mute the city. Phone signal vanishes into bronzes."
       },
       "choices": [
         {
           "id": "booked",
           "text": {
-            "cn": "有预约：认真看展做笔记。",
-            "en": "Booked: deep exhibit notes."
+            "cn": "有预约：认真看展，做两页笔记（或假装）。",
+            "en": "Booked: deep exhibits, two pages of notes (or fake notes)."
           },
           "effect": {
             "money": 0,
@@ -29,13 +29,21 @@
             "has_local_number"
           ],
           "showIfLocked": true,
+          "lockedHint": {
+            "cn": "预约常要国内号收验证码。漫游选手请改走现场碰运气。",
+            "en": "Booking often needs a local number for SMS. Roamers: try walk-up luck."
+          },
+          "feedback": {
+            "cn": "历史展厅让你短暂忘记扫码战争。原来「不弹窗」也可以是一种幸福。",
+            "en": "History briefly replaces QR wars. Happiness can mean “no pop-ups”."
+          },
           "next": "done"
         },
         {
           "id": "walkup",
           "text": {
-            "cn": "碰运气现场入馆，排长队。",
-            "en": "Walk-up lottery + long queue."
+            "cn": "碰运气现场入馆：排长队赌人品。",
+            "en": "Walk-up lottery: queue and gamble kindness."
           },
           "effect": {
             "money": 0,
@@ -43,19 +51,27 @@
             "battery": -20,
             "locality": 2
           },
+          "feedback": {
+            "cn": "挤进去了。脚比大脑先累。你对「余票」两个字产生敬畏。",
+            "en": "You’re in. Feet tire before brains. You now revere the words “tickets left”."
+          },
           "next": "done"
         },
         {
           "id": "gift",
           "text": {
-            "cn": "看一半去文创店「收集历史周边」。",
-            "en": "Half exhibits, then gift-shop history."
+            "cn": "看一半去文创店：用冰箱贴收集历史。",
+            "en": "Half exhibits, then gift shop: collect history as magnets."
           },
           "effect": {
             "money": -150,
             "sanity": 7,
             "battery": -12,
             "locality": 3
+          },
+          "feedback": {
+            "cn": "你买到了很有文化的消费。肚子饿，精神还行。",
+            "en": "You purchased cultured consumption. Hungry, but sane-ish."
           },
           "next": "done"
         }
@@ -65,8 +81,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "国家博物馆日結束。",
-        "en": "National Museum day ends."
+        "cn": "国博日结束。安静是今天最贵的体验——幸好它免费。",
+        "en": "Museum day ends. Quiet was the priciest feeling — luckily free."
       }
     }
   }

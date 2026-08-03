@@ -5,7 +5,7 @@
 
 export function createInitialPlayer(overrides = {}) {
   return {
-    money: 2800,
+    money: 5000,
     sanity: 100,
     battery: 100,
     locality: 0,
@@ -20,6 +20,7 @@ export function createInitialPlayer(overrides = {}) {
     currentNode: null,
     visa: null,
     lodging: null,
+    characterId: null,
     ...overrides,
   }
 }
@@ -33,6 +34,10 @@ export function applyVisaInitial(player, visaConfig) {
   player.visa = visaConfig?.id ?? null
   player.isVisaVerified = true
   player.timeRemaining = initial.timeRemaining ?? player.timeRemaining
+  if (initial.money != null) player.money = initial.money
+  if (initial.sanity != null) player.sanity = initial.sanity
+  if (initial.battery != null) player.battery = initial.battery
+  if (initial.locality != null) player.locality = initial.locality
   player.currentCity = 'beijing'
   return player
 }

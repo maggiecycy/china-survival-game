@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "大梅沙",
-        "en": "Dameisha"
+        "cn": "大梅沙：海风与二手烟谈判",
+        "en": "Dameisha: Sea Breeze vs Secondhand Smoke"
       },
       "text": {
-        "cn": "海水与沙滩排球。有人抽烟经过——你的公共空间定义再次抖动。",
-        "en": "Sea and volleyball. Smoke drifts by — public-space definitions wobble again."
+        "cn": "海水看起来很治愈。沙滩排球大爷比你更会社交。有人抽烟经过——你的「公共空间」定义又开始抖动。",
+        "en": "The sea looks healing. Volleyball uncles out-social you. Someone smokes past — your definition of “public space” wobbles again."
       },
       "choices": [
         {
           "id": "swim",
           "text": {
-            "cn": "游泳放松。",
-            "en": "Swim and unwind."
+            "cn": "游泳放松：把城市盐分洗掉一层。",
+            "en": "Swim: rinse one layer of city salt."
           },
           "effect": {
             "money": -80,
@@ -25,13 +25,17 @@
             "battery": -15,
             "locality": 3
           },
+          "feedback": {
+            "cn": "水很舒服。相机电量先投降。你接受了「湿着头发回地铁」。",
+            "en": "Water feels great. Battery surrenders first. You accept wet-hair metro rides."
+          },
           "next": "done"
         },
         {
           "id": "bike_beach",
           "text": {
-            "cn": "海岸骑行。",
-            "en": "Coast bike ride."
+            "cn": "海岸骑行：风很大，滤镜很便宜。",
+            "en": "Coast bike: strong wind, free filters."
           },
           "effect": {
             "money": -60,
@@ -39,19 +43,27 @@
             "battery": -18,
             "locality": 3
           },
+          "feedback": {
+            "cn": "你被叫「老外朋友」。出汗是社交货币。",
+            "en": "They call you “foreign friend”. Sweat is social currency."
+          },
           "next": "done"
         },
         {
           "id": "smoke_annoy",
           "text": {
             "cn": "烟味驱离沙滩位，郁闷离开。",
-            "en": "Smoke drives you off the spot."
+            "en": "Smoke drives you off the spot; leave annoyed."
           },
           "effect": {
             "money": -40,
             "sanity": -14,
             "battery": -10,
             "locality": 1
+          },
+          "feedback": {
+            "cn": "你想礼貌提醒，话到嘴边变成深呼吸。文化冲突：现场直播。",
+            "en": "You almost politely object; it becomes a deep breath. Culture clash: live broadcast."
           },
           "next": "done"
         }
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "大梅沙日結束。",
-        "en": "Dameisha day ends."
+        "cn": "大梅沙日结束。盐在皮肤上，烟在记忆里。",
+        "en": "Dameisha ends. Salt on skin; smoke in memory."
       }
     }
   }

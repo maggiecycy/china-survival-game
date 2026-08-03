@@ -5,12 +5,12 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "平安金融中心",
-        "en": "Ping An Tower"
+        "cn": "平安金融中心：登高看电路板城市",
+        "en": "Ping An Tower: City as Circuit Board"
       },
       "text": {
-        "cn": "登高要预约/购票。城市网格在脚下像电路板。",
-        "en": "Deck needs ticket/booking. City grid below looks like a PCB."
+        "cn": "登高要购票/预约。脚下的城市网格像一块巨大电路板——华强北的亲戚在发光。电梯里有人认真补口红，有人认真回工作消息。",
+        "en": "Deck needs ticket/booking. The grid below looks like a giant PCB — Huaqiangbei’s glowing relatives. In the lift: lipstick repair and Slack replies, equally serious."
       },
       "choices": [
         {
@@ -25,13 +25,17 @@
             "battery": -12,
             "locality": 3
           },
+          "feedback": {
+            "cn": "高度让焦虑变小。你暂时觉得自己也「很湾区」。",
+            "en": "Altitude shrinks anxiety. You briefly feel very “Greater Bay”."
+          },
           "next": "done"
         },
         {
           "id": "rush",
           "text": {
-            "cn": "下班高峰挤电梯。",
-            "en": "Rush-hour elevator crush."
+            "cn": "下班高峰挤电梯：垂直早高峰。",
+            "en": "Rush-hour elevator: vertical commute."
           },
           "effect": {
             "money": -200,
@@ -39,19 +43,27 @@
             "battery": -16,
             "locality": 2
           },
+          "feedback": {
+            "cn": "你看见了风景，也看见了别人的肩膀。登高，原来也要排队。",
+            "en": "You see the view and many shoulders. Even height requires queues."
+          },
           "next": "done"
         },
         {
           "id": "fail_book",
           "text": {
-            "cn": "票售罄，只能仰望。",
-            "en": "Sold out; look up from street."
+            "cn": "票售罄，只能仰望：免费的颈椎运动。",
+            "en": "Sold out; look up: free neck exercise."
           },
           "effect": {
             "money": -30,
             "sanity": -5,
             "battery": -8,
             "locality": 1
+          },
+          "feedback": {
+            "cn": "大厦还在。你的预约技巧也需要升级。",
+            "en": "Tower remains. Your booking skills need a firmware update."
           },
           "next": "done"
         }
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "平安金融中心日結束。",
-        "en": "Ping An Tower day ends."
+        "cn": "登高日结束。云还在上面，你回到地面继续扫码。",
+        "en": "Deck day ends. Clouds stay up; you return to QR life below."
       }
     }
   }

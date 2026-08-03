@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "兰桂坊",
-        "en": "Lan Kwai Fong"
+        "cn": "兰桂坊：噪音里的社交副本",
+        "en": "Lan Kwai Fong: Social Dungeon in Noise"
       },
       "text": {
-        "cn": "酒吧街噪音与酒气。你可以社交，也可以社恐。",
-        "en": "Bar street noise and booze. Social or socially anxious — your call."
+        "cn": "酒吧街噪音与酒气。你可以社交，也可以社恐。有人用三种语言点单，有人只点手指。",
+        "en": "Bar street noise and booze air. Social or socially anxious — your call. Someone orders in three languages; someone only points."
       },
       "choices": [
         {
           "id": "one_drink",
           "text": {
-            "cn": "喝一杯就走。",
-            "en": "One drink then leave."
+            "cn": "喝一杯就走：可控社交。",
+            "en": "One drink then leave: controlled social."
           },
           "effect": {
             "money": -120,
@@ -25,12 +25,16 @@
             "battery": -10,
             "locality": 3
           },
+          "feedback": {
+            "cn": "你完成了「来过」。耳朵还在，肝也还在。",
+            "en": "Check-in complete. Ears intact; liver intact."
+          },
           "next": "done"
         },
         {
           "id": "party",
           "text": {
-            "cn": "跟外国人聊天到很晚。",
+            "cn": "跟旅行者聊天到很晚。",
             "en": "Chat with travelers late."
           },
           "effect": {
@@ -38,6 +42,10 @@
             "sanity": 12,
             "battery": -16,
             "locality": 5
+          },
+          "feedback": {
+            "cn": "你们交换路线与避坑经验。酒精是催化剂，故事是真正的消费。",
+            "en": "You trade routes and scam tips. Alcohol is catalyst; stories are the real spend."
           },
           "next": "done"
         },
@@ -53,6 +61,10 @@
             "battery": -12,
             "locality": 1
           },
+          "feedback": {
+            "cn": "社恐胜利。安静的空调声听起来像天籁。",
+            "en": "Social anxiety wins. Hotel AC sounds like heaven."
+          },
           "next": "done"
         }
       ]
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "兰桂坊日結束。",
-        "en": "Lan Kwai Fong day ends."
+        "cn": "兰桂坊夜结束。嗓子哑了，故事多了。",
+        "en": "LKF night ends. Throat hoarse; stories denser."
       }
     }
   }

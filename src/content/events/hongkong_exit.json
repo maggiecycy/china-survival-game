@@ -5,18 +5,18 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "離境口岸",
-        "en": "Exit"
+        "cn": "离境口岸：真正的毕业闸",
+        "en": "Exit Border: The Real Graduation Gate"
       },
       "text": {
-        "cn": "你走向離境檢查。這一站完成後，系統會根據 Locality 等狀態判定結局。",
-        "en": "You walk to departure control. Finishing this stop triggers ending evaluation."
+        "cn": "你走向离境检查。护照、表情、行李轮子的声音都突然很清晰。这一站结束后，系统会根据你的金钱、精神与本地化判定：你到底是怎样离开中国的。",
+        "en": "You walk to departure control. Passport, face, suitcase wheels — suddenly crisp. After this stop, money, sanity, and locality decide how you leave China."
       },
       "choices": [
         {
           "id": "depart",
           "text": {
-            "cn": "提交證件，離境。",
+            "cn": "提交证件，离境。",
             "en": "Present documents and leave."
           },
           "effect": {
@@ -26,6 +26,10 @@
           "addFlags": [
             "departed_hongkong"
           ],
+          "feedback": {
+            "cn": "盖章声很轻，结局很重。你回头看一眼——扫码、台阶、海风，都还在身后。",
+            "en": "The stamp is soft; the ending is heavy. You glance back — QR codes, stairs, sea wind still behind you."
+          },
           "next": "done"
         }
       ]
@@ -34,8 +38,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "關口在你身後合上。",
-        "en": "The gate closes behind you."
+        "cn": "关口在你身后合上。旅途结算开始。",
+        "en": "The gate closes behind you. Journey resolution begins."
       }
     }
   }

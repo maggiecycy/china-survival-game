@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "欢乐谷",
-        "en": "Happy Valley"
+        "cn": "欢乐谷：通勤式快乐",
+        "en": "Happy Valley: Commute-Style Joy"
       },
       "text": {
-        "cn": "过山车队列像另一条通勤。尖叫是门票附赠音效。",
-        "en": "Coaster queues feel like commute 2.0. Screams are included audio."
+        "cn": "过山车队列像另一条早高峰。尖叫是门票附赠音效。有人边排队边吃鸡爪——快乐与奇葩并行不悖。",
+        "en": "Coaster queues feel like morning rush. Screams are included audio. Someone eats chicken feet in line — joy and weirdness coexist."
       },
       "choices": [
         {
           "id": "coaster",
           "text": {
-            "cn": "狂坐过山车，肾上腺素换 Sanity。",
-            "en": "Coasters: adrenaline for sanity."
+            "cn": "狂坐过山车：肾上腺素临时覆盖焦虑。",
+            "en": "Coasters: adrenaline briefly overrides anxiety."
           },
           "effect": {
             "money": -320,
@@ -25,13 +25,17 @@
             "battery": -30,
             "locality": 2
           },
+          "feedback": {
+            "cn": "你喊得很真诚。下来后头发像经历了台风，心情意外不错。",
+            "en": "Your screams were sincere. Hair looks typhooned; mood oddly good."
+          },
           "next": "done"
         },
         {
           "id": "mild",
           "text": {
-            "cn": "选温和项目，保护颈椎。",
-            "en": "Mild rides; protect your neck."
+            "cn": "选温和项目：保护颈椎与面子。",
+            "en": "Mild rides: protect neck and dignity."
           },
           "effect": {
             "money": -280,
@@ -39,19 +43,27 @@
             "battery": -18,
             "locality": 1
           },
+          "feedback": {
+            "cn": "你没有变成表情包。有时这就是胜利。",
+            "en": "You didn’t become a meme. Sometimes that’s the win."
+          },
           "next": "done"
         },
         {
           "id": "queue",
           "text": {
-            "cn": "排队三小时只坐一个。",
-            "en": "Three-hour queue for one ride."
+            "cn": "排队三小时只坐一个：时间刺客体验卡。",
+            "en": "Three-hour queue for one ride: time assassin DLC."
           },
           "effect": {
             "money": -300,
             "sanity": -14,
             "battery": -25,
             "locality": 1
+          },
+          "feedback": {
+            "cn": "项目九十秒。排队半生。你开始重新评估「快乐」的单价。",
+            "en": "Ride: 90 seconds. Queue: half a life. You reprice happiness per minute."
           },
           "next": "done"
         }
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "欢乐谷日結束。",
-        "en": "Happy Valley day ends."
+        "cn": "欢乐谷日结束。嗓子哑了，快乐账单已出。",
+        "en": "Happy Valley ends. Throat hoarse; joy invoice issued."
       }
     }
   }

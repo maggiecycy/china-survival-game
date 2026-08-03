@@ -4,6 +4,8 @@ import visas from './visas.json'
 import endings from './endings.json'
 import gameConfig from './gameConfig.json'
 import travel from './travel.json'
+import routes from './routes.json'
+import characters from './characters.json'
 import { eventGraphs } from './events'
 import { attractionsByCity } from './attractions'
 
@@ -14,6 +16,8 @@ export {
   endings,
   gameConfig,
   travel,
+  routes,
+  characters,
   eventGraphs,
   attractionsByCity,
 }
@@ -25,6 +29,8 @@ export default {
   endings,
   gameConfig,
   travel,
+  routes,
+  characters,
   eventGraphs,
   attractionsByCity,
 }

@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "華強北",
-        "en": "Huaqiangbei"
+        "cn": "华强北：零件迷宫与日结诱惑",
+        "en": "Huaqiangbei: Parts Maze & Same-Day Pay"
       },
       "text": {
-        "cn": "零件迷宮。有工作室攔截你：『外模拍智能手錶廣告，兩小時，日結。』",
-        "en": "Parts maze. A studio stops you: 'Foreign model for a smartwatch ad, two hours, same-day pay.'"
+        "cn": "楼里像未来零件菜市场。有人拦你：『外模拍智能手表广告，两小时，日结。』旁边摊位在测耳机，低音炮把你的心跳一起测了。",
+        "en": "Inside feels like a wet market for the future. Someone stops you: “Watch ad, two hours, paid today.” A stall tests earbuds — the bass tests your heartbeat too."
       },
       "choices": [
         {
           "id": "browse",
           "text": {
-            "cn": "亂逛兩小時（可能買奇怪配件）。",
-            "en": "Wander two hours (maybe buy weird gadgets)."
+            "cn": "只逛不买：当电子人类学田野调查。",
+            "en": "Browse only: electronic anthropology fieldwork."
           },
           "effect": {
             "money": -60,
@@ -25,13 +25,17 @@
             "battery": -15,
             "locality": 3
           },
+          "feedback": {
+            "cn": "你看见了世上所有数据线的亲戚。钱包没死，方向感死了。",
+            "en": "You meet every cable’s relatives. Wallet lives; orientation dies."
+          },
           "next": "done"
         },
         {
           "id": "watch_model",
           "text": {
-            "cn": "💰 接手錶廣告：對著鏡頭說 Wow。",
-            "en": "💰 Take the watch ad: say Wow to the camera."
+            "cn": "💰 接手表广告：对着镜头说 Wow。",
+            "en": "💰 Watch ad: say Wow to the lens."
           },
           "effect": {
             "money": 320,
@@ -42,20 +46,20 @@
           "addFlags": [
             "did_model_gig"
           ],
-          "feedback": {
-            "cn": "你說了十二次 Wow。錢是真的，尊嚴需要重啟。",
-            "en": "You said Wow twelve times. Money is real; dignity needs a reboot."
-          },
-          "next": "done",
           "showIfLocked": true,
           "requiresStats": {
             "sanityGte": 70,
             "batteryGte": 25
           },
           "lockedHint": {
-            "cn": "需要 Sanity ≥ 70 且电量 ≥ 25，才敢接高强度约拍。",
-            "en": "Needs Sanity ≥ 70 and Battery ≥ 25 for a demanding gig."
-          }
+            "cn": "约拍门槛：Sanity ≥ 70 且电量 ≥ 25。没电的模特只是一块会走路的背景板。",
+            "en": "Gig gate: Sanity ≥ 70 and Battery ≥ 25. A dead-phone model is just a walking backdrop."
+          },
+          "feedback": {
+            "cn": "Wow 说了二十次。日结到账。你对「智能」两个字开始过敏。",
+            "en": "Twenty Wows. Paid. You develop a mild allergy to the word “smart”."
+          },
+          "next": "done"
         }
       ]
     },
@@ -63,8 +67,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "華強北日結束。",
-        "en": "Huaqiangbei day ends."
+        "cn": "华强北日结束。你带走了报价单，没带走灵魂。",
+        "en": "Huaqiangbei ends. You leave with price lists, not your soul."
       }
     }
   }

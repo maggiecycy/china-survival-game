@@ -54,7 +54,9 @@ const labels = {
 </script>
 
 <template>
-  <div class="max-w-md w-full mx-auto mt-4 mb-8 p-4 bg-stone-900 text-amber-500 rounded-xl font-mono text-[10px] space-y-2">
+  <div
+    class="w-full p-4 bg-stone-900 text-amber-500 font-mono text-[10px] space-y-2 min-h-full"
+  >
     <div class="flex justify-between items-center border-b border-stone-700 pb-1">
       <p class="font-bold">{{ labels[language].title }}</p>
       <button @click="resetGame" class="text-red-400 hover:text-red-300 underline">
@@ -96,7 +98,7 @@ const labels = {
       </span>
     </div>
 
-    <div class="pt-2 border-t border-stone-800 max-h-32 overflow-y-auto space-y-1">
+    <div class="pt-2 border-t border-stone-800 max-h-40 lg:max-h-64 overflow-y-auto space-y-1">
       <p v-for="(logItem, index) in gameLogs" :key="index" class="text-stone-400">
         <span class="text-stone-600">[{{ logItem.time }}]</span> {{ logItem.icon }} {{ logItem.text }}
       </p>

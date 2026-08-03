@@ -5,19 +5,19 @@
     "main": {
       "id": "main",
       "title": {
-        "cn": "环球影城",
-        "en": "Universal Beijing"
+        "cn": "环球影城：快乐很贵",
+        "en": "Universal Beijing: Expensive Joy"
       },
       "text": {
-        "cn": "门票贵、项目排队更贵（用时间付）。周边店闪着光诱惑你的钱包。",
-        "en": "Tickets pricey; queues cost time. Merch glows at your wallet."
+        "cn": "门票贵，排队更贵——贵在时间。周边店用灯光催眠你的钱包。有人穿全套周边走过，像会移动的广告牌。",
+        "en": "Tickets cost money; queues cost time. Merch lighting hypnotizes wallets. Someone in full merch walks by like a mobile billboard."
       },
       "choices": [
         {
           "id": "rides",
           "text": {
-            "cn": "狂玩项目，接受腿软与排队。",
-            "en": "Ride hard; accept queues and jelly legs."
+            "cn": "狂玩项目：用腿软兑换尖叫。",
+            "en": "Ride hard: trade jelly legs for screams."
           },
           "effect": {
             "money": -650,
@@ -25,13 +25,17 @@
             "battery": -35,
             "locality": 2
           },
+          "feedback": {
+            "cn": "你玩爽了。也学会了「热门项目 = 另一条通勤高峰」。",
+            "en": "Fun achieved. Also learned: hot rides = rush hour with costumes."
+          },
           "next": "done"
         },
         {
           "id": "show",
           "text": {
-            "cn": "看演出 + 少排队策略。",
-            "en": "Shows + low-queue strategy."
+            "cn": "看演出 + 少排队策略：聪明的懒人路线。",
+            "en": "Shows + low-queue strategy: smart lazy route."
           },
           "effect": {
             "money": -520,
@@ -39,19 +43,27 @@
             "battery": -22,
             "locality": 2
           },
+          "feedback": {
+            "cn": "灯光很炸。你坐着就把「来过」完成了——膝盖表示感谢。",
+            "en": "Lights slap. You complete “been there” while seated — knees send thanks."
+          },
           "next": "done"
         },
         {
           "id": "merch_melt",
           "text": {
-            "cn": "买周边买到理智归边。",
-            "en": "Merch until sanity thins."
+            "cn": "买周边买到理智归边：购物车比过山车刺激。",
+            "en": "Merch until sanity thins: cart > coaster thrills."
           },
           "effect": {
             "money": -900,
             "sanity": -14,
             "battery": -20,
             "locality": 1
+          },
+          "feedback": {
+            "cn": "袋子很沉。快乐很短。你开始计算回程行李额。",
+            "en": "Bags heavy. Joy brief. You start calculating baggage allowance home."
           },
           "next": "done"
         }
@@ -61,8 +73,8 @@
       "id": "done",
       "end": true,
       "text": {
-        "cn": "环球影城日結束。",
-        "en": "Universal Beijing day ends."
+        "cn": "环球日结束。钱包与嗓子一起沙哑。",
+        "en": "Universal day ends. Wallet and throat both hoarse."
       }
     }
   }

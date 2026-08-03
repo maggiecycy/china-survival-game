@@ -76,7 +76,7 @@
     ],
     "eligibleCountHint": 54,
     "initial": {
-      "money": 2800,
+      "money": 5000,
       "sanity": 100,
       "timeRemaining": 144,
       "battery": 100,
@@ -151,7 +151,7 @@
       "Uruguay"
     ],
     "initial": {
-      "money": 2800,
+      "money": 5000,
       "sanity": 100,
       "timeRemaining": 720,
       "battery": 100,
@@ -183,7 +183,7 @@
     ],
     "allCountries": true,
     "initial": {
-      "money": 2800,
+      "money": 5000,
       "sanity": 100,
       "timeRemaining": 720,
       "battery": 100,

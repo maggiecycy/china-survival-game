@@ -1,4 +1,5 @@
 <script setup>
+import FeedbackModal from '../components/FeedbackModal.vue'
 import { useGameStore } from '../stores/useGameStore'
 
 const {
@@ -7,6 +8,7 @@ const {
   tutorialStageIndex,
   currentTutorialStage,
   tutorialFeedback,
+  selectedCharacter,
   t,
   chooseTutorialOption,
   confirmTutorialFeedback,
@@ -52,17 +54,13 @@ const {
       </button>
     </div>
 
-    <div v-if="tutorialFeedback" class="fixed inset-0 bg-stone-950/60 flex items-center justify-center p-6 z-50 fade-in">
-      <div class="bg-white rounded-2xl p-5 max-w-sm w-full space-y-4 shadow-xl scale-in">
-        <div class="text-4xl text-center">📝</div>
-        <p class="text-xs text-stone-700 leading-relaxed">{{ t(tutorialFeedback) }}</p>
-        <button
-          @click="confirmTutorialFeedback"
-          class="w-full bg-stone-900 text-stone-100 font-bold py-2.5 rounded-xl hover:bg-stone-800 transition active:scale-[0.98]"
-        >
-          {{ language === 'en' ? 'Continue' : '繼續' }}
-        </button>
-      </div>
-    </div>
+    <FeedbackModal
+      v-if="tutorialFeedback"
+      :text="t(tutorialFeedback)"
+      :confirm-label="language === 'en' ? 'Continue' : '繼續'"
+      :character-src="selectedCharacter?.sprite || ''"
+      :character-name="selectedCharacter ? t(selectedCharacter.name) : ''"
+      @confirm="confirmTutorialFeedback"
+    />
   </section>
 </template>

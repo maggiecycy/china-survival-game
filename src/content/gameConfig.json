@@ -40,7 +40,8 @@
     "minBatteryToOffer": 45
   },
   "economy": {
-    "startingMoney": 2800
+    "startingMoney": 5000,
+    "note": "外籍背包客约 1–2 周中国行常见启动预算量级（含城际票+住宿+门票缓冲），非奢华游"
   },
   "gates": {
     "hustleSanityGte": 70,
@@ -60,21 +61,24 @@
   "lodgingTypes": {
     "international": {
       "type": "international",
-      "nightlyCost": 320,
+      "nightlyCost": 480,
       "nightsLeft": null,
-      "label": { "cn": "國際連鎖酒店", "en": "International hotel" }
+      "label": { "cn": "國際連鎖酒店", "en": "International hotel" },
+      "note": "北京/上海中档国际连锁常见约 ¥400–700/晚"
     },
     "foreigner_ok": {
       "type": "foreigner_ok",
-      "nightlyCost": 220,
+      "nightlyCost": 260,
       "nightsLeft": null,
-      "label": { "cn": "可接待外賓旅店", "en": "Foreigner-OK lodge" }
+      "label": { "cn": "可接待外賓旅店", "en": "Foreigner-OK lodge" },
+      "note": "可接待外宾的中档酒店/民宿约 ¥200–350"
     },
     "youth_hostel": {
       "type": "youth_hostel",
-      "nightlyCost": 90,
+      "nightlyCost": 100,
       "nightsLeft": null,
-      "label": { "cn": "青年旅舍", "en": "Youth hostel" }
+      "label": { "cn": "青年旅舍", "en": "Youth hostel" },
+      "note": "青旅床位常见约 ¥80–150"
     },
     "couch": {
       "type": "couch",
